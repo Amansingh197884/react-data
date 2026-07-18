@@ -329,15 +329,7 @@ body {
   margin: 0 auto;
 }
 
-*/
-/* 4 Cards in 1 Row Layout */
-/* .amenities-grid {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 30px;
-} */
 
-/* Premium Card Design */
 .amenity-card {
   position: relative;
   background-color: #ffffff;
@@ -393,31 +385,6 @@ body {
   transition: color 0.4s ease;
 }
 
-/* hover  */
-/* .amenity-card:hover {
-  transform: translateY(-8px);
-  box-shadow: 0 12px 30px rgba(191, 163, 122, 0.15); 
-} */
-
-/* .amenity-card:hover .hover-slide-bg {
-  width: 100%;
-  opacity: 0.08;
-} */
-
-/* .amenity-card:hover::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  height: 100%;
-  background: #bfa37a;
-  z-index: 3;
-}
-
-.amenity-card:hover .amenity-icon {
-  transform: scale(1.1); 
-} */
-
 
 @media (max-width: 1100px) {
   .amenities-grid {
@@ -432,7 +399,6 @@ body {
   }
 }
 
-/* add new css  */
 
 .apartments-container {
   max-width: 1200px;
@@ -493,7 +459,6 @@ body {
   background: #1e383c;
 }
 
-/* Card Styling */
 .card {
   display: flex;
   flex-direction: column;
@@ -1070,9 +1035,6 @@ small {
   box-shadow: none;
 }
 
-/* .amenity-card:hover {
-  transform: translateY(-5px);
-} */
 
 .amenity-icon-img {
   width: 60px;
