@@ -8,10 +8,10 @@ import 'swiper/css/navigation';
 import './Gallery.css'; 
 
 const amenitiesData = [
-  { id: 1, title: 'Lounge Area', image: 'https://i.pinimg.com/1200x/6e/68/71/6e6871bdff75cae8100d0c5695c9cf89.jpg' },
-  { id: 2, title: 'Garden & Walkway', image: 'https://i.pinimg.com/736x/29/44/8a/29448ade24e1ce66be0e779f7177ed76.jpg' },
-  { id: 3, title: 'Banquet Hall', image: 'https://i.pinimg.com/1200x/69/94/53/699453be9caf9b47b524a57ff72c6770.jpg' },
-  { id: 4, title: 'Gymnasium', image: 'https://i.pinimg.com/736x/f7/64/5a/f7645a02442b680fdcc2f509d1ae1411.jpg' },
+  { id: 1, title: 'Lounge Area', image: 'https://i.pinimg.com/1200x/36/f3/49/36f349abe68fa5c40a49fc95db588775.jpg' },
+  { id: 2, title: 'Garden & Walkway', image: 'https://i.pinimg.com/1200x/77/00/ac/7700acfe975dab47b21cc8e21bb9af12.jpg' },
+  { id: 3, title: 'Banquet Hall', image: 'https://i.pinimg.com/1200x/0b/09/f8/0b09f8beb47ecc0a43e26dc53d3d79c9.jpg' },
+  { id: 4, title: 'Gymnasium', image: 'https://i.pinimg.com/736x/14/11/eb/1411eb51b37c91c40359df31469557a7.jpg' },
 ];
 
 const AmenitiesGallery = () => {
@@ -19,10 +19,11 @@ const AmenitiesGallery = () => {
 
   return (
     <section className="py-5 bg-light position-relative">
-      <div className="container-fluid">
+      <div className="container-fluid mt-5">
         
+        {/* Header section with heading and Custom Navigation arrows */}
         <div className="d-flex justify-content-between align-items-center mb-4">
-          <h2 className="display-5 font-serif text-dark m-0">Amenities</h2>
+          <h2 className="display-5 font-serif text-dark m-0">Gallery</h2>
           <div className="d-flex gap-2">
             <button className="nav-btn prev-btn">
             <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M15 18l-6-6 6-6"/></svg>

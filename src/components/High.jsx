@@ -28,7 +28,7 @@ const AboutSection = () => {
   }, []);
 
   return (
-    <section className="about text-white min-vh-100 d-flex align-items-center overflow-hidden">
+    <section className="about text-white min-vh-100 d-flex align-items-center overflow-hidden mt-5">
       <div className="container-fluid p-0">
         <div className="row g-0 align-items-stretch min-vh-100">
 

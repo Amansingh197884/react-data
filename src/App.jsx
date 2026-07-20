@@ -11,6 +11,7 @@ import ContactUs from './components/ContactUs.jsx';
 import Slide from './components/Slide.jsx';
 import High from './components/High.jsx';
 import New from './components/New.jsx';
+import Gallery from './components/Gallery.jsx'
 import Footer from './components/Footer.jsx';
 
 const MainPage = () => {
@@ -18,12 +19,13 @@ const MainPage = () => {
     <>
       <Home />
       <High />
+      <Gallery/>
+
       <AboutUs />
-      
+            <Slide />
       
       <VisionMission />
       {/* <Amenities /> */}
-      <Slide />
       <Testimonials />
       <ContactUs />
     </>

@@ -2,8 +2,10 @@ import React from 'react';
 
 export default function AboutUs() {
   return (
-    <section id="about" className="py-5 bg-white">
-      <div className="container my-5">
+    <section id="about" className="py-5 pb-0 bg-white">
+      
+      <div className="container-fluid p-3 my-5">
+        
         <div className="row align-items-center gy-4">
           <div className="col-lg-6 animate__animated animate__fadeInLeft">
             <span className="badge   rounded-pill px-3 py-2 mb-3 fw-semibold text-uppercase tracking-wider">Who We Are</span>

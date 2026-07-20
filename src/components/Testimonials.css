@@ -1,0 +1,77 @@
+
+.custom-heading {
+  color: #2b354f;
+  letter-spacing: -0.5px;
+}
+
+.bg-light-custom {
+  background-color: #f6efde !important;
+}
+
+.bg-featured {
+ background-color: #211a11;
+ 
+  }
+
+.transition-all {
+  transition: all 0.4s cubic-bezier(0.25, 1, 0.5, 1);
+}
+.transition-transform {
+  transition: transform 0.4s ease;
+}
+
+.quote-box {
+  min-height: 260px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.quote-arrow {
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 0;
+  height: 0;
+  border-left: 12px solid transparent;
+  border-right: 12px solid transparent;
+  transition: border-top-color 0.4s ease;
+}
+
+.arrow-light {
+  border-top: 10px solid #f7f9fc;
+}
+
+.arrow-featured {
+  border-top: 10px solid #211a11;
+}
+
+.avatar-wrapper {
+  width: 85px;
+  height: 85px;
+  border: 3px solid transparent;
+  transition: all 0.4s ease;
+}
+
+
+.testimonial-item:hover .quote-box {
+  transform: translateY(-8px);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.08) !important;
+}
+
+.testimonial-item:hover .avatar-wrapper {
+  transform: scale(1.08);
+  box-shadow: 0 8px 20px rgba(255, 77, 85, 0.2) !important;
+}
+
+.testimonial-item:hover .avatar-wrapper img {
+  transform: scale(1.12);
+}
+
+.testimonial-swiper .swiper-pagination-bullet-active {
+  background: #211a11 !important;
+  width: 24px;
+  border-radius: 4px;
+  transition: width 0.3s ease;
+}
