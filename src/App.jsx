@@ -14,17 +14,18 @@ import New from './components/New.jsx';
 import Gallery from './components/Gallery.jsx'
 import Footer from './components/Footer.jsx';
 import Property from './components/Property.jsx'
+import PropertyDetails from './components/PropertyDetails.jsx'
 
 const MainPage = () => {
   return (
     <>
       <Home />
       <High />
-      <Gallery/>
+      <Gallery />
 
       <AboutUs />
-            <Slide />
-      
+      <Slide />
+
       <VisionMission />
       {/* <Amenities /> */}
       <Testimonials />
@@ -42,15 +43,11 @@ export default function App() {
       <Routes>
         <Route path="/" element={<MainPage />} />
         <Route path="/new" element={<New />} />
-      </Routes>
-       <Routes>
-        <Route path="/" element={<MainPage />} />
         <Route path="/Property" element={<Property />} />
+        <Route path="/PropertyDetails" element={<PropertyDetails />} />
       </Routes>
 
       <Footer />
-
-       
     </div>
   );
 }
