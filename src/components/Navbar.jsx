@@ -41,8 +41,9 @@ export default function Navbar() {
               <Link className="nav-link nav-link-custom" to="/" onClick={() => setIsNavOpen(false)}>Home</Link>
             </li>
 
-             <li className="nav-item"><a className="nav-link nav-link-custom" href="#properties">Properties</a></li>
-            <li className="nav-item"><a className="nav-link nav-link-custom" href="#about">About</a></li>
+    <Link to="/Property" className="nav-link nav-link-custom" onClick={() => setIsNavOpen(false)}>
+                Properties
+              </Link>            <li className="nav-item"><a className="nav-link nav-link-custom" href="#about">About</a></li>
             {/* <li className="nav-item"><a className="nav-link nav-link-custom" href="#contact">Contact Us</a></li> */}
        <Link to="/New" className="nav-link nav-link-custom" onClick={() => setIsNavOpen(false)}>
                 Contact Us

@@ -25,12 +25,12 @@ const AmenitiesGallery = () => {
         <div className="d-flex justify-content-between align-items-center mb-4">
           <h2 className="display-5 font-serif text-dark m-0">Gallery</h2>
           <div className="d-flex gap-2">
-            <button className="nav-btn prev-btn">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M15 18l-6-6 6-6"/></svg>
-          </button>
-          <button className="nav-btn next-btn">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M9 18l6-6-6-6"/></svg>
-          </button>
+            <button className="nav-btn custom-prev-btn" aria-label="Previous slide">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M15 18l-6-6 6-6"/></svg>
+            </button>
+            <button className="nav-btn custom-next-btn" aria-label="Next slide">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M9 18l6-6-6-6"/></svg>
+            </button>
           </div>
         </div>
 
@@ -43,6 +43,11 @@ const AmenitiesGallery = () => {
           navigation={{
             prevEl: '.custom-prev-btn',
             nextEl: '.custom-next-btn',
+          }}
+          // FIX 2: Dynamic elements load hone ke baad Swiper re-init ho
+          onBeforeInit={(swiper) => {
+            swiper.params.navigation.prevEl = '.custom-prev-btn';
+            swiper.params.navigation.nextEl = '.custom-next-btn';
           }}
           breakpoints={{
             640: { slidesPerView: 1.5 },
@@ -71,7 +76,7 @@ const AmenitiesGallery = () => {
         </Swiper>
       </div>
 
-      {/* Lightbox / Popup Modal ("Bahar nikal kar aana" feature) */}
+      {/* Lightbox / Popup Modal */}
       {activeImage && (
         <div className="lightbox-overlay" onClick={() => setActiveImage(null)}>
           <span className="lightbox-close">&times;</span>
