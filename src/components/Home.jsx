@@ -18,7 +18,7 @@ export default function Home() {
   }, []);
 
   return (
-    <div className="bg-light min-vh-100 overflow-x-hidden position-relative">
+    <div className="bg-light min-vh-100 overflow-x-hidden position-relative aman">
       <header
         className="animated-hero text-white"
         style={{ backgroundImage: `url(${heroImages[currentImgIndex]})` }}

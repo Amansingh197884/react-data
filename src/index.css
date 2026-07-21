@@ -1100,3 +1100,8 @@ small {
     box-shadow: 0 14px 36px rgba(201, 164, 91, 0.32);
 
 }
+@media screen and (max-width:600px){
+  .aman{
+    min-height: 70vh !important;
+  }
+}
