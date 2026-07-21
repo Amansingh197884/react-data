@@ -22,27 +22,27 @@ const heroImages = [
 const galleryImages = [
     {
         id: 1,
-        url: "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1200&q=80",
+        url: "https://i.pinimg.com/736x/a5/3b/a7/a53ba76257e03f110e14d43e9b834e1b.jpg",
         caption: "Exterior View"
     },
     {
         id: 2,
-        url: "https://images.unsplash.com/photo-1600566753376-12c8ab7fb75b?auto=format&fit=crop&w=1200&q=80",
+        url: "https://i.pinimg.com/736x/e6/46/51/e646510afdef4bde6ad87324f2c56a9b.jpg",
         caption: "Grand Entrance & Hallway"
     },
     {
         id: 3,
-        url: "https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&w=1200&q=80",
+        url: "https://i.pinimg.com/736x/ae/ac/3e/aeac3ea759cc35792286ffab3946bdc4.jpg",
         caption: "Living Room with Sea View"
     },
     {
         id: 4,
-        url: "https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=1200&q=80",
+        url: "https://i.pinimg.com/736x/8b/07/b1/8b07b191b3ba0d33497bf8c01500b2ba.jpg",
         caption: "Dining & Show Kitchen Area"
     },
     {
         id: 5,
-        url: "https://images.unsplash.com/photo-1512917774080-9991f1c4c750?auto=format&fit=crop&w=1200&q=80",
+        url: "https://i.pinimg.com/736x/94/9a/37/949a375cb4562db2209c97e06b5aa568.jpg",
         caption: "Outdoor Pool Deck"
     }
 ];
@@ -135,7 +135,7 @@ export default function Home() {
     ];
 
     return (
-        <div className="bg-light min-vh-100 overflow-x-hidden position-relative home-wrapper">
+        <div className="Full min-vh-100 overflow-x-hidden position-relative home-wrapper">
             <header
                 className="animated-hero hero-section text-white position-relative"
                 style={{ backgroundImage: `url(${heroImages[currentImgIndex]})` }}
@@ -173,7 +173,7 @@ export default function Home() {
                         <div className="col-lg-6">
                             <div className="villa-img-frame">
                                 <img
-                                    src="https://images.unsplash.com/photo-1600566753376-12c8ab7fb75b?auto=format&fit=crop&w=800&q=80"
+                                    src="https://i.pinimg.com/1200x/d3/04/b7/d304b759643b45c59ced8e076905dfb2.jpg"
                                     alt="Double Height Entrance Lobby"
                                     className="img-fluid"
                                 />
@@ -203,76 +203,13 @@ export default function Home() {
                 </div>
             </section>
 
-            <section className="layout-section py-5">
-                <div className="container py-4">
-                    <h2 className="layout-title text-center mb-5">Layout</h2>
-
-                    <div className="row g-4 align-items-center">
-                        <div className="col-lg-5 col-md-6">
-                            <div className="layout-details-card">
-                                <div className="layout-row highlight-row">
-                                    <span className="label font-weight-bold">PLOT AREA</span>
-                                    <span className="value font-weight-bold">992 – 1,672 SQM <small className="text-muted">(10,678 – 17,997 sq ft)</small></span>
-                                </div>
-                                <div className="layout-row">
-                                    <span className="label">Upper Ground Floor</span>
-                                    <span className="value">328 SQM</span>
-                                </div>
-                                <div className="layout-row">
-                                    <span className="label">External Area / Terraces / Balconies</span>
-                                    <span className="value">166 SQM</span>
-                                </div>
-                                <div className="layout-row">
-                                    <span className="label">Garage</span>
-                                    <span className="value">77 SQM</span>
-                                </div>
-                                <div className="layout-row">
-                                    <span className="label">Lower Ground Floor</span>
-                                    <span className="value">145 SQM</span>
-                                </div>
-                                <div className="layout-row accent-row mt-3">
-                                    <span className="label">Total SA</span>
-                                    <span className="value">716 SQM <small>(7,707 sq ft)</small></span>
-                                </div>
-                                <div className="layout-row accent-row">
-                                    <span className="label">TOTAL BUA</span>
-                                    <span className="value">637 SQM <small>(6,857 sq ft)</small></span>
-                                </div>
-                                <p className="footnote mt-3">*Including Service Rooms</p>
-                            </div>
-                        </div>
-
-                        <div className="col-lg-7 col-md-6">
-                            <div className="row g-3">
-                                <div className="col-6">
-                                    <div className="floorplan-box">
-                                        <img
-                                            src="https://images.unsplash.com/photo-1600585152220-90363fe7e115?auto=format&fit=crop&w=600&q=80"
-                                            alt="Ground Floor Layout"
-                                            className="img-fluid floorplan-img"
-                                        />
-                                        <span className="floorplan-label">Ground Floor</span>
-                                    </div>
-                                </div>
-                                <div className="col-6">
-                                    <div className="floorplan-box">
-                                        <img
-                                            src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=600&q=80"
-                                            alt="First Floor Layout"
-                                            className="img-fluid floorplan-img"
-                                        />
-                                        <span className="floorplan-label">First Floor</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
+         
 
             {/* --- UNIT FEATURES SECTION --- */}
             <section className="unit-features-section py-5">
-                <div className="container-flui p-4">
+
+                <div className="container p-4">
+
                     <h2 className="unit-features-title display-4 text-center mb-5">Unit Features</h2>
 
                     <div className="row g-4">
@@ -338,6 +275,74 @@ export default function Home() {
                     </Swiper>
                 </div>
             </section>
+
+   <section className="layout-section py-5">
+                <div className="container py-4">
+                    <h2 className="layout-title text-start mb-5">Layout</h2>
+
+                    <div className="row g-4 align-items-center">
+                        <div className="col-lg-5 col-md-6">
+                            <div className="layout-details-card">
+                                <div className="layout-row highlight-row">
+                                    <span className="label font-weight-bold">PLOT AREA</span>
+                                    <span className="value font-weight-bold">992 – 1,672 SQM <small className="text-muted">(10,678 – 17,997 sq ft)</small></span>
+                                </div>
+                                <div className="layout-row">
+                                    <span className="label">Upper Ground Floor</span>
+                                    <span className="value">328 SQM</span>
+                                </div>
+                                <div className="layout-row">
+                                    <span className="label">External Area / Terraces / Balconies</span>
+                                    <span className="value">166 SQM</span>
+                                </div>
+                                <div className="layout-row">
+                                    <span className="label">Garage</span>
+                                    <span className="value">77 SQM</span>
+                                </div>
+                                <div className="layout-row">
+                                    <span className="label">Lower Ground Floor</span>
+                                    <span className="value">145 SQM</span>
+                                </div>
+                                <div className="layout-row accent-row mt-3">
+                                    <span className="label">Total SA</span>
+                                    <span className="value">716 SQM <small>(7,707 sq ft)</small></span>
+                                </div>
+                                <div className="layout-row accent-row">
+                                    <span className="label">TOTAL BUA</span>
+                                    <span className="value">637 SQM <small>(6,857 sq ft)</small></span>
+                                </div>
+                                <p className="footnote mt-3">*Including Service Rooms</p>
+                            </div>
+                        </div>
+
+                        <div className="col-lg-7 col-md-6">
+                            <div className="row g-3">
+                                <div className="col-6">
+                                    <div className="floorplan-box">
+                                        <img
+                                            src="https://i.pinimg.com/1200x/34/93/e3/3493e3ee5a649e9614db70b3606a9ebc.jpg"
+                                            alt="Ground Floor Layout"
+                                            className="img-fluid floorplan-img"
+                                        />
+                                        <span className="floorplan-label">Ground Floor</span>
+                                    </div>
+                                </div>
+                                <div className="col-6">
+                                    <div className="floorplan-box">
+                                        <img
+                                            src="https://i.pinimg.com/736x/18/fa/34/18fa34f99556a5a1a2976b0977fbd41b.jpg"
+                                            alt="First Floor Layout"
+                                            className="img-fluid floorplan-img"
+                                        />
+                                        <span className="floorplan-label">First Floor</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
 
             {/* --- LIGHTBOX MODAL --- */}
             {selectedImgIndex !== null && (

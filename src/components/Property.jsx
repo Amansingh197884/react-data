@@ -161,9 +161,12 @@ export default function ApartmentsSection() {
                                     <p className="specs">{item.specs}</p>
                                     <div>
                                         <div>
-                                            <button className="btn new-btn text-center">
-                                                Discover More <i className="bi bi-arrow-right ms-2"></i>
+                                                
+                                            <Link to="/PropertyDetails">
+                                                 <button className="btn new-btn ">
+                                                Discover More <i class="bi bi-arrow-right ms-2"></i>
                                             </button>
+                                            </Link>
                                         </div>
                                     </div>
                                 </div>
