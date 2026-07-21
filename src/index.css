@@ -361,7 +361,8 @@ body {
   z-index: 2;
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: start;
+  padding: 10px;
 }
 
 .amenity-icon {
@@ -491,7 +492,7 @@ body {
 /* Red Price Badge */
 .price-tag {
   position: absolute;
-  bottom: 0px;
+  top: 0px;
   font-weight: bold;
   left: -2px;
    background-color: #211a11;
@@ -499,13 +500,13 @@ body {
  
   padding: 10px 19px;
   display: flex;
-  border-top-right-radius: 20px;
   flex-direction: column;
+  border-bottom-right-radius: 20x !important;
   line-height: 1.2;
   transition: all;
 }
 
-.card:hover .price-tag {
+.card:hover .price-tag  {
   position: absolute;
   transition: 0.3s;
   font-weight: bold;
@@ -533,7 +534,11 @@ body {
   font-weight: normal;
   font-size: 0.7rem;
 }
-
+.card:hover .price-value small {
+  font-weight: normal;
+  font-size: 0.7rem;
+  color: #000 !important;
+}
 /* Card Typography */
 
 
@@ -762,7 +767,7 @@ body {
 .contact-hero {
   position: relative;
   height: 350px;
-  background-image: url('https://i.pinimg.com/1200x/0b/a7/db/0ba7dba50842f3337c075903a22e4530.jpg');
+  background-image: url('https://i.pinimg.com/736x/c2/06/40/c20640ad1c4e6e7fe468f9945ba3310d.jpg');
   background-size: cover;
   background-position: center;
   animation: scaleBackground 1.5s ease-out forwards;

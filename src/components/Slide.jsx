@@ -8,10 +8,13 @@ import 'swiper/css/navigation';
 import './Gallery.css'; 
 
 const amenitiesData = [
-  { id: 1, title: 'Lounge Area', image: 'https://i.pinimg.com/1200x/6e/68/71/6e6871bdff75cae8100d0c5695c9cf89.jpg' },
-  { id: 2, title: 'Garden & Walkway', image: 'https://i.pinimg.com/736x/29/44/8a/29448ade24e1ce66be0e779f7177ed76.jpg' },
-  { id: 3, title: 'Banquet Hall', image: 'https://i.pinimg.com/1200x/69/94/53/699453be9caf9b47b524a57ff72c6770.jpg' },
-  { id: 4, title: 'Gymnasium', image: 'https://i.pinimg.com/736x/f7/64/5a/f7645a02442b680fdcc2f509d1ae1411.jpg' },
+  { id: 1, title: 'Lounge Area', image: 'https://www.express-zenith.site/assets/img/a1-768w.jpg', price: 'Gym' },
+  { id: 2, title: 'Lounge Area', image: 'https://www.express-zenith.site/assets/img/a2-768w.jpg', price: 'Gym' },
+  { id: 3, title: 'Lounge Area', image: 'https://www.express-zenith.site/assets/img/a5-768w.jpg', price: 'Gym' },
+  { id: 4, title: 'Lounge Area', image: 'https://www.express-zenith.site/assets/img/a6-768w.jpg', price: 'Gym' },
+  { id: 5, title: 'Lounge Area', image: 'https://www.express-zenith.site/assets/img/a4-768w.jpg', price: 'Gym' },
+  { id: 6, title: 'Lounge Area', image: 'https://www.express-zenith.site/assets/img/a5-768w.jpg', price: 'Gym' },
+  { id: 7, title: 'Lounge Area', image: 'https://www.express-zenith.site/assets/img/a7-768w.jpg', price: 'Gym' },
 ];
 
 const AmenitiesGallery = () => {
@@ -19,17 +22,18 @@ const AmenitiesGallery = () => {
 
   return (
     <section className="py-5 bg-light position-relative">
-      <div className="container-fluid">
+      <div className="container-fluid mt-5">
         
+        {/* Header section with heading and Custom Navigation arrows */}
         <div className="d-flex justify-content-between align-items-center mb-4">
           <h2 className="display-5 font-serif text-dark m-0">Amenities</h2>
           <div className="d-flex gap-2">
-            <button className="nav-btn prev-btn">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M15 18l-6-6 6-6"/></svg>
-          </button>
-          <button className="nav-btn next-btn">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M9 18l6-6-6-6"/></svg>
-          </button>
+            <button className="nav-btn custom-prev-btn" aria-label="Previous slide">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M15 18l-6-6 6-6"/></svg>
+            </button>
+            <button className="nav-btn custom-next-btn" aria-label="Next slide">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M9 18l6-6-6-6"/></svg>
+            </button>
           </div>
         </div>
 
@@ -42,6 +46,11 @@ const AmenitiesGallery = () => {
           navigation={{
             prevEl: '.custom-prev-btn',
             nextEl: '.custom-next-btn',
+          }}
+          // FIX 2: Dynamic elements load hone ke baad Swiper re-init ho
+          onBeforeInit={(swiper) => {
+            swiper.params.navigation.prevEl = '.custom-prev-btn';
+            swiper.params.navigation.nextEl = '.custom-next-btn';
           }}
           breakpoints={{
             640: { slidesPerView: 1.5 },
@@ -70,7 +79,7 @@ const AmenitiesGallery = () => {
         </Swiper>
       </div>
 
-      {/* Lightbox / Popup Modal ("Bahar nikal kar aana" feature) */}
+      {/* Lightbox / Popup Modal */}
       {activeImage && (
         <div className="lightbox-overlay" onClick={() => setActiveImage(null)}>
           <span className="lightbox-close">&times;</span>

@@ -14,6 +14,7 @@ import New from './components/New.jsx';
 import Gallery from './components/Gallery.jsx'
 import Footer from './components/Footer.jsx';
 import Property from './components/Property.jsx'
+import PropertyDetails from './components/PropertyDetails.jsx'
 
 const MainPage = () => {
   return (
@@ -47,8 +48,15 @@ export default function App() {
         <Route path="/" element={<MainPage />} />
         <Route path="/Property" element={<Property />} />
       </Routes>
-
+      
+  <Routes>
+        <Route path="/" element={<MainPage />} />
+        
+        <Route path="/PropertyDetails" element={<PropertyDetails />} />
+      </Routes>
       <Footer />
+
+       
     </div>
   );
 }
