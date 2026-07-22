@@ -1,0 +1,106 @@
+.tracking-wider {
+    letter-spacing: 2px;
+}
+
+.contact-heroo {
+    position: relative;
+    height: 350px;
+    background-image: url('https://i.pinimg.com/736x/9e/a6/f2/9ea6f210710c28863bb3009105687db7.jpg');
+    background-size: cover;
+    background-position: center;
+    animation: scaleBackground 1.5s ease-out forwards;
+}
+
+.hero-overlayy {
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.55);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.hero-contentt {
+    text-align: center;
+    color: #ffffff;
+    animation: fadeInUp 0.8s ease-out forwards;
+}
+
+.badge {
+    color: #fff !important;
+    font-size: 1rem
+}
+
+.new-btnb {
+
+    padding: 13px 22px;
+    border-radius: 50px;
+
+    border: 1px solid #211a11;
+    color: black;
+    box-shadow: 0 14px 36px rgba(33, 26, 17, 0.32);
+    transition: 0.4s;
+}
+
+.new-btnb:hover {
+    background: #211a11;
+    color: #fff;
+    border-color: #211a11;
+    box-shadow: 0 14px 36px rgba(33, 26, 17, 0.32);
+
+
+}
+
+.Apa h3 {
+    color: gold;
+}
+
+.new {
+    background-color: #211a11;
+}
+
+.bg-primary-subtle {
+    background-color: rgba(255, 217, 0, 0.53) !important;
+}
+.feature-card i{
+    color: #000 !important;
+}
+.icon-wrapper {
+    width: 64px;
+    height: 64px;
+}
+
+.grid-img {
+    height: 220px;
+}
+
+.story-img {
+    max-height: 480px;
+}
+
+.team-img {
+    height: 320px;
+}
+
+.feature-card,
+.stat-card,
+.team-card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.feature-card:hover,
+.stat-card:hover,
+.team-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 0.75rem 1.5rem rgba(0, 0, 0, 0.08) !important;
+}
+
+.accordion-button:not(.collapsed) {
+    background-color: #f8f9fa;
+    color: #211a11;
+    box-shadow: none;
+}
+
+.accordion-button:focus {
+    box-shadow: none;
+}

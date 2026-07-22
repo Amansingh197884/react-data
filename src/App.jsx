@@ -15,6 +15,7 @@ import Gallery from './components/Gallery.jsx'
 import Footer from './components/Footer.jsx';
 import Property from './components/Property.jsx'
 import PropertyDetails from './components/PropertyDetails.jsx'
+import Aboutpage from './components/Aboutpage.jsx'
 
 const MainPage = () => {
   return (
@@ -39,11 +40,12 @@ export default function App() {
   return (
     <div className="bg-light min-vh-100 overflow-x-hidden">
       <Navbar />
-
       <Routes>
         <Route path="/" element={<MainPage />} />
         <Route path="/new" element={<New />} />
         <Route path="/Property" element={<Property />} />
+        <Route path="/Aboutpage" element={<Aboutpage />} />
+
         <Route path="/PropertyDetails" element={<PropertyDetails />} />
       </Routes>
 

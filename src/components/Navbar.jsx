@@ -41,22 +41,24 @@ export default function Navbar() {
               <Link className="nav-link nav-link-custom" to="/" onClick={() => setIsNavOpen(false)}>Home</Link>
             </li>
 
-    <Link to="/Property" className="nav-link nav-link-custom" onClick={() => setIsNavOpen(false)}>
-                Properties
-              </Link>            <li className="nav-item"><a className="nav-link nav-link-custom" href="#about">About</a></li>
-            {/* <li className="nav-item"><a className="nav-link nav-link-custom" href="#contact">Contact Us</a></li> */}
-       <Link to="/New" className="nav-link nav-link-custom" onClick={() => setIsNavOpen(false)}>
-                Contact Us
-              </Link>
+            <Link to="/Property" className="nav-link nav-link-custom" onClick={() => setIsNavOpen(false)}>
+              Properties
+            </Link>
+            <Link to="/Aboutpage" className="nav-link nav-link-custom" onClick={() => setIsNavOpen(false)}>
+              About
+            </Link>              {/* <li className="nav-item"><a className="nav-link nav-link-custom" href="#contact">Contact Us</a></li> */}
+            <Link to="/New" className="nav-link nav-link-custom" onClick={() => setIsNavOpen(false)}>
+              Contact Us
+            </Link>
 
 
-           
+
           </ul>
         </div>
-{/* btn  */}
+        {/* btn  */}
 
- <div className="d-none d-lg-block ms-5">
-           {/* <Link to="/New" className="btn btn-outline-light rounded-2 px-4 py-2 text-capitalize btn-consultation" onClick={() => setIsNavOpen(false)}>
+        <div className="d-none d-lg-block ms-5">
+          {/* <Link to="/New" className="btn btn-outline-light rounded-2 px-4 py-2 text-capitalize btn-consultation" onClick={() => setIsNavOpen(false)}>
                 Contact <FaArrowRight size={14} />
               </Link> */}
         </div>
