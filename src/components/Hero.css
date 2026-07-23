@@ -1,53 +1,24 @@
 @import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700&family=Montserrat:wght@300;400;500;600&display=swap');
 
-/* =========================================================
-   1. COLOR THEMES & VARIABLES (Select Your Theme Here)
-   ========================================================= */
 
-/* DEFAULT THEME: Rose Gold & Champagne (Elegant Modern Royal) */
 :root {
-  --accent-primary: #f3c2b2;
-  --accent-gradient: linear-gradient(180deg, #ffffff 0%, #fce4ec 30%, #f3c2b2 65%, #c98875 100%);
-  --btn-gradient: linear-gradient(180deg, #fbe8e1 0%, #c98875 100%);
-  --btn-text-color: #1a0a0d;
-  --overlay-bg: radial-gradient(ellipse at center, rgba(25, 15, 20, 0.35) 0%, rgba(10, 5, 8, 0.85) 100%),
-                linear-gradient(180deg, rgba(15, 8, 12, 0.6) 0%, rgba(15, 8, 12, 0.2) 40%, rgba(15, 8, 12, 0.85) 100%);
-  --glass-border: rgba(243, 194, 178, 0.3);
-  --btn-shadow: rgba(201, 136, 117, 0.4);
+  --accent-gold: #e8c88b;   
+  --accent-gold-bright: #f5d79e; 
+  
+  --title-gradient: linear-gradient(180deg, #ffffff 0%, #f3f4f6 60%, #e5e7eb 100%);
+
+  --btn-gradient: linear-gradient(180deg, #e8c88b 0%, #b8914b 100%);
+  --btn-text-color: #111827;
+  
+  --overlay-bg: radial-gradient(ellipse at center, rgba(12, 28, 20, 0.35) 0%, rgba(4, 12, 8, 0.88) 100%),
+                linear-gradient(180deg, rgba(6, 18, 12, 0.6) 0%, rgba(3, 10, 6, 0.25) 40%, rgba(2, 8, 4, 0.9) 100%);
+  
+  --glass-border: rgba(232, 200, 139, 0.25);
+  --btn-shadow: rgba(232, 200, 139, 0.35);
   
   --font-serif: 'Cinzel', serif;
   --font-sans: 'Montserrat', sans-serif;
 }
-
-/* OPTIONAL THEME 2: Emerald Green & Gold (Rich Mansion Vibe) 
-   [Usage in HTML/JSX: <div className="hero-section-container" data-theme="emerald">] */
-[data-theme="emerald"] {
-  --accent-primary: #a7f3d0;
-  --accent-gradient: linear-gradient(180deg, #ffffff 0%, #d1fae5 30%, #6ee7b7 65%, #059669 100%);
-  --btn-gradient: linear-gradient(180deg, #a7f3d0 0%, #059669 100%);
-  --btn-text-color: #022c22;
-  --overlay-bg: radial-gradient(ellipse at center, rgba(6, 30, 20, 0.35) 0%, rgba(2, 12, 8, 0.9) 100%),
-                linear-gradient(180deg, rgba(2, 18, 12, 0.6) 0%, rgba(2, 18, 12, 0.2) 40%, rgba(2, 18, 12, 0.85) 100%);
-  --glass-border: rgba(110, 231, 183, 0.3);
-  --btn-shadow: rgba(5, 150, 105, 0.4);
-}
-
-/* OPTIONAL THEME 3: Silver Platinum & Charcoal (Executive Minimalist) 
-   [Usage in HTML/JSX: <div className="hero-section-container" data-theme="silver">] */
-[data-theme="silver"] {
-  --accent-primary: #e2e8f0;
-  --accent-gradient: linear-gradient(180deg, #ffffff 0%, #f1f5f9 30%, #cbd5e1 65%, #64748b 100%);
-  --btn-gradient: linear-gradient(180deg, #ffffff 0%, #94a3b8 100%);
-  --btn-text-color: #0f172a;
-  --overlay-bg: radial-gradient(ellipse at center, rgba(20, 20, 25, 0.35) 0%, rgba(5, 5, 8, 0.9) 100%),
-                linear-gradient(180deg, rgba(10, 10, 12, 0.6) 0%, rgba(10, 10, 12, 0.2) 40%, rgba(10, 10, 12, 0.85) 100%);
-  --glass-border: rgba(226, 232, 240, 0.3);
-  --btn-shadow: rgba(148, 163, 184, 0.4);
-}
-
-/* =========================================================
-   2. NAVBAR STYLING (Fixed-top Responsive Navigation)
-   ========================================================= */
 
 .luxury-navbar {
   padding: 25px 0;
@@ -57,27 +28,26 @@
   z-index: 1000;
 }
 
-/* Scroll Background Effect */
 .luxury-navbar.scrolled {
   padding: 15px 0;
-  background: rgba(12, 12, 12, 0.85) !important;
+  background: rgba(4, 12, 8, 0.9) !important;
   backdrop-filter: blur(15px);
   -webkit-backdrop-filter: blur(15px);
   border-bottom: 1px solid var(--glass-border);
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.6);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.7);
 }
 
 .luxury-brand {
   font-family: var(--font-serif) !important;
   font-size: 1.8rem !important;
   font-weight: 500 !important;
-  color: var(--accent-primary) !important;
+  color: #ffffff !important;
   letter-spacing: 1px;
   text-decoration: none;
 }
 
 .luxury-nav-link {
-  color: rgba(255, 255, 255, 0.85) !important;
+  color: rgba(255, 255, 255, 0.88) !important;
   font-size: 1rem !important;
   font-weight: 300 !important;
   padding: 5px 0 !important;
@@ -88,7 +58,7 @@
 
 .luxury-nav-link:hover,
 .luxury-nav-link.active {
-  color: var(--accent-primary) !important;
+  color: var(--accent-gold) !important;
 }
 
 .luxury-nav-link::after {
@@ -98,7 +68,7 @@
   left: 50%;
   width: 0%;
   height: 2px;
-  background-color: var(--accent-primary);
+  background-color: var(--accent-gold);
   transition: all 0.3s ease;
   transform: translateX(-50%);
 }
@@ -108,9 +78,9 @@
   width: 100%;
 }
 
-/* =========================================================
-   3. MAIN HERO BANNER & CAROUSEL
-   ========================================================= */
+.nav-icon {
+  color: var(--accent-gold);
+}
 
 .hero-section-container {
   position: relative;
@@ -124,7 +94,6 @@
   font-family: var(--font-sans);
 }
 
-/* Background Carousel Slides */
 .hero-bg-slide {
   position: absolute;
   top: 0;
@@ -142,7 +111,6 @@
   opacity: 1;
 }
 
-/* Overlay Layer */
 .hero-overlay-dark {
   position: absolute;
   top: 0;
@@ -153,13 +121,12 @@
   z-index: 2;
 }
 
-/* Main Content Box */
 .hero-content-box {
   position: relative;
   z-index: 10;
   width: 100%;
   max-width: 1200px;
-  padding: 80px 20px 40px;
+  padding: 100px 20px 40px;
   text-align: center;
   display: flex;
   flex-direction: column;
@@ -167,51 +134,48 @@
 }
 
 .top-brand-subtitle {
-  font-family: var(--font-sans);
-  color: var(--accent-primary);
-  font-size: 0.82rem;
-  letter-spacing: 3.5px;
-  font-weight: 400;
-  margin-bottom: 15px;
+  font-family: var(--font-serif);
+  color: var(--accent-gold);
+  font-size: 0.9rem;
+  letter-spacing: 4px;
+  font-weight: 500;
+  margin-bottom: 12px;
   text-transform: uppercase;
-  opacity: 0.95;
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.8);
 }
 
-/* 3D Metallic Main Heading */
 .main-hero-heading {
   font-family: var(--font-serif);
   font-size: clamp(2.8rem, 6.5vw, 5.2rem);
-  font-weight: 500;
-  letter-spacing: 6px;
+  font-weight: 400;
+  letter-spacing: 5px;
   line-height: 1.05;
-  margin-bottom: 45px;
-  text-transform: uppercase;
-  background: var(--accent-gradient);
+  margin-bottom: 20px;
+  text-transform: capitalize;
+  background: var(--title-gradient);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  filter: drop-shadow(0px 6px 12px rgba(0, 0, 0, 0.8));
+  filter: drop-shadow(0px 4px 15px rgba(0, 0, 0, 0.9));
 }
 
-/* =========================================================
-   4. GLASSMORPHISM SEARCH CONTAINER & FORM
-   ========================================================= */
 
 .search-glass-wrapper {
   width: 100%;
   max-width: 820px;
-  margin-bottom: 70px;
+  margin-top: 25px;
+  margin-bottom: 50px;
 }
 
 .search-inner-form {
   display: flex;
   align-items: center;
-  background: rgba(25, 25, 25, 0.45);
+  background: rgba(10, 20, 15, 0.55);
   backdrop-filter: blur(16px);
   -webkit-backdrop-filter: blur(16px);
   border: 1px solid var(--glass-border);
   border-radius: 10px;
   padding: 5px;
-  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.6);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.7);
 }
 
 .search-item {
@@ -229,7 +193,7 @@
 }
 
 .search-icon {
-  color: rgba(255, 255, 255, 0.7);
+  color: var(--accent-gold);
   font-size: 1rem;
   margin-right: 12px;
   flex-shrink: 0;
@@ -238,7 +202,7 @@
 .vertical-divider {
   width: 1px;
   height: 28px;
-  background: rgba(255, 255, 255, 0.25);
+  background: rgba(255, 255, 255, 0.2);
 }
 
 .glass-select,
@@ -253,15 +217,14 @@
 }
 
 .glass-select option {
-  background-color: #121212;
+  background-color: #05100a;
   color: #ffffff;
 }
 
 .glass-input::placeholder {
-  color: rgba(255, 255, 255, 0.65);
+  color: rgba(255, 255, 255, 0.7);
 }
 
-/* Search Button */
 .search-gold-btn {
   background: var(--btn-gradient);
   border: none;
@@ -282,41 +245,39 @@
 
 .search-gold-btn:hover {
   filter: brightness(1.1);
-  box-shadow: 0 4px 18px var(--btn-shadow);
+  box-shadow: 0 4px 20px var(--btn-shadow);
 }
 
-/* =========================================================
-   5. BOTTOM TAGLINES & RESPONSIVENESS
-   ========================================================= */
 
 .bottom-tagline-group {
-  margin-top: 10px;
+  margin-top: 5px;
 }
 
 .tagline-title {
   font-family: var(--font-serif);
-  color: var(--accent-primary);
-  font-size: 1.55rem;
+  color: var(--accent-gold);
+  font-size: 1.45rem;
   font-weight: 400;
+  /* font-style: italic; */
   margin-bottom: 6px;
   letter-spacing: 0.5px;
-  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.8);
+  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.9);
 }
 
 .tagline-sub {
   font-family: var(--font-serif);
-  color: var(--accent-primary);
-  font-size: 1.25rem;
-  font-weight: 400;
+  color: rgba(255, 255, 255, 0.9);
+  font-size: 1.15rem;
+  font-weight: 300;
   margin: 0;
   letter-spacing: 0.5px;
-  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.8);
+  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.9);
 }
 
-/* Mobile & Tablet View Adaptations */
+/* Mobile & Tablet Responsive View */
 @media (max-width: 991px) {
   .mobile-luxury-menu {
-    background: rgba(15, 15, 15, 0.95);
+    background: rgba(4, 12, 8, 0.96);
     backdrop-filter: blur(20px);
     -webkit-backdrop-filter: blur(20px);
     border: 1px solid var(--glass-border);
@@ -328,12 +289,12 @@
 
 @media (max-width: 768px) {
   .hero-content-box {
-    padding-top: 110px;
+    padding-top: 120px;
   }
 
   .main-hero-heading {
     letter-spacing: 2px;
-    margin-bottom: 30px;
+    margin-bottom: 20px;
   }
 
   .search-inner-form {
@@ -358,10 +319,10 @@
   }
 
   .tagline-title {
-    font-size: 1.25rem;
+    font-size: 1.2rem;
   }
 
   .tagline-sub {
-    font-size: 1rem;
+    font-size: 0.95rem;
   }
 }
