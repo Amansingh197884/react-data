@@ -1,14 +1,31 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
+import './Footer.css';
 
 export default function Footer() {
+  const currentYear = new Date().getFullYear();
+
   return (
-    <footer className="py-4  text-white-50 border-top border-secondary" style={{backgroundColor:'#211a11',}}>
-      <div className="container text-white d-flex flex-column flex-md-row justify-content-between align-items-center gap-3 text-center text-md-start">
-        <small>&copy; 2026 Aajneeti</small>
-        <div className="d-flex gap-4 small">
-          <a href="#about" className=" text-decoration-none">Privacy Charter</a>
-          <a href="#vision" className=" text-decoration-none">Terms of Service</a>
-          <a href="#contact" className=" text-decoration-none">System Security</a>
+    <footer className="luxury-footer py-4">
+      <div className="container-fluid px-3 px-md-5">
+        <div className="row align-items-center justify-content-between g-3">
+          
+          {/* Left Side: Copyright Text */}
+          <div className="col-md-5 text-center text-md-start">
+            <p className="copyright-text mb-0">
+              &copy; {currentYear} Aajneeti
+            </p>
+          </div>
+
+          {/* Right Side: Navigation Links */}
+          <div className="col-md-7 text-center text-md-end">
+            <div className="footer-links-group d-flex flex-wrap justify-content-center justify-content-md-end gap-3 gap-md-4">
+              <Link to="/privacy" className="footer-link">Privacy Charter</Link>
+              <Link to="/terms" className="footer-link">Terms of Service</Link>
+              <Link to="/security" className="footer-link">System Security</Link>
+            </div>
+          </div>
+
         </div>
       </div>
     </footer>

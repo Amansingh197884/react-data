@@ -22,12 +22,14 @@ const MainPage = () => {
     <>
       <Home />
       <High />
-      <Gallery />
+            <Gallery />
+            <Slide />
 
       <AboutUs />
-      <Slide />
 
       <VisionMission />
+
+
       {/* <Amenities /> */}
       <Testimonials />
       <ContactUs />

@@ -1,0 +1,177 @@
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700&family=Montserrat:wght@300;400;500;600&display=swap');
+
+:root {
+  --accent-gold: #e8c88b;
+  --accent-gold-bright: #f5d79e;
+  --btn-gradient: linear-gradient(180deg, #e8c88b 0%, #b8914b 100%);
+  --dark-bg: #090e0b;
+  --glass-border: rgba(232, 200, 139, 0.25);
+  --font-serif: 'Cinzel', serif;
+  --font-sans: 'Montserrat', sans-serif;
+}
+
+.mission-vision-section {
+  width: 100%;
+  background-color: var(--dark-bg);
+  font-family: var(--font-sans);
+  position: relative;
+  overflow: hidden;
+}
+
+.mv-section-tag {
+  font-family: var(--font-serif);
+  color: var(--accent-gold);
+  font-size: 0.82rem;
+  letter-spacing: 3.5px;
+  font-weight: 500;
+  display: block;
+  margin-bottom: 8px;
+  text-transform: uppercase;
+}
+
+.mv-section-title {
+  font-family: var(--font-serif);
+  font-size: clamp(2rem, 4vw, 3.2rem);
+  font-weight: 400;
+  color: #ffffff;
+  letter-spacing: 1px;
+}
+
+.mv-card {
+  background: rgba(18, 26, 21, 0.55);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid var(--glass-border);
+  border-radius: 16px;
+  padding: 40px 35px;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  position: relative;
+  overflow: hidden;
+}
+
+.mv-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(232, 200, 139, 0.08), transparent);
+  transition: left 0.7s ease;
+}
+
+.mv-card:hover::before {
+  left: 100%;
+}
+
+.mv-card:hover {
+  transform: translateY(-6px);
+  border-color: rgba(232, 200, 139, 0.5);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.7), 0 0 20px rgba(232, 200, 139, 0.12);
+}
+
+.mv-icon-box {
+  width: 62px;
+  height: 62px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(232, 200, 139, 0.2) 0%, rgba(232, 200, 139, 0.05) 100%);
+  border: 1px solid var(--accent-gold);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.4s ease;
+}
+
+.mv-icon {
+  color: var(--accent-gold);
+  font-size: 1.5rem;
+  transition: transform 0.4s ease;
+}
+
+.mv-card:hover .mv-icon-box {
+  background: var(--btn-gradient);
+  box-shadow: 0 0 15px rgba(232, 200, 139, 0.4);
+}
+
+.mv-card:hover .mv-icon {
+  color: #111827;
+  transform: scale(1.1);
+}
+
+.mv-discover-btn {
+  background: transparent;
+  border: 1px solid var(--glass-border);
+  border-radius: 30px;
+  padding: 8px 20px;
+  color: var(--accent-gold);
+  font-family: var(--font-sans);
+  font-size: 0.85rem;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.btn-arrow {
+  font-size: 0.75rem;
+  transition: transform 0.3s ease;
+}
+
+.mv-discover-btn:hover {
+  background: var(--btn-gradient);
+  color: #111827;
+  border-color: transparent;
+  box-shadow: 0 4px 15px rgba(232, 200, 139, 0.3);
+}
+
+.mv-discover-btn:hover .btn-arrow {
+  transform: translateX(4px);
+}
+
+.mv-card-title {
+  font-family: var(--font-serif);
+  font-size: 1.85rem;
+  font-weight: 400;
+  color: #ffffff;
+  margin-bottom: 16px;
+  letter-spacing: 0.5px;
+}
+
+.mv-card-text {
+  color: rgba(255, 255, 255, 0.82);
+  font-size: 0.98rem;
+  line-height: 1.75;
+  font-weight: 300;
+  margin: 0;
+}
+
+@media (max-width: 768px) {
+  .mv-card {
+    padding: 28px 20px;
+  }
+
+  .mv-icon-box {
+    width: 52px;
+    height: 52px;
+  }
+
+  .mv-icon {
+    font-size: 1.25rem;
+  }
+
+  .mv-discover-btn {
+    padding: 6px 14px;
+    font-size: 0.78rem;
+  }
+
+  .mv-card-title {
+    font-size: 1.5rem;
+  }
+
+  .mv-card-text {
+    font-size: 0.9rem;
+    line-height: 1.65;
+  }
+}

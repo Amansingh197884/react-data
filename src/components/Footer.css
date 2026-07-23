@@ -1,0 +1,55 @@
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700&family=Montserrat:wght@300;400;500;600&display=swap');
+
+:root {
+  --accent-gold: #e8c88b;
+  --dark-bg: #090e0b;
+  --glass-border: rgba(232, 200, 139, 0.25);
+  --font-serif: 'Cinzel', serif;
+  --font-sans: 'Montserrat', sans-serif;
+}
+
+.luxury-footer {
+  width: 100%;
+  background-color: var(--dark-bg);
+  border-top: 1px solid var(--glass-border);
+  font-family: var(--font-sans);
+  position: relative;
+  z-index: 10;
+}
+
+.copyright-text {
+  font-family: var(--font-serif);
+  color: var(--accent-gold);
+  font-size: 0.95rem;
+  letter-spacing: 0.5px;
+  opacity: 0.9;
+}
+
+.footer-link {
+  color: rgba(255, 255, 255, 0.85);
+  font-family: var(--font-sans);
+  font-size: 0.9rem;
+  font-weight: 300;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  letter-spacing: 0.3px;
+}
+
+.footer-link:hover {
+  color: var(--accent-gold);
+  text-shadow: 0 0 8px rgba(232, 200, 139, 0.4);
+}
+
+@media (max-width: 768px) {
+  .luxury-footer {
+    padding: 20px 0;
+  }
+
+  .copyright-text {
+    font-size: 0.88rem;
+  }
+
+  .footer-link {
+    font-size: 0.82rem;
+  }
+}

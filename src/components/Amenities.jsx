@@ -9,7 +9,7 @@ const MainPage = () => {
       <Home />
       <High />
       <Gallery />
-      <Property /> {/* Agar Property cards yahan hain */}
+      <Property /> 
       <AboutUs />
       <Slide />
       <VisionMission />
