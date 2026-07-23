@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
-import { FaSearch } from 'react-icons/fa';
+import { FaSlidersH, FaMapMarkerAlt, FaSearch } from 'react-icons/fa';
+import './Hero.css';
 
 const heroImages = [
   "https://i.pinimg.com/1200x/2e/8c/f4/2e8cf45d4b5980b2110944dfe2afe4d8.jpg",
@@ -18,58 +19,57 @@ export default function Home() {
   }, []);
 
   return (
-    <div className="bg-light min-vh-100 overflow-x-hidden position-relative aman">
-      <header
-        className="animated-hero text-white"
-        style={{ backgroundImage: `url(${heroImages[currentImgIndex]})` }}
-      >
-        <div className="hero-overlay"></div>
+    <div className="hero-section-container">
+      {/* Background Image Carousel */}
+      {heroImages.map((img, index) => (
+        <div
+          key={index}
+          className={`hero-bg-slide ${index === currentImgIndex ? 'active' : ''}`}
+          style={{ backgroundImage: `url(${img})` }}
+        />
+      ))}
 
-        <div className="container text-center hero-content-wrapper pt-5 mt-5">
-          <div className="animate__animated animate__fadeInDown">
-            <span className="text-warning text-uppercase mb-2 tracking-wide font-serif">
-              Aajneeti Properties
-            </span>
-            <h1 className="display-4 fw-light mb-4 text-uppercase tracking-wider font-serif" style={{ letterSpacing: '-1px' }}>
-              Find Your Place
-            </h1>
-          </div>
+      <div className="hero-overlay-dark"></div>
 
-          <div className="row justify-content-center mx-1 animate__animated animate__fadeInUp animate__delay-1s home-form">
-            <div className="col-lg-8 search-container mx-auto p-2 rounded shadow-lg backdrop-blur mb-5">
-              <form onSubmit={(e) => e.preventDefault()} className="row g-2 align-items-center m-0">
-                <div className="col-md-5">
-                  <div className="input-group location-ss">
-                    <span className="input-group-text bg-transparent border-0 text-white opacity-50"><i className="bi bi-sliders"></i></span>
-                    <select className="form-select bg-transparent border-0 text-white-50 custom-select">
-                      <option value="Property Type">Property Type</option>
-                      <option value="apartment">Apartment</option>
-                      <option value="villa">Villa</option>
-                    </select>
-                  </div>
-                </div>
+      <div className="hero-content-box">
+        {/* <p className="top-brand-subtitle">AAJNEETI PROPERTIES</p> */}
 
-                {/* 2 */}
+        <h1 className="main-hero-heading">FIND YOUR PLACE</h1>
 
-                <div className="col-md-4">
-                  <div className="input-group location-s">
-                    <span className="input-group-text bg-transparent border-0 text-white opacity-50"><i className="bi bi-geo-alt"></i></span>
-                    <input type="text" className="form-control bg-transparent border-0 text-white custom-input" placeholder="Location" />
-                  </div>
-                </div>
-                <div className="col-md-2 ms-md-auto location-sss">
-                  
-                  <button className="btn text-white  w-100 py-2  fw-semibold tracking-wide home-search">
-                    Search <i className="bi bi-search ms-2"></i>
-                  </button>
-                </div>
-              </form>
+        <div className="search-glass-wrapper">
+          <form onSubmit={(e) => e.preventDefault()} className="search-inner-form">
+            
+            <div className="search-item flex-select">
+<i className="bi bi-sliders text-white me-2"></i>              <select className="glass-select">
+                <option value="">Property Type</option>
+                <option value="villa">Villa</option>
+                <option value="flat">Flat</option>
+                <option value="plot">Plot</option>
+              </select>
             </div>
-          </div>
 
+            <div className="vertical-divider"></div>
+
+            <div className="search-item flex-input">
+<i className="bi bi-geo-alt me-2 text-white"></i>              <input
+                type="text"
+                className="glass-input"
+                placeholder="Where are you looking?"
+              />
+            </div>
+
+            <button type="submit" className="search-gold-btn">
+              <i className="bi bi-search ms-2"></i>
+              <span>FIND HOME</span>
+            </button>
+          </form>
         </div>
-      </header>
+
+        <div className="bottom-tagline-group">
+          <h3 className="tagline-title">Luxury Living, Reimagined.</h3>
+          <p className="tagline-sub">Discover Your Dream in Pune’s Prime Locations.</p>
+        </div>
+      </div>
     </div>
   );
 }
-

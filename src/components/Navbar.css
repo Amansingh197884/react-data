@@ -1,0 +1,110 @@
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Montserrat:wght@300;400;500;600&display=swap');
+
+:root {
+  --gold-primary: #e2c08d;
+  --font-serif: 'Cinzel', serif;
+  --font-sans: 'Montserrat', sans-serif;
+}
+.luxury-brand {
+  color: #7dd3fc !important;
+}
+
+.luxury-nav-link:hover,
+.luxury-nav-link.active {
+  color: #7dd3fc !important;
+}
+
+.luxury-nav-link::after {
+  background-color: #7dd3fc;
+}
+/* Base Navbar Styling */
+.luxury-navbar {
+  padding: 25px 0;
+  transition: all 0.4s ease-in-out;
+  background: transparent;
+  font-family: var(--font-sans);
+  z-index: 1000;
+}
+
+/* Background Effect on Scroll */
+.luxury-navbar.scrolled {
+  padding: 15px 0;
+  background: rgba(18, 18, 18, 0.85) !important;
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-bottom: 1px solid rgba(226, 192, 141, 0.15);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+}
+
+/* Brand Logo Styling */
+.luxury-brand {
+  font-family: var(--font-serif) !important;
+  font-size: 1.8rem !important;
+  font-weight: 500 !important;
+  /* color: var(--gold-primary) !important; */
+  letter-spacing: 1px;
+  text-transform: none;
+  transition: opacity 0.3s ease;
+}
+
+.luxury-brand:hover {
+  opacity: 0.9;
+}
+
+/* Custom Nav Links */
+.luxury-nav-link {
+  color: rgba(255, 255, 255, 0.85) !important;
+  font-size: 1rem !important;
+  font-weight: 300 !important;
+  padding: 5px 0 !important;
+  position: relative;
+  transition: all 0.3s ease;
+  letter-spacing: 0.5px;
+}
+
+/* Hover and Active State (Gold Color) */
+.luxury-nav-link:hover,
+.luxury-nav-link.active {
+  color: var(--gold-primary) !important;
+}
+
+/* Underline Animation on Hover/Active */
+.luxury-nav-link::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  width: 0%;
+  height: 2px;
+  background-color: var(--gold-primary);
+  transition: all 0.3s ease;
+  transform: translateX(-50%);
+}
+
+.luxury-nav-link:hover::after,
+.luxury-nav-link.active::after {
+  width: 100%;
+}
+
+/* Mobile Toggle Icon */
+.navbar-toggler {
+  color: var(--gold-primary) !important;
+}
+
+/* Responsive Mobile Glassmorphism Menu */
+@media (max-width: 991px) {
+  .mobile-luxury-menu {
+    background: rgba(20, 20, 20, 0.95);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border: 1px solid rgba(226, 192, 141, 0.2);
+    border-radius: 12px;
+    margin-top: 15px;
+    padding: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.8);
+  }
+
+  .luxury-nav-link::after {
+    display: none; /* Mobile screen par line-underline drop kar di h clean look ke liye */
+  }
+}

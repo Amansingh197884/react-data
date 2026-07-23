@@ -133,6 +133,44 @@ export default function Home() {
             title: "Landscape"
         }
     ];
+        const [activeTab, setActiveTab] = useState('ground');
+
+    const floorData = {
+        ground: {
+            title: "Ground Floor - Living & Entertainment",
+            area: "328 SQM (3,530 SQFT)",
+            image: "https://images.unsplash.com/photo-1600585152220-90363fe7e115?auto=format&fit=crop&w=1200&q=80",
+            features: [
+                "Grand Double-Height Entrance Lobby",
+                "Formal & Casual Family Living Areas",
+                "Show Kitchen & Back-of-House Prep Kitchen",
+                "Direct Garden & Deck Access",
+                "Guest Suite with En-suite Bathroom"
+            ]
+        },
+        first: {
+            title: "First Floor - Private Sanctuary",
+            area: "240 SQM (2,583 SQFT)",
+            image: "https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=1200&q=80",
+            features: [
+                "Master Suite with Private Balcony & Walk-in Closet",
+                "3 Secondary En-suite Bedrooms",
+                "Private Family Lounge / Study Area",
+                "Panoramic Parkland Views"
+            ]
+        },
+        terrace: {
+            title: "Rooftop Terrace & Sky Deck",
+            area: "148 SQM (1,593 SQFT)",
+            image: "https://images.unsplash.com/photo-1512917774080-9991f1c4c750?auto=format&fit=crop&w=1200&q=80",
+            features: [
+                "360-Degree Sunset & Ocean Views",
+                "Outdoor Dining & BBQ Lounge Area",
+                "Optional Plunge Pool / Jacuzzi Provision"
+            ]
+        }
+    };
+
 
     return (
         <div className="Full min-vh-100 overflow-x-hidden position-relative home-wrapper">
@@ -365,6 +403,57 @@ export default function Home() {
                     </button>
                 </div>
             )}
+
+
+
+            {/* new  */}
+                 <section className="modern-section bg-light-mesh">
+                <div className="container">
+                    <div className="text-center section-header">
+                        <span className="badge-pill">Architectural Precision</span>
+                        <h2 className="main-heading">Thoughtfully Designed Layouts</h2>
+                        <div className="gold-divider"></div>
+                    </div>
+
+                    <div className="floor-tabs-container">
+                        <button className={`tab-btn ${activeTab === 'ground' ? 'active' : ''}`} onClick={() => setActiveTab('ground')}>
+                            Ground Floor
+                        </button>
+                        <button className={`tab-btn ${activeTab === 'first' ? 'active' : ''}`} onClick={() => setActiveTab('first')}>
+                            First Floor
+                        </button>
+                        <button className={`tab-btn ${activeTab === 'terrace' ? 'active' : ''}`} onClick={() => setActiveTab('terrace')}>
+                            Rooftop Deck
+                        </button>
+                    </div>
+
+                    <div className="row g-4 align-items-center mt-3">
+                        <div className="col-lg-6">
+                            <div className="interactive-img-card" onClick={() => setSelectedPlanImg(floorData[activeTab].image)}>
+                                <img src={floorData[activeTab].image} alt={floorData[activeTab].title} className="img-fluid rounded-4 shadow-lg" />
+                                <div className="img-overlay">
+                                    <span> Click to View High-Res Plan</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div className="col-lg-6">
+                            <div className="plan-details-box">
+                                <span className="area-badge">{floorData[activeTab].area}</span>
+                                <h3 className="plan-title mt-2">{floorData[activeTab].title}</h3>
+                                <hr className="my-3 opacity-10" />
+                                <ul className="feature-list list-unstyled">
+                                    {floorData[activeTab].features.map((item, idx) => (
+                                        <li key={idx}>{item}</li>
+                                    ))}
+                                </ul>
+                                <button className="btn btn-gold mt-3">
+                                   Download Blueprint PDF
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
         </div>
     );
 }
