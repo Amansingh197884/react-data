@@ -362,6 +362,9 @@
         padding-left: 15px;
         padding-right: 15px;
     }
+    .hero-section-container{
+        height: 70vh;
+    }
 
     .top-brand-subtitle {
         font-size: 0.75rem;
