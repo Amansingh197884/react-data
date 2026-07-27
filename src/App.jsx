@@ -16,18 +16,17 @@ import Footer from './components/Footer.jsx';
 import Property from './components/Property.jsx'
 import PropertyDetails from './components/PropertyDetails.jsx'
 import Aboutpage from './components/Aboutpage.jsx'
-
+import Featured from './components/Featured.jsx'
 const MainPage = () => {
   return (
     <>
       <Home />
       <High />
-            <Gallery />
-            <Slide />
-
+      <Gallery />
+      <Slide />
       <AboutUs />
-
       <VisionMission />
+<Featured/>
 
 
       {/* <Amenities /> */}

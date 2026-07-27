@@ -12,7 +12,7 @@
 
 .contact-section {
   width: 100%;
-  background-color: var(--dark-bg);
+  background-color: #090e0b;
   font-family: var(--font-sans);
   position: relative;
   overflow: hidden;
@@ -104,7 +104,6 @@
   animation: fadeInUp 1s ease-out forwards;
 }
 
-/* FIX: Label Alignment & Positioning */
 .form-group {
   position: relative;
   display: flex;
@@ -114,7 +113,7 @@
 }
 
 .custom-label {
-  position: static !important; /* Overlap fix karne ke liye */
+  position: static !important; 
   display: block !important;
   color: #ffffff !important;
   font-family: var(--font-serif) !important;

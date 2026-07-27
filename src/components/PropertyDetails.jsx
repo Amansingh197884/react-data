@@ -5,9 +5,12 @@ import {
     FaChevronRight,
     FaDownload,
     FaGlobe,
-    FaArrowDown
+    FaArrowDown,
+    FaBed,
+    FaRulerCombined,
+    FaBath,
+    FaCompass
 } from 'react-icons/fa';
-
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Navigation, Autoplay } from 'swiper/modules';
 
@@ -15,9 +18,8 @@ import 'swiper/css';
 import 'swiper/css/navigation';
 import './Home.css';
 
-const heroImages = [
-    "https://ora-uae.com/sites/default/files/styles/max_2944x2944/public/2026-02/Sunray-Villa-Hero.jpg?itok=BQeOjhJ7",
-];
+const PropertyBgImage = "https://i.pinimg.com/1200x/3f/9a/35/3f9a353e1b4cbb124563980c896ae9cf.jpg";
+const propertyCardImage = "https://i.pinimg.com/1200x/49/86/4c/49864c7d80b57ba5dc252d070efc3d32.jpg";
 
 const galleryImages = [
     {
@@ -51,12 +53,7 @@ export default function Home() {
     const [currentImgIndex, setCurrentImgIndex] = useState(0);
     const [selectedImgIndex, setSelectedImgIndex] = useState(null);
 
-    useEffect(() => {
-        const interval = setInterval(() => {
-            setCurrentImgIndex((prevIndex) => (prevIndex + 1) % heroImages.length);
-        }, 5000);
-        return () => clearInterval(interval);
-    }, []);
+   
 
     const openLightbox = (index) => {
         setSelectedImgIndex(index);
@@ -133,71 +130,130 @@ export default function Home() {
             title: "Landscape"
         }
     ];
-        const [activeTab, setActiveTab] = useState('ground');
 
-    const floorData = {
-        ground: {
-            title: "Ground Floor - Living & Entertainment",
-            area: "328 SQM (3,530 SQFT)",
-            image: "https://images.unsplash.com/photo-1600585152220-90363fe7e115?auto=format&fit=crop&w=1200&q=80",
-            features: [
-                "Grand Double-Height Entrance Lobby",
-                "Formal & Casual Family Living Areas",
-                "Show Kitchen & Back-of-House Prep Kitchen",
-                "Direct Garden & Deck Access",
-                "Guest Suite with En-suite Bathroom"
-            ]
+    // new floor plan
+    const FloorImages = [
+        {
+            id: 1,
+            url: "https://i.pinimg.com/1200x/d0/fc/eb/d0fceb317febcbf0368beb6db1ebeab1.jpg",
+            title: "Ground Floor Layout",
+            bhk: "3 BHK",
+            area: "1,850 Sq.Ft.",
+            baths: "3 Baths",
+            facing: "East Facing",
+            features: ["Living Room", "Dining Area", "2 Car Parking", "Lawn"]
         },
-        first: {
-            title: "First Floor - Private Sanctuary",
-            area: "240 SQM (2,583 SQFT)",
-            image: "https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=1200&q=80",
-            features: [
-                "Master Suite with Private Balcony & Walk-in Closet",
-                "3 Secondary En-suite Bedrooms",
-                "Private Family Lounge / Study Area",
-                "Panoramic Parkland Views"
-            ]
+        {
+            id: 2,
+            url: "https://i.pinimg.com/736x/b5/a5/10/b5a510c9eafaa5f3c6a172021af5bf0f.jpg",
+            title: "First Floor Plan",
+            bhk: "2 BHK + Study",
+            area: "1,420 Sq.Ft.",
+            baths: "2 Baths",
+            facing: "North-East",
+            features: ["Master Suite", "Private Balcony", "Study Room"]
         },
-        terrace: {
-            title: "Rooftop Terrace & Sky Deck",
-            area: "148 SQM (1,593 SQFT)",
-            image: "https://images.unsplash.com/photo-1512917774080-9991f1c4c750?auto=format&fit=crop&w=1200&q=80",
-            features: [
-                "360-Degree Sunset & Ocean Views",
-                "Outdoor Dining & BBQ Lounge Area",
-                "Optional Plunge Pool / Jacuzzi Provision"
-            ]
+        {
+            id: 3,
+            url: "https://i.pinimg.com/736x/0d/db/82/0ddb821540197828c6f3aab237db7f2f.jpg",
+            title: "Second Floor Premium Suite",
+            bhk: "2 BHK",
+            area: "1,250 Sq.Ft.",
+            baths: "2 Baths",
+            facing: "Sea View",
+            features: ["Ocean Front Balcony", "Open Kitchen", "Walk-in Closet"]
+        },
+        {
+            id: 4,
+            url: "https://i.pinimg.com/1200x/a2/44/24/a2442438d6556be7ded9b912f32b08a3.jpg",
+            title: "Penthouse & Show Kitchen",
+            bhk: "4 BHK Duplex",
+            area: "2,600 Sq.Ft.",
+            baths: "4 Baths",
+            facing: "North Facing",
+            features: ["Island Kitchen", "Terrace Garden", "Servant Room"]
+        },
+        {
+            id: 5,
+            url: "https://i.pinimg.com/736x/0c/05/33/0c05336f48e2e00ce57aa9f269186971.jpg",
+            title: "Rooftop & Pool Lounge",
+            bhk: "Terrace Area",
+            area: "1,100 Sq.Ft.",
+            baths: "1 Powder Room",
+            facing: "360 View",
+            features: ["Infinity Pool", "BBQ Counter", "Sundeck"]
         }
-    };
+    ];
 
+    const [selectedPlan, setSelectedPlan] = useState(null);
 
     return (
         <div className="Full min-vh-100 overflow-x-hidden position-relative home-wrapper">
-            <header
-                className="animated-hero hero-section text-white position-relative"
-                style={{ backgroundImage: `url(${heroImages[currentImgIndex]})` }}
-            >
-                {/* <div className="hero-overlay"></div> */}
+            <div className="Full min-vh-100 overflow-x-hidden position-relative home-wrapper">
 
-                <div className="container text-center hero-content-wrapper hero-content pt-5 mt-5">
-                    <div className="animate__animated animate__fadeInDown">
-                        <h1 className="display-4 fw-light mb-2 text-uppercase tracking-wider font-serif" style={{ letterSpacing: '-1px' }}>
-                            Find Your Place
-                        </h1>
-                        <span className="text-warning text-uppercase mb-2 tracking-wide font-serif border-bottom">
-                            Sunray-Villa-Hero Unique in concept, acts as a natural connection of nature
-                        </span>
-                    </div>
-                </div>
+                {/* New Hero Section Matching Design */}
+                <header className="hero-container" style={{ backgroundImage: `url(${PropertyBgImage})` }}>
 
-                <div className="explore-more-wrapper" onClick={scrollToNext}>
-                    <span className="explore-text">Explore More</span>
-                    <div className="capsule-arrow-btn">
-                        <FaArrowDown />
+                    {/* Hero Overlay Darkening / Tint */}
+                    <div className="hero-overlay"></div>
+
+                    {/* Main Content Area */}
+                    <div className="hero-content-wrapper">
+
+                        {/* Left Typography Block */}
+                        <div className="hero-left">
+                            <h1 className="hero-main-heading">
+                                Stop Searching.<br />
+                                Start Living.
+                            </h1>
+
+                            <p className="hero-subtext">
+                                Your Direct Path To The Home<br />
+                                You Deserve
+                            </p>
+
+                            <button className="contact-now-btn">
+                                Contact Now
+                            </button>
+                        </div>
+
+                        {/* Right Property Card & Badge */}
+                        <div className="hero-right">
+                            <div className="property-card-container">
+
+                                {/* "SOLD" Yellow Badge */}
+                                <div className="sold-badge">
+                                    <span>SOLD</span>
+                                </div>
+
+                                {/* Property Preview Floating Box */}
+                                <div className="property-card">
+                                    <img
+                                        src={propertyCardImage}
+                                        alt="Charming Family Ranch"
+                                        className="card-thumbnail"
+                                    />
+                                    <div className="card-details">
+                                        <h3 className="card-title">
+                                            Charming Family Ranch in Greenfield Estates
+                                        </h3>
+                                        <p className="card-specs">
+                                            3 Bed | 2 Bath | 167 Sqm
+                                        </p>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+
                     </div>
-                </div>
-            </header>
+
+                </header>
+
+                {/* Downstream section content can be added below */}
+            </div>
+
+
 
             <section id="villa-intro" className="villa-intro-section py-5">
                 <div className="container py-4">
@@ -234,14 +290,134 @@ export default function Home() {
                                 <button className="btn-pill-outline">
                                     DOWNLOAD BROCHURE <FaDownload className="ms-2" />
                                 </button>
-                               
+
                             </div>
                         </div>
                     </div>
                 </div>
             </section>
 
-         
+            {/* new  */}
+            {/* Floor Plan Section */}
+            <section className="fn-section py-5">
+                <div className="container-fluid p-4 py-4 position-relative">
+                    <div className="d-flex justify-content-between align-items-center mb-4">
+                        <h2 className="display-4 font-serif mb-0">Floor Plan</h2>
+
+                        <div className="swiper-custom-navigation">
+                            <button type="button" className="swiper-prev-btn">
+                                <FaChevronLeft />
+                            </button>
+                            <button type="button" className="swiper-next-btn">
+                                <FaChevronRight />
+                            </button>
+                        </div>
+                    </div>
+
+                    <Swiper
+                        modules={[Navigation, Autoplay]}
+                        spaceBetween={20}
+                        slidesPerView={1.2}
+                        autoplay={{ delay: 3500, disableOnInteraction: false }}
+                        navigation={{
+                            prevEl: '.swiper-prev-btn',
+                            nextEl: '.swiper-next-btn',
+                        }}
+                        breakpoints={{
+                            576: { slidesPerView: 2 },
+                            768: { slidesPerView: 3 },
+                            1200: { slidesPerView: 3 }
+                        }}
+                        className="gallery-swiper"
+                    >
+                        {FloorImages.map((plan) => (
+                            <SwiperSlide key={plan.id}>
+                                <div
+                                    className="gallery-item"
+                                    onClick={() => setSelectedPlan(plan)}
+                                >
+                                    <img
+                                        src={plan.url}
+                                        alt={plan.title}
+                                        style={{ filter: 'blur(5px)', transition: '0.3s' }}
+                                    />
+                                    <div className="gallery-overlay">
+                                        <span>{plan.title}</span>
+                                        <small className="d-block text-white-50">{plan.bhk} • {plan.area}</small>
+                                    </div>
+                                </div>
+                            </SwiperSlide>
+                        ))}
+                    </Swiper>
+                </div>
+
+                {/* Detail Modal Overlay */}
+                {selectedPlan && (
+                    <div className="fp-modal-backdrop" onClick={() => setSelectedPlan(null)}>
+                        <div className="fp-modal-content" onClick={(e) => e.stopPropagation()}>
+                            <button type="button" className="fp-modal-close" onClick={() => setSelectedPlan(null)}>
+                                <FaTimes />
+                            </button>
+
+                            <div className="row g-0 align-items-center">
+                                <div className="col-lg-7">
+                                    <div className="fp-preview-box">
+                                        <img src={selectedPlan.url} alt={selectedPlan.title} />
+                                    </div>
+                                </div>
+
+                                <div className="col-lg-5">
+                                    <div className="fp-details-panel p-4 p-md-5">
+                                        <span className="badge bg-primary mb-2">{selectedPlan.bhk}</span>
+                                        <h3 className="fp-detail-title">{selectedPlan.title}</h3>
+
+                                        <div className="fp-stats-grid my-4">
+                                            <div className="fp-stat-item">
+                                                <FaRulerCombined className="fp-icon" />
+                                                <div>
+                                                    <small>Total Area</small>
+                                                    <h6>{selectedPlan.area}</h6>
+                                                </div>
+                                            </div>
+                                            <div className="fp-stat-item">
+                                                <FaBed className="fp-icon" />
+                                                <div>
+                                                    <small>Type</small>
+                                                    <h6>{selectedPlan.bhk}</h6>
+                                                </div>
+                                            </div>
+                                            <div className="fp-stat-item">
+                                                <FaBath className="fp-icon" />
+                                                <div>
+                                                    <small>Baths</small>
+                                                    <h6>{selectedPlan.baths}</h6>
+                                                </div>
+                                            </div>
+                                            <div className="fp-stat-item">
+                                                <FaCompass className="fp-icon" />
+                                                <div>
+                                                    <small>Facing</small>
+                                                    <h6>{selectedPlan.facing}</h6>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div className="fp-features-list">
+                                            <h5 className="mb-2">Key Highlights:</h5>
+                                            <ul>
+                                                {selectedPlan.features.map((feat, i) => (
+                                                    <li key={i}>{feat}</li>
+                                                ))}
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                )}
+            </section>
+            {/* new  */}
 
             {/* --- UNIT FEATURES SECTION --- */}
             <section className="unit-features-section py-5">
@@ -314,72 +490,7 @@ export default function Home() {
                 </div>
             </section>
 
-   <section className="layout-section py-5">
-                <div className="container py-4">
-                    <h2 className="layout-title text-start mb-5">Layout</h2>
 
-                    <div className="row g-4 align-items-center">
-                        <div className="col-lg-5 col-md-6">
-                            <div className="layout-details-card">
-                                <div className="layout-row highlight-row">
-                                    <span className="label font-weight-bold">PLOT AREA</span>
-                                    <span className="value font-weight-bold">992 – 1,672 SQM <small className="text-muted">(10,678 – 17,997 sq ft)</small></span>
-                                </div>
-                                <div className="layout-row">
-                                    <span className="label">Upper Ground Floor</span>
-                                    <span className="value">328 SQM</span>
-                                </div>
-                                <div className="layout-row">
-                                    <span className="label">External Area / Terraces / Balconies</span>
-                                    <span className="value">166 SQM</span>
-                                </div>
-                                <div className="layout-row">
-                                    <span className="label">Garage</span>
-                                    <span className="value">77 SQM</span>
-                                </div>
-                                <div className="layout-row">
-                                    <span className="label">Lower Ground Floor</span>
-                                    <span className="value">145 SQM</span>
-                                </div>
-                                <div className="layout-row accent-row mt-3">
-                                    <span className="label">Total SA</span>
-                                    <span className="value">716 SQM <small>(7,707 sq ft)</small></span>
-                                </div>
-                                <div className="layout-row accent-row">
-                                    <span className="label">TOTAL BUA</span>
-                                    <span className="value">637 SQM <small>(6,857 sq ft)</small></span>
-                                </div>
-                                <p className="footnote mt-3">*Including Service Rooms</p>
-                            </div>
-                        </div>
-
-                        <div className="col-lg-7 col-md-6">
-                            <div className="row g-3">
-                                <div className="col-6">
-                                    <div className="floorplan-box">
-                                        <img
-                                            src="https://i.pinimg.com/1200x/34/93/e3/3493e3ee5a649e9614db70b3606a9ebc.jpg"
-                                            alt="Ground Floor Layout"
-                                            className="img-fluid floorplan-img"
-                                        />
-                                        <span className="floorplan-label">Ground Floor</span>
-                                    </div>
-                                </div>
-                                <div className="col-6">
-                                    <div className="floorplan-box">
-                                        <img
-                                            src="https://i.pinimg.com/736x/18/fa/34/18fa34f99556a5a1a2976b0977fbd41b.jpg"
-                                            alt="First Floor Layout"
-                                            className="img-fluid floorplan-img"
-                                        />
-                                        <span className="floorplan-label">First Floor</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
 
 
             {/* --- LIGHTBOX MODAL --- */}
@@ -406,54 +517,7 @@ export default function Home() {
 
 
 
-            {/* new  */}
-                 <section className="modern-section bg-light-mesh">
-                <div className="container">
-                    <div className="text-center section-header">
-                        <span className="badge-pill">Architectural Precision</span>
-                        <h2 className="main-heading">Thoughtfully Designed Layouts</h2>
-                        <div className="gold-divider"></div>
-                    </div>
 
-                    <div className="floor-tabs-container">
-                        <button className={`tab-btn ${activeTab === 'ground' ? 'active' : ''}`} onClick={() => setActiveTab('ground')}>
-                            Ground Floor
-                        </button>
-                        <button className={`tab-btn ${activeTab === 'first' ? 'active' : ''}`} onClick={() => setActiveTab('first')}>
-                            First Floor
-                        </button>
-                        <button className={`tab-btn ${activeTab === 'terrace' ? 'active' : ''}`} onClick={() => setActiveTab('terrace')}>
-                            Rooftop Deck
-                        </button>
-                    </div>
-
-                    <div className="row g-4 align-items-center mt-3">
-                        <div className="col-lg-6">
-                            <div className="interactive-img-card" onClick={() => setSelectedPlanImg(floorData[activeTab].image)}>
-                                <img src={floorData[activeTab].image} alt={floorData[activeTab].title} className="img-fluid rounded-4 shadow-lg" />
-                                <div className="img-overlay">
-                                    <span> Click to View High-Res Plan</span>
-                                </div>
-                            </div>
-                        </div>
-                        <div className="col-lg-6">
-                            <div className="plan-details-box">
-                                <span className="area-badge">{floorData[activeTab].area}</span>
-                                <h3 className="plan-title mt-2">{floorData[activeTab].title}</h3>
-                                <hr className="my-3 opacity-10" />
-                                <ul className="feature-list list-unstyled">
-                                    {floorData[activeTab].features.map((item, idx) => (
-                                        <li key={idx}>{item}</li>
-                                    ))}
-                                </ul>
-                                <button className="btn btn-gold mt-3">
-                                   Download Blueprint PDF
-                                </button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
         </div>
     );
 }

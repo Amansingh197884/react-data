@@ -36,6 +36,7 @@ export default function ContactUs() {
 
     return (
         <section id="contact" className="contact-section py-5">
+            
             <div className="container-fluid px-3 px-md-5 my-md-4">
                 <div className="row g-4 g-lg-5 align-items-center">
                     
@@ -100,7 +101,7 @@ export default function ContactUs() {
                                             required 
                                             value={formData.name} 
                                             onChange={(e) => setFormData({ ...formData, name: e.target.value })} 
-                                            placeholder="Aman Singh" 
+                                            placeholder="Enter Your Name" 
                                         />
                                     </div>
 
@@ -112,7 +113,7 @@ export default function ContactUs() {
                                             required 
                                             value={formData.email} 
                                             onChange={(e) => setFormData({ ...formData, email: e.target.value })} 
-                                            placeholder="aman@example.com" 
+                                            placeholder="Enter Your Email" 
                                         />
                                     </div>
 
@@ -123,7 +124,7 @@ export default function ContactUs() {
                                             className="custom-input" 
                                             value={formData.phone} 
                                             onChange={(e) => setFormData({ ...formData, phone: e.target.value })} 
-                                            placeholder="+1 (555) 000-0000" 
+                                            placeholder="Enter Your Phone Number" 
                                         />
                                     </div>
 
@@ -135,7 +136,7 @@ export default function ContactUs() {
                                             required 
                                             value={formData.message} 
                                             onChange={(e) => setFormData({ ...formData, message: e.target.value })} 
-                                            placeholder="Outline your project timeline..."
+                                            placeholder="Enter Your Message..."
                                         ></textarea>
                                     </div>
 

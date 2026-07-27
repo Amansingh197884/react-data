@@ -1,0 +1,128 @@
+
+.featured-section {
+  background-color: #f8f9fa;
+}
+
+.section-title {
+  font-size: 2.5rem;
+  color: #2c3e50;
+  margin-bottom: 4px;
+}
+
+.section-subtitle {
+  color: #7f8c8d;
+  font-size: 0.95rem;
+}
+
+/* Card Styling */
+.project-card {
+  position: relative;
+  height: 380px;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+  cursor: grabbing;
+}
+
+.card-bg-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease, filter 0.5s ease;
+}
+
+.default-content {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding: 20px 15px;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.85), transparent);
+  color: #ffffff;
+  text-align: center;
+  transition: opacity 0.4s ease, transform 0.4s ease;
+  z-index: 2;
+}
+
+.project-title {
+  font-size: 1.8rem;
+  margin-bottom: 2px;
+  color: #ffffff;
+}
+
+.project-location {
+  font-size: 0.85rem;
+  font-weight: 500;
+  margin-bottom: 2px;
+  opacity: 0.9;
+}
+
+.project-city {
+  font-size: 0.8rem;
+  opacity: 0.75;
+  margin: 0;
+}
+
+.hover-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(255, 255, 255, 0.65);
+  backdrop-filter: blur(4px);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.4s ease;
+  z-index: 3;
+}
+
+.price-from {
+  font-size: 1.3rem;
+  color: #555;
+  margin-bottom: 2px;
+    /* font-family: 'Caveat', cursive, sans-serif; */
+
+}
+
+.price-amount {
+  /* font-family: 'Caveat', cursive, sans-serif; */
+  font-size: 2.2rem;
+  font-weight: 700;
+  color: #000;
+  margin-bottom: 12px;
+}
+
+.view-btn {
+  background-color: #d9534f; /* Red pill button from image */
+  color: #fff;
+  padding: 6px 24px;
+  border-radius: 20px;
+  text-decoration: none;
+  font-size: 0.85rem;
+  font-weight: 500;
+  box-shadow: 0 4px 10px rgba(217, 83, 79, 0.3);
+  transition: transform 0.2s ease, background-color 0.2s ease;
+}
+
+.view-btn:hover {
+  background-color: #c9302c;
+  color: #fff;
+  transform: scale(1.05);
+}
+
+/* Hover Animations */
+.project-card:hover .card-bg-img {
+  transform: scale(1.05);
+}
+
+.project-card:hover .default-content {
+  opacity: 0;
+  transform: translateY(20px);
+}
+
+.project-card:hover .hover-overlay {
+  opacity: 1;
+  visibility: visible;
+}

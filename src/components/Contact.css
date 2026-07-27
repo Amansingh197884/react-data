@@ -31,41 +31,41 @@
   margin-bottom: 1rem;
 }
 
-.form-control-custom {
+.custom-form-group .form-control-custom {
   border: none;
-  border-bottom: 1px solid #c8c8c8;
+  border-bottom: 1px solid #c8c8c8 !important;
   border-radius: 0px;
   padding: 8px 0px 6px 0px;
   background-color: transparent;
   outline: none;
   font-size: 1rem;
-  color: #212529;
+  color: #212529 !important;
   transition: border-bottom 0.3s ease;
 }
 
-.form-control-custom:focus {
-  border-bottom: 1px solid #000;
+.custom-form-group .form-control-custom:focus {
+  border-bottom: 1px solid #000 !important;
 }
 
-.custom-label {
-  position: absolute;
-  top: 8px;
+.custom-form-group .custom-label {
+  position: absolute !important;
+  top: 8px !important;
   left: 0;
-  color: #6c757d;
+  color: #000 !important;
   pointer-events: none;
   transition: all 0.25s ease;
   font-size: 0.95rem;
 }
 
-.form-control-custom:focus ~ .custom-label,
-.form-control-custom:not(:placeholder-shown) ~ .custom-label {
-  top: -16px;
+.custom-form-group .form-control-custom:focus ~ .custom-label,
+.custom-form-group .form-control-custom:not(:placeholder-shown) ~ .custom-label {
+  top: -16px !important;
   font-size: 0.75rem;
-  color: #000;
+  color: #000 !important;
   font-weight: 500;
 }
 
-.custom-globe-icon {
+.custom-form-group .custom-globe-icon {
   font-size: 0.85rem;
   padding-bottom: 6px;
 }
@@ -75,12 +75,12 @@
 }
 
 .phone-label-shift {
-  left: 38px;
+  left: 38px !important;
 }
 
 .form-control-custom:focus ~ .phone-label-shift,
 .form-control-custom:not(:placeholder-shown) ~ .phone-label-shift {
-  left: 0px;
+  left: 0px !important;
 }
 
 .custom-submit-btn {

@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { FaBars, FaTimes } from 'react-icons/fa';
 import { Link, useLocation } from 'react-router-dom';
-
+import Logo from "../Assets/Logo.png";
 export default function Navbar() {
   const [isNavOpen, setIsNavOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
@@ -21,10 +21,10 @@ export default function Navbar() {
 
   return (
     <>
-      <nav className={`navbar navbar-expand-lg luxury-navbar fixed-top ${isScrolled ? 'scrolled' : ''}`}>
-        <div className="container">
+      <nav className={`navbar navbar-expand-lg p-2 luxury-navbar fixed-top ${isScrolled ? 'scrolled' : ''}`}>
+        <div className="container-fluid">
           <Link className="navbar-brand luxury-brand" to="/" onClick={() => setIsNavOpen(false)}>
-            Aajneeti
+          <img src={Logo} alt="Logo" /> Ariahaus
           </Link>
 
           <button
@@ -36,7 +36,7 @@ export default function Navbar() {
           </button>
 
           <div className="collapse navbar-collapse d-none d-lg-block">
-            <ul className="navbar-nav ms-auto align-items-center gap-4">
+            <ul className="navbar-nav ms-auto align-items-center gap-5">
               <li className="nav-item">
                 <Link className={`nav-link luxury-nav-link ${location.pathname === '/' ? 'active' : ''}`} to="/">Home</Link>
               </li>

@@ -13,34 +13,34 @@ const testimonialsData = [
     name: "Anna Estrada",
     role: "Property Buyer",
     feedback: "Aajneeti delivered structural perfection and absolute transparency throughout our villa purchase journey in Pune.",
-    image: "https://images.unsplash.com/photo-1534528741775-53994a69daeb?q=80&w=200&auto=format&fit=crop"
+    image: "https://i.pinimg.com/736x/61/f9/82/61f982fa89499422030c803affc50ed0.jpg"
   },
   {
     id: 2,
     name: "Samantha Evans",
     role: "Real Estate Investor",
     feedback: "Exceptional architecture and seamless execution. The team redefines modern luxury living with great finesse.",
-    image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=200&auto=format&fit=crop"
+    image: "https://i.pinimg.com/736x/10/91/55/109155a4213dbcaf07bd7ed90393ef13.jpg"
   },
   {
     id: 3,
     name: "Julie Warren",
     role: "Penthouse Owner",
     feedback: "From structural luxury to small utility details, everything is engineered to high-performance standards.",
-    image: "https://images.unsplash.com/photo-1517841905240-472988babdf9?q=80&w=200&auto=format&fit=crop"
+    image: "https://i.pinimg.com/1200x/55/18/87/551887f865fe94c481ea9c43daf5e47e.jpg"
   },
   {
     id: 4,
     name: "Michael Chen",
     role: "Commercial Client",
     feedback: "A trustworthy developer that prioritizes quality and sustainability in every square foot they build.",
-    image: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?q=80&w=200&auto=format&fit=crop"
+    image: "https://i.pinimg.com/736x/8d/64/a2/8d64a2c405d85098f359e1d82dea6b8b.jpg"
   }
 ];
 
 export default function Testimonials() {
   return (
-    <section className="testimonials-section py-5" id="testimonials">
+    <section className="testimonials-section py-5 mb-5" id="testimonials">
       <div className="container-fluid px-3 px-md-5">
         
         {/* Section Title */}
