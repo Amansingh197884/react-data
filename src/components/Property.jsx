@@ -101,17 +101,17 @@ export default function ApartmentsSection() {
                         <div className="hero-content">
                             <Link to="/" className="text-decoration-none text-white me-1">HOME</Link>
                             <span>/ PROPERTY</span>
-                            <h1 className='font-serif'>Property</h1>
+                            <h1 className='mv-section-title'>Property</h1>
                         </div>
                     </div>
                 </header>
             </div>
 
             <section className="apartments-container">
-                <div className="apartments-header">
+                <div className="apartments-header align-items-center">
                     <div className="header-text">
-                        <h2>Top 10 apartments</h2>
-                        <p>From a room for a night to a loft for as long as you like, there's a RoamStay for every occasion.</p>
+                        <h1 className='mv-section-title text-black'>Top 10 apartments</h1>
+                        {/* <p>From a room for a night to a loft for as long as you like, there's a RoamStay for every occasion.</p> */}
                     </div>
 
                     <div className="navigation-buttons">
@@ -179,10 +179,10 @@ export default function ApartmentsSection() {
 
             {/* 2 */}
             <section className="apartments-container">
-                <div className="apartments-header">
+                <div className="apartments-header align-items-center">
                     <div className="header-text">
-                        <h2>Feature Projects</h2>
-                        <p>From a room for a night to a loft for as long as you like, there's a RoamStay for every occasion.</p>
+                        <h1 className='mv-section-title text-black'>Feature Projects</h1>
+                        {/* <p>From a room for a night to a loft for as long as you like, there's a RoamStay for every occasion.</p> */}
                     </div>
 
                     <div className="navigation-buttons">

@@ -58,7 +58,7 @@ const ContactPage = () => {
           
           {/* Header Section */}
           <div className="text-start mb-4">
-            <h1 className="fw-normal mb-3 text-dark custom-heading">
+            <h1 className="fw-normal mb-3 text-dark mv-section-title fs-2">
               Let's Start The Conversation
             </h1>
             <p className="text-secondary small fw-light lh-base custom-subtext">

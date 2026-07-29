@@ -48,7 +48,7 @@ export default function FeaturedProjects() {
     <section className="featured-section p-3 mb-5 mt-5">
       <Container-fluid>
         <div className="text-start mb-4">
-          <h2 className="font-serif display-4">Featured Projects</h2>
+          <h2 className="mv-section-title text-black">Featured Projects</h2>
         </div>
 
         <Swiper

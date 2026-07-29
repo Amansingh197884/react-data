@@ -26,7 +26,7 @@ const AmenitiesGallery = () => {
         
         {/* Header section with heading and Custom Navigation arrows */}
         <div className="d-flex justify-content-between align-items-center mb-4">
-          <h2 className="display-5 font-serif text-dark m-0">Amenities</h2>
+          <h2 className="mv-section-title text-dark m-0">Amenities</h2>
           <div className="d-flex gap-2">
             <button className="nav-btn custom-prev-btn" aria-label="Previous slide">
               <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M15 18l-6-6 6-6"/></svg>
