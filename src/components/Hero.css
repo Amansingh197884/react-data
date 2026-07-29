@@ -1,16 +1,26 @@
-@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700&family=Montserrat:wght@300;400;500;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600;700&family=Montserrat:wght@300;400;500;600&display=swap');
 
 :root {
-    --accent-gold: #e8c88b;
-    --accent-gold-bright: #f5d79e;
-    --title-gradient: linear-gradient(180deg, #ffffff 0%, #f3f4f6 60%, #e5e7eb 100%);
-    --btn-gradient: linear-gradient(180deg, #e8c88b 0%, #b8914b 100%);
-    --btn-text-color: #111827;
-    --overlay-bg: radial-gradient(ellipse at center, rgba(12, 28, 20, 0.2) 0%, rgba(4, 12, 8, 0.75) 100%),
-        linear-gradient(180deg, rgba(6, 18, 12, 0.45) 0%, rgba(3, 10, 6, 0.15) 40%, rgba(2, 8, 4, 0.8) 100%);
-    --glass-border: rgba(232, 200, 139, 0.3);
-    --btn-shadow: rgba(232, 200, 139, 0.35);
-    --font-serif: 'Cinzel', serif;
+    /* Colors extracted directly from Amyra Farms Inspect Element */
+    --accent-gold: #c9a45b;                  /* --hsr-champagne */
+    --accent-gold-bright: #e5be70;           /* Soft highlight gold */
+    --bg-night: #15110b;                    /* --hsr-night */
+    --bg-walnut: #211a11;                   /* --hsr-walnut */
+    --text-stone: #f6efde;                   /* --hsr-stone */
+    --text-paper: #faf4e6;                   /* --hsr-paper */
+
+    --title-gradient: linear-gradient(180deg, #faf4e6 0%, #f6efde 60%, #c9a45b 100%);
+    --btn-gradient: linear-gradient(180deg, #c9a45b 0%, #9e7a37 100%);
+    --btn-text-color: #15110b;
+    
+    --overlay-bg: radial-gradient(ellipse at center, rgba(33, 26, 17, 0.4) 0%, rgba(21, 17, 11, 0.85) 100%),
+        linear-gradient(180deg, rgba(21, 17, 11, 0.5) 0%, rgba(33, 26, 17, 0.3) 40%, rgba(21, 17, 11, 0.9) 100%);
+    
+    --glass-border: rgba(201, 164, 91, 0.25); /* --hsr-champagne-soft style border */
+    --btn-shadow: rgba(201, 164, 91, 0.35);
+    
+    /* Font Family updated from inspect element */
+    --font-serif: 'Cormorant Garamond', Georgia, 'Times New Roman', serif;
     --font-sans: 'Montserrat', sans-serif;
 }
 
@@ -28,7 +38,7 @@
 
 .luxury-navbar.scrolled {
     padding: 12px 0;
-    background: rgba(4, 12, 8, 0.95) !important;
+    background: rgba(21, 17, 11, 0.95) !important;
     backdrop-filter: blur(15px);
     -webkit-backdrop-filter: blur(15px);
     border-bottom: 1px solid var(--glass-border);
@@ -39,13 +49,13 @@
     font-family: var(--font-serif) !important;
     font-size: 1.8rem !important;
     font-weight: 500 !important;
-    color: #ffffff !important;
+    color: var(--text-paper) !important;
     letter-spacing: 1px;
     text-decoration: none;
 }
 
 .luxury-nav-link {
-    color: rgba(255, 255, 255, 0.9) !important;
+    color: rgba(246, 239, 222, 0.85) !important;
     font-size: 0.98rem !important;
     font-weight: 300 !important;
     padding: 5px 0 !important;
@@ -82,7 +92,7 @@
     left: 0;
     width: 100vw;
     height: 100vh;
-    background: rgba(0, 0, 0, 0.6);
+    background: rgba(0, 0, 0, 0.7);
     backdrop-filter: blur(4px);
     z-index: 1045;
     opacity: 0;
@@ -101,7 +111,7 @@
     right: -300px;
     width: 280px;
     height: 100vh;
-    background: rgba(6, 16, 12, 0.96);
+    background: rgba(21, 17, 11, 0.97);
     backdrop-filter: blur(20px);
     -webkit-backdrop-filter: blur(20px);
     border-left: 1px solid var(--glass-border);
@@ -122,7 +132,7 @@
     justify-content: space-between;
     align-items: center;
     padding-bottom: 20px;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    border-bottom: 1px solid rgba(201, 164, 91, 0.2);
     margin-bottom: 20px;
 }
 
@@ -149,7 +159,7 @@
 }
 
 .drawer-link {
-    color: #ffffff;
+    color: var(--text-paper);
     text-decoration: none;
     font-size: 1.1rem;
     font-weight: 300;
@@ -175,6 +185,7 @@
     justify-content: center;
     align-items: center;
     font-family: var(--font-sans);
+    background-color: var(--bg-night);
 }
 
 .hero-bg-slide {
@@ -230,9 +241,9 @@
 .main-hero-heading {
     font-family: var(--font-serif);
     font-size: clamp(2.4rem, 6vw, 5.2rem);
-    font-weight: 400;
-    letter-spacing: 4px;
-    line-height: 1.1;
+    font-weight: 300;
+    letter-spacing: 2px;
+    line-height: 1.05;
     margin-bottom: 25px;
     text-transform: capitalize;
     background: var(--title-gradient);
@@ -251,7 +262,7 @@
 .search-inner-form {
     display: flex;
     align-items: center;
-    background: rgba(10, 20, 15, 0.6);
+    background: rgba(33, 26, 17, 0.7);
     backdrop-filter: blur(16px);
     -webkit-backdrop-filter: blur(16px);
     border: 1px solid var(--glass-border);
@@ -284,7 +295,7 @@
 .vertical-divider {
     width: 1px;
     height: 28px;
-    background: rgba(255, 255, 255, 0.2);
+    background: rgba(201, 164, 91, 0.25);
 }
 
 .glass-select,
@@ -292,19 +303,19 @@
     background: transparent;
     border: none;
     outline: none;
-    color: #ffffff;
+    color: var(--text-stone);
     font-family: var(--font-sans);
     font-size: 0.95rem;
     width: 100%;
 }
 
 .glass-select option {
-    background-color: #05100a;
-    color: #ffffff;
+    background-color: var(--bg-walnut);
+    color: var(--text-paper);
 }
 
 .glass-input::placeholder {
-    color: rgba(255, 255, 255, 0.7);
+    color: rgba(246, 239, 222, 0.6);
 }
 
 .search-gold-btn {
@@ -326,7 +337,7 @@
 }
 
 .search-gold-btn:hover {
-    filter: brightness(1.1);
+    filter: brightness(1.15);
     box-shadow: 0 4px 20px var(--btn-shadow);
 }
 
@@ -339,7 +350,6 @@
     color: var(--accent-gold);
     font-size: 1.45rem;
     font-weight: 400;
-    /* font-style: italic; */
     margin-bottom: 6px;
     letter-spacing: 0.5px;
     text-shadow: 0 2px 10px rgba(0, 0, 0, 0.9);
@@ -347,7 +357,7 @@
 
 .tagline-sub {
     font-family: var(--font-serif);
-    color: rgba(255, 255, 255, 0.9);
+    color: var(--text-stone);
     font-size: 1.15rem;
     font-weight: 300;
     margin: 0;
@@ -395,7 +405,7 @@
 
     .search-item {
         width: 100%;
-        border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+        border-bottom: 1px solid rgba(201, 164, 91, 0.2);
         padding: 10px 4px;
     }
 

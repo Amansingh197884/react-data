@@ -4,7 +4,7 @@ import './MissionVision.css';
 
 export default function MissionVision() {
   return (
-    <section className="mission-vision-section py-5 mt-5" id="mission-vision">
+    <section className="mission-vision-section py-5 " id="mission-vision">
       <div className="container-fluid px-3 px-md-5">
         
         {/* Section Header */}

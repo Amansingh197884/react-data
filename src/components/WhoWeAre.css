@@ -1,21 +1,30 @@
-@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700&family=Montserrat:wght@300;400;500;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600;700&family=Montserrat:wght@300;400;500;600&display=swap');
 
 :root {
-  --accent-gold: #e8c88b;
-  --accent-gold-bright: #f5d79e;
-  --btn-gradient: linear-gradient(180deg, #e8c88b 0%, #b8914b 100%);
-  --dark-bg: #090e0b;
-  --glass-border: rgba(232, 200, 139, 0.25);
-  --font-serif: 'Cinzel', serif;
+  /* Colors extracted directly from Amyra Farms */
+  --bg-walnut-dark: #1b150e;               /* Main section background (Earthy Dark Walnut) */
+  --bg-card-brown: rgba(48, 38, 27, 0.45);  /* Inside card background tone */
+  
+  --accent-gold: #c9a45b;                  /* --hsr-champagne (Gold tags & borders) */
+  --glass-border: rgba(201, 164, 91, 0.35); /* Distinct Gold/Champagne border */
+  
+  --text-paper: #faf4e6;                   /* --hsr-paper (Headings) */
+  --text-stone: #f6efde;                   /* --hsr-stone (Body text) */
+  
+  --btn-gradient: linear-gradient(180deg, #c9a45b 0%, #9e7a37 100%);
+  
+  /* Typography */
+  --font-serif: 'Cormorant Garamond', Georgia, 'Times New Roman', serif;
   --font-sans: 'Montserrat', sans-serif;
 }
 
 .who-we-are-section {
   width: 100%;
-  background-color: var(--dark-bg);
+  background-color: var(--bg-walnut-dark); /* Warm Walnut Brown background */
   font-family: var(--font-sans);
   position: relative;
   overflow: hidden;
+  padding: 80px 0;
 }
 
 .wwa-left-col {
@@ -33,9 +42,9 @@
     height: 70%;
     background: linear-gradient(
       180deg,
-      rgba(232, 200, 139, 0) 0%,
-      rgba(232, 200, 139, 0.25) 50%,
-      rgba(232, 200, 139, 0) 100%
+      rgba(201, 164, 91, 0) 0%,
+      rgba(201, 164, 91, 0.3) 50%,
+      rgba(201, 164, 91, 0) 100%
     );
   }
 }
@@ -47,9 +56,9 @@
 .wwa-tag {
   font-family: var(--font-serif);
   color: var(--accent-gold);
-  font-size: 0.82rem;
+  font-size: 0.85rem;
   letter-spacing: 3.5px;
-  font-weight: 500;
+  font-weight: 600;
   display: block;
   margin-bottom: 12px;
   text-transform: uppercase;
@@ -58,15 +67,16 @@
 .wwa-heading {
   font-family: var(--font-serif);
   font-size: clamp(2.2rem, 4.2vw, 3.8rem);
-  font-weight: 400;
-  color: #ffffff;
+  font-weight: 300;
+  color: var(--text-paper);
   margin-bottom: 24px;
-  letter-spacing: 1px;
+  letter-spacing: 0.5px;
   line-height: 1.15;
 }
 
 .wwa-description {
-  color: rgba(255, 255, 255, 0.88);
+  color: var(--text-stone);
+  opacity: 0.88;
   font-size: 1.05rem;
   line-height: 1.8;
   font-weight: 300;
@@ -74,7 +84,8 @@
 }
 
 .wwa-subtext {
-  color: rgba(255, 255, 255, 0.65);
+  color: var(--text-stone);
+  opacity: 0.65;
   font-size: 0.92rem;
   line-height: 1.7;
   font-weight: 300;
@@ -82,11 +93,11 @@
 }
 
 .experience-glass-card {
-  background: rgba(18, 26, 21, 0.55);
-  backdrop-filter: blur(16px);
-  -webkit-backdrop-filter: blur(16px);
+  background: var(--bg-card-brown);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
   border: 1px solid var(--glass-border);
-  border-radius: 20px;
+  border-radius: 4px;                       /* Luxury sharp corners like Amyra Farms cards */
   padding: 50px 35px;
   transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
   animation: fadeInUp 1.2s ease-out forwards;
@@ -101,7 +112,7 @@
   left: -100%;
   width: 100%;
   height: 100%;
-  background: linear-gradient(90deg, transparent, rgba(232, 200, 139, 0.08), transparent);
+  background: linear-gradient(90deg, transparent, rgba(201, 164, 91, 0.12), transparent);
   transition: left 0.7s ease;
 }
 
@@ -110,21 +121,21 @@
 }
 
 .experience-glass-card:hover {
-  transform: translateY(-6px);
-  border-color: rgba(232, 200, 139, 0.5);
-  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.7), 0 0 20px rgba(232, 200, 139, 0.12);
+  transform: translateY(-4px);
+  border-color: rgba(201, 164, 91, 0.75);
+  box-shadow: 0 12px 30px rgba(15, 10, 5, 0.5);
 }
 
 .stat-number {
   font-family: var(--font-serif);
   font-size: clamp(3.5rem, 6vw, 5rem);
-  font-weight: 500;
-  background: linear-gradient(180deg, #ffffff 0%, #e8c88b 100%);
+  font-weight: 400;
+  background: linear-gradient(180deg, #faf4e6 0%, #c9a45b 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   line-height: 1;
   margin-bottom: 15px;
-  filter: drop-shadow(0px 4px 10px rgba(0, 0, 0, 0.8));
+  filter: drop-shadow(0px 4px 10px rgba(0, 0, 0, 0.5));
 }
 
 .stat-title {
@@ -137,7 +148,8 @@
 }
 
 .stat-description {
-  color: rgba(255, 255, 255, 0.75);
+  color: var(--text-stone);
+  opacity: 0.75;
   font-size: 0.92rem;
   line-height: 1.6;
   font-weight: 300;
@@ -167,6 +179,10 @@
 }
 
 @media (max-width: 991px) {
+  .who-we-are-section {
+    padding: 50px 0;
+  }
+
   .experience-glass-card {
     padding: 35px 25px;
   }

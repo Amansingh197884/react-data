@@ -3,7 +3,7 @@ import './WhoWeAre.css';
 
 export default function WhoWeAre() {
   return (
-    <section className="who-we-are-section py-5 mb-5" id="who-we-are">
+    <section className="who-we-are-section py-5 " id="who-we-are">
       <div className="container-fluid px-3 px-md-5">
         <div className="row align-items-center g-4 g-lg-5">
           

@@ -1,0 +1,180 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&family=Montserrat:wght@300;400;500;600&display=swap');
+
+:root {
+  /* Colors matched with Amyra Farms Dark/Walnut Theme */
+  --bg-walnut-dark: #15110b;               /* Deep Walnut Background */
+  --accent-gold: #c9a45b;                  /* Champagne Gold */
+  --glass-border: rgba(201, 164, 91, 0.35); /* Subtle Champagne outline */
+  
+  --text-paper: #faf4e6;                   /* Headings & Light text */
+  --text-stone: #f6efde;                   /* Subheadings & Badges */
+  
+  --btn-gradient: linear-gradient(180deg, #c9a45b 0%, #9e7a37 100%);
+  
+  /* Fonts */
+  --font-serif: 'Cormorant Garamond', Georgia, 'Times New Roman', serif;
+  --font-sans: 'Montserrat', sans-serif;
+}
+
+.amenities-gallery-section {
+  width: 100%;
+  background-color: var(--bg-walnut-dark);
+  font-family: var(--font-sans);
+  overflow: hidden;
+}
+
+/* Header Section */
+.gallery-section-tag {
+  font-family: var(--font-serif);
+  color: var(--accent-gold);
+  font-size: 0.85rem;
+  letter-spacing: 3.5px;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.gallery-section-title {
+  font-family: var(--font-serif);
+  font-size: clamp(2rem, 4vw, 3.2rem);
+  font-weight: 300;
+  color: var(--text-paper);
+  letter-spacing: 0.5px;
+}
+
+/* Custom Navigation Buttons */
+.custom-prev-btn, .custom-next-btn {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: transparent;
+  border: 1px solid var(--glass-border);
+  color: var(--accent-gold);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.custom-prev-btn:hover, .custom-next-btn:hover {
+  background: var(--btn-gradient);
+  color: var(--bg-walnut-dark);
+  border-color: transparent;
+  box-shadow: 0 4px 15px rgba(201, 164, 91, 0.35);
+}
+
+/* Slide Cards Styling */
+.amenities-card {
+  height: 320px;
+  border-radius: 4px;                      /* Sharp luxury corners */
+  border: 1px solid var(--glass-border);
+  cursor: pointer;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+  position: relative;
+}
+
+.card-img-zoom {
+  transition: transform 0.8s ease;
+}
+
+.card-gradient-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, rgba(21, 17, 11, 0.85) 0%, rgba(21, 17, 11, 0.1) 60%, transparent 100%);
+  pointer-events: none;
+}
+
+.amenities-card:hover .card-img-zoom {
+  transform: scale(1.08);
+}
+
+.amenities-card:hover {
+  border-color: rgba(201, 164, 91, 0.7);
+  box-shadow: 0 12px 35px rgba(201, 164, 91, 0.15);
+}
+
+/* Label/Badge Position & Styling */
+.badge-title {
+  bottom: 20px;
+  left: 20px;
+  background: rgba(33, 26, 17, 0.88);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border: 1px solid var(--glass-border);
+  color: var(--text-paper);
+  font-family: var(--font-serif);
+  font-size: 1.05rem;
+  font-weight: 400;
+  letter-spacing: 0.5px;
+  transition: all 0.3s ease;
+  z-index: 2;
+}
+
+.amenities-card:hover .badge-title {
+  border-color: var(--accent-gold);
+  color: var(--accent-gold);
+}
+
+/* --- Lightbox Modal Overlay Effect --- */
+.lightbox-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(15, 11, 7, 0.92);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  z-index: 9999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.lightbox-content img {
+  max-width: 90vw;
+  max-height: 82vh;
+  border-radius: 6px;
+  border: 1px solid var(--glass-border);
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.8), 0 0 25px rgba(201, 164, 91, 0.2);
+  object-fit: contain;
+}
+
+.lightbox-close {
+  position: absolute;
+  top: 25px;
+  right: 35px;
+  color: var(--accent-gold);
+  font-size: 42px;
+  font-weight: 300;
+  cursor: pointer;
+  transition: 0.3s ease;
+  line-height: 1;
+}
+
+.lightbox-close:hover {
+  color: var(--text-paper);
+  transform: scale(1.1);
+}
+
+/* Entry Animation */
+.animate-zoom {
+  animation: zoomIn 0.35s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+@keyframes zoomIn {
+  from { transform: scale(0.85); opacity: 0; }
+  to { transform: scale(1); opacity: 1; }
+}
+
+@media (max-width: 768px) {
+  .amenities-card {
+    height: 280px;
+  }
+  
+  .badge-title {
+    font-size: 0.95rem;
+    bottom: 15px;
+    left: 15px;
+  }
+}

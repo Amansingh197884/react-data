@@ -1,29 +1,38 @@
-@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700&family=Montserrat:wght@300;400;500;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600;700&family=Montserrat:wght@300;400;500;600&display=swap');
 
 :root {
-  --accent-gold: #e8c88b;
-  --accent-gold-bright: #f5d79e;
-  --btn-gradient: linear-gradient(180deg, #e8c88b 0%, #b8914b 100%);
-  --dark-bg: #090e0b;
-  --glass-border: rgba(232, 200, 139, 0.25);
-  --font-serif: 'Cinzel', serif;
+  /* Colors extracted directly from this section image */
+  --bg-walnut-dark: #1b150e;               /* Main section background (Earthy Dark Walnut) */
+  --bg-card-brown: rgba(48, 38, 27, 0.45);  /* Inside card background tone */
+  
+  --accent-gold: #c9a45b;                  /* --hsr-champagne (Gold tags & borders) */
+  --glass-border: rgba(201, 164, 91, 0.35); /* Distinct Gold/Champagne border */
+  
+  --text-paper: #faf4e6;                   /* --hsr-paper (Card Titles) */
+  --text-stone: #f6efde;                   /* --hsr-stone (Body Text) */
+  
+  --btn-gradient: linear-gradient(180deg, #c9a45b 0%, #9e7a37 100%);
+  
+  /* Typography */
+  --font-serif: 'Cormorant Garamond', Georgia, 'Times New Roman', serif;
   --font-sans: 'Montserrat', sans-serif;
 }
 
 .mission-vision-section {
   width: 100%;
-  background-color: var(--dark-bg);
+  background-color: var(--bg-walnut-dark); /* Exact Warm Walnut Brown background */
   font-family: var(--font-sans);
   position: relative;
   overflow: hidden;
+  padding: 80px 0;
 }
 
 .mv-section-tag {
   font-family: var(--font-serif);
   color: var(--accent-gold);
-  font-size: 0.82rem;
+  font-size: 0.85rem;
   letter-spacing: 3.5px;
-  font-weight: 500;
+  font-weight: 600;
   display: block;
   margin-bottom: 8px;
   text-transform: uppercase;
@@ -32,17 +41,17 @@
 .mv-section-title {
   font-family: var(--font-serif);
   font-size: clamp(2rem, 4vw, 3.2rem);
-  font-weight: 400;
-  color: #ffffff;
+  font-weight: 300;
+  color: var(--text-paper);
   letter-spacing: 1px;
 }
 
 .mv-card {
-  background: rgba(18, 26, 21, 0.55);
-  backdrop-filter: blur(16px);
-  -webkit-backdrop-filter: blur(16px);
-  border: 1px solid var(--glass-border);
-  border-radius: 16px;
+  background: var(--bg-card-brown);       /* Same warm dark brown card tone as image */
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border: 1px solid var(--glass-border);   /* Exact Gold outline frame */
+  border-radius: 4px;                      /* Sharp, elegant luxury corners like image */
   padding: 40px 35px;
   transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
   position: relative;
@@ -56,7 +65,7 @@
   left: -100%;
   width: 100%;
   height: 100%;
-  background: linear-gradient(90deg, transparent, rgba(232, 200, 139, 0.08), transparent);
+  background: linear-gradient(90deg, transparent, rgba(201, 164, 91, 0.12), transparent);
   transition: left 0.7s ease;
 }
 
@@ -65,16 +74,16 @@
 }
 
 .mv-card:hover {
-  transform: translateY(-6px);
-  border-color: rgba(232, 200, 139, 0.5);
-  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.7), 0 0 20px rgba(232, 200, 139, 0.12);
+  transform: translateY(-4px);
+  border-color: rgba(201, 164, 91, 0.75);
+  box-shadow: 0 12px 30px rgba(15, 10, 5, 0.5);
 }
 
 .mv-icon-box {
-  width: 62px;
-  height: 62px;
+  width: 58px;
+  height: 58px;
   border-radius: 50%;
-  background: radial-gradient(circle, rgba(232, 200, 139, 0.2) 0%, rgba(232, 200, 139, 0.05) 100%);
+  background: rgba(201, 164, 91, 0.1);
   border: 1px solid var(--accent-gold);
   display: flex;
   align-items: center;
@@ -84,18 +93,18 @@
 
 .mv-icon {
   color: var(--accent-gold);
-  font-size: 1.5rem;
+  font-size: 1.4rem;
   transition: transform 0.4s ease;
 }
 
 .mv-card:hover .mv-icon-box {
   background: var(--btn-gradient);
-  box-shadow: 0 0 15px rgba(232, 200, 139, 0.4);
+  box-shadow: 0 0 15px rgba(201, 164, 91, 0.35);
 }
 
 .mv-card:hover .mv-icon {
-  color: #111827;
-  transform: scale(1.1);
+  color: var(--bg-walnut-dark);
+  transform: scale(1.08);
 }
 
 .mv-discover-btn {
@@ -121,9 +130,9 @@
 
 .mv-discover-btn:hover {
   background: var(--btn-gradient);
-  color: #111827;
+  color: var(--bg-walnut-dark);
   border-color: transparent;
-  box-shadow: 0 4px 15px rgba(232, 200, 139, 0.3);
+  box-shadow: 0 4px 15px rgba(201, 164, 91, 0.3);
 }
 
 .mv-discover-btn:hover .btn-arrow {
@@ -134,13 +143,14 @@
   font-family: var(--font-serif);
   font-size: 1.85rem;
   font-weight: 400;
-  color: #ffffff;
+  color: var(--text-paper);
   margin-bottom: 16px;
   letter-spacing: 0.5px;
 }
 
 .mv-card-text {
-  color: rgba(255, 255, 255, 0.82);
+  color: var(--text-stone);
+  opacity: 0.88;
   font-size: 0.98rem;
   line-height: 1.75;
   font-weight: 300;
@@ -148,17 +158,21 @@
 }
 
 @media (max-width: 768px) {
+  .mission-vision-section {
+    padding: 50px 0;
+  }
+
   .mv-card {
     padding: 28px 20px;
   }
 
   .mv-icon-box {
-    width: 52px;
-    height: 52px;
+    width: 50px;
+    height: 50px;
   }
 
   .mv-icon {
-    font-size: 1.25rem;
+    font-size: 1.2rem;
   }
 
   .mv-discover-btn {

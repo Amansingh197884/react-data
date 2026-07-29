@@ -5,7 +5,7 @@ import { Navigation, Autoplay } from 'swiper/modules';
 // Import Swiper styles
 import 'swiper/css';
 import 'swiper/css/navigation';
-import './Gallery.css'; 
+import './Slide.css'; 
 
 const amenitiesData = [
   { id: 1, title: 'Lounge Area', image: 'https://www.express-zenith.site/assets/img/a1-768w.jpg', price: 'Gym' },
@@ -21,12 +21,16 @@ const AmenitiesGallery = () => {
   const [activeImage, setActiveImage] = useState(null);
 
   return (
-    <section className="py-5 bg-light position-relative">
-      <div className="container-fluid mt-5">
+    <section className="amenities-gallery-section py-5 position-relative">
+      <div className="container-fluid px-3 px-md-5 my-4">
         
-        {/* Header section with heading and Custom Navigation arrows */}
-        <div className="d-flex justify-content-between align-items-center mb-4">
-          <h2 className="mv-section-title text-dark m-0">Amenities</h2>
+        {/* Header section with Tag, Heading & Custom Navigation arrows */}
+        <div className="d-flex justify-content-between align-items-end mb-4">
+          <div>
+            <span className="gallery-section-tag d-block mb-1">ESTATE AMENITIES</span>
+            <h2 className="gallery-section-title m-0">Amenities</h2>
+          </div>
+
           <div className="d-flex gap-2">
             <button className="nav-btn custom-prev-btn" aria-label="Previous slide">
               <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M15 18l-6-6 6-6"/></svg>
@@ -42,12 +46,12 @@ const AmenitiesGallery = () => {
           modules={[Navigation, Autoplay]}
           spaceBetween={24}
           slidesPerView={1}
-          autoplay={{ delay: 3000, disableOnInteraction: false }}
+          loop={true}
+          autoplay={{ delay: 3500, disableOnInteraction: false, pauseOnMouseEnter: true }}
           navigation={{
             prevEl: '.custom-prev-btn',
             nextEl: '.custom-next-btn',
           }}
-          // FIX 2: Dynamic elements load hone ke baad Swiper re-init ho
           onBeforeInit={(swiper) => {
             swiper.params.navigation.prevEl = '.custom-prev-btn';
             swiper.params.navigation.nextEl = '.custom-next-btn';
@@ -62,15 +66,16 @@ const AmenitiesGallery = () => {
           {amenitiesData.map((item) => (
             <SwiperSlide key={item.id}>
               <div 
-                className="amenities-card position-relative overflow-hidden shadow-sm"
+                className="amenities-card position-relative overflow-hidden"
                 onClick={() => setActiveImage(item.image)}
               >
                 <img 
                   src={item.image} 
                   alt={item.title} 
-                  className="w-100 h-100 object-fit-cover" 
+                  className="w-100 h-100 object-fit-cover card-img-zoom" 
                 />
-                <span className="badge-title position-absolute px-3 py-2 rounded-pill bg-white text-dark shadow-sm">
+                <div className="card-gradient-overlay" />
+                <span className="badge-title position-absolute px-3 py-2 rounded-pill">
                   {item.title}
                 </span>
               </div>

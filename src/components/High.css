@@ -1,18 +1,29 @@
-@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700&family=Montserrat:wght@300;400;500;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600;700&family=Montserrat:wght@300;400;500;600&display=swap');
 
 :root {
-  --accent-gold: #e8c88b;
-  --btn-gradient: linear-gradient(180deg, #fce08b 0%, #d4a347 100%);
-  --dark-bg: #090e0b;
-  --font-serif: 'Cinzel', serif;
+  /* Colors directly matched from Amyra Farms light/paper sections */
+  --bg-paper: #f5f0e6;                     /* --hsr-paper (Light Cream/Paper background) */
+  --bg-paper-alt: #ebd8be;                 /* Light warm accent */
+  --text-dark: #1a140c;                    /* --hsr-ink (Dark Charcoal/Walnut heading text) */
+  --text-muted-dark: rgba(26, 20, 12, 0.75); /* Muted body text for light background */
+  
+  --accent-gold: #c9a45b;                  /* --hsr-champagne (Gold taglines & accents) */
+  --btn-gradient: linear-gradient(180deg, #c9a45b 0%, #a17f3b 100%);
+  --btn-text-color: #ffffff;
+  
+  /* Font Family */
+  --font-serif: 'Cormorant Garamond', Georgia, 'Times New Roman', serif;
   --font-sans: 'Montserrat', sans-serif;
 }
 
 .about-section-container {
   width: 100%;
-  background-color: black;
+  /* background-color: var(--bg-paper);  */
+       /* Light paper background like images */
   font-family: var(--font-sans);
+      background: linear-gradient(180deg, #faf4e6 0%, #f6efde 100%);
   overflow: hidden;
+  padding: 80px 0;
 }
 
 .about-left-col {
@@ -30,9 +41,9 @@
     height: 75%;
     background: linear-gradient(
       180deg,
-      rgba(232, 200, 139, 0) 0%,
-      rgba(232, 200, 139, 0.25) 50%,
-      rgba(232, 200, 139, 0) 100%
+      rgba(201, 164, 91, 0) 0%,
+      rgba(201, 164, 91, 0.3) 50%,
+      rgba(201, 164, 91, 0) 100%
     );
   }
 }
@@ -43,30 +54,31 @@
 
 .about-tag {
   font-family: var(--font-serif);
-  color: var(--accent-gold);
-  font-size: 0.82rem;
+  color: var(--accent-gold);               /* Champagne Gold Tagline */
+  font-size: 0.85rem;
   letter-spacing: 3.5px;
-  font-weight: 500;
+  font-weight: 600;
+  text-transform: uppercase;
   display: block;
-  margin-bottom: 10px;
+  margin-bottom: 12px;
 }
 
 .about-heading {
   font-family: var(--font-serif);
   font-size: clamp(2.4rem, 4.5vw, 3.8rem);
   font-weight: 400;
-  color: #ffffff;
+  color: var(--text-dark);                 /* Dark Ink text on light background */
   margin-bottom: 24px;
-  letter-spacing: 1px;
+  letter-spacing: 0.5px;
   line-height: 1.1;
 }
 
 .about-description {
   font-family: var(--font-sans);
-  color: rgba(255, 255, 255, 0.85);
+  color: var(--text-muted-dark);          /* Dark readable body text */
   font-size: 1rem;
-  line-height: 1.8;
-  font-weight: 300;
+  line-height: 1.85;
+  font-weight: 400;
   margin-bottom: 35px;
 }
 
@@ -75,21 +87,21 @@
   border: none;
   border-radius: 50px;
   padding: 14px 36px;
-  color: #111827;
+  color: var(--btn-text-color);
   font-family: var(--font-sans);
   font-weight: 600;
   font-size: 0.9rem;
   letter-spacing: 0.5px;
   cursor: pointer;
   transition: all 0.3s ease;
-  box-shadow: 0 4px 15px rgba(232, 200, 139, 0.2);
+  box-shadow: 0 4px 15px rgba(201, 164, 91, 0.3);
   animation: pulseGlow 3s infinite alternate;
 }
 
 .discover-btn:hover {
   transform: translateY(-3px) scale(1.02);
   filter: brightness(1.1);
-  box-shadow: 0 8px 25px rgba(232, 200, 139, 0.4);
+  box-shadow: 0 8px 25px rgba(201, 164, 91, 0.45);
 }
 
 .about-image-wrapper {
@@ -97,6 +109,8 @@
   max-height: 480px;
   border-radius: 12px;
   overflow: hidden;
+  border: 1px solid rgba(201, 164, 91, 0.25);
+  box-shadow: 0 15px 35px rgba(26, 20, 12, 0.08);
   animation: fadeInUp 1.2s ease-out forwards;
 }
 
@@ -136,14 +150,18 @@
 
 @keyframes pulseGlow {
   0% {
-    box-shadow: 0 0 0 0 rgba(232, 200, 139, 0.3);
+    box-shadow: 0 0 0 0 rgba(201, 164, 91, 0.3);
   }
   100% {
-    box-shadow: 0 0 15px 5px rgba(232, 200, 139, 0.2);
+    box-shadow: 0 0 15px 5px rgba(201, 164, 91, 0.25);
   }
 }
 
 @media (max-width: 991px) {
+  .about-section-container {
+    padding: 50px 0;
+  }
+
   .about-img {
     height: 360px;
   }

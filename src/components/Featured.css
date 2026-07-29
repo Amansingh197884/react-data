@@ -1,34 +1,95 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&family=Montserrat:wght@300;400;500;600&display=swap');
+
+:root {
+  /* Colors matched directly from Amyra Farms Dark Theme */
+  --bg-walnut-dark: #15110b;               /* Deep Walnut background */
+  --bg-card-dark: rgba(33, 26, 17, 0.95);
+  
+  --accent-gold: #c9a45b;                  /* Champagne Gold */
+  --glass-border: rgba(201, 164, 91, 0.35); /* Gold outline border */
+  
+  --text-paper: #faf4e6;                   /* Headings */
+  --text-stone: #f6efde;                   /* Body text */
+  
+  --btn-gradient: linear-gradient(180deg, #c9a45b 0%, #9e7a37 100%);
+  
+  /* Fonts */
+  --font-serif: 'Cormorant Garamond', Georgia, 'Times New Roman', serif;
+  --font-sans: 'Montserrat', sans-serif;
+}
 
 .featured-section {
-  background-color: #f8f9fa;
+  width: 100%;
+  background-color: var(--bg-walnut-dark);
+  font-family: var(--font-sans);
+  overflow: hidden;
 }
 
-.section-title {
-  font-size: 2.5rem;
-  color: #2c3e50;
-  margin-bottom: 4px;
+/* Header Tagline & Title */
+.featured-tag {
+  font-family: var(--font-serif);
+  color: var(--accent-gold);
+  font-size: 0.85rem;
+  letter-spacing: 3.5px;
+  font-weight: 600;
+  text-transform: uppercase;
 }
 
-.section-subtitle {
-  color: #7f8c8d;
-  font-size: 0.95rem;
+.featured-section-title {
+  font-family: var(--font-serif);
+  font-size: clamp(2rem, 4vw, 3.2rem);
+  font-weight: 300;
+  color: var(--text-paper);
+  letter-spacing: 0.5px;
+}
+
+/* Custom Swiper Navigation Buttons */
+.swiper-prev-btn,
+.swiper-next-btn {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: transparent;
+  border: 1px solid var(--glass-border);
+  color: var(--accent-gold);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.swiper-prev-btn:hover,
+.swiper-next-btn:hover {
+  background: var(--btn-gradient);
+  color: var(--bg-walnut-dark);
+  border-color: transparent;
+  box-shadow: 0 4px 15px rgba(201, 164, 91, 0.35);
+}
+
+.swiper-button-disabled {
+  opacity: 0.35;
+  cursor: not-allowed;
+  border-color: rgba(201, 164, 91, 0.15);
 }
 
 /* Card Styling */
 .project-card {
   position: relative;
-  height: 380px;
-  border-radius: 16px;
+  height: 420px;
+  border-radius: 4px;                       /* Clean luxury edges */
   overflow: hidden;
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
-  cursor: grabbing;
+  border: 1px solid var(--glass-border);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.6);
+  cursor: pointer;
 }
 
 .card-bg-img {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  transition: transform 0.5s ease, filter 0.5s ease;
+  transition: transform 0.8s ease, filter 0.8s ease;
 }
 
 .default-content {
@@ -36,38 +97,47 @@
   bottom: 0;
   left: 0;
   width: 100%;
-  padding: 20px 15px;
-  background: linear-gradient(to top, rgba(0, 0, 0, 0.85), transparent);
-  color: #ffffff;
-  text-align: center;
+  padding: 30px 20px 20px;
+  background: linear-gradient(to top, rgba(21, 17, 11, 0.95) 0%, rgba(21, 17, 11, 0.4) 70%, transparent 100%);
+  color: var(--text-paper);
+  text-align: left;
   transition: opacity 0.4s ease, transform 0.4s ease;
   z-index: 2;
 }
 
 .project-title {
-  font-size: 1.8rem;
-  margin-bottom: 2px;
-  color: #ffffff;
+  font-family: var(--font-serif);
+  font-size: 1.85rem;
+  font-weight: 400;
+  margin-bottom: 4px;
+  color: var(--text-paper);
+  letter-spacing: 0.5px;
 }
 
 .project-location {
-  font-size: 0.85rem;
-  font-weight: 500;
+  font-family: var(--font-sans);
+  font-size: 0.88rem;
+  font-weight: 400;
+  color: var(--accent-gold);
   margin-bottom: 2px;
-  opacity: 0.9;
+  letter-spacing: 0.5px;
 }
 
 .project-city {
-  font-size: 0.8rem;
+  font-family: var(--font-serif);
+  font-size: 0.85rem;
+  color: var(--text-stone);
   opacity: 0.75;
   margin: 0;
 }
 
+/* Hover Overlay */
 .hover-overlay {
   position: absolute;
   inset: 0;
-  background: rgba(255, 255, 255, 0.65);
-  backdrop-filter: blur(4px);
+  background: rgba(21, 17, 11, 0.88);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -76,53 +146,73 @@
   visibility: hidden;
   transition: all 0.4s ease;
   z-index: 3;
+  padding: 20px;
+  border: 1px solid var(--accent-gold);
 }
 
 .price-from {
-  font-size: 1.3rem;
-  color: #555;
-  margin-bottom: 2px;
-    /* font-family: 'Caveat', cursive, sans-serif; */
-
+  font-family: var(--font-serif);
+  font-size: 0.9rem;
+  color: var(--accent-gold);
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  margin-bottom: 4px;
 }
 
 .price-amount {
-  /* font-family: 'Caveat', cursive, sans-serif; */
-  font-size: 2.2rem;
-  font-weight: 700;
-  color: #000;
-  margin-bottom: 12px;
+  font-family: var(--font-serif);
+  font-size: 2.6rem;
+  font-weight: 400;
+  color: var(--text-paper);
+  margin-bottom: 20px;
+  letter-spacing: 0.5px;
 }
 
 .view-btn {
-  background-color: #d9534f; /* Red pill button from image */
-  color: #fff;
-  padding: 6px 24px;
-  border-radius: 20px;
+  background: var(--btn-gradient);
+  color: var(--bg-walnut-dark);
+  padding: 10px 28px;
+  border-radius: 50px;
   text-decoration: none;
+  font-family: var(--font-sans);
   font-size: 0.85rem;
-  font-weight: 500;
-  box-shadow: 0 4px 10px rgba(217, 83, 79, 0.3);
-  transition: transform 0.2s ease, background-color 0.2s ease;
+  font-weight: 600;
+  letter-spacing: 1px;
+  box-shadow: 0 4px 15px rgba(201, 164, 91, 0.3);
+  transition: all 0.3s ease;
 }
 
 .view-btn:hover {
-  background-color: #c9302c;
-  color: #fff;
-  transform: scale(1.05);
+  filter: brightness(1.15);
+  color: var(--bg-walnut-dark);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(201, 164, 91, 0.45);
 }
 
 /* Hover Animations */
 .project-card:hover .card-bg-img {
-  transform: scale(1.05);
+  transform: scale(1.08);
 }
 
 .project-card:hover .default-content {
   opacity: 0;
-  transform: translateY(20px);
+  transform: translateY(15px);
 }
 
 .project-card:hover .hover-overlay {
   opacity: 1;
   visibility: visible;
+}
+
+@media (max-width: 576px) {
+  .project-card {
+    height: 360px;
+  }
+  
+  .swiper-prev-btn,
+  .swiper-next-btn {
+    width: 38px;
+    height: 38px;
+    font-size: 0.8rem;
+  }
 }

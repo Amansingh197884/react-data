@@ -1,12 +1,12 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { Container } from 'react-bootstrap';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Navigation, Autoplay } from 'swiper/modules';
+import { FaChevronLeft, FaChevronRight } from 'react-icons/fa';
 
 import 'swiper/css';
 import 'swiper/css/navigation';
-import './Featured.css'; 
+import './Featured.css';
 
 const projectsData = [
   {
@@ -45,19 +45,39 @@ const projectsData = [
 
 export default function FeaturedProjects() {
   return (
-    <section className="featured-section p-3 mb-5 mt-5">
-      <Container-fluid>
-        <div className="text-start mb-4">
-          <h2 className="mv-section-title text-black">Featured Projects</h2>
+    <section className="featured-section py-5">
+      <div className="container-fluid px-3 px-md-5">
+        
+        {/* Header with Navigation Buttons */}
+        <div className="d-flex justify-content-between align-items-end mb-4">
+          <div>
+            <span className="featured-tag d-block mb-1">OUR PORTFOLIO</span>
+            <h2 className="featured-section-title m-0">Featured Projects</h2>
+          </div>
+
+          {/* Custom Prev & Next Buttons */}
+          <div className="swiper-nav-buttons d-flex gap-2">
+            <button className="swiper-prev-btn" aria-label="Previous Project">
+              <FaChevronLeft />
+            </button>
+            <button className="swiper-next-btn" aria-label="Next Project">
+              <FaChevronRight />
+            </button>
+          </div>
         </div>
 
+        {/* Swiper Slider */}
         <Swiper
           modules={[Navigation, Autoplay]}
+          navigation={{
+            prevEl: '.swiper-prev-btn',
+            nextEl: '.swiper-next-btn',
+          }}
           spaceBetween={24}
           slidesPerView={1}
           loop={true}
           autoplay={{
-            delay: 3000,
+            delay: 3500,
             disableOnInteraction: false,
             pauseOnMouseEnter: true
           }}
@@ -80,17 +100,17 @@ export default function FeaturedProjects() {
                 </div>
 
                 <div className="hover-overlay">
-                  <span className="price-from">from</span>
+                  <span className="price-from">starting from</span>
                   <h4 className="price-amount">{item.price}</h4>
                   <Link to="/PropertyDetails" className="view-btn">
-                    View
+                    View Project
                   </Link>
                 </div>
               </div>
             </SwiperSlide>
           ))}
         </Swiper>
-      </Container-fluid>
+      </div>
     </section>
   );
 }

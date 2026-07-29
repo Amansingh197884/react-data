@@ -3,7 +3,7 @@ import './High.css';
 
 export default function AboutUs() {
   return (
-    <section className="about-section-container py-5 mt-5" id="about">
+    <section className="about-section-container py-5 " id="about">
       <div className="container-fluid px-3 px-md-5">
         <div className="row align-items-center g-4 g-lg-5">
           

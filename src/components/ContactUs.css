@@ -1,29 +1,39 @@
-@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700&family=Montserrat:wght@300;400;500;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&family=Montserrat:wght@300;400;500;600&display=swap');
 
 :root {
-  --accent-gold: #e8c88b;
-  --accent-gold-bright: #f5d79e;
-  --btn-gradient: linear-gradient(180deg, #e8c88b 0%, #b8914b 100%);
-  --dark-bg: #090e0b;
-  --glass-border: rgba(232, 200, 139, 0.25);
-  --font-serif: 'Cinzel', serif;
+  /* Colors matched with Image 4 (Warm Walnut / Dark Theme) */
+  --bg-walnut-dark: #1b150e;               /* Main background (Earthy Dark Walnut) */
+  --bg-card-brown: rgba(48, 38, 27, 0.45);  /* Inside card background tone */
+  --input-bg: rgba(33, 26, 17, 0.7);        /* Input fields background */
+  
+  --accent-gold: #c9a45b;                  /* --hsr-champagne (Gold accents & icons) */
+  --glass-border: rgba(201, 164, 91, 0.35); /* Distinct Gold outline */
+  
+  --text-paper: #faf4e6;                   /* --hsr-paper (Headings & Values) */
+  --text-stone: #f6efde;                   /* --hsr-stone (Body & Labels) */
+  
+  --btn-gradient: linear-gradient(180deg, #c9a45b 0%, #9e7a37 100%);
+  
+  /* Exact Amyra Farms Font Family */
+  --font-serif: 'Cormorant Garamond', Georgia, 'Times New Roman', serif;
   --font-sans: 'Montserrat', sans-serif;
 }
 
 .contact-section {
   width: 100%;
-  background-color: #090e0b;
+  background-color: var(--bg-walnut-dark);  /* Warm Walnut background */
   font-family: var(--font-sans);
   position: relative;
   overflow: hidden;
+  padding: 80px 0;
 }
 
 .contact-tag {
   font-family: var(--font-serif);
   color: var(--accent-gold);
-  font-size: 0.82rem;
+  font-size: 0.85rem;
   letter-spacing: 3.5px;
-  font-weight: 500;
+  font-weight: 600;
   display: block;
   margin-bottom: 10px;
   text-transform: uppercase;
@@ -32,14 +42,16 @@
 .contact-title {
   font-family: var(--font-serif);
   font-size: clamp(2.4rem, 4.5vw, 3.8rem);
-  font-weight: 400;
-  color: #ffffff;
+  font-weight: 300;
+  color: var(--text-paper);
   margin-bottom: 18px;
-  letter-spacing: 1px;
+  letter-spacing: 0.5px;
 }
 
 .contact-subtext {
-  color: rgba(255, 255, 255, 0.82);
+  font-family: var(--font-sans);
+  color: var(--text-stone);
+  opacity: 0.85;
   font-size: 1rem;
   line-height: 1.7;
   font-weight: 300;
@@ -63,13 +75,13 @@
   height: 52px;
   border-radius: 50%;
   background: var(--btn-gradient);
-  color: #111827;
+  color: var(--bg-walnut-dark);
   display: flex;
   align-items: center;
   justify-content: center;
   font-size: 1.25rem;
   flex-shrink: 0;
-  box-shadow: 0 4px 15px rgba(232, 200, 139, 0.3);
+  box-shadow: 0 4px 15px rgba(201, 164, 91, 0.3);
   transition: transform 0.3s ease;
 }
 
@@ -78,7 +90,9 @@
 }
 
 .item-label {
-  color: rgba(255, 255, 255, 0.55);
+  font-family: var(--font-sans);
+  color: var(--text-stone);
+  opacity: 0.65;
   font-size: 0.8rem;
   display: block;
   margin-bottom: 2px;
@@ -86,21 +100,21 @@
 }
 
 .item-value {
-  color: #ffffff;
+  color: var(--text-paper);
   font-family: var(--font-serif);
-  font-size: 1.05rem;
+  font-size: 1.1rem;
   font-weight: 400;
   letter-spacing: 0.3px;
 }
 
 .contact-glass-card {
-  background: rgba(18, 26, 21, 0.55);
-  backdrop-filter: blur(16px);
-  -webkit-backdrop-filter: blur(16px);
+  background: var(--bg-card-brown);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
   border: 1px solid var(--glass-border);
-  border-radius: 20px;
+  border-radius: 6px;                      /* Sharp, luxury corners */
   padding: 45px 40px;
-  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.7);
+  box-shadow: 0 20px 40px rgba(15, 10, 5, 0.6);
   animation: fadeInUp 1s ease-out forwards;
 }
 
@@ -115,9 +129,9 @@
 .custom-label {
   position: static !important; 
   display: block !important;
-  color: #ffffff !important;
+  color: var(--text-paper) !important;
   font-family: var(--font-serif) !important;
-  font-size: 0.95rem !important;
+  font-size: 1.05rem !important;
   font-weight: 400 !important;
   margin-bottom: 8px !important;
   letter-spacing: 0.5px;
@@ -126,11 +140,11 @@
 
 .custom-input {
   width: 100%;
-  background: rgba(10, 20, 15, 0.6);
-  border: 1px solid rgba(232, 200, 139, 0.2);
-  border-radius: 8px;
+  background: var(--input-bg);
+  border: 1px solid var(--glass-border);
+  border-radius: 4px;
   padding: 12px 16px;
-  color: #ffffff;
+  color: var(--text-stone);
   font-family: var(--font-sans);
   font-size: 0.95rem;
   outline: none;
@@ -138,13 +152,13 @@
 }
 
 .custom-input::placeholder {
-  color: rgba(255, 255, 255, 0.35);
+  color: rgba(246, 239, 222, 0.4);
 }
 
 .custom-input:focus {
   border-color: var(--accent-gold);
-  box-shadow: 0 0 12px rgba(232, 200, 139, 0.25);
-  background: rgba(10, 20, 15, 0.85);
+  box-shadow: 0 0 12px rgba(201, 164, 91, 0.25);
+  background: rgba(33, 26, 17, 0.9);
 }
 
 .custom-textarea {
@@ -157,7 +171,7 @@
   border: none;
   border-radius: 50px;
   padding: 14px;
-  color: #111827;
+  color: var(--bg-walnut-dark);
   font-family: var(--font-sans);
   font-weight: 600;
   font-size: 0.95rem;
@@ -168,14 +182,14 @@
   gap: 10px;
   cursor: pointer;
   transition: all 0.3s ease;
-  box-shadow: 0 4px 18px rgba(232, 200, 139, 0.35);
+  box-shadow: 0 4px 18px rgba(201, 164, 91, 0.35);
   margin-top: 10px;
 }
 
 .contact-gold-btn:hover {
-  filter: brightness(1.1);
+  filter: brightness(1.15);
   transform: translateY(-2px);
-  box-shadow: 0 8px 25px rgba(232, 200, 139, 0.5);
+  box-shadow: 0 8px 25px rgba(201, 164, 91, 0.5);
 }
 
 .contact-gold-btn:disabled {
@@ -201,7 +215,9 @@
 }
 
 .success-sub {
-  color: rgba(255, 255, 255, 0.8);
+  font-family: var(--font-sans);
+  color: var(--text-stone);
+  opacity: 0.85;
   font-size: 1rem;
 }
 
@@ -217,6 +233,10 @@
 }
 
 @media (max-width: 991px) {
+  .contact-section {
+    padding: 50px 0;
+  }
+
   .contact-glass-card {
     padding: 35px 25px;
   }
@@ -239,7 +259,7 @@
   }
 
   .item-value {
-    font-size: 0.92rem;
+    font-size: 0.95rem;
   }
 
   .contact-glass-card {

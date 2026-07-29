@@ -1,28 +1,38 @@
-@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700&family=Montserrat:wght@300;400;500;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600;700&family=Montserrat:wght@300;400;500;600&display=swap');
 
 :root {
-  --accent-gold: #e8c88b;
-  --accent-gold-bright: #f5d79e;
-  --dark-bg: #090e0b;
-  --glass-border: rgba(232, 200, 139, 0.25);
-  --font-serif: 'Cinzel', serif;
+  /* Colors matched with Image 1 (Light Paper Theme) */
+  --bg-paper: #f5f0e6;                     /* Light Cream/Paper background */
+  --bg-card-paper: #faf4e6;                /* Card background tone */
+  
+  --text-dark: #1a140c;                    /* Ink Dark Charcoal for Headings & Names */
+  --text-muted-dark: rgba(26, 20, 12, 0.78); /* Body text for readability */
+  
+  --accent-gold: #c9a45b;                  /* Champagne Gold for tags & icons */
+  --glass-border: rgba(201, 164, 91, 0.3);  /* Champagne thin border */
+  
+  --btn-gradient: linear-gradient(180deg, #c9a45b 0%, #9e7a37 100%);
+  
+  /* Typography */
+  --font-serif: 'Cormorant Garamond', Georgia, 'Times New Roman', serif;
   --font-sans: 'Montserrat', sans-serif;
 }
 
 .testimonials-section {
   width: 100%;
-  background-color: black;
+  background-color: var(--bg-paper);      /* Light paper background */
   font-family: var(--font-sans);
   position: relative;
   overflow: hidden;
+  padding: 80px 0;
 }
 
 .testi-tag {
   font-family: var(--font-serif);
-  color: var(--accent-gold);
-  font-size: 0.82rem;
+  color: var(--accent-gold);               /* Champagne Gold tagline */
+  font-size: 0.85rem;
   letter-spacing: 3.5px;
-  font-weight: 500;
+  font-weight: 600;
   display: block;
   margin-bottom: 8px;
   text-transform: uppercase;
@@ -32,8 +42,8 @@
   font-family: var(--font-serif);
   font-size: clamp(2rem, 4vw, 3.2rem);
   font-weight: 400;
-  color: #ffffff;
-  letter-spacing: 1px;
+  color: var(--text-dark);                 /* Dark Ink text */
+  letter-spacing: 0.5px;
 }
 
 .swiper-container-wrapper {
@@ -52,22 +62,23 @@
 
 .testimonial-card {
   width: 100%;
-  background: black;
+  background: var(--bg-card-paper);        /* Paper tone card background */
   backdrop-filter: blur(16px);
   -webkit-backdrop-filter: blur(16px);
   border: 1px solid var(--glass-border);
-  border-radius: 16px;
+  border-radius: 8px;                       /* Luxury clean edges */
   padding: 35px 25px;
   text-align: center;
   position: relative;
   transition: all 0.4s ease;
   margin-bottom: 25px;
+  box-shadow: 0 10px 30px rgba(26, 20, 12, 0.05);
 }
 
 .testimonial-card-wrapper:hover .testimonial-card {
   transform: translateY(-6px);
-  border-color: rgba(232, 200, 139, 0.5);
-  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.7), 0 0 20px rgba(232, 200, 139, 0.12);
+  border-color: rgba(201, 164, 91, 0.6);
+  box-shadow: 0 15px 35px rgba(26, 20, 12, 0.1);
 }
 
 .quote-icon-box {
@@ -77,23 +88,22 @@
 .quote-icon {
   color: var(--accent-gold);
   font-size: 1.8rem;
-  opacity: 0.9;
+  opacity: 0.95;
 }
 
 .testimonial-text {
-  color: rgba(255, 255, 255, 0.85);
-  font-size: 0.95rem;
-  line-height: 1.7;
-  font-weight: 300;
-  /* font-style: italic; */
+  color: var(--text-muted-dark);
+  font-size: 0.98rem;
+  line-height: 1.75;
+  font-weight: 400;
   margin-bottom: 20px;
   min-height: 75px;
 }
 
 .client-name {
   font-family: var(--font-serif);
-  color: #ffffff;
-  font-size: 1.15rem;
+  color: var(--text-dark);
+  font-size: 1.2rem;
   font-weight: 500;
   margin-bottom: 4px;
   letter-spacing: 0.5px;
@@ -102,8 +112,8 @@
 .client-role {
   color: var(--accent-gold);
   font-size: 0.8rem;
-  font-weight: 400;
-  letter-spacing: 1px;
+  font-weight: 600;
+  letter-spacing: 1.5px;
   text-transform: uppercase;
   display: block;
 }
@@ -115,22 +125,22 @@
   transform: translateX(-50%) rotate(45deg);
   width: 18px;
   height: 18px;
-  background: rgba(18, 26, 21, 0.95);
+  background: var(--bg-card-paper);        /* Matching card color */
   border-right: 1px solid var(--glass-border);
   border-bottom: 1px solid var(--glass-border);
 }
 
 .testimonial-card-wrapper:hover .bubble-arrow {
-  border-color: rgba(232, 200, 139, 0.5);
+  border-color: rgba(201, 164, 91, 0.6);
 }
 
 .client-avatar-wrapper {
   width: 65px;
   height: 65px;
   border-radius: 50%;
-  padding: 3px;
-  /* background: linear-gradient(180deg, #e8c88b 0%, #b8914b 100%); */
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.6);
+  padding: 2px;
+  background: var(--accent-gold);
+  box-shadow: 0 8px 20px rgba(26, 20, 12, 0.15);
   transition: transform 0.3s ease;
 }
 
@@ -146,7 +156,7 @@
 }
 
 .swiper-pagination-bullet {
-  background: rgba(255, 255, 255, 0.4) !important;
+  background: rgba(26, 20, 12, 0.25) !important;
   opacity: 1 !important;
   width: 10px !important;
   height: 10px !important;
@@ -157,18 +167,20 @@
   background: var(--accent-gold) !important;
   width: 28px !important;
   border-radius: 10px !important;
-  box-shadow: 0 0 10px rgba(232, 200, 139, 0.5);
+  box-shadow: 0 0 10px rgba(201, 164, 91, 0.4);
 }
-.swiper-pagination-bullet-active {
-    background: var(--accent-gold) !important;
-}
+
 @media (max-width: 768px) {
+  .testimonials-section {
+    padding: 50px 0;
+  }
+
   .testimonial-card {
     padding: 28px 18px;
   }
 
   .testimonial-text {
-    font-size: 0.9rem;
+    font-size: 0.92rem;
     min-height: auto;
   }
 
