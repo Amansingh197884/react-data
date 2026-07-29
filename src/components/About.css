@@ -1,106 +1,292 @@
-.tracking-wider {
-    letter-spacing: 2px;
+/* Color Palette Variables (Pure #000 Black + Dark Cards + Gold) */
+:root {
+  --aria-black: #000000;
+  --aria-card-bg: #0c0d10;
+  --aria-card-hover: #14161d;
+  --aria-gold: #eec35d;
+  --aria-gold-dark: #c89c38;
+  --aria-text-white: #ffffff;
+  --aria-text-muted: #a0a5b5;
+  --aria-border: rgba(255, 255, 255, 0.08);
 }
 
-.contact-heroo {
-    position: relative;
-    height: 350px;
-    background-image: url('https://i.pinimg.com/736x/9e/a6/f2/9ea6f210710c28863bb3009105687db7.jpg');
-    background-size: cover;
-    background-position: center;
-    animation: scaleBackground 1.5s ease-out forwards;
+/* Master Pure Black Overrides */
+body, 
+.aria-about-page, 
+.aria-section {
+  background-color: var(--aria-black) !important;
+  color: var(--aria-text-white) !important;
 }
 
-.hero-overlayy {
-    position: absolute;
-    inset: 0;
-    background: rgba(0, 0, 0, 0.55);
-    display: flex;
-    align-items: center;
-    justify-content: center;
+.aria-bg-card-wrap {
+  background-color: #060708 !important;
+  border-top: 1px solid var(--aria-border);
+  border-bottom: 1px solid var(--aria-border);
 }
 
-.hero-contentt {
-    text-align: center;
-    color: #ffffff;
-    animation: fadeInUp 0.8s ease-out forwards;
+.aria-font-serif {
+  font-family: serif !important;
 }
 
-.badge {
-    color: #fff !important;
-    font-size: 1rem
+.aria-gold-sub {
+  color: var(--aria-gold);
+  font-size: 0.75rem;
+  letter-spacing: 2px;
+  font-weight: 700;
+  display: block;
+  text-transform: uppercase;
 }
 
-.new-btnb {
-
-    padding: 13px 22px;
-    border-radius: 50px;
-
-    border: 1px solid #211a11;
-    color: black;
-    box-shadow: 0 14px 36px rgba(33, 26, 17, 0.32);
-    transition: 0.4s;
+.aria-gold-text {
+  color: var(--aria-gold) !important;
 }
 
-.new-btnb:hover {
-    background: #211a11;
-    color: #fff;
-    border-color: #211a11;
-    box-shadow: 0 14px 36px rgba(33, 26, 17, 0.32);
-
-
+.aria-text-muted {
+  color: var(--aria-text-muted) !important;
 }
 
-.Apa h3 {
-    color: gold;
+.aria-gold-badge {
+  background: rgba(238, 195, 93, 0.12) !important;
+  color: var(--aria-gold) !important;
+  border: 1px solid var(--aria-gold) !important;
+  padding: 5px 14px;
+  border-radius: 30px;
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 1px;
 }
 
-.new {
-    background-color: #211a11;
+/* Hero Header */
+.aria-contact-hero {
+  position: relative;
+  height: 320px;
+  background-image: url('https://i.pinimg.com/736x/9e/a6/f2/9ea6f210710c28863bb3009105687db7.jpg');
+  background-size: cover;
+  background-position: center;
 }
 
-.bg-primary-subtle {
-    background-color: rgba(255, 217, 0, 0.53) !important;
+.aria-hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 1)) !important;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
-.feature-card i{
-    color: #000 !important;
+
+.aria-breadcrumb a {
+  color: var(--aria-gold);
+  font-size: 0.85rem;
+  letter-spacing: 1px;
 }
-.icon-wrapper {
-    width: 64px;
-    height: 64px;
+
+.aria-breadcrumb span {
+  color: var(--aria-text-muted);
+  font-size: 0.85rem;
+}
+
+/* Dark Card Styling */
+.aria-card-box {
+  background-color: var(--aria-card-bg) !important;
+  border: 1px solid var(--aria-border) !important;
+  transition: all 0.3s ease;
+}
+
+.aria-card-box:hover {
+  background-color: var(--aria-card-hover) !important;
+  border-color: rgba(238, 195, 93, 0.3) !important;
+  transform: translateY(-4px);
+}
+
+/* Buttons */
+.aria-btn-gold {
+  display: inline-block;
+  background: linear-gradient(135deg, var(--aria-gold), var(--aria-gold-dark)) !important;
+  color: #000000 !important;
+  font-weight: 700;
+  padding: 12px 30px;
+  border-radius: 40px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  border: none;
+}
+
+.aria-btn-gold:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(238, 195, 93, 0.35);
+}
+
+.aria-btn-outline {
+  display: inline-block;
+  background: transparent !important;
+  color: var(--aria-gold) !important;
+  border: 1px solid var(--aria-gold) !important;
+  font-weight: 600;
+  padding: 12px 30px;
+  border-radius: 40px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.aria-btn-outline:hover {
+  background: var(--aria-gold) !important;
+  color: #000000 !important;
+}
+
+.aria-link-gold {
+  color: var(--aria-gold) !important;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 0.9rem;
+}
+
+/* Purpose Cards (Vision / Mission) */
+.aria-purpose-card {
+  background: var(--aria-card-bg) !important;
+  border: 1px solid var(--aria-border) !important;
+  border-radius: 20px;
+  transition: all 0.3s ease;
+  height: 100%;
+}
+
+.aria-purpose-card:hover {
+  background: var(--aria-card-hover) !important;
+  border-color: rgba(238, 195, 93, 0.3) !important;
+  transform: translateY(-5px);
+}
+
+.aria-card-icon-box {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background: rgba(238, 195, 93, 0.1) !important;
+  color: var(--aria-gold) !important;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.2rem;
+  border: 1px solid rgba(238, 195, 93, 0.3);
+}
+
+/* Featured Project Cards */
+.aria-project-card {
+  position: relative;
+  border-radius: 16px;
+  overflow: hidden;
+  height: 280px;
+  border: 1px solid var(--aria-border);
+  background-color: var(--aria-card-bg);
+}
+
+.aria-project-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.aria-project-card:hover img {
+  transform: scale(1.08);
+}
+
+.aria-project-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.95), transparent 70%);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 20px;
+}
+
+.aria-project-overlay h4 {
+  color: #ffffff;
+  margin: 0;
+  font-family: serif;
+  font-size: 1.25rem;
+}
+
+.aria-project-overlay small {
+  color: var(--aria-gold);
+}
+
+.aria-icon-circle {
+  width: 54px;
+  height: 54px;
+  border-radius: 50%;
+  background: rgba(238, 195, 93, 0.1) !important;
+  color: var(--aria-gold) !important;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.4rem;
+  border: 1px solid rgba(238, 195, 93, 0.2);
+}
+
+/* FAQ Dark Accordion */
+.aria-faq-container {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.aria-faq-item {
+  background: var(--aria-card-bg) !important;
+  border: 1px solid var(--aria-border) !important;
+  border-radius: 14px;
+  padding: 18px 24px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.aria-faq-item:hover,
+.aria-faq-item.active {
+  background: var(--aria-card-hover) !important;
+  border-color: rgba(238, 195, 93, 0.4) !important;
+}
+
+.aria-faq-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 15px;
+}
+
+.aria-faq-header h5 {
+  color: #ffffff !important;
+  font-size: 1.05rem;
+  margin: 0;
+  font-weight: 500;
+}
+
+.aria-faq-item.active .aria-faq-header h5 {
+  color: var(--aria-gold) !important;
+}
+
+.aria-faq-arrow {
+  color: var(--aria-gold) !important;
+  transition: transform 0.3s ease;
+}
+
+.aria-faq-item.active .aria-faq-arrow {
+  transform: rotate(180deg);
+}
+
+.aria-faq-body {
+  color: var(--aria-text-muted) !important;
+  font-size: 0.9rem;
+  line-height: 1.6;
+  margin-top: 12px;
+  padding-top: 12px;
+  border-top: 1px dashed var(--aria-border);
 }
 
 .grid-img {
-    height: 220px;
+  height: 220px;
+  border-radius: 16px;
 }
 
 .story-img {
-    max-height: 480px;
-}
-
-.team-img {
-    height: 320px;
-}
-
-.feature-card,
-.stat-card,
-.team-card {
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.feature-card:hover,
-.stat-card:hover,
-.team-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 0.75rem 1.5rem rgba(0, 0, 0, 0.08) !important;
-}
-
-.accordion-button:not(.collapsed) {
-    background-color: #f8f9fa;
-    color: #211a11;
-    box-shadow: none;
-}
-
-.accordion-button:focus {
-    box-shadow: none;
+  max-height: 480px;
+  border-radius: 20px;
 }
