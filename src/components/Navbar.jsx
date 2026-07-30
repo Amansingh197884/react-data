@@ -2,6 +2,8 @@ import React, { useState, useEffect } from 'react';
 import { FaBars, FaTimes } from 'react-icons/fa';
 import { Link, useLocation } from 'react-router-dom';
 import Logo from "../assets/Logo.png";
+import './Navbar.css';
+
 export default function Navbar() {
   const [isNavOpen, setIsNavOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
@@ -22,17 +24,19 @@ export default function Navbar() {
   return (
     <>
       <nav className={`navbar navbar-expand-lg p-2 luxury-navbar fixed-top ${isScrolled ? 'scrolled' : ''}`}>
-        <div className="container-fluid">
-          <Link className="navbar-brand luxury-brand" to="/" onClick={() => setIsNavOpen(false)}>
-          <img src={Logo} alt="Logo" /> Ariahaus
+        <div className="container-fluid px-3 px-md-5">
+          <Link className="navbar-brand luxury-brand d-flex align-items-center gap-2" to="/" onClick={() => setIsNavOpen(false)}>
+            <img src={Logo} alt="Ariahaus Logo" className="navbar-logo-img" /> 
+            <span>Ariahaus</span>
           </Link>
 
           <button
-            className="navbar-toggler border-0 shadow-none p-0"
+            className="navbar-toggler border-0 shadow-none p-0 d-lg-none"
             type="button"
             onClick={() => setIsNavOpen(true)}
+            aria-label="Toggle Navigation"
           >
-            <FaBars size={26} className="text-white" />
+            <FaBars size={24} className="text-gold-icon" />
           </button>
 
           <div className="collapse navbar-collapse d-none d-lg-block">
@@ -54,16 +58,18 @@ export default function Navbar() {
         </div>
       </nav>
 
+      {/* Side Drawer Backdrop */}
       <div 
         className={`side-drawer-backdrop ${isNavOpen ? 'open' : ''}`} 
         onClick={() => setIsNavOpen(false)}
       ></div>
 
+      {/* Side Drawer Menu for Mobile */}
       <div className={`side-drawer-menu ${isNavOpen ? 'open' : ''}`}>
         <div className="drawer-header">
-          <span className="drawer-brand">Aajneeti</span>
-          <button className="close-btn" onClick={() => setIsNavOpen(false)}>
-            <FaTimes size={24} className="text-white" />
+          <span className="drawer-brand">Ariahaus</span>
+          <button className="close-btn" onClick={() => setIsNavOpen(false)} aria-label="Close Menu">
+            <FaTimes size={22} className="text-gold-icon" />
           </button>
         </div>
 
