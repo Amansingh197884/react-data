@@ -20,7 +20,6 @@ export default function Home() {
 
   return (
     <div className="hero-section-container">
-      {/* Background Image Carousel */}
       {heroImages.map((img, index) => (
         <div
           key={index}
@@ -32,15 +31,14 @@ export default function Home() {
       <div className="hero-overlay-dark"></div>
 
       <div className="hero-content-box">
-        {/* <p className="top-brand-subtitle">AAJNEETI PROPERTIES</p> */}
 
         <h1 className="main-hero-heading">FIND YOUR PLACE</h1>
 
         <div className="search-glass-wrapper">
           <form onSubmit={(e) => e.preventDefault()} className="search-inner-form">
-            
+
             <div className="search-item flex-select">
-<i className="bi bi-sliders text-white me-2"></i>              <select className="glass-select">
+              <i className="bi bi-sliders text-white me-2"></i>              <select className="glass-select">
                 <option value="">Property Type</option>
                 <option value="villa">Villa</option>
                 <option value="flat">Flat</option>
@@ -51,7 +49,7 @@ export default function Home() {
             <div className="vertical-divider"></div>
 
             <div className="search-item flex-input">
-<i className="bi bi-geo-alt me-2 text-white"></i>              <input
+              <i className="bi bi-geo-alt me-2 text-white"></i>              <input
                 type="text"
                 className="glass-input"
                 placeholder="Where are you looking?"

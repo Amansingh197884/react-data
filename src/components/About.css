@@ -1,57 +1,96 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&family=Montserrat:wght@300;400;500;600&display=swap');
+
 :root {
-  --aria-black: #000000;
-  --aria-card-bg: #0c0d10;
-  --aria-card-hover: #14161d;
-  --aria-gold: #eec35d;
-  --aria-gold-dark: #c89c38;
-  --aria-text-white: #ffffff;
-  --aria-text-muted: #a0a5b5;
-  --aria-border: rgba(255, 255, 255, 0.08);
+  /* Exact Amyra Farms Theme Variables */
+  --bg-walnut-dark: #15110b;                 /* Main Dark Background */
+  --bg-card-brown: rgba(33, 26, 17, 0.85);    /* Dark Card Glass Base */
+  
+  --bg-paper: #f5f0e6;                       /* Light Paper Theme Background */
+  --bg-card-paper: #faf4e6;                  /* Light Card Background */
+
+  --accent-gold: #c9a45b;                    /* Champagne Gold */
+  --glass-border: rgba(201, 164, 91, 0.35);   /* Champagne Thin Border */
+
+  --text-paper: #faf4e6;                     /* Dark Mode Light Heading */
+  --text-stone: #f6efde;                     /* Dark Mode Muted Body Text */
+  --text-dark: #1a140c;                      /* Light Mode Charcoal Heading */
+  --text-dark-muted: rgba(26, 20, 12, 0.78); /* Light Mode Muted Body Text */
+
+  --btn-gradient: linear-gradient(180deg, #c9a45b 0%, #9e7a37 100%);
+
+  /* Fonts */
+  --font-serif: 'Cormorant Garamond', Georgia, 'Times New Roman', serif;
+  --font-sans: 'Montserrat', sans-serif;
 }
 
-body, 
-.aria-about-page, 
-.aria-section {
-  background-color: var(--aria-black) !important;
-  color: var(--aria-text-white) !important;
+.aria-about-page {
+  width: 100%;
+  font-family: var(--font-sans);
+  overflow: hidden;
 }
 
-.aria-bg-card-wrap {
-  background-color: #060708 !important;
-  border-top: 1px solid var(--aria-border);
-  border-bottom: 1px solid var(--aria-border);
+/* --- ALTERNATING SECTIONS --- */
+.aria-section-dark {
+  background-color: var(--bg-walnut-dark);
+  color: var(--text-paper);
 }
 
-.aria-font-serif {
-  font-family: serif !important;
+.aria-section-light {
+  background-color: var(--bg-paper);
+  color: var(--text-dark);
 }
 
-.aria-gold-sub {
-  color: var(--aria-gold);
+/* Headings */
+.mv-section-title {
+  font-family: var(--font-serif);
+  font-size: clamp(2.2rem, 4.5vw, 3.8rem);
+  font-weight: 300;
+  color: var(--text-paper);
+  letter-spacing: 0.5px;
+}
+
+.mv-section-title-dark {
+  font-family: var(--font-serif);
+  font-size: clamp(2.2rem, 4.5vw, 3.8rem);
+  font-weight: 300;
+  color: var(--text-dark);
+  letter-spacing: 0.5px;
+}
+
+.mv-section-tag {
+  font-family: var(--font-serif);
+  color: var(--accent-gold);
+  font-size: 0.85rem;
+  letter-spacing: 3.5px;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.aria-gold-badge {
+  background: rgba(201, 164, 91, 0.12);
+  color: var(--accent-gold);
+  border: 1px solid var(--accent-gold);
+  padding: 5px 16px;
+  border-radius: 30px;
   font-size: 0.75rem;
+  font-family: var(--font-serif);
+  font-weight: 600;
   letter-spacing: 2px;
-  font-weight: 700;
-  display: block;
   text-transform: uppercase;
 }
 
 .aria-gold-text {
-  color: var(--aria-gold) !important;
+  color: var(--accent-gold) !important;
+  font-family: var(--font-serif);
 }
 
 .aria-text-muted {
-  color: var(--aria-text-muted) !important;
+  color: var(--text-stone);
+  opacity: 0.85;
 }
 
-.aria-gold-badge {
-  background: rgba(238, 195, 93, 0.12) !important;
-  color: var(--aria-gold) !important;
-  border: 1px solid var(--aria-gold) !important;
-  padding: 5px 14px;
-  border-radius: 30px;
-  font-size: 0.75rem;
-  font-weight: 700;
-  letter-spacing: 1px;
+.aria-text-dark-muted {
+  color: var(--text-dark-muted);
 }
 
 /* Hero Header */
@@ -66,60 +105,66 @@ body,
 .aria-hero-overlay {
   position: absolute;
   inset: 0;
-  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 1)) !important;
+  background: linear-gradient(180deg, rgba(15, 11, 7, 0.7) 0%, rgba(15, 11, 7, 0.9) 100%);
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
 .aria-breadcrumb a {
-  color: var(--aria-gold);
+  color: var(--accent-gold);
   font-size: 0.85rem;
-  letter-spacing: 1px;
+  letter-spacing: 1.5px;
 }
 
-.aria-breadcrumb span {
-  color: var(--aria-text-muted);
-  font-size: 0.85rem;
+.crumb-sep {
+  color: var(--accent-gold);
 }
 
-/* Dark Card Styling */
-.aria-card-box {
-  background-color: var(--aria-card-bg) !important;
-  border: 1px solid var(--aria-border) !important;
-  transition: all 0.3s ease;
+/* Cards (Dark Walnut Mode) */
+.aria-card-dark {
+  background-color: var(--bg-card-brown);
+  border: 1px solid var(--glass-border);
+  backdrop-filter: blur(8px);
+  transition: all 0.35s ease;
 }
 
-.aria-card-box:hover {
-  background-color: var(--aria-card-hover) !important;
-  border-color: rgba(238, 195, 93, 0.3) !important;
+.aria-card-dark:hover {
+  border-color: rgba(201, 164, 91, 0.75);
   transform: translateY(-4px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.6);
 }
 
 /* Buttons */
 .aria-btn-gold {
   display: inline-block;
-  background: linear-gradient(135deg, var(--aria-gold), var(--aria-gold-dark)) !important;
-  color: #000000 !important;
-  font-weight: 700;
+  background: var(--btn-gradient);
+  color: #15110b !important;
+  font-family: var(--font-sans);
+  font-weight: 600;
+  font-size: 0.88rem;
   padding: 12px 30px;
   border-radius: 40px;
   text-decoration: none;
   transition: all 0.3s ease;
   border: none;
+  box-shadow: 0 4px 15px rgba(201, 164, 91, 0.3);
 }
 
 .aria-btn-gold:hover {
+  filter: brightness(1.15);
   transform: translateY(-2px);
-  box-shadow: 0 8px 25px rgba(238, 195, 93, 0.35);
+  box-shadow: 0 8px 25px rgba(201, 164, 91, 0.45);
 }
 
 .aria-btn-outline {
   display: inline-block;
-  background: transparent !important;
-  color: var(--aria-gold) !important;
-  border: 1px solid var(--aria-gold) !important;
-  font-weight: 600;
+  background: transparent;
+  color: var(--accent-gold) !important;
+  border: 1px solid var(--glass-border);
+  font-family: var(--font-sans);
+  font-weight: 500;
+  font-size: 0.88rem;
   padding: 12px 30px;
   border-radius: 40px;
   text-decoration: none;
@@ -127,60 +172,113 @@ body,
 }
 
 .aria-btn-outline:hover {
-  background: var(--aria-gold) !important;
-  color: #000000 !important;
+  background: var(--btn-gradient);
+  color: #15110b !important;
+  border-color: transparent;
 }
 
-.aria-link-gold {
-  color: var(--aria-gold) !important;
-  text-decoration: none;
+.aria-btn-outline-dark {
+  display: inline-block;
+  background: transparent;
+  color: var(--text-dark) !important;
+  border: 1px solid rgba(201, 164, 91, 0.5);
+  font-family: var(--font-sans);
   font-weight: 600;
-  font-size: 0.9rem;
-}
-
-/* Purpose Cards (Vision / Mission) */
-.aria-purpose-card {
-  background: var(--aria-card-bg) !important;
-  border: 1px solid var(--aria-border) !important;
-  border-radius: 20px;
+  font-size: 0.88rem;
+  padding: 12px 30px;
+  border-radius: 40px;
+  text-decoration: none;
   transition: all 0.3s ease;
-  height: 100%;
 }
 
-.aria-purpose-card:hover {
-  background: var(--aria-card-hover) !important;
-  border-color: rgba(238, 195, 93, 0.3) !important;
+.aria-btn-outline-dark:hover {
+  background: var(--btn-gradient);
+  color: #15110b !important;
+  border-color: transparent;
+}
+
+/* Vision / Mission Section */
+.mission-vision-section {
+  background-color: var(--bg-walnut-dark);
+}
+
+.mv-card {
+  background: var(--bg-card-brown);
+  border: 1px solid var(--glass-border);
+  border-radius: 4px;
+  padding: 35px 30px;
+  transition: all 0.4s ease;
+}
+
+.mv-card:hover {
+  border-color: var(--accent-gold);
   transform: translateY(-5px);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.8);
 }
 
-.aria-card-icon-box {
-  width: 48px;
-  height: 48px;
+.mv-icon-box {
+  width: 54px;
+  height: 54px;
   border-radius: 50%;
-  background: rgba(238, 195, 93, 0.1) !important;
-  color: var(--aria-gold) !important;
+  background: rgba(201, 164, 91, 0.1);
+  border: 1px solid var(--accent-gold);
+  color: var(--accent-gold);
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 1.2rem;
-  border: 1px solid rgba(238, 195, 93, 0.3);
+  font-size: 1.3rem;
 }
 
-/* Featured Project Cards */
+.mv-discover-btn {
+  background: transparent;
+  border: 1px solid var(--glass-border);
+  border-radius: 30px;
+  padding: 8px 18px;
+  color: var(--accent-gold);
+  font-size: 0.82rem;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.mv-discover-btn:hover {
+  background: var(--btn-gradient);
+  color: #15110b;
+  border-color: transparent;
+}
+
+.mv-card-title {
+  font-family: var(--font-serif);
+  font-size: 1.8rem;
+  color: var(--text-paper);
+  margin-bottom: 14px;
+}
+
+.mv-card-text {
+  color: var(--text-stone);
+  opacity: 0.85;
+  font-size: 0.95rem;
+  line-height: 1.75;
+  font-weight: 300;
+}
+
+/* Featured Projects Cards */
 .aria-project-card {
   position: relative;
-  border-radius: 16px;
+  border-radius: 4px;
   overflow: hidden;
-  height: 280px;
-  border: 1px solid var(--aria-border);
-  background-color: var(--aria-card-bg);
+  height: 320px;
+  border: 1px solid var(--glass-border);
+  background-color: var(--bg-card-brown);
 }
 
 .aria-project-card img {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  transition: transform 0.5s ease;
+  transition: transform 0.8s ease;
 }
 
 .aria-project-card:hover img {
@@ -190,57 +288,59 @@ body,
 .aria-project-overlay {
   position: absolute;
   inset: 0;
-  background: linear-gradient(to top, rgba(0, 0, 0, 0.95), transparent 70%);
+  background: linear-gradient(to top, rgba(21, 17, 11, 0.95) 0%, transparent 70%);
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
-  padding: 20px;
+  padding: 24px;
 }
 
 .aria-project-overlay h4 {
-  color: #ffffff;
+  color: var(--text-paper);
   margin: 0;
-  font-family: serif;
-  font-size: 1.25rem;
+  font-family: var(--font-serif);
+  font-size: 1.5rem;
 }
 
 .aria-project-overlay small {
-  color: var(--aria-gold);
+  color: var(--accent-gold);
+  font-size: 0.85rem;
 }
 
 .aria-icon-circle {
-  width: 54px;
-  height: 54px;
+  width: 58px;
+  height: 58px;
   border-radius: 50%;
-  background: rgba(238, 195, 93, 0.1) !important;
-  color: var(--aria-gold) !important;
+  background: rgba(201, 164, 91, 0.1);
+  color: var(--accent-gold);
   display: flex;
   align-items: center;
   justify-content: center;
   font-size: 1.4rem;
-  border: 1px solid rgba(238, 195, 93, 0.2);
+  border: 1px solid var(--glass-border);
 }
 
-/* FAQ Dark Accordion */
+/* FAQ Accordion (Light Paper Mode) */
 .aria-faq-container {
   display: flex;
   flex-direction: column;
-  gap: 14px;
+  gap: 16px;
 }
 
-.aria-faq-item {
-  background: var(--aria-card-bg) !important;
-  border: 1px solid var(--aria-border) !important;
-  border-radius: 14px;
-  padding: 18px 24px;
+.aria-faq-item-paper {
+  background: var(--bg-card-paper);
+  border: 1px solid var(--glass-border);
+  border-radius: 4px;
+  padding: 20px 24px;
   cursor: pointer;
   transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(26, 20, 12, 0.03);
 }
 
-.aria-faq-item:hover,
-.aria-faq-item.active {
-  background: var(--aria-card-hover) !important;
-  border-color: rgba(238, 195, 93, 0.4) !important;
+.aria-faq-item-paper:hover,
+.aria-faq-item-paper.active {
+  border-color: var(--accent-gold);
+  box-shadow: 0 8px 25px rgba(201, 164, 91, 0.15);
 }
 
 .aria-faq-header {
@@ -251,40 +351,86 @@ body,
 }
 
 .aria-faq-header h5 {
-  color: #ffffff !important;
-  font-size: 1.05rem;
+  color: var(--text-dark);
+  font-family: var(--font-serif);
+  font-size: 1.2rem;
   margin: 0;
   font-weight: 500;
 }
 
-.aria-faq-item.active .aria-faq-header h5 {
-  color: var(--aria-gold) !important;
+.aria-faq-item-paper.active .aria-faq-header h5 {
+  color: var(--accent-gold);
 }
 
 .aria-faq-arrow {
-  color: var(--aria-gold) !important;
+  color: var(--accent-gold);
   transition: transform 0.3s ease;
 }
 
-.aria-faq-item.active .aria-faq-arrow {
+.aria-faq-item-paper.active .aria-faq-arrow {
   transform: rotate(180deg);
 }
 
 .aria-faq-body {
-  color: var(--aria-text-muted) !important;
-  font-size: 0.9rem;
-  line-height: 1.6;
-  margin-top: 12px;
-  padding-top: 12px;
-  border-top: 1px dashed var(--aria-border);
+  color: var(--text-dark-muted);
+  font-size: 0.95rem;
+  line-height: 1.7;
+  margin-top: 14px;
+  padding-top: 14px;
+  border-top: 1px dashed rgba(201, 164, 91, 0.3);
 }
 
 .grid-img {
-  height: 220px;
-  border-radius: 16px;
+  height: 240px;
+  object-fit: cover;
 }
 
 .story-img {
   max-height: 480px;
-  border-radius: 20px;
+}
+
+.border-gold {
+  border: 1px solid var(--glass-border);
+}
+
+/* --- ANIMATIONS --- */
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(25px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeInLeft {
+  from { opacity: 0; transform: translateX(-25px); }
+  to { opacity: 1; transform: translateX(0); }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+.animate-slide-up {
+  animation: fadeInUp 0.8s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+}
+
+.animate-slide-left {
+  animation: fadeInLeft 0.8s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+}
+
+.animate-fade-in {
+  animation: fadeIn 1s ease forwards;
+}
+
+@media (max-width: 768px) {
+  .mv-card {
+    padding: 25px 20px;
+  }
+
+  .aria-project-card {
+    height: 260px;
+  }
+
+  .aria-faq-header h5 {
+    font-size: 1.05rem;
+  }
 }

@@ -21,28 +21,29 @@ export default function AboutUs() {
     return (
         <div className="aria-about-page">
             
-            {/* Hero Banner Header */}
+            {/* 1. Hero Banner Header (DARK WALNUT THEME) */}
             <header className="aria-contact-hero">
                 <div className="aria-hero-overlay">
-                    <div className="aria-hero-content text-center">
+                    <div className="aria-hero-content text-center animate-fade-in">
                         <div className="aria-breadcrumb mb-2">
                             <Link to="/" className="text-decoration-none">HOME</Link>
-                            <span> / ABOUT US</span>
+                            <span className="crumb-sep"> / </span>
+                            <span className="aria-gold-text">ABOUT US</span>
                         </div>
-                        <h1 className="mv-section-title">ABOUT US</h1>
+                        <h1 className="mv-section-title">About Us</h1>
                     </div>
                 </div>
             </header>
 
-            {/* Intro Section */}
-            <section className="aria-section py-5">
-                <div className="container py-lg-4">
+            {/* 2. Intro Section (DARK WALNUT THEME) */}
+            <section className="aria-section-dark py-5">
+                <div className="container-fluid px-3 px-md-5 py-lg-4">
                     <div className="row align-items-center g-5">
-                        <div className="col-lg-6">
+                        <div className="col-lg-6 animate-slide-left">
                             <span className="aria-gold-badge mb-3 d-inline-block">
                                 ABOUT US
                             </span>
-                            <h2 className="mv-section-title fs-2">
+                            <h2 className="mv-section-title fs-2 mb-3">
                                 Crafting Unforgettable Stay Experiences
                             </h2>
                             <p className="aria-text-muted lead mb-4">
@@ -54,28 +55,28 @@ export default function AboutUs() {
                             </div>
                         </div>
 
-                        <div className="col-lg-6">
+                        <div className="col-lg-6 animate-slide-up">
                             <div className="row g-3">
                                 <div className="col-6">
                                     <img 
                                         src="https://i.pinimg.com/736x/66/2e/d3/662ed34442c03c5b8b1ea7504f4494a5.jpg" 
                                         alt="Luxury Interior" 
-                                        className="img-fluid rounded-4 shadow-sm w-100 object-fit-cover mb-3 grid-img"
+                                        className="img-fluid rounded-2 shadow-sm w-100 object-fit-cover mb-3 grid-img border-gold"
                                     />
-                                    <div className="p-3 text-white aria-card-box rounded-4 text-center">
-                                        <h4 className="fw-bold aria-gold-text mb-0">100%</h4>
-                                        <small className="aria-text-muted">Verified Properties</small>
+                                    <div className="p-3 aria-card-dark rounded-2 text-center">
+                                        <h4 className="fw-bold aria-gold-text mb-0 fs-3">100%</h4>
+                                        <small className="aria-text-stone">Verified Properties</small>
                                     </div>
                                 </div>
                                 <div className="col-6 pt-4">
-                                    <div className="p-3 text-white aria-card-box rounded-4 text-center mb-3">
-                                        <h4 className="fw-bold aria-gold-text mb-0">4.9 ★</h4>
-                                        <small className="aria-text-muted">Guest Satisfaction</small>
+                                    <div className="p-3 aria-card-dark rounded-2 text-center mb-3">
+                                        <h4 className="fw-bold aria-gold-text mb-0 fs-3">4.9 ★</h4>
+                                        <small className="aria-text-stone">Guest Satisfaction</small>
                                     </div>
                                     <img 
                                         src="https://i.pinimg.com/736x/9c/57/93/9c5793a7622d418c655551ed90774d84.jpg" 
                                         alt="Modern Living" 
-                                        className="img-fluid rounded-4 shadow-sm w-100 object-fit-cover grid-img"
+                                        className="img-fluid rounded-2 shadow-sm w-100 object-fit-cover grid-img border-gold"
                                     />
                                 </div>
                             </div>
@@ -84,28 +85,28 @@ export default function AboutUs() {
                 </div>
             </section>
 
-            {/* Our Story Section */}
-            <section id="our-story" className="aria-section py-5 my-3 aria-bg-card-wrap">
-                <div className="container">
-                    <div className="row g-4 align-items-center">
-                        <div className="col-lg-6">
+            {/* 3. Our Story Section (LIGHT PAPER THEME) */}
+            <section id="our-story" className="aria-section-light py-5">
+                <div className="container-fluid px-3 px-md-5 py-3">
+                    <div className="row g-5 align-items-center">
+                        <div className="col-lg-6 animate-slide-left">
                             <div className="position-relative pe-lg-3">
                                 <img 
                                     src="https://i.pinimg.com/736x/b1/d0/c3/b1d0c3926eb7b9c10f6200fc4f68c517.jpg" 
                                     alt="Modern Living Room" 
-                                    className="img-fluid rounded-4 shadow-lg w-100 object-fit-cover story-img"
+                                    className="img-fluid rounded-2 shadow-lg w-100 object-fit-cover story-img border-gold"
                                 />
                             </div>
                         </div>
 
-                        <div className="col-lg-6">
+                        <div className="col-lg-6 animate-slide-up">
                             <div className="ps-lg-3">
                                 <span className="aria-gold-badge mb-2 d-inline-block">OUR MISSION</span>
-                                <h2 className="mv-section-title fs-2">Redefining Short-Term Living</h2>
-                                <p className="aria-text-muted leading-relaxed">
+                                <h2 className="mv-section-title-dark fs-2 mb-3">Redefining Short-Term Living</h2>
+                                <p className="aria-text-dark-muted leading-relaxed mb-3">
                                     From a room for a night to a loft for as long as you like, there’s a RoamStay for every occasion. We combine the comfort of a home with the quality and consistency of a boutique hotel.
                                 </p>
-                                <p className="aria-text-muted leading-relaxed mb-4">
+                                <p className="aria-text-dark-muted leading-relaxed mb-4">
                                     Founded with a vision to make travel seamless, our spaces are thoughtfully designed, centrally located, and backed by 24/7 localized support.
                                 </p>
 
@@ -113,7 +114,7 @@ export default function AboutUs() {
                                     <Link to="/Property" className="aria-btn-gold">
                                         Explore Properties
                                     </Link>
-                                    <Link to="/New" className="aria-btn-outline">
+                                    <Link to="/New" className="aria-btn-outline-dark">
                                         Contact Us
                                     </Link>
                                 </div>
@@ -123,44 +124,44 @@ export default function AboutUs() {
                 </div>
             </section>
 
-            {/* Stats Counter Section */}
-            <section className="aria-section py-5">
-                <div className="container py-3">
+            {/* 4. Stats Counter Section (DARK WALNUT THEME) */}
+            <section className="aria-section-dark py-5">
+                <div className="container-fluid px-3 px-md-5 py-3">
                     <div className="row g-4 text-center">
                         <div className="col-6 col-md-3">
-                            <div className="p-4 aria-card-box rounded-4 h-100 stat-card">
-                                <h3 className="mv-section-title aria-gold-text mb-1">2,500+</h3>
-                                <p className="aria-text-muted mb-0 small">Handpicked Apartments</p>
+                            <div className="p-4 aria-card-dark rounded-2 h-100 stat-card">
+                                <h3 className="mv-section-title aria-gold-text mb-1 fs-1">2,500+</h3>
+                                <p className="aria-text-stone mb-0 small">Handpicked Apartments</p>
                             </div>
                         </div>
                         <div className="col-6 col-md-3">
-                            <div className="p-4 aria-card-box rounded-4 h-100 stat-card">
-                                <h3 className="mv-section-title aria-gold-text mb-1">50k+</h3>
-                                <p className="aria-text-muted mb-0 small">Happy Guests Served</p>
+                            <div className="p-4 aria-card-dark rounded-2 h-100 stat-card">
+                                <h3 className="mv-section-title aria-gold-text mb-1 fs-1">50k+</h3>
+                                <p className="aria-text-stone mb-0 small">Happy Guests Served</p>
                             </div>
                         </div>
                         <div className="col-6 col-md-3">
-                            <div className="p-4 aria-card-box rounded-4 h-100 stat-card">
-                                <h3 className="mv-section-title aria-gold-text mb-1">15+</h3>
-                                <p className="aria-text-muted mb-0 small">Cities Worldwide</p>
+                            <div className="p-4 aria-card-dark rounded-2 h-100 stat-card">
+                                <h3 className="mv-section-title aria-gold-text mb-1 fs-1">15+</h3>
+                                <p className="aria-text-stone mb-0 small">Cities Worldwide</p>
                             </div>
                         </div>
                         <div className="col-6 col-md-3">
-                            <div className="p-4 aria-card-box rounded-4 h-100 stat-card">
-                                <h3 className="mv-section-title aria-gold-text mb-1">4.9 ★</h3>
-                                <p className="aria-text-muted mb-0 small">Average Guest Rating</p>
+                            <div className="p-4 aria-card-dark rounded-2 h-100 stat-card">
+                                <h3 className="mv-section-title aria-gold-text mb-1 fs-1">4.9 ★</h3>
+                                <p className="aria-text-stone mb-0 small">Average Guest Rating</p>
                             </div>
                         </div>
                     </div>
                 </div>
             </section>
 
-            {/* Vision & Mission Section */}
-            <section className="mission-vision-section py-5 mt-5" id="mission-vision">
+            {/* 5. Vision & Mission Section (DARK WALNUT THEME) */}
+            <section className="mission-vision-section py-5" id="mission-vision">
                  <div className="container-fluid px-3 px-md-5">
                    
                    {/* Section Header */}
-                   <div className="text-center mb-5">
+                   <div className="text-center mb-5 animate-fade-in">
                      <span className="mv-section-tag">OUR PURPOSE</span>
                      <h2 className="mv-section-title">Driving Real Estate Excellence</h2>
                    </div>
@@ -169,7 +170,7 @@ export default function AboutUs() {
                    <div className="row g-4 justify-content-center">
                      
                      {/* Our Vision Card */}
-                     <div className="col-lg-6 col-md-12">
+                     <div className="col-lg-6 col-md-12 animate-slide-up">
                        <div className="mv-card h-100">
                          <div className="mv-card-header d-flex align-items-center justify-content-between mb-4">
                            <div className="mv-icon-box">
@@ -193,7 +194,7 @@ export default function AboutUs() {
                      </div>
            
                      {/* Our Mission Card */}
-                     <div className="col-lg-6 col-md-12">
+                     <div className="col-lg-6 col-md-12 animate-slide-up">
                        <div className="mv-card h-100">
                          <div className="mv-card-header d-flex align-items-center justify-content-between mb-4">
                            <div className="mv-icon-box">
@@ -218,23 +219,24 @@ export default function AboutUs() {
            
                    </div>
                  </div>
-               </section>
+            </section>
 
-            {/* Featured Projects Section */}
-            <section className="aria-section py-5">
-                <div className="container-fluid px-5">
-                    <div className="d-flex justify-content-between align-items-center mb-4">
+            {/* 6. Featured Projects Section (LIGHT PAPER THEME) */}
+            <section className="aria-section-light py-5">
+                <div className="container-fluid px-3 px-md-5">
+                    <div className="d-flex justify-content-between align-items-end mb-4 animate-fade-in">
                         <div>
-                            <h2 className="mv-section-title">Featured Projects</h2>
+                            <span className="aria-gold-badge mb-1 d-inline-block">EXCLUSIVES</span>
+                            <h2 className="mv-section-title-dark m-0">Featured Projects</h2>
                         </div>
-                        <Link to="/Property" className="aria-btn-outline d-none d-md-inline-block">
-                            View All Projects <FaArrowRight />
+                        <Link to="/Property" className="aria-btn-outline-dark d-none d-md-inline-block">
+                            View All Projects <FaArrowRight className="ms-1" />
                         </Link>
                     </div>
 
                     <div className="row g-4">
-                        <div className="col-md-4">
-                            <div className="aria-project-card">
+                        <div className="col-md-4 animate-slide-up">
+                            <div className="aria-project-card border-gold">
                                 <img 
                                     src="https://i.pinimg.com/736x/66/2e/d3/662ed34442c03c5b8b1ea7504f4494a5.jpg" 
                                     alt="Luxury Residency" 
@@ -245,8 +247,8 @@ export default function AboutUs() {
                                 </div>
                             </div>
                         </div>
-                        <div className="col-md-4">
-                            <div className="aria-project-card">
+                        <div className="col-md-4 animate-slide-up">
+                            <div className="aria-project-card border-gold">
                                 <img 
                                     src="https://i.pinimg.com/736x/9c/57/93/9c5793a7622d418c655551ed90774d84.jpg" 
                                     alt="Sky Villas" 
@@ -257,8 +259,8 @@ export default function AboutUs() {
                                 </div>
                             </div>
                         </div>
-                        <div className="col-md-4">
-                            <div className="aria-project-card">
+                        <div className="col-md-4 animate-slide-up">
+                            <div className="aria-project-card border-gold">
                                 <img 
                                     src="https://i.pinimg.com/736x/9e/a6/f2/9ea6f210710c28863bb3009105687db7.jpg" 
                                     alt="Private Estates" 
@@ -273,46 +275,46 @@ export default function AboutUs() {
                 </div>
             </section>
 
-            {/* Features Cards Section */}
-            <section className="aria-section py-5 aria-bg-card-wrap">
-                <div className="container">
-                    <div className="text-center mx-auto mb-5">
-                        <span className="aria-gold-sub">WHY CHOOSE US</span>
-                        <h2 className="mv-section-title text-white fs-2 mt-2">Designed for comfort, built for peace of mind</h2>
+            {/* 7. Features Cards Section (DARK WALNUT THEME) */}
+            <section className="aria-section-dark py-5">
+                <div className="container-fluid px-3 px-md-5">
+                    <div className="text-center mx-auto mb-5 animate-fade-in">
+                        <span className="mv-section-tag">WHY CHOOSE US</span>
+                        <h2 className="mv-section-title fs-2 mt-2">Designed for comfort, built for peace of mind</h2>
                     </div>
 
                     <div className="row g-4">
-                        <div className="col-md-4">
-                            <div className="aria-card-box h-100 p-4 rounded-4 text-center feature-card">
+                        <div className="col-md-4 animate-slide-up">
+                            <div className="aria-card-dark h-100 p-4 rounded-2 text-center feature-card">
                                 <div className="aria-icon-circle mx-auto mb-3">
                                     <FaBuilding />
                                 </div>
-                                <h4 className="h5 text-white aria-font-serif mb-2">Prime Locations</h4>
-                                <p className="aria-text-muted small mb-0">
+                                <h4 className="h5 aria-gold-text mb-2">Prime Locations</h4>
+                                <p className="aria-text-stone small mb-0">
                                     Every stay is situated in vibrant neighborhoods, steps away from top dining and transit hubs.
                                 </p>
                             </div>
                         </div>
 
-                        <div className="col-md-4">
-                            <div className="aria-card-box h-100 p-4 rounded-4 text-center feature-card">
+                        <div className="col-md-4 animate-slide-up">
+                            <div className="aria-card-dark h-100 p-4 rounded-2 text-center feature-card">
                                 <div className="aria-icon-circle mx-auto mb-3">
                                     <FaShieldAlt />
                                 </div>
-                                <h4 className="h5 text-white aria-font-serif mb-2">Verified Standards</h4>
-                                <p className="aria-text-muted small mb-0">
+                                <h4 className="h5 aria-gold-text mb-2">Verified Standards</h4>
+                                <p className="aria-text-stone small mb-0">
                                     High-speed Wi-Fi, professional cleaning, and premium amenities guaranteed in every booking.
                                 </p>
                             </div>
                         </div>
 
-                        <div className="col-md-4">
-                            <div className="aria-card-box h-100 p-4 rounded-4 text-center feature-card">
+                        <div className="col-md-4 animate-slide-up">
+                            <div className="aria-card-dark h-100 p-4 rounded-2 text-center feature-card">
                                 <div className="aria-icon-circle mx-auto mb-3">
                                     <FaHeadset />
                                 </div>
-                                <h4 className="h5 text-white aria-font-serif mb-2">24/7 Concierge</h4>
-                                <p className="aria-text-muted small mb-0">
+                                <h4 className="h5 aria-gold-text mb-2">24/7 Concierge</h4>
+                                <p className="aria-text-stone small mb-0">
                                     Our dedicated local support team is always available to help you during your stay.
                                 </p>
                             </div>
@@ -321,19 +323,19 @@ export default function AboutUs() {
                 </div>
             </section>
 
-            {/* FAQ Accordion Section */}
-            <section className="aria-section py-5">
-                <div className="container py-3">
+            {/* 8. FAQ Accordion Section (LIGHT PAPER THEME) */}
+          <section className="aria-section-light py-5">
+                <div className="container-fluid px-3 px-md-5 py-3">
                     <div className="row justify-content-center">
                         <div className="col-lg-8">
-                            <div className="text-center mb-5">
-                                <span className="aria-gold-sub">QUESTIONS & ANSWERS</span>
-                                <h2 className="mv-section-title text-white display-6">Frequently Asked Questions</h2>
-                                <p className="aria-text-muted">Everything you need to know about booking with us</p>
+                            <div className="text-center mb-5 animate-fade-in">
+                                <span className="aria-gold-badge mb-2 d-inline-block">QUESTIONS & ANSWERS</span>
+                                <h2 className="mv-section-title-dark display-6">Frequently Asked Questions</h2>
+                                <p className="aria-text-dark-muted">Everything you need to know about booking with us</p>
                             </div>
 
                             <div className="aria-faq-container">
-                                <div className={`aria-faq-item ${openFaq === 0 ? 'active' : ''}`} onClick={() => toggleFaq(0)}>
+                                <div className={`aria-faq-item-paper ${openFaq === 0 ? 'active' : ''}`} onClick={() => toggleFaq(0)}>
                                     <div className="aria-faq-header">
                                         <h5>How does check-in work at RoamStay properties?</h5>
                                         <FaChevronDown className="aria-faq-arrow" />
@@ -345,7 +347,7 @@ export default function AboutUs() {
                                     )}
                                 </div>
 
-                                <div className={`aria-faq-item ${openFaq === 1 ? 'active' : ''}`} onClick={() => toggleFaq(1)}>
+                                <div className={`aria-faq-item-paper ${openFaq === 1 ? 'active' : ''}`} onClick={() => toggleFaq(1)}>
                                     <div className="aria-faq-header">
                                         <h5>Are high-speed internet and workspaces available?</h5>
                                         <FaChevronDown className="aria-faq-arrow" />

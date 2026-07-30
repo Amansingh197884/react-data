@@ -40,7 +40,7 @@ const testimonialsData = [
 
 export default function Testimonials() {
   return (
-    <section className="testimonials-section py-5 mb-5" id="testimonials">
+    <section className="testimonials-section py-5 " id="testimonials">
       <div className="container-fluid px-3 px-md-5">
         
         {/* Section Title */}
