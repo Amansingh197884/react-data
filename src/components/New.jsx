@@ -1,7 +1,9 @@
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
+import { FaPaperPlane, FaGlobe } from 'react-icons/fa';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'animate.css/animate.min.css';
-import './Contact.css'
+import './Contact.css';
 
 const ContactPage = () => {
   const [formData, setFormData] = useState({
@@ -54,24 +56,25 @@ const ContactPage = () => {
       <div className="custom-bg-overlay position-absolute top-0 start-0 w-100 h-100"></div>
 
       <div className="container position-relative z-1 d-flex justify-content-center">
-        <div className="custom-contact-card bg-white p-4 p-sm-5 animate__animated animate__fadeInUp">
+        <div className="custom-contact-card p-4 p-sm-5 animate__animated animate__fadeInUp">
           
           {/* Header Section */}
           <div className="text-start mb-4">
-            <h1 className="fw-normal mb-3 text-dark mv-section-title fs-2">
+            <span className="contact-tag-sub d-block mb-1">GET IN TOUCH</span>
+            <h1 className="fw-normal mb-2 mv-section-title">
               Let's Start The Conversation
             </h1>
-            <p className="text-secondary small fw-light lh-base custom-subtext">
+            <p className="custom-subtext">
               Reach out to our team today for a complimentary, no-obligation consultation.<br className="d-none d-sm-block" />
-              We're here to answer your questions
+              We are here to answer your questions and guide your estate journey.
             </p>
           </div>
 
           {/* Form / Success Section */}
           {sent ? (
             <div className="text-center py-5 animate__animated animate__zoomIn">
-              <h3 className="text-success fw-bold">Message Logged!</h3>
-              <p className="text-muted small">We will get back to you shortly.</p>
+              <h3 className="text-gold fw-bold font-serif fs-2">Message Logged!</h3>
+              <p className="text-stone small">We will get back to you shortly.</p>
             </div>
           ) : (
             <form onSubmit={handleSubmit} className="custom-minimal-form mt-4">
@@ -88,7 +91,7 @@ const ContactPage = () => {
                       value={formData.firstName}
                       onChange={(e) => setFormData({ ...formData, firstName: e.target.value })}
                     />
-                    <label className="custom-label">First name *</label>
+                    <label className="custom-label">First Name *</label>
                   </div>
                 </div>
                 <div className="col-12 col-md-6">
@@ -101,7 +104,7 @@ const ContactPage = () => {
                       value={formData.lastName}
                       onChange={(e) => setFormData({ ...formData, lastName: e.target.value })}
                     />
-                    <label className="custom-label">Last name *</label>
+                    <label className="custom-label">Last Name *</label>
                   </div>
                 </div>
               </div>
@@ -110,9 +113,8 @@ const ContactPage = () => {
               <div className="row g-4 mb-4">
                 <div className="col-12 col-md-6">
                   <div className="custom-form-group position-relative d-flex align-items-end">
-                    <span className="custom-globe-icon text-muted me-2 mt-2 mb-1">
-                      <i className="fa-solid fa-earth-americas me-1"></i>
-                      {/* <i className="fa-solid fa-chevron-down tiny-arrow"></i> */}
+                    <span className="custom-globe-icon text-gold me-2 mb-1">
+                      <FaGlobe />
                     </span>
                     <input
                       type="tel"
@@ -121,49 +123,50 @@ const ContactPage = () => {
                       value={formData.phone}
                       onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
                     />
-                    <label className="custom-label phone-label-shift">Phone</label>
+                    <label className="custom-label phone-label-shift">Phone Number</label>
                   </div>
                 </div>
                 <div className="col-12 col-md-6">
                   <div className="custom-form-group position-relative">
                     <input
-                      type="type"
+                      type="email"
                       className="form-control-custom w-100"
                       required
                       placeholder=" "
                       value={formData.email}
                       onChange={(e) => setFormData({ ...formData, email: e.target.value })}
                     />
-                    <label className="custom-label">Email *</label>
+                    <label className="custom-label">Email Address *</label>
                   </div>
                 </div>
               </div>
 
-              {/* Row 3: Subject */}
-            
-
-              {/* Row 4: Message */}
+              {/* Row 3: Message */}
               <div className="custom-form-group position-relative mb-5">
                 <textarea
                   className="form-control-custom w-100"
-                  rows="1"
+                  rows="2"
                   required
                   placeholder=" "
                   value={formData.message}
                   onChange={(e) => setFormData({ ...formData, message: e.target.value })}
                   style={{ resize: 'none' }}
                 ></textarea>
-                <label className="custom-label">Message</label>
+                <label className="custom-label">Your Message *</label>
               </div>
 
-              {/* Submit Button aligned perfectly center/wide layout */}
+              {/* Submit Button */}
               <div className="w-100 text-center">
                 <button 
                   type="submit" 
-                  className="custom-submit-btn w-100 py-3 text-uppercase  text-white"
+                  className="custom-submit-btn w-100 py-3 text-uppercase"
                   disabled={loading}
                 >
-                  {loading ? "Submitting..." : "Submit Inquiry"}
+                  {loading ? "Submitting Inquiry..." : (
+                    <>
+                      Submit Inquiry <FaPaperPlane className="ms-2" />
+                    </>
+                  )}
                 </button>
               </div>
 

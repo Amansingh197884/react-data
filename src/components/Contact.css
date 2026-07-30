@@ -1,81 +1,139 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&family=Montserrat:wght@300;400;500;600&display=swap');
+
+:root {
+  /* Amyra Farms Theme Variables */
+  --bg-walnut-dark: #15110b;                 /* Main Dark Background */
+  --bg-card-brown: rgba(33, 26, 17, 0.88);    /* Glass Card Base */
+  
+  --accent-gold: #c9a45b;                    /* Champagne Gold */
+  --glass-border: rgba(201, 164, 91, 0.35);   /* Champagne Thin Border */
+
+  --text-paper: #faf4e6;                     /* Headings */
+  --text-stone: #f6efde;                     /* Body Text */
+  
+  --btn-gradient: linear-gradient(180deg, #c9a45b 0%, #9e7a37 100%);
+
+  /* Fonts */
+  --font-serif: 'Cormorant Garamond', Georgia, 'Times New Roman', serif;
+  --font-sans: 'Montserrat', sans-serif;
+}
+
 .custom-wrapper {
   overflow: hidden;
-  background-color: #121212;
+  background-color: var(--bg-walnut-dark);
+  font-family: var(--font-sans);
 }
 
 .custom-bg-overlay {
   background-image: url('https://i.pinimg.com/736x/a8/3c/3a/a83c3aa881dfdf1cd5f0d6299bda151b.jpg'); 
   background-size: cover;
   background-position: center center;
+  filter: brightness(0.35);
   z-index: 0;
 }
 
 .custom-contact-card {
   width: 100%;
-  max-width: 680px;
-  border-radius: 5px; 
-  box-shadow: 0 25px 50px rgba(0, 0, 0, 0.3);
-  margin-top: 100px;
+  max-width: 720px;
+  background: var(--bg-card-brown) !important;
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid var(--glass-border);
+  border-radius: 6px; 
+  box-shadow: 0 25px 60px rgba(0, 0, 0, 0.7);
+  margin-top: 60px;
 }
 
-.custom-heading {
-  font-size: 2.25rem;
-  letter-spacing: -0.5px;
+/* Header Text */
+.contact-tag-sub {
+  font-family: var(--font-serif);
+  color: var(--accent-gold);
+  font-size: 0.85rem;
+  letter-spacing: 3.5px;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.mv-section-title {
+  font-family: var(--font-serif);
+  font-size: clamp(2rem, 4vw, 3rem);
+  font-weight: 300;
+  color: var(--text-paper) !important;
+  letter-spacing: 0.5px;
 }
 
 .custom-subtext {
-  font-size: 0.95rem;
+  font-family: var(--font-sans);
+  font-size: 0.92rem;
+  color: var(--text-stone);
+  opacity: 0.82;
+  line-height: 1.6;
 }
 
+.text-gold {
+  color: var(--accent-gold) !important;
+}
+
+.text-stone {
+  color: var(--text-stone) !important;
+}
+
+.font-serif {
+  font-family: var(--font-serif) !important;
+}
+
+/* Form Group & Input Styling */
 .custom-form-group {
-  margin-bottom: 1rem;
+  margin-bottom: 1.2rem;
 }
 
 .custom-form-group .form-control-custom {
   border: none;
-  border-bottom: 1px solid #c8c8c8 !important;
+  border-bottom: 1px solid var(--glass-border) !important;
   border-radius: 0px;
-  padding: 8px 0px 6px 0px;
+  padding: 10px 0px 8px 0px;
   background-color: transparent;
   outline: none;
-  font-size: 1rem;
-  color: #212529 !important;
-  transition: border-bottom 0.3s ease;
+  font-family: var(--font-sans);
+  font-size: 0.95rem;
+  color: var(--text-paper) !important;
+  transition: all 0.3s ease;
 }
 
 .custom-form-group .form-control-custom:focus {
-  border-bottom: 1px solid #000 !important;
+  border-bottom: 1px solid var(--accent-gold) !important;
+  box-shadow: 0 4px 12px rgba(201, 164, 91, 0.15);
 }
 
+/* Floating Label Animation */
 .custom-form-group .custom-label {
   position: absolute !important;
-  top: 8px !important;
+  top: 10px !important;
   left: 0;
-  color: #000 !important;
+  color: var(--text-stone) !important;
+  opacity: 0.7;
   pointer-events: none;
   transition: all 0.25s ease;
-  font-size: 0.95rem;
+  font-family: var(--font-serif);
+  font-size: 1rem;
 }
 
 .custom-form-group .form-control-custom:focus ~ .custom-label,
 .custom-form-group .form-control-custom:not(:placeholder-shown) ~ .custom-label {
   top: -16px !important;
-  font-size: 0.75rem;
-  color: #000 !important;
-  font-weight: 500;
+  font-size: 0.8rem;
+  color: var(--accent-gold) !important;
+  opacity: 1;
+  letter-spacing: 1px;
 }
 
 .custom-form-group .custom-globe-icon {
-  font-size: 0.85rem;
-  padding-bottom: 6px;
-}
-
-.tiny-arrow {
-  font-size: 0.6rem;
+  font-size: 0.9rem;
+  padding-bottom: 8px;
 }
 
 .phone-label-shift {
-  left: 38px !important;
+  left: 28px !important;
 }
 
 .form-control-custom:focus ~ .phone-label-shift,
@@ -83,21 +141,41 @@
   left: 0px !important;
 }
 
+/* Submit Button */
 .custom-submit-btn {
-  background-color: #151716;
+  background: var(--btn-gradient) !important;
+  color: #15110b !important;
   border: none;
-  font-size: 0.9rem;
-  letter-spacing: 1px;
-  font-weight: 500;
+  font-family: var(--font-sans);
+  font-size: 0.88rem;
+  letter-spacing: 1.5px;
+  font-weight: 600;
+  border-radius: 50px;
   cursor: pointer;
-  transition: background-color 0.2s ease;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(201, 164, 91, 0.3);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .custom-submit-btn:hover {
-  background-color: #2c2f2d;
+  filter: brightness(1.15);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(201, 164, 91, 0.45);
 }
 
 .custom-submit-btn:disabled {
-  background-color: #777;
+  background: #443c31 !important;
+  color: var(--text-stone) !important;
   cursor: not-allowed;
+  transform: none;
+  box-shadow: none;
+}
+
+@media (max-width: 576px) {
+  .custom-contact-card {
+    margin-top: 30px;
+    padding: 24px !important;
+  }
 }
