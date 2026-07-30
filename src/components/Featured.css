@@ -1,15 +1,14 @@
 @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&family=Montserrat:wght@300;400;500;600&display=swap');
 
 :root {
-  /* Colors matched directly from Amyra Farms Dark Theme */
-  --bg-walnut-dark: #15110b;               /* Deep Walnut background */
+  --bg-walnut-dark: #15110b;         
   --bg-card-dark: rgba(33, 26, 17, 0.95);
   
-  --accent-gold: #c9a45b;                  /* Champagne Gold */
-  --glass-border: rgba(201, 164, 91, 0.35); /* Gold outline border */
+  --accent-gold: #c9a45b;          
+  --glass-border: rgba(201, 164, 91, 0.35);
   
-  --text-paper: #faf4e6;                   /* Headings */
-  --text-stone: #f6efde;                   /* Body text */
+  --text-paper: #faf4e6;                
+  --text-stone: #f6efde;                
   
   --btn-gradient: linear-gradient(180deg, #c9a45b 0%, #9e7a37 100%);
   
@@ -25,7 +24,6 @@
   overflow: hidden;
 }
 
-/* Header Tagline & Title */
 .featured-tag {
   font-family: var(--font-serif);
   color: var(--accent-gold);

@@ -1,25 +1,27 @@
 @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600;700&family=Montserrat:wght@300;400;500;600&display=swap');
 
 :root {
-    /* Colors extracted directly from Amyra Farms Inspect Element */
-    --accent-gold: #c9a45b;                  /* --hsr-champagne */
-    --accent-gold-bright: #e5be70;           /* Soft highlight gold */
-    --bg-night: #15110b;                    /* --hsr-night */
-    --bg-walnut: #211a11;                   /* --hsr-walnut */
-    --text-stone: #f6efde;                   /* --hsr-stone */
-    --text-paper: #faf4e6;                   /* --hsr-paper */
+    --accent-gold: #c9a45b;      
+    --accent-gold-bright: #e5be70;  
+    --bg-night: #15110b;            
+    --bg-walnut: #211a11;                  
+    --text-stone: #f6efde;                 
+    --text-paper: #faf4e6;                 
 
     --title-gradient: linear-gradient(180deg, #faf4e6 0%, #f6efde 60%, #c9a45b 100%);
     --btn-gradient: linear-gradient(180deg, #c9a45b 0%, #9e7a37 100%);
     --btn-text-color: #15110b;
     
-    --overlay-bg: radial-gradient(ellipse at center, rgba(33, 26, 17, 0.4) 0%, rgba(21, 17, 11, 0.85) 100%),
-        linear-gradient(180deg, rgba(21, 17, 11, 0.5) 0%, rgba(33, 26, 17, 0.3) 40%, rgba(21, 17, 11, 0.9) 100%);
-    
-    --glass-border: rgba(201, 164, 91, 0.25); /* --hsr-champagne-soft style border */
+   --overlay-bg: linear-gradient(
+      180deg, 
+      rgba(15, 11, 7, 0.65) 0%,       
+      rgba(21, 17, 11, 0.25) 35%,     
+      rgba(21, 17, 11, 0.35) 65%,      
+      rgba(15, 11, 7, 0.85) 100%      
+    );
+    --glass-border: rgba(201, 164, 91, 0.25);
     --btn-shadow: rgba(201, 164, 91, 0.35);
     
-    /* Font Family updated from inspect element */
     --font-serif: 'Cormorant Garamond', Georgia, 'Times New Roman', serif;
     --font-sans: 'Montserrat', sans-serif;
 }

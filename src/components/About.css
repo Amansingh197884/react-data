@@ -1,4 +1,3 @@
-/* Color Palette Variables (Pure #000 Black + Dark Cards + Gold) */
 :root {
   --aria-black: #000000;
   --aria-card-bg: #0c0d10;
@@ -10,7 +9,6 @@
   --aria-border: rgba(255, 255, 255, 0.08);
 }
 
-/* Master Pure Black Overrides */
 body, 
 .aria-about-page, 
 .aria-section {

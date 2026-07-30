@@ -1,27 +1,25 @@
 @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&family=Montserrat:wght@300;400;500;600&display=swap');
 
 :root {
-  /* Colors matched with Image 4 (Warm Walnut / Dark Theme) */
-  --bg-walnut-dark: #1b150e;               /* Main background (Earthy Dark Walnut) */
-  --bg-card-brown: rgba(48, 38, 27, 0.45);  /* Inside card background tone */
-  --input-bg: rgba(33, 26, 17, 0.7);        /* Input fields background */
+  --bg-walnut-dark: #1b150e;         
+  --bg-card-brown: rgba(48, 38, 27, 0.45); 
+  --input-bg: rgba(33, 26, 17, 0.7);      
   
-  --accent-gold: #c9a45b;                  /* --hsr-champagne (Gold accents & icons) */
-  --glass-border: rgba(201, 164, 91, 0.35); /* Distinct Gold outline */
+  --accent-gold: #c9a45b;              
+  --glass-border: rgba(201, 164, 91, 0.35);
   
-  --text-paper: #faf4e6;                   /* --hsr-paper (Headings & Values) */
-  --text-stone: #f6efde;                   /* --hsr-stone (Body & Labels) */
+  --text-paper: #faf4e6;               
+  --text-stone: #f6efde;               
   
   --btn-gradient: linear-gradient(180deg, #c9a45b 0%, #9e7a37 100%);
   
-  /* Exact Amyra Farms Font Family */
   --font-serif: 'Cormorant Garamond', Georgia, 'Times New Roman', serif;
   --font-sans: 'Montserrat', sans-serif;
 }
 
 .contact-section {
   width: 100%;
-  background-color: var(--bg-walnut-dark);  /* Warm Walnut background */
+  background-color: var(--bg-walnut-dark);
   font-family: var(--font-sans);
   position: relative;
   overflow: hidden;
