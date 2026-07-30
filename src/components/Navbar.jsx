@@ -2,7 +2,6 @@ import React, { useState, useEffect } from 'react';
 import { FaBars, FaTimes } from 'react-icons/fa';
 import { Link, useLocation } from 'react-router-dom';
 import Logo from "../assets/Logo.png";
-import './Navbar.css';
 
 export default function Navbar() {
   const [isNavOpen, setIsNavOpen] = useState(false);

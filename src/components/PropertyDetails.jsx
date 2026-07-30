@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { Link } from 'react-router-dom';
 import {
     FaTimes,
     FaChevronLeft,
@@ -23,15 +24,22 @@ import {
     FaShieldAlt,
     FaSubway,
     FaPlane,
-    FaHospital
+    FaHospital,
+    FaFacebookF, 
+  FaInstagram, 
+  FaWhatsapp, 
+  FaGlobe, 
+  FaArrowUp
 } from 'react-icons/fa';
 
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Navigation, Autoplay } from 'swiper/modules';
 
+import Logo from "../assets/Logo.png";
 import 'swiper/css';
 import 'swiper/css/navigation';
 import './Home.css';
+import './DetailsFooter.css';
 
 const galleryImages = [
     { id: 1, url: "https://i.pinimg.com/236x/c3/e9/c0/c3e9c03dc28256bf151861402f86a64b.jpg", caption: "Exterior Architectural View" },
@@ -137,6 +145,10 @@ export default function Home() {
         return () => clearInterval(timer);
     }, [currentSlide]);
 
+    const scrollToTop = () => {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+    };
+
     const handleSubmit = async (e) => {
         e.preventDefault();
         setLoading(true);
@@ -240,7 +252,7 @@ export default function Home() {
                 </div>
             </section>
 
-            {/* 3. NEW ADDED: HIGHLIGHTS SECTION (DARK WALNUT THEME) */}
+            {/* 3. HIGHLIGHTS SECTION */}
             <section className="highlights-section py-5">
                 <div className="container-fluid px-3 px-md-5">
                     <div className="text-center mb-5">
@@ -264,7 +276,7 @@ export default function Home() {
                 </div>
             </section>
 
-            {/* 4. UNIT FEATURES SECTION (LIGHT PAPER THEME) */}
+            {/* 4. UNIT FEATURES SECTION */}
             <section className="unit-features-section-paper py-5">
                 <div className="container-fluid px-3 px-md-5">
                     <div className="text-center mb-5">
@@ -287,109 +299,106 @@ export default function Home() {
                 </div>
             </section>
 
-         {/* 5. ELEVATED GALLERY SECTION (3 CARDS PER VIEW) */}
-         <section className='Galleryall'>
-            <section className="gallery-section-dark py-5">
-                <div className="container-fluid px-3 px-md-5 py-2">
-                    <div className="d-flex justify-content-between align-items-end mb-4">
-                        <div>
-                            <span className="section-tag-gold d-block mb-1">VISUAL TOUR</span>
-                            <h2 className="about-heading-light m-0">Gallery</h2>
+            {/* 5. ELEVATED GALLERY SECTION */}
+            <section className='Galleryall'>
+                <section className="gallery-section-dark py-5">
+                    <div className="container-fluid px-3 px-md-5 py-2">
+                        <div className="d-flex justify-content-between align-items-end mb-4">
+                            <div>
+                                <span className="section-tag-gold d-block mb-1">VISUAL TOUR</span>
+                                <h2 className="about-heading-light m-0">Gallery</h2>
+                            </div>
+
+                            <div className="swiper-custom-navigation gap-2 d-flex">
+                                <button className="swiper-prev-btn nav-btn-dark" aria-label="Previous Photo">
+                                    <FaChevronLeft />
+                                </button>
+                                <button className="swiper-next-btn nav-btn-dark" aria-label="Next Photo">
+                                    <FaChevronRight />
+                                </button>
+                            </div>
                         </div>
 
-                        <div className="swiper-custom-navigation gap-2 d-flex">
-                            <button className="swiper-prev-btn nav-btn-dark" aria-label="Previous Photo">
-                                <FaChevronLeft />
-                            </button>
-                            <button className="swiper-next-btn nav-btn-dark" aria-label="Next Photo">
-                                <FaChevronRight />
-                            </button>
-                        </div>
-                    </div>
-
-                    <Swiper
-                        modules={[Navigation, Autoplay]}
-                        spaceBetween={24}
-                        slidesPerView={1}
-                        autoplay={{ delay: 3500, disableOnInteraction: false }}
-                        navigation={{
-                            prevEl: '.gallery-section-dark .swiper-prev-btn',
-                            nextEl: '.gallery-section-dark .swiper-next-btn',
-                        }}
-                        breakpoints={{
-                            640: { slidesPerView: 1.8 },
-                            768: { slidesPerView: 2.5 },
-                            1024: { slidesPerView: 3 } /* Strict 3 cards for desktop */
-                        }}
-                        className="gallery-swiper"
-                    >
-                        {galleryImages.map((img, index) => (
-                            <SwiperSlide key={img.id}>
-                                <div className="gallery-card-luxury" onClick={() => setSelectedImgIndex(index)}>
-                                    <img src={img.url} alt={img.caption} />
-                                    <div className="gallery-card-overlay">
-                                        <span className="gallery-tag">CLICK TO ENLARGE</span>
-                                        <p className="gallery-caption-title">{img.caption}</p>
+                        <Swiper
+                            modules={[Navigation, Autoplay]}
+                            spaceBetween={24}
+                            slidesPerView={1}
+                            autoplay={{ delay: 3500, disableOnInteraction: false }}
+                            navigation={{
+                                prevEl: '.gallery-section-dark .swiper-prev-btn',
+                                nextEl: '.gallery-section-dark .swiper-next-btn',
+                            }}
+                            breakpoints={{
+                                640: { slidesPerView: 1.8 },
+                                768: { slidesPerView: 2.5 },
+                                1024: { slidesPerView: 3 }
+                            }}
+                            className="gallery-swiper"
+                        >
+                            {galleryImages.map((img, index) => (
+                                <SwiperSlide key={img.id}>
+                                    <div className="gallery-card-luxury" onClick={() => setSelectedImgIndex(index)}>
+                                        <img src={img.url} alt={img.caption} />
+                                        <div className="gallery-card-overlay">
+                                            <span className="gallery-tag">CLICK TO ENLARGE</span>
+                                            <p className="gallery-caption-title">{img.caption}</p>
+                                        </div>
                                     </div>
-                                </div>
-                            </SwiperSlide>
-                        ))}
-                    </Swiper>
-                </div>
-            </section>
+                                </SwiperSlide>
+                            ))}
+                        </Swiper>
+                    </div>
+                </section>
 
-            {/* --- LUXURY UPGRADED LIGHTBOX MODAL --- */}
-            {selectedImgIndex !== null && (
-                <div className="luxury-lightbox-modal" onClick={() => setSelectedImgIndex(null)}>
-                    {/* Top Bar with Counter and Close Button */}
-                    <div className="lightbox-top-bar" onClick={(e) => e.stopPropagation()}>
-                        <span className="lightbox-counter">
-                            {selectedImgIndex + 1} / {galleryImages.length}
-                        </span>
-                        <button className="lightbox-close-btn" onClick={() => setSelectedImgIndex(null)}>
-                            <FaTimes />
+                {/* LIGHTBOX MODAL */}
+                {selectedImgIndex !== null && (
+                    <div className="luxury-lightbox-modal" onClick={() => setSelectedImgIndex(null)}>
+                        <div className="lightbox-top-bar" onClick={(e) => e.stopPropagation()}>
+                            <span className="lightbox-counter">
+                                {selectedImgIndex + 1} / {galleryImages.length}
+                            </span>
+                            <button className="lightbox-close-btn" onClick={() => setSelectedImgIndex(null)}>
+                                <FaTimes />
+                            </button>
+                        </div>
+
+                        <button 
+                            className="lightbox-arrow-btn lightbox-arrow-left" 
+                            onClick={(e) => {
+                                e.stopPropagation();
+                                setSelectedImgIndex((prev) => (prev === 0 ? galleryImages.length - 1 : prev - 1));
+                            }}
+                            aria-label="Previous image"
+                        >
+                            <FaChevronLeft />
+                        </button>
+
+                        <div className="lightbox-image-container animate-zoom-in" onClick={(e) => e.stopPropagation()}>
+                            <img
+                                src={galleryImages[selectedImgIndex].url}
+                                alt={galleryImages[selectedImgIndex].caption}
+                                className="lightbox-main-img"
+                            />
+                            <div className="lightbox-caption-bar">
+                                <p className="lightbox-caption-text">{galleryImages[selectedImgIndex].caption}</p>
+                            </div>
+                        </div>
+
+                        <button 
+                            className="lightbox-arrow-btn lightbox-arrow-right" 
+                            onClick={(e) => {
+                                e.stopPropagation();
+                                setSelectedImgIndex((prev) => (prev === galleryImages.length - 1 ? 0 : prev + 1));
+                            }}
+                            aria-label="Next image"
+                        >
+                            <FaChevronRight />
                         </button>
                     </div>
+                )}
+            </section>
 
-                    {/* Navigation Prev Button */}
-                    <button 
-                        className="lightbox-arrow-btn lightbox-arrow-left" 
-                        onClick={(e) => {
-                            e.stopPropagation();
-                            setSelectedImgIndex((prev) => (prev === 0 ? galleryImages.length - 1 : prev - 1));
-                        }}
-                        aria-label="Previous image"
-                    >
-                        <FaChevronLeft />
-                    </button>
-
-                    {/* Main Image Box */}
-                    <div className="lightbox-image-container animate-zoom-in" onClick={(e) => e.stopPropagation()}>
-                        <img
-                            src={galleryImages[selectedImgIndex].url}
-                            alt={galleryImages[selectedImgIndex].caption}
-                            className="lightbox-main-img"
-                        />
-                        <div className="lightbox-caption-bar">
-                            <p className="lightbox-caption-text">{galleryImages[selectedImgIndex].caption}</p>
-                        </div>
-                    </div>
-
-                    {/* Navigation Next Button */}
-                    <button 
-                        className="lightbox-arrow-btn lightbox-arrow-right" 
-                        onClick={(e) => {
-                            e.stopPropagation();
-                            setSelectedImgIndex((prev) => (prev === galleryImages.length - 1 ? 0 : prev + 1));
-                        }}
-                        aria-label="Next image"
-                    >
-                        <FaChevronRight />
-                    </button>
-                </div>
-            )}
-</section>
-            {/* 6. ELEVATED FLOOR PLAN SECTION (LIGHT PAPER THEME) */}
+            {/* 6. ELEVATED FLOOR PLAN SECTION */}
             <section className="fn-section-paper py-5">
                 <div className="container-fluid px-3 px-md-5">
                     <div className="d-flex justify-content-between align-items-end mb-4">
@@ -509,7 +518,7 @@ export default function Home() {
                 )}
             </section>
 
-            {/* 7. NEW ADDED: LOCATION & CONNECTIVITY SECTION (DARK WALNUT THEME) */}
+            {/* 7. LOCATION & CONNECTIVITY SECTION */}
             <section className="location-section py-5">
                 <div className="container-fluid px-3 px-md-5">
                     <div className="row g-5 align-items-center">
@@ -552,7 +561,7 @@ export default function Home() {
                 </div>
             </section>
 
-            {/* 8. ELEVATED PRICING SECTION (DARK WALNUT THEME WITH GOLD ACCENTS) */}
+            {/* 8. ELEVATED PRICING SECTION */}
             <section className="pricing-wrapper-dark py-5">
                 <div className="container-fluid px-3 px-md-5">
                     <div className="text-start mb-5">
@@ -576,7 +585,6 @@ export default function Home() {
                     </div>
 
                     <div className="row g-4 justify-content-center">
-                        {/* Card 1 */}
                         <div className="col-lg-4 col-md-6">
                             <div className="pricing-card-dark">
                                 <span className="pricing-card-badge">Popular</span>
@@ -609,7 +617,6 @@ export default function Home() {
                             </div>
                         </div>
 
-                        {/* Card 2 */}
                         <div className="col-lg-4 col-md-6">
                             <div className="pricing-card-dark featured-dark">
                                 <span className="pricing-card-badge">Most Premium</span>
@@ -642,7 +649,6 @@ export default function Home() {
                             </div>
                         </div>
 
-                        {/* Card 3 */}
                         <div className="col-lg-4 col-md-6">
                             <div className="pricing-card-dark">
                                 <span className="pricing-card-badge">Limited Edition</span>
@@ -825,22 +831,96 @@ export default function Home() {
                 </div>
             </div>
 
-            {/* LIGHTBOX MODAL */}
-            {selectedImgIndex !== null && (
-                <div className="lightbox-modal" onClick={() => setSelectedImgIndex(null)}>
-                    <button className="lightbox-close" onClick={() => setSelectedImgIndex(null)}>
-                        <FaTimes />
-                    </button>
-                    <div className="lightbox-content" onClick={(e) => e.stopPropagation()}>
-                        <img
-                            src={galleryImages[selectedImgIndex].url}
-                            alt={galleryImages[selectedImgIndex].caption}
-                        />
-                        <p className="lightbox-caption">{galleryImages[selectedImgIndex].caption}</p>
-                    </div>
-                </div>
-            )}
+            {/* 10. NEW CUSTOM DETAILS FOOTER */}
+      
+<footer className="zen-custom-footer py-5">
+        <div className="container-fluid px-3 px-md-5">
+          
+          {/* Main 3-Column Section */}
+          <div className="row g-4 g-lg-5 pb-5">
+            
+            {/* Column 1: Logo, Tagline & Social Icons */}
+            <div className="col-lg-4 col-md-12">
+              <div className="footer-brand-container">
+                <Link to="/" className="text-decoration-none d-flex align-items-center gap-2 mb-3">
+                  <img src={Logo} alt="Ariahaus Logo" className="zen-footer-logo" />
+                  <span className="zen-footer-brand-title">ARIAHAUS</span>
+                </Link>
+                
+                <p className="zen-footer-tagline mb-4">
+                  A luxury villa community in Sakleshpur, Karnataka. Elevation without compromise.
+                </p>
 
+                <div className="zen-social-links d-flex align-items-center gap-3">
+                  <a href="#facebook" className="zen-social-circle" aria-label="Facebook">
+                    <FaFacebookF />
+                  </a>
+                  <a href="#instagram" className="zen-social-circle" aria-label="Instagram">
+                    <FaInstagram />
+                  </a>
+                  <a href="#whatsapp" className="zen-social-circle" aria-label="WhatsApp">
+                    <FaWhatsapp />
+                  </a>
+                  <a href="#website" className="zen-social-circle" aria-label="Website">
+                    <FaGlobe />
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            {/* Column 2: Navigate Links */}
+            <div className="col-lg-4 col-md-6 ps-lg-5">
+              <h6 className="zen-column-header">NAVIGATE</h6>
+              <ul className="zen-nav-list">
+                <li><Link to="/Property">Residences</Link></li>
+                <li><Link to="/#about">Amenities</Link></li>
+                <li><Link to="/#gallery">Gallery</Link></li>
+                <li><Link to="/#location">Location</Link></li>
+                <li><Link to="/New">Contact</Link></li>
+              </ul>
+            </div>
+
+            {/* Column 3: Contact Info */}
+            <div className="col-lg-4 col-md-6">
+              <h6 className="zen-column-header">CONTACT</h6>
+              <div className="zen-contact-details">
+                <p className="mb-1">
+                  <a href="mailto:info@amyrafarms.com" className="zen-email-link">info@amyrafarms.com</a>
+                </p>
+                <p className="mb-3">
+                  <a href="https://ariahausvillas.in" className="zen-email-link">ariahausvillas.in</a>
+                </p>
+                <div className="zen-address-text">
+                  <p className="m-0">Sakleshpur, Coffee Corridor,</p>
+                  <p className="m-0">Karnataka, India</p>
+                </div>
+              </div>
+            </div>
+
+          </div>
+
+          {/* Bottom Sub-Footer Bar */}
+          <div className="zen-sub-footer pt-4 border-top-gold">
+            <div className="row align-items-center g-3">
+              <div className="col-lg-4 col-md-12 text-center text-lg-start">
+                <span className="zen-copy-text">© 2026 Ariahaus. All rights reserved.</span>
+              </div>
+
+              <div className="col-lg-4 col-md-12 text-center">
+                <div className="zen-policy-links d-inline-flex gap-4">
+                  <Link to="/Terms">Terms and Conditions</Link>
+                  <Link to="/Privacy">Privacy Policy</Link>
+                </div>
+              </div>
+
+              <div className="col-lg-4 col-md-12 text-center text-lg-end">
+                <span className="zen-rera-text">RERA Registered · K-RERA/11/BLG/0013/2026</span>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </footer>
         </div>
     );
 }
