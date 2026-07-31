@@ -1,13 +1,13 @@
 @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600;700&family=Montserrat:wght@300;400;500;600&display=swap');
 
 :root {
-  /* Colors directly matched from Amyra Farms light/paper sections */
-  --bg-paper: #f5f0e6;                     /* --hsr-paper (Light Cream/Paper background) */
-  --bg-paper-alt: #ebd8be;                 /* Light warm accent */
-  --text-dark: #1a140c;                    /* --hsr-ink (Dark Charcoal/Walnut heading text) */
-  --text-muted-dark: rgba(26, 20, 12, 0.75); /* Muted body text for light background */
+ 
+  --bg-paper: #f5f0e6;    
+  --bg-paper-alt: #ebd8be; 
+  --text-dark: #1a140c;    
+  --text-muted-dark: rgba(26, 20, 12, 0.75);
   
-  --accent-gold: #c9a45b;                  /* --hsr-champagne (Gold taglines & accents) */
+  --accent-gold: #c9a45b;            
   --btn-gradient: linear-gradient(180deg, #c9a45b 0%, #a17f3b 100%);
   --btn-text-color: #ffffff;
   
@@ -54,7 +54,7 @@
 
 .about-tag {
   font-family: var(--font-serif);
-  color: var(--accent-gold);               /* Champagne Gold Tagline */
+  color: var(--accent-gold);            
   font-size: 0.85rem;
   letter-spacing: 3.5px;
   font-weight: 600;
@@ -67,7 +67,7 @@
   font-family: var(--font-serif);
   font-size: clamp(2.4rem, 4.5vw, 3.8rem);
   font-weight: 400;
-  color: var(--text-dark);                 /* Dark Ink text on light background */
+  color: var(--text-dark);             
   margin-bottom: 24px;
   letter-spacing: 0.5px;
   line-height: 1.1;
@@ -75,7 +75,7 @@
 
 .about-description {
   font-family: var(--font-sans);
-  color: var(--text-muted-dark);          /* Dark readable body text */
+  color: var(--text-muted-dark);     
   font-size: 1rem;
   line-height: 1.85;
   font-weight: 400;

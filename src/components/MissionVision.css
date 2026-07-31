@@ -1,26 +1,25 @@
 @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600;700&family=Montserrat:wght@300;400;500;600&display=swap');
 
 :root {
-  /* Colors extracted directly from this section image */
-  --bg-walnut-dark: #1b150e;               /* Main section background (Earthy Dark Walnut) */
-  --bg-card-brown: rgba(48, 38, 27, 0.45);  /* Inside card background tone */
   
-  --accent-gold: #c9a45b;                  /* --hsr-champagne (Gold tags & borders) */
-  --glass-border: rgba(201, 164, 91, 0.35); /* Distinct Gold/Champagne border */
+  --bg-walnut-dark: #1b150e;   
+  --bg-card-brown: rgba(48, 38, 27, 0.45);
   
-  --text-paper: #faf4e6;                   /* --hsr-paper (Card Titles) */
-  --text-stone: #f6efde;                   /* --hsr-stone (Body Text) */
+  --accent-gold: #c9a45b;         
+  --glass-border: rgba(201, 164, 91, 0.35); 
+  
+  --text-paper: #faf4e6;        
+  --text-stone: #f6efde;        
   
   --btn-gradient: linear-gradient(180deg, #c9a45b 0%, #9e7a37 100%);
   
-  /* Typography */
   --font-serif: 'Cormorant Garamond', Georgia, 'Times New Roman', serif;
   --font-sans: 'Montserrat', sans-serif;
 }
 
 .mission-vision-section {
   width: 100%;
-  background-color: var(--bg-walnut-dark); /* Exact Warm Walnut Brown background */
+  background-color: var(--bg-walnut-dark);
   font-family: var(--font-sans);
   position: relative;
   overflow: hidden;
@@ -47,11 +46,11 @@
 }
 
 .mv-card {
-  background: var(--bg-card-brown);       /* Same warm dark brown card tone as image */
+  background: var(--bg-card-brown);   
   backdrop-filter: blur(8px);
   -webkit-backdrop-filter: blur(8px);
-  border: 1px solid var(--glass-border);   /* Exact Gold outline frame */
-  border-radius: 4px;                      /* Sharp, elegant luxury corners like image */
+  border: 1px solid var(--glass-border);  
+  border-radius: 4px;                   
   padding: 40px 35px;
   transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
   position: relative;

@@ -7,7 +7,6 @@ export default function WhoWeAre() {
       <div className="container-fluid px-3 px-md-5">
         <div className="row align-items-center g-4 g-lg-5">
           
-          {/* Left Text Content */}
           <div className="col-lg-7 wwa-left-col pe-lg-5">
             <div className="wwa-text-content">
               <span className="wwa-tag">WHO WE ARE</span>
@@ -27,7 +26,6 @@ export default function WhoWeAre() {
             </div>
           </div>
 
-          {/* Right Experience / Stats Glass Card */}
           <div className="col-lg-5 wwa-right-col ps-lg-4">
             <div className="experience-glass-card text-center">
               <div className="stat-number">10+</div>

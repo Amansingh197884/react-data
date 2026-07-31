@@ -1,11 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&family=Montserrat:wght@300;400;500;600&display=swap');
 
 :root {
-  --bg-walnut-dark: #15110b;                 /* Main Dark Walnut Background */
-  --accent-gold: #c9a45b;                    /* Champagne Gold */
-  --glass-border: rgba(201, 164, 91, 0.22);   /* Soft Gold Divider Border */
-  --text-paper: #faf4e6;                     /* Clean Heading Text */
-  --text-stone: #d4ceb8;                     /* Muted Body Text */
+  --bg-walnut-dark: #15110b;           
+  --accent-gold: #c9a45b;             
+  --glass-border: rgba(201, 164, 91, 0.22); 
+  --text-paper: #faf4e6;                   
+  --text-stone: #d4ceb8;                
 
   --font-serif: 'Cormorant Garamond', Georgia, serif;
   --font-sans: 'Montserrat', sans-serif;

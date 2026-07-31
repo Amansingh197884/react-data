@@ -1,26 +1,25 @@
 @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600;700&family=Montserrat:wght@300;400;500;600&display=swap');
 
 :root {
-  /* Colors matched with Image 1 (Light Paper Theme) */
-  --bg-paper: #f5f0e6;                     /* Light Cream/Paper background */
-  --bg-card-paper: #faf4e6;                /* Card background tone */
+ 
+  --bg-paper: #f5f0e6;  
+  --bg-card-paper: #faf4e6;
   
-  --text-dark: #1a140c;                    /* Ink Dark Charcoal for Headings & Names */
-  --text-muted-dark: rgba(26, 20, 12, 0.78); /* Body text for readability */
+  --text-dark: #1a140c; 
+  --text-muted-dark: rgba(26, 20, 12, 0.78);
   
-  --accent-gold: #c9a45b;                  /* Champagne Gold for tags & icons */
-  --glass-border: rgba(201, 164, 91, 0.3);  /* Champagne thin border */
+  --accent-gold: #c9a45b;    
+  --glass-border: rgba(201, 164, 91, 0.3); 
   
   --btn-gradient: linear-gradient(180deg, #c9a45b 0%, #9e7a37 100%);
   
-  /* Typography */
   --font-serif: 'Cormorant Garamond', Georgia, 'Times New Roman', serif;
   --font-sans: 'Montserrat', sans-serif;
 }
 
 .testimonials-section {
   width: 100%;
-  background-color: var(--bg-paper);      /* Light paper background */
+  background-color: var(--bg-paper); 
   font-family: var(--font-sans);
   position: relative;
   overflow: hidden;
@@ -29,7 +28,7 @@
 
 .testi-tag {
   font-family: var(--font-serif);
-  color: var(--accent-gold);               /* Champagne Gold tagline */
+  color: var(--accent-gold);            
   font-size: 0.85rem;
   letter-spacing: 3.5px;
   font-weight: 600;
@@ -42,7 +41,7 @@
   font-family: var(--font-serif);
   font-size: clamp(2rem, 4vw, 3.2rem);
   font-weight: 400;
-  color: var(--text-dark);                 /* Dark Ink text */
+  color: var(--text-dark);            
   letter-spacing: 0.5px;
 }
 
@@ -62,11 +61,11 @@
 
 .testimonial-card {
   width: 100%;
-  background: var(--bg-card-paper);        /* Paper tone card background */
+  background: var(--bg-card-paper);  
   backdrop-filter: blur(16px);
   -webkit-backdrop-filter: blur(16px);
   border: 1px solid var(--glass-border);
-  border-radius: 8px;                       /* Luxury clean edges */
+  border-radius: 8px;                 
   padding: 35px 25px;
   text-align: center;
   position: relative;
@@ -125,7 +124,7 @@
   transform: translateX(-50%) rotate(45deg);
   width: 18px;
   height: 18px;
-  background: var(--bg-card-paper);        /* Matching card color */
+  background: var(--bg-card-paper);  
   border-right: 1px solid var(--glass-border);
   border-bottom: 1px solid var(--glass-border);
 }

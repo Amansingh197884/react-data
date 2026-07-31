@@ -21,7 +21,6 @@ export default function AboutUs() {
     return (
         <div className="aria-about-page">
             
-            {/* 1. Hero Banner Header (DARK WALNUT THEME) */}
             <header className="aria-contact-hero">
                 <div className="aria-hero-overlay">
                     <div className="aria-hero-content text-center animate-fade-in">
@@ -35,7 +34,6 @@ export default function AboutUs() {
                 </div>
             </header>
 
-            {/* 2. Intro Section (DARK WALNUT THEME) */}
             <section className="aria-section-dark py-5">
                 <div className="container-fluid px-3 px-md-5 py-lg-4">
                     <div className="row align-items-center g-5">
@@ -85,7 +83,6 @@ export default function AboutUs() {
                 </div>
             </section>
 
-            {/* 3. Our Story Section (LIGHT PAPER THEME) */}
             <section id="our-story" className="aria-section-light py-5">
                 <div className="container-fluid px-3 px-md-5 py-3">
                     <div className="row g-5 align-items-center">
@@ -124,7 +121,6 @@ export default function AboutUs() {
                 </div>
             </section>
 
-            {/* 4. Stats Counter Section (DARK WALNUT THEME) */}
             <section className="aria-section-dark py-5">
                 <div className="container-fluid px-3 px-md-5 py-3">
                     <div className="row g-4 text-center">
@@ -156,7 +152,6 @@ export default function AboutUs() {
                 </div>
             </section>
 
-            {/* 5. Vision & Mission Section (DARK WALNUT THEME) */}
             <section className="mission-vision-section py-5" id="mission-vision">
                  <div className="container-fluid px-3 px-md-5">
                    
@@ -166,7 +161,6 @@ export default function AboutUs() {
                      <h2 className="mv-section-title">Driving Real Estate Excellence</h2>
                    </div>
            
-                   {/* Mission & Vision Cards Grid */}
                    <div className="row g-4 justify-content-center">
                      
                      {/* Our Vision Card */}
@@ -221,7 +215,6 @@ export default function AboutUs() {
                  </div>
             </section>
 
-            {/* 6. Featured Projects Section (LIGHT PAPER THEME) */}
             <section className="aria-section-light py-5">
                 <div className="container-fluid px-3 px-md-5">
                     <div className="d-flex justify-content-between align-items-end mb-4 animate-fade-in">
@@ -275,7 +268,6 @@ export default function AboutUs() {
                 </div>
             </section>
 
-            {/* 7. Features Cards Section (DARK WALNUT THEME) */}
             <section className="aria-section-dark py-5">
                 <div className="container-fluid px-3 px-md-5">
                     <div className="text-center mx-auto mb-5 animate-fade-in">
@@ -323,7 +315,6 @@ export default function AboutUs() {
                 </div>
             </section>
 
-            {/* 8. FAQ Accordion Section (LIGHT PAPER THEME) */}
           <section className="aria-section-light py-5">
                 <div className="container-fluid px-3 px-md-5 py-3">
                     <div className="row justify-content-center">

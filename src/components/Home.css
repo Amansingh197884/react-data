@@ -1,20 +1,19 @@
 @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&family=Montserrat:wght@300;400;500;600&display=swap');
 
 :root {
-  /* Amyra Farms Color Palette */
-  --bg-walnut-dark: #15110b;                 /* Main Dark Background */
-  --bg-card-brown: rgba(33, 26, 17, 0.85);    /* Dark Glass Card Base */
+  --bg-walnut-dark: #15110b; 
+  --bg-card-brown: rgba(33, 26, 17, 0.85); 
   
-  --bg-paper: #f5f0e6;                       /* Light Paper Theme Background */
-  --bg-card-paper: #faf4e6;                  /* Light Card Background */
+  --bg-paper: #f5f0e6;           
+  --bg-card-paper: #faf4e6;      
 
-  --accent-gold: #c9a45b;                    /* Champagne Gold */
-  --glass-border: rgba(201, 164, 91, 0.35);   /* Champagne Thin Border */
+  --accent-gold: #c9a45b;         
+  --glass-border: rgba(201, 164, 91, 0.35);
 
-  --text-paper: #faf4e6;                     /* Dark Mode Light Text */
-  --text-stone: #f6efde;                     /* Dark Mode Muted Text */
-  --text-dark: #1a140c;                      /* Light Mode Dark Heading */
-  --text-dark-muted: rgba(26, 20, 12, 0.78); /* Light Mode Muted Text */
+  --text-paper: #faf4e6;              
+  --text-stone: #f6efde;             
+  --text-dark: #1a140c;           
+  --text-dark-muted: rgba(26, 20, 12, 0.78);
 
   --btn-gradient: linear-gradient(180deg, #c9a45b 0%, #9e7a37 100%);
 
@@ -250,7 +249,6 @@
   line-height: 1.6;
 }
 
-/* --- 4. UNIT FEATURES (LIGHT PAPER THEME) --- */
 .unit-features-section-paper {
   background-color: var(--bg-paper);
 }
@@ -283,7 +281,6 @@
   font-size: 1.05rem;
 }
 
-/* --- 5. ELEVATED GALLERY SECTION (DARK WALNUT) --- */
 .gallery-section-dark {
   background-color: var(--bg-walnut-dark);
 }
@@ -334,7 +331,6 @@
   transform: scale(1.08);
 }
 
-/* --- 6. ELEVATED FLOOR PLAN SECTION (LIGHT PAPER) --- */
 .fn-section-paper {
   background-color: var(--bg-paper);
 }
@@ -493,7 +489,6 @@
   font-size: 1.2rem;
 }
 
-/* --- 7. LOCATION & CONNECTIVITY SECTION (NEW) --- */
 .location-section {
   background-color: var(--bg-walnut-dark);
 }
@@ -530,7 +525,6 @@
   box-shadow: 0 15px 35px rgba(0, 0, 0, 0.7);
 }
 
-/* --- 8. ELEVATED PRICING SECTION (DARK WALNUT) --- */
 .pricing-wrapper-dark {
   background-color: var(--bg-walnut-dark);
 }
@@ -802,7 +796,6 @@ input:checked + .slider:before {
 .hero-tag-sub{
     color: #9e7a37;
 }
-/* --- LUXURY FULLSCREEN LIGHTBOX OVERLAY --- */
 .Galleryall .luxury-lightbox-modal {
   position: fixed;
   inset: 0;
@@ -817,7 +810,6 @@ input:checked + .slider:before {
   padding: 60px 20px 30px;
 }
 
-/* Top Navigation Bar */
 .Galleryall .lightbox-top-bar {
   position: absolute;
   top: 20px;
@@ -864,7 +856,6 @@ input:checked + .slider:before {
   transform: scale(1.08);
 }
 
-/* Lightbox Side Navigation Arrows */
 .Galleryall .lightbox-arrow-btn {
   position: absolute;
   top: 50%;
@@ -899,7 +890,6 @@ input:checked + .slider:before {
   box-shadow: 0 0 20px rgba(201, 164, 91, 0.5);
 }
 
-/* Expanded Main Image Container */
 .Galleryall .lightbox-image-container {
   position: relative;
   max-width: 90vw;

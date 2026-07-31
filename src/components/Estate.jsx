@@ -8,17 +8,14 @@ export default function EstateVillaSection() {
         <div className="row">
           <div className="col-12 col-lg-10 col-xl-9">
             
-            {/* Tagline */}
             <span className="villa-tag d-block mb-3">
               Estate Villa · 1BHK
             </span>
 
-            {/* Main Heading */}
             <h2 className="villa-heading mb-4">
               Intimate. Private. Immersed in Nature.
             </h2>
 
-            {/* Description */}
             <p className="villa-description mb-5">
               The 1BHK Estate Villa is designed as a luxury private suite inside the
               coffee estate. Ideal for couples, weekend stays, wellness escapes, and
@@ -26,7 +23,6 @@ export default function EstateVillaSection() {
               outdoors.
             </p>
 
-            {/* Price Box */}
             <div className="price-card-box p-4 p-md-4">
               <span className="price-tagline d-block mb-2">
                 INDICATIVE PRICE · PER VILLA

@@ -57,13 +57,11 @@ export default function Navbar() {
         </div>
       </nav>
 
-      {/* Side Drawer Backdrop */}
       <div 
         className={`side-drawer-backdrop ${isNavOpen ? 'open' : ''}`} 
         onClick={() => setIsNavOpen(false)}
       ></div>
 
-      {/* Side Drawer Menu for Mobile */}
       <div className={`side-drawer-menu ${isNavOpen ? 'open' : ''}`}>
         <div className="drawer-header">
           <span className="drawer-brand">Ariahaus</span>

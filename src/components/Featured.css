@@ -76,7 +76,7 @@
 .project-card {
   position: relative;
   height: 420px;
-  border-radius: 4px;                       /* Clean luxury edges */
+  border-radius: 4px;                  
   overflow: hidden;
   border: 1px solid var(--glass-border);
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.6);

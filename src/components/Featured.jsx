@@ -48,14 +48,12 @@ export default function FeaturedProjects() {
     <section className="featured-section py-5">
       <div className="container-fluid px-3 px-md-5">
         
-        {/* Header with Navigation Buttons */}
         <div className="d-flex justify-content-between align-items-end mb-4">
           <div>
             <span className="featured-tag d-block mb-1">OUR PORTFOLIO</span>
             <h2 className="featured-section-title m-0">Featured Projects</h2>
           </div>
 
-          {/* Custom Prev & Next Buttons */}
           <div className="swiper-nav-buttons d-flex gap-2">
             <button className="swiper-prev-btn" aria-label="Previous Project">
               <FaChevronLeft />

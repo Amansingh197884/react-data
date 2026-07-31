@@ -24,7 +24,7 @@ const AmenitiesGallery = () => {
     <section className="amenities-gallery-section py-5 position-relative">
       <div className="container-fluid px-3 px-md-5 my-4">
         
-        {/* Header section with Tag, Heading & Custom Navigation arrows */}
+     
         <div className="d-flex justify-content-between align-items-end mb-4">
           <div>
             <span className="gallery-section-tag d-block mb-1">ESTATE AMENITIES</span>
@@ -84,7 +84,6 @@ const AmenitiesGallery = () => {
         </Swiper>
       </div>
 
-      {/* Lightbox / Popup Modal */}
       {activeImage && (
         <div className="lightbox-overlay" onClick={() => setActiveImage(null)}>
           <span className="lightbox-close">&times;</span>

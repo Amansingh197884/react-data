@@ -83,7 +83,6 @@ export default function PrivacyPolicy() {
             </div>
           </div>
 
-          {/* Accordion / Detailed Sections */}
           <div className="privacy-accordion-wrapper">
             {sections.map((item, index) => (
               <div 
@@ -106,7 +105,6 @@ export default function PrivacyPolicy() {
             ))}
           </div>
 
-          {/* Data Query Contact Box */}
           <div className="privacy-contact-box mt-5 p-4 p-md-5 text-center">
             <h3 className="privacy-contact-heading mb-2">Questions Regarding Your Data?</h3>
             <p className="privacy-contact-desc mb-4">

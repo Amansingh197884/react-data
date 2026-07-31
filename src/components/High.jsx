@@ -7,7 +7,6 @@ export default function AboutUs() {
       <div className="container-fluid px-3 px-md-5">
         <div className="row align-items-center g-4 g-lg-5">
           
-          {/* Left Text Content */}
           <div className="col-lg-6 about-left-col pe-lg-5">
             <div className="about-text-content">
               <span className="about-tag">WHO WE ARE</span>
@@ -29,7 +28,6 @@ export default function AboutUs() {
             </div>
           </div>
 
-          {/* Right Image Section */}
           <div className="col-lg-6 about-right-col ps-lg-5">
             <div className="about-image-wrapper">
               <img 

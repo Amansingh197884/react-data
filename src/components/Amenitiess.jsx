@@ -2,7 +2,6 @@ import React, { useState } from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Navigation, Autoplay } from 'swiper/modules';
 
-// Import Swiper styles
 import 'swiper/css';
 import 'swiper/css/navigation';
 import './Gallery.css'; 
@@ -21,7 +20,7 @@ const AmenitiesGallery = () => {
     <section className="py-5 bg-light position-relative">
       <div className="container-fluid mt-5">
         
-        {/* Header section with heading and Custom Navigation arrows */}
+      
         <div className="d-flex justify-content-between align-items-center mb-4">
           <h2 className="display-5 font-serif text-dark m-0">Gallery</h2>
           <div className="d-flex gap-2">
@@ -44,7 +43,7 @@ const AmenitiesGallery = () => {
             prevEl: '.custom-prev-btn',
             nextEl: '.custom-next-btn',
           }}
-          // FIX 2: Dynamic elements load hone ke baad Swiper re-init ho
+      
           onBeforeInit={(swiper) => {
             swiper.params.navigation.prevEl = '.custom-prev-btn';
             swiper.params.navigation.nextEl = '.custom-next-btn';
@@ -76,7 +75,7 @@ const AmenitiesGallery = () => {
         </Swiper>
       </div>
 
-      {/* Lightbox / Popup Modal */}
+    
       {activeImage && (
         <div className="lightbox-overlay" onClick={() => setActiveImage(null)}>
           <span className="lightbox-close">&times;</span>
