@@ -93,29 +93,29 @@ export default function ApartmentsSection() {
     return (
         <div className="aria-property-page">
             
-            {/* Top Hero Banner */}
-            <div className="contact-container container-fluid p-0">
-                <header className="contact-hero">
-                    <div className="hero-overlay-dark">
-                        <div className="hero-content aria-fade-in text-center">
-                            <div className="breadcrumb-nav mb-2">
-                                <Link to="/" className="text-decoration-none nav-crumb">HOME</Link>
-                                <span className="crumb-separator mx-2">/</span>
-                                <span className="aria-gold-text">PROPERTY</span>
-                            </div>
-                            <h1 className='property-hero-title'>Exclusive Residences</h1>
-                        </div>
-                    </div>
-                </header>
+             <div className="property-hero-wrapper container-fluid p-0">
+    <header className="property-hero-banner">
+        <div className="property-hero-overlay">
+            <div className="property-hero-content text-center">
+                <div className="property-breadcrumb-nav mb-2">
+                    <Link to="/" className="property-breadcrumb-link">
+                        HOME
+                    </Link>
+                    <span className="property-crumb-separator mx-2">/</span>
+                    <span className="property-gold-current">PROPERTY</span>
+                </div>
+                <h1 className="property-hero-title">Exclusive Residences</h1>
+            </div>
+        </div>
+    </header>
             </div>
 
-            {/* Section 1: Top Luxury Apartments */}
-            <section className=" py-5">
+            <section className="mt-5 mb-5 py-5">
                 <div className="container-fluid px-3 px-md-5">
                     <div className="apartments-header d-flex justify-content-between align-items-end mb-4">
                         <div className="header-text">
                             <span className="aria-gold-sub d-block mb-1">CURATED SELECTION</span>
-                            <h2 className='mv-section-title m-0'>Top Luxury Apartments</h2>
+                            <h1 className='mv-section-title m-0'>Top Luxury Apartments</h1>
                         </div>
 
                         <div className="navigation-buttons d-flex gap-2">
@@ -135,13 +135,14 @@ export default function ApartmentsSection() {
                             nextEl: '.apt-next-1',
                         }}
                         autoplay={{ delay: 3500, disableOnInteraction: false, pauseOnMouseEnter: true }}
-                        spaceBetween={24}
-                        slidesPerView={1}
+                        spaceBetween={20}
+                        slidesPerView={1.2} /* FIX 2: Default mobile peek view */
                         loop={true}
                         breakpoints={{
-                            640: { slidesPerView: 1.5 },
-                            768: { slidesPerView: 2 },
-                            1024: { slidesPerView: 3 }
+                            480: { slidesPerView: 1.25, spaceBetween: 20 },
+                            640: { slidesPerView: 1.6, spaceBetween: 20 },
+                            768: { slidesPerView: 2.2, spaceBetween: 24 },
+                            1024: { slidesPerView: 3, spaceBetween: 24 }
                         }}
                         className="apartments-slider"
                     >
@@ -151,7 +152,6 @@ export default function ApartmentsSection() {
                                     <div className="card-image-wrapper">
                                         <img src={item.image} alt={item.title} className="card-image" />
                                         
-                                        {/* Hover Animated Glass Overlay */}
                                         <div className="hover-card-overlay">
                                             <span className="overlay-starting">STARTING FROM</span>
                                             <h3 className="overlay-price">{item.price}</h3>
@@ -161,7 +161,6 @@ export default function ApartmentsSection() {
                                         </div>
                                     </div>
 
-                                    {/* Card Content Below Image */}
                                     <div className="card-content">
                                         <h3 className="property-title">{item.title}</h3>
                                         <p className="location">{item.location}</p>
@@ -177,12 +176,12 @@ export default function ApartmentsSection() {
             </section>
 
             {/* Section 2: Featured Projects */}
-            <section className=" py-5 pt-0">
+            <section className="py-5 pt-0 mt-5">
                 <div className="container-fluid px-3 px-md-5">
                     <div className="apartments-header d-flex justify-content-between align-items-end mb-4">
                         <div className="header-text">
                             <span className="aria-gold-sub d-block mb-1">PORTFOLIO EXCLUSIVES</span>
-                            <h2 className='mv-section-title m-0'>Featured Projects</h2>
+                            <h1 className='mv-section-title m-0'>Featured Projects</h1>
                         </div>
 
                         <div className="navigation-buttons d-flex gap-2">
@@ -202,13 +201,14 @@ export default function ApartmentsSection() {
                             nextEl: '.apt-next-2',
                         }}
                         autoplay={{ delay: 4000, disableOnInteraction: false, pauseOnMouseEnter: true }}
-                        spaceBetween={24}
-                        slidesPerView={1}
+                        spaceBetween={20}
+                        slidesPerView={1.2} /* FIX 2: Default mobile peek view */
                         loop={true}
                         breakpoints={{
-                            640: { slidesPerView: 1.5 },
-                            768: { slidesPerView: 2 },
-                            1024: { slidesPerView: 3 }
+                            480: { slidesPerView: 1.25, spaceBetween: 20 },
+                            640: { slidesPerView: 1.6, spaceBetween: 20 },
+                            768: { slidesPerView: 2.2, spaceBetween: 24 },
+                            1024: { slidesPerView: 3, spaceBetween: 24 }
                         }}
                         className="apartments-slider"
                     >
@@ -218,7 +218,6 @@ export default function ApartmentsSection() {
                                     <div className="card-image-wrapper">
                                         <img src={item.image} alt={item.title} className="card-image" />
                                         
-                                        {/* Hover Animated Glass Overlay */}
                                         <div className="hover-card-overlay">
                                             <span className="overlay-starting">STARTING FROM</span>
                                             <h3 className="overlay-price">{item.price}</h3>
@@ -228,7 +227,6 @@ export default function ApartmentsSection() {
                                         </div>
                                     </div>
 
-                                    {/* Card Content Below Image */}
                                     <div className="card-content">
                                         <h3 className="property-title">{item.title}</h3>
                                         <p className="location">{item.location}</p>
@@ -252,7 +250,7 @@ export default function ApartmentsSection() {
                         <p className="aria-text-muted max-w-600 mx-auto mb-4">
                             Schedule an exclusive private tour with our senior real estate advisory team and explore available residences before official releases.
                         </p>
-                        <div className="d-flex justify-content-center  gap-3 flex-wrap">
+                        <div className="d-flex justify-content-center gap-3 flex-wrap">
                             <Link to="/New" className="overlay-gold-btn px-4 py-3 text-decoration-none">
                                 Book Private Tour
                             </Link>

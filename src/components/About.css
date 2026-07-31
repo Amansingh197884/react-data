@@ -1,24 +1,22 @@
 @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&family=Montserrat:wght@300;400;500;600&display=swap');
 
 :root {
-  /* Exact Amyra Farms Theme Variables */
-  --bg-walnut-dark: #15110b;                 /* Main Dark Background */
-  --bg-card-brown: rgba(33, 26, 17, 0.85);    /* Dark Card Glass Base */
+  --bg-walnut-dark: #15110b;            
+  --bg-card-brown: rgba(33, 26, 17, 0.85);   
   
-  --bg-paper: #f5f0e6;                       /* Light Paper Theme Background */
-  --bg-card-paper: #faf4e6;                  /* Light Card Background */
+  --bg-paper: #f5f0e6;                
+  --bg-card-paper: #faf4e6;           
 
-  --accent-gold: #c9a45b;                    /* Champagne Gold */
-  --glass-border: rgba(201, 164, 91, 0.35);   /* Champagne Thin Border */
+  --accent-gold: #c9a45b;            
+  --glass-border: rgba(201, 164, 91, 0.35); 
 
-  --text-paper: #faf4e6;                     /* Dark Mode Light Heading */
-  --text-stone: #f6efde;                     /* Dark Mode Muted Body Text */
-  --text-dark: #1a140c;                      /* Light Mode Charcoal Heading */
-  --text-dark-muted: rgba(26, 20, 12, 0.78); /* Light Mode Muted Body Text */
+  --text-paper: #faf4e6;             
+  --text-stone: #f6efde;             
+  --text-dark: #1a140c;              
+  --text-dark-muted: rgba(26, 20, 12, 0.78); 
 
   --btn-gradient: linear-gradient(180deg, #c9a45b 0%, #9e7a37 100%);
 
-  /* Fonts */
   --font-serif: 'Cormorant Garamond', Georgia, 'Times New Roman', serif;
   --font-sans: 'Montserrat', sans-serif;
 }
@@ -29,7 +27,6 @@
   overflow: hidden;
 }
 
-/* --- ALTERNATING SECTIONS --- */
 .aria-section-dark {
   background-color: var(--bg-walnut-dark);
   color: var(--text-paper);
@@ -40,7 +37,6 @@
   color: var(--text-dark);
 }
 
-/* Headings */
 .mv-section-title {
   font-family: var(--font-serif);
   font-size: clamp(2.2rem, 4.5vw, 3.8rem);

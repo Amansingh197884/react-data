@@ -168,8 +168,8 @@
 }
 
 .nav-btn-light {
-  border-color: rgba(201, 164, 91, 0.5);
-  color: var(--text-dark);
+  border-color: rgb(228, 154, 5) !important;
+  color: #000 !important;
 }
 
 .nav-btn:hover, .nav-btn-dark:hover, .nav-btn-light:hover {

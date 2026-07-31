@@ -1,17 +1,15 @@
 @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&family=Montserrat:wght@300;400;500;600&display=swap');
 
 :root {
-  /* Colors matched with Amyra Farms Dark/Walnut Theme */
-  --bg-walnut-dark: #15110b;               /* Deep Walnut Background */
-  --accent-gold: #c9a45b;                  /* Champagne Gold */
-  --glass-border: rgba(201, 164, 91, 0.35); /* Subtle Champagne outline */
+  --bg-walnut-dark: #15110b;        
+  --accent-gold: #c9a45b;          
+  --glass-border: rgba(201, 164, 91, 0.35); 
   
-  --text-paper: #faf4e6;                   /* Headings & Light text */
-  --text-stone: #f6efde;                   /* Subheadings & Badges */
+  --text-paper: #faf4e6;           
+  --text-stone: #f6efde;            
   
   --btn-gradient: linear-gradient(180deg, #c9a45b 0%, #9e7a37 100%);
   
-  /* Fonts */
   --font-serif: 'Cormorant Garamond', Georgia, 'Times New Roman', serif;
   --font-sans: 'Montserrat', sans-serif;
 }
@@ -23,7 +21,6 @@
   overflow: hidden;
 }
 
-/* Header Section */
 .gallery-section-tag {
   font-family: var(--font-serif);
   color: var(--accent-gold);
@@ -41,13 +38,12 @@
   letter-spacing: 0.5px;
 }
 
-/* Custom Navigation Buttons */
 .custom-prev-btn, .custom-next-btn {
   width: 44px;
   height: 44px;
   border-radius: 50%;
-  background: transparent;
-  border: 1px solid var(--glass-border);
+  background: transparent !important;
+  border: 1px solid var(--glass-border) !important;
   color: var(--accent-gold);
   display: flex;
   align-items: center;
@@ -57,10 +53,10 @@
 }
 
 .custom-prev-btn:hover, .custom-next-btn:hover {
-  background: var(--btn-gradient);
-  color: var(--bg-walnut-dark);
-  border-color: transparent;
-  box-shadow: 0 4px 15px rgba(201, 164, 91, 0.35);
+  background: var(--btn-gradient) !important;
+  color: var(--bg-walnut-dark) !important;
+  border-color: transparent !important;
+  box-shadow: 0 4px 15px rgba(201, 164, 91, 0.35) !important;
 }
 
 /* Slide Cards Styling */
