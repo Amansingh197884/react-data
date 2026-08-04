@@ -2,11 +2,12 @@ import React, { useState, useEffect } from 'react';
 import { FaSlidersH, FaMapMarkerAlt, FaSearch } from 'react-icons/fa';
 import './Hero.css';
 
-const heroImages = [
-  "https://i.pinimg.com/1200x/2e/8c/f4/2e8cf45d4b5980b2110944dfe2afe4d8.jpg",
-  "https://i.pinimg.com/1200x/69/fb/af/69fbaf394b30a03d673865eb3c661584.jpg",
-  "https://i.pinimg.com/1200x/c5/6e/94/c56e940486969a64984fdf3e3d1f2f14.jpg"
-];
+
+import banner1 from '../assets/banner2.jpeg';
+import banner2 from '../assets/banner1.jpeg';
+import banner3 from '../assets/banner3.jpeg';
+
+const heroImages = [banner1, banner2, banner3];
 
 export default function Home() {
   const [currentImgIndex, setCurrentImgIndex] = useState(0);
@@ -31,15 +32,21 @@ export default function Home() {
       <div className="hero-overlay-dark"></div>
 
       <div className="hero-content-box">
+        {/* <p className="top-brand-subtitle animate-fade-down">
+          Luxury Real Estate
+        </p> */}
 
-        <h1 className="main-hero-heading">FIND YOUR PLACE</h1>
+        <h1 className="main-hero-heading animate-fade-up">
+          FIND YOUR PLACE
+        </h1>
 
-        <div className="search-glass-wrapper">
+        <div className="search-glass-wrapper animate-fade-in-scale">
           <form onSubmit={(e) => e.preventDefault()} className="search-inner-form">
-
+            
             <div className="search-item flex-select">
-              <i className="bi bi-sliders text-white me-2"></i>              <select className="glass-select">
-                <option value="">Property Type</option>
+              <FaSlidersH className="search-icon" />
+              <select className="glass-select" defaultValue="">
+                <option value="" disabled hidden>Property Type</option>
                 <option value="villa">Villa</option>
                 <option value="flat">Flat</option>
                 <option value="plot">Plot</option>
@@ -49,7 +56,8 @@ export default function Home() {
             <div className="vertical-divider"></div>
 
             <div className="search-item flex-input">
-              <i className="bi bi-geo-alt me-2 text-white"></i>              <input
+              <FaMapMarkerAlt className="search-icon" />
+              <input
                 type="text"
                 className="glass-input"
                 placeholder="Where are you looking?"
@@ -57,13 +65,13 @@ export default function Home() {
             </div>
 
             <button type="submit" className="search-gold-btn">
-              <i className="bi bi-search ms-2"></i>
+              <FaSearch className="btn-icon" />
               <span>FIND HOME</span>
             </button>
           </form>
         </div>
 
-        <div className="bottom-tagline-group">
+        <div className="bottom-tagline-group animate-fade-up-delay">
           <h3 className="tagline-title">Luxury Living, Reimagined.</h3>
           <p className="tagline-sub">Discover Your Dream in Pune’s Prime Locations.</p>
         </div>
