@@ -1,4 +1,7 @@
-@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400;1,600&display=swap');
+
+
+@import url('https://fonts.googleapis.com/css2?family=Wix+Madefor+Display:wght@400;500;600&display=swap');
+
 
 :root {
     --accent-gold: #c9a45b;      
@@ -24,20 +27,20 @@
     
     --bg-walnut-dark: #15110b;               
     --bg-card-brown: rgba(33, 26, 17, 0.88);  
+ --font-serif: 'Wix Madefor Display', sans-serif;
+  --font-sans: 'Wix Madefor Display', sans-serif;
 
-    /* Force Cormorant Garamond font globally */
-    --font-serif: 'Cormorant Garamond', Georgia, serif;
-    --font-sans: 'Cormorant Garamond', Georgia, serif;
+
 }
-
+h1{
+     --font-serif: 'Wix Madefor Display', sans-serif !important;
+  --font-sans: 'Wix Madefor Display', sans-serif !important;
+}
 * {
     box-sizing: border-box;
-    font-family: var(--font-serif) !important;
 }
 
-/* =========================================================
-   NAVBAR STYLES (Retained & Purely Styled with Cormorant Garamond)
-   ========================================================= */
+
 .luxury-navbar {
     padding: 22px 0;
     transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
@@ -208,9 +211,7 @@
     border-bottom-color: var(--accent-gold);
 }
 
-/* =========================================================
-   HERO SECTION & FULL PAGE ANIMATIONS
-   ========================================================= */
+
 .hero-section-container {
     position: relative;
     width: 100%;
@@ -223,7 +224,6 @@
     background-color: var(--bg-night);
 }
 
-/* Background Slide & Ken-Burns Zoom Animation */
 .hero-bg-slide {
     position: absolute;
     top: 0;
@@ -288,7 +288,6 @@
     filter: drop-shadow(0px 4px 15px rgba(0, 0, 0, 0.95));
 }
 
-/* Search Form (Glassmorphism + Enhanced Inputs) */
 .search-glass-wrapper {
     width: 100%;
     max-width: 860px;

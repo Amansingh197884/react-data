@@ -1,4 +1,3 @@
-@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600;700&family=Montserrat:wght@300;400;500;600&display=swap');
 
 :root {
   
@@ -12,9 +11,7 @@
   --text-stone: #f6efde;        
   
   --btn-gradient: linear-gradient(180deg, #c9a45b 0%, #9e7a37 100%);
-  
-  --font-serif: 'Cormorant Garamond', Georgia, 'Times New Roman', serif;
-  --font-sans: 'Montserrat', sans-serif;
+
 }
 
 .mission-vision-section {
