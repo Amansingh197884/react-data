@@ -1,41 +1,37 @@
 
-
-@import url('https://fonts.googleapis.com/css2?family=Wix+Madefor+Display:wght@400;500;600&display=swap');
-
-
 :root {
-    --accent-gold: #c9a45b;      
-    --accent-gold-bright: #e5be70;  
-    --bg-night: #15110b;            
-    --bg-walnut: #211a11;                  
-    --text-stone: #f6efde;                 
-    --text-paper: #faf4e6;                 
+    --accent-gold: #c9a45b;
+    --accent-gold-bright: #e5be70;
+    --bg-night: #15110b;
+    --bg-walnut: #211a11;
+    --text-stone: #f6efde;
+    --text-paper: #faf4e6;
 
     --title-gradient: linear-gradient(180deg, #faf4e6 0%, #f6efde 60%, #c9a45b 100%);
     --btn-gradient: linear-gradient(135deg, #c9a45b 0%, #9e7a37 100%);
     --btn-text-color: #15110b;
-    
-    --overlay-bg: linear-gradient(
-      180deg, 
-      rgba(15, 11, 7, 0.75) 0%,       
-      rgba(21, 17, 11, 0.35) 35%,     
-      rgba(21, 17, 11, 0.45) 65%,      
-      rgba(15, 11, 7, 0.90) 100%      
-    );
+
+    --overlay-bg: linear-gradient(180deg,
+            rgba(15, 11, 7, 0.75) 0%,
+            rgba(21, 17, 11, 0.35) 35%,
+            rgba(21, 17, 11, 0.45) 65%,
+            rgba(15, 11, 7, 0.90) 100%);
     --glass-border: rgba(201, 164, 91, 0.35);
     --btn-shadow: rgba(201, 164, 91, 0.4);
-    
-    --bg-walnut-dark: #15110b;               
-    --bg-card-brown: rgba(33, 26, 17, 0.88);  
- --font-serif: 'Wix Madefor Display', sans-serif;
-  --font-sans: 'Wix Madefor Display', sans-serif;
+
+    --bg-walnut-dark: #15110b;
+    --bg-card-brown: rgba(33, 26, 17, 0.88);
+    --font-serif: 'Wix Madefor Display', sans-serif;
+    --font-sans: 'Wix Madefor Display', sans-serif;
 
 
 }
-h1{
-     --font-serif: 'Wix Madefor Display', sans-serif !important;
-  --font-sans: 'Wix Madefor Display', sans-serif !important;
+
+h1 {
+    --font-serif: 'Wix Madefor Display', sans-serif !important;
+    --font-sans: 'Wix Madefor Display', sans-serif !important;
 }
+
 * {
     box-sizing: border-box;
 }
@@ -81,11 +77,10 @@ h1{
     transform: scale(1.1);
 }
 
-/* Nav Links */
 .luxury-nav-link {
     color: var(--text-stone) !important;
     opacity: 0.88;
-    font-size: 1.35rem !important;
+    font-size: 1rem !important;
     font-weight: 600 !important;
     padding: 6px 0 !important;
     position: relative;
@@ -118,7 +113,6 @@ h1{
     width: 100%;
 }
 
-/* Side Drawer (Mobile Nav) */
 .side-drawer-backdrop {
     position: fixed;
     top: 0;
@@ -276,8 +270,8 @@ h1{
 }
 
 .main-hero-heading {
-    font-size: clamp(2.8rem, 7vw, 5.8rem);
-    font-weight: 600;
+    font-size: clamp(2.8rem, 7vw, 5.5rem);
+    font-weight: 500;
     letter-spacing: 3px;
     line-height: 1.05;
     margin-bottom: 30px;
@@ -319,8 +313,13 @@ h1{
     padding: 10px 16px;
 }
 
-.flex-select { flex: 1; }
-.flex-input { flex: 1.5; }
+.flex-select {
+    flex: 1;
+}
+
+.flex-input {
+    flex: 1.5;
+}
 
 .search-icon {
     color: var(--accent-gold);
@@ -427,18 +426,39 @@ h1{
 }
 
 @keyframes fadeInDown {
-    from { opacity: 0; transform: translateY(-30px); }
-    to { opacity: 1; transform: translateY(0); }
+    from {
+        opacity: 0;
+        transform: translateY(-30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 @keyframes fadeInUp {
-    from { opacity: 0; transform: translateY(30px); }
-    to { opacity: 1; transform: translateY(0); }
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 @keyframes fadeInScale {
-    from { opacity: 0; transform: scale(0.94); }
-    to { opacity: 1; transform: scale(1); }
+    from {
+        opacity: 0;
+        transform: scale(0.94);
+    }
+
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
 }
 
 /* Responsive Styles */

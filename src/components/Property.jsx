@@ -115,7 +115,7 @@ export default function ApartmentsSection() {
                     <div className="apartments-header d-flex justify-content-between align-items-end mb-4">
                         <div className="header-text">
                             <span className="aria-gold-sub d-block mb-1">CURATED SELECTION</span>
-                            <h1 className='mv-section-title m-0'>Top Luxury Apartments</h1>
+                            <h1 className='text-white m-0'>Top Luxury Apartments</h1>
                         </div>
 
                         <div className="navigation-buttons d-flex gap-2">
@@ -136,7 +136,7 @@ export default function ApartmentsSection() {
                         }}
                         autoplay={{ delay: 3500, disableOnInteraction: false, pauseOnMouseEnter: true }}
                         spaceBetween={20}
-                        slidesPerView={1.2} /* FIX 2: Default mobile peek view */
+                        slidesPerView={1.2} 
                         loop={true}
                         breakpoints={{
                             480: { slidesPerView: 1.25, spaceBetween: 20 },
@@ -175,13 +175,12 @@ export default function ApartmentsSection() {
                 </div>
             </section>
 
-            {/* Section 2: Featured Projects */}
             <section className="py-5 pt-0 mt-5">
                 <div className="container-fluid px-3 px-md-5">
                     <div className="apartments-header d-flex justify-content-between align-items-end mb-4">
                         <div className="header-text">
                             <span className="aria-gold-sub d-block mb-1">PORTFOLIO EXCLUSIVES</span>
-                            <h1 className='mv-section-title m-0'>Featured Projects</h1>
+                            <h1 className='text-white m-0'>Featured Projects</h1>
                         </div>
 
                         <div className="navigation-buttons d-flex gap-2">

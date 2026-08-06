@@ -38,7 +38,6 @@
   letter-spacing: 0.5px;
 }
 
-/* Custom Swiper Navigation Buttons */
 .swiper-prev-btn,
 .swiper-next-btn {
   width: 44px;
@@ -69,11 +68,10 @@
   border-color: rgba(201, 164, 91, 0.15);
 }
 
-/* Card Styling */
 .project-card {
   position: relative;
   height: 420px;
-  border-radius: 4px;                  
+  border-radius: 15px;                  
   overflow: hidden;
   border: 1px solid var(--glass-border);
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.6);
@@ -126,7 +124,6 @@
   margin: 0;
 }
 
-/* Hover Overlay */
 .hover-overlay {
   position: absolute;
   inset: 0;
@@ -142,6 +139,7 @@
   transition: all 0.4s ease;
   z-index: 3;
   padding: 20px;
+  border-radius: 15px;
   border: 1px solid var(--accent-gold);
 }
 

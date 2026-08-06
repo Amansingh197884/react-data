@@ -62,7 +62,7 @@
   backdrop-filter: blur(16px);
   -webkit-backdrop-filter: blur(16px);
   border: 1px solid var(--glass-border);
-  border-radius: 8px;                 
+  border-radius: 15px;                 
   padding: 35px 25px;
   text-align: center;
   position: relative;

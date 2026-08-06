@@ -29,7 +29,7 @@ export default function AboutUs() {
                             <span className="crumb-sep"> / </span>
                             <span className="aria-gold-text">ABOUT US</span>
                         </div>
-                        <h1 className="mv-section-title">About Us</h1>
+                        <h1 className="text-white">About Us</h1>
                     </div>
                 </div>
             </header>

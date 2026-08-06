@@ -15,7 +15,7 @@
 
 }
 
-.contact-section {
+.contact-section {  
   width: 100%;
   background-color: var(--bg-walnut-dark);
   font-family: var(--font-sans);
@@ -108,7 +108,7 @@
   backdrop-filter: blur(8px);
   -webkit-backdrop-filter: blur(8px);
   border: 1px solid var(--glass-border);
-  border-radius: 6px;                      /* Sharp, luxury corners */
+  border-radius: 15px ;                
   padding: 45px 40px;
   box-shadow: 0 20px 40px rgba(15, 10, 5, 0.6);
   animation: fadeInUp 1s ease-out forwards;

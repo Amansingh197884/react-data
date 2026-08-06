@@ -57,10 +57,9 @@
   box-shadow: 0 4px 15px rgba(201, 164, 91, 0.35) !important;
 }
 
-/* Slide Cards Styling */
 .amenities-card {
   height: 320px;
-  border-radius: 4px;                      /* Sharp luxury corners */
+  border-radius: 15px;   
   border: 1px solid var(--glass-border);
   cursor: pointer;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
@@ -85,6 +84,7 @@
 .amenities-card:hover {
   border-color: rgba(201, 164, 91, 0.7);
   box-shadow: 0 12px 35px rgba(201, 164, 91, 0.15);
+  border-radius: 15px;
 }
 
 /* Label/Badge Position & Styling */

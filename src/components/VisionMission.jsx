@@ -13,7 +13,6 @@ export default function MissionVision() {
           <h2 className="mv-section-title">Driving Real Estate Excellence</h2>
         </div>
 
-        {/* Mission & Vision Cards Grid */}
         <div className="row g-4 justify-content-center">
           
           {/* Our Vision Card */}
