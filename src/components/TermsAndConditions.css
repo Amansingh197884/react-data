@@ -17,7 +17,6 @@
   min-height: 100vh;
 }
 
-/* Hero Header */
 .terms-hero-section {
   padding: 120px 20px 60px;
   border-bottom: 1px solid var(--glass-border);
@@ -54,11 +53,10 @@
   letter-spacing: 1px;
 }
 
-/* Feature Cards */
 .terms-card {
   background: var(--bg-card-brown);
   border: 1px solid var(--glass-border);
-  border-radius: 4px;
+  border-radius: 14px;
   transition: all 0.3s ease;
 }
 
@@ -85,7 +83,6 @@
   opacity: 0.8;
 }
 
-/* Accordion Styling */
 .terms-accordion-wrapper {
   display: flex;
   flex-direction: column;
@@ -97,7 +94,7 @@
 .terms-accordion-item {
   background: var(--bg-card-brown);
   border: 1px solid var(--glass-border);
-  border-radius: 4px;
+  border-radius: 14px;
   padding: 20px 24px;
   cursor: pointer;
   transition: all 0.3s ease;
@@ -134,11 +131,10 @@
   padding-top: 14px;
 }
 
-/* Contact Box */
 .terms-contact-box {
   background: rgba(33, 26, 17, 0.6);
   border: 1px solid var(--glass-border);
-  border-radius: 6px;
+  border-radius: 16px;
   max-width: 900px;
   margin: 0 auto;
 }

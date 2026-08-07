@@ -60,8 +60,8 @@ const ContactPage = () => {
           
           {/* Header Section */}
           <div className="text-start mb-4">
-            <span className="contact-tag-sub d-block mb-1">GET IN TOUCH</span>
-            <h1 className="fw-normal mb-2 mv-section-title">
+            <span className="contact-tag-sub d-block mb-2">GET IN TOUCH</span>
+            <h1 className="fw-normal mb-2 text-white mb-3">
               Let's Start The Conversation
             </h1>
             <p className="custom-subtext">

@@ -125,25 +125,25 @@ export default function AboutUs() {
                 <div className="container-fluid px-3 px-md-5 py-3">
                     <div className="row g-4 text-center">
                         <div className="col-6 col-md-3">
-                            <div className="p-4 aria-card-dark rounded-2 h-100 stat-card">
+                            <div className="p-4 aria-card-dark rounded-4 h-100 stat-card">
                                 <h3 className="mv-section-title aria-gold-text mb-1 fs-1">2,500+</h3>
                                 <p className="aria-text-stone mb-0 small">Handpicked Apartments</p>
                             </div>
                         </div>
                         <div className="col-6 col-md-3">
-                            <div className="p-4 aria-card-dark rounded-2 h-100 stat-card">
+                            <div className="p-4 aria-card-dark rounded-4 h-100 stat-card">
                                 <h3 className="mv-section-title aria-gold-text mb-1 fs-1">50k+</h3>
                                 <p className="aria-text-stone mb-0 small">Happy Guests Served</p>
                             </div>
                         </div>
                         <div className="col-6 col-md-3">
-                            <div className="p-4 aria-card-dark rounded-2 h-100 stat-card">
+                            <div className="p-4 aria-card-dark rounded-4 h-100 stat-card">
                                 <h3 className="mv-section-title aria-gold-text mb-1 fs-1">15+</h3>
                                 <p className="aria-text-stone mb-0 small">Cities Worldwide</p>
                             </div>
                         </div>
                         <div className="col-6 col-md-3">
-                            <div className="p-4 aria-card-dark rounded-2 h-100 stat-card">
+                            <div className="p-4 aria-card-dark rounded-4 h-100 stat-card">
                                 <h3 className="mv-section-title aria-gold-text mb-1 fs-1">4.9 ★</h3>
                                 <p className="aria-text-stone mb-0 small">Average Guest Rating</p>
                             </div>
@@ -277,7 +277,7 @@ export default function AboutUs() {
 
                     <div className="row g-4">
                         <div className="col-md-4 animate-slide-up">
-                            <div className="aria-card-dark h-100 p-4 rounded-2 text-center feature-card">
+                            <div className="aria-card-dark h-100 p-4 rounded-4 text-center feature-card">
                                 <div className="aria-icon-circle mx-auto mb-3">
                                     <FaBuilding />
                                 </div>
@@ -289,7 +289,7 @@ export default function AboutUs() {
                         </div>
 
                         <div className="col-md-4 animate-slide-up">
-                            <div className="aria-card-dark h-100 p-4 rounded-2 text-center feature-card">
+                            <div className="aria-card-dark h-100 p-4 rounded-4 text-center feature-card">
                                 <div className="aria-icon-circle mx-auto mb-3">
                                     <FaShieldAlt />
                                 </div>
@@ -301,7 +301,7 @@ export default function AboutUs() {
                         </div>
 
                         <div className="col-md-4 animate-slide-up">
-                            <div className="aria-card-dark h-100 p-4 rounded-2 text-center feature-card">
+                            <div className="aria-card-dark h-100 p-4 rounded-4 text-center feature-card">
                                 <div className="aria-icon-circle mx-auto mb-3">
                                     <FaHeadset />
                                 </div>

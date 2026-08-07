@@ -109,15 +109,15 @@ const FloorImages = [
 
 const heroSlides = [
     {
-        title: "Design Build Kitchen & Living",
-        subtitle: "Homes designed around what's truly important: family, food, and elevated living.",
-        buttonText: "VISIT SHOWROOM",
+        title: "20-Acre Eco-Luxury Estate in Sakleshpur",
+        subtitle: "Exclusive 2, 3, 4 & 5 BHK Private Villas nestled in serene coffee plantations with private plunge pools, 5-star hospitality, and 3-tier security.",
+        highlight: "Starting at ₹1.15 Cr Onwards",
         image: "https://i.pinimg.com/1200x/8d/28/34/8d2834c2c580401ba7f836145be43484.jpg"
     },
     {
-        title: "Modern Living & Luxury Space",
-        subtitle: "Experience luxury and comfort seamlessly integrated with nature and style.",
-        buttonText: "EXPLORE VILLAS",
+        title: "Elevated Living Amidst Coffee Corridors",
+        subtitle: "Spacious Italian Show Kitchens, Double-Height Living Areas, Sky View Terraces, and 24/7 Managed Concierge Services.",
+        highlight: "RERA Registered · K-RERA/11/BLG/0013/2026",
         image: "https://i.pinimg.com/1200x/27/ce/7b/27ce7bf6c7768ba02de43ba8e4ad1cbd.jpg"
     }
 ];
@@ -177,46 +177,50 @@ export default function Home() {
             setLoading(false);
         }
     };
+    
 
     return (
         <div className="home-wrapper">
             
             {/* 1. HERO SPLIT SECTION */}
-            <section className="hero-split-container">
-                <div className="hero-overlay-dark"></div>
+         {/* 1. HERO SPLIT SECTION */}
+<section className="hero-split-container">
+    <div className="hero-overlay-dark"></div>
 
-                <div className="hero-left-panel">
-                    <div key={currentSlide} className="hero-content-box animate-text">
-                        <span className="hero-tag-sub mb-2 d-block">LUXURY ESTATE</span>
-                        <h1 className="hero-title">{heroSlides[currentSlide].title}</h1>
-                        <p className="hero-subtitle">{heroSlides[currentSlide].subtitle}</p>
+    <div className="hero-left-panel">
+        <div key={currentSlide} className="hero-content-box animate-text">
+            <span className="hero-tag-sub mb-2 d-block">ARIAHAUS ESTATE • SAKLESHPUR</span>
+            <h1 className="hero-title">{heroSlides[currentSlide].title}</h1>
+            <p className="hero-subtitle">{heroSlides[currentSlide].subtitle}</p>
 
-                        <button className="visit-showroom-btn">
-                            {heroSlides[currentSlide].buttonText} <FaArrowRight className="btn-icon ms-2" />
-                        </button>
-                    </div>
-                </div>
+            {/* Property Key Highlight Tag instead of Button */}
+            <div className="hero-property-badge">
+                <FaGem className="me-2 text-gold" />
+                <span>{heroSlides[currentSlide].highlight}</span>
+            </div>
+        </div>
+    </div>
 
-                <div className="hero-right-panel">
-                    {heroSlides.map((slide, index) => (
-                        <img
-                            key={index}
-                            src={slide.image}
-                            alt={slide.title}
-                            className={`hero-slide-img ${index === currentSlide ? 'active' : ''}`}
-                        />
-                    ))}
+    <div className="hero-right-panel">
+        {heroSlides.map((slide, index) => (
+            <img
+                key={index}
+                src={slide.image}
+                alt={slide.title}
+                className={`hero-slide-img ${index === currentSlide ? 'active' : ''}`}
+            />
+        ))}
 
-                    <div className="hero-nav-controls">
-                        <button className="nav-btn prev-btn" onClick={() => setCurrentSlide(currentSlide === 0 ? heroSlides.length - 1 : currentSlide - 1)}>
-                            <FaChevronLeft />
-                        </button>
-                        <button className="nav-btn next-btn" onClick={() => setCurrentSlide((currentSlide + 1) % heroSlides.length)}>
-                            <FaChevronRight />
-                        </button>
-                    </div>
-                </div>
-            </section>
+        <div className="hero-nav-controls">
+            <button className="nav-btn prev-btn" onClick={() => setCurrentSlide(currentSlide === 0 ? heroSlides.length - 1 : currentSlide - 1)}>
+                <FaChevronLeft />
+            </button>
+            <button className="nav-btn next-btn" onClick={() => setCurrentSlide((currentSlide + 1) % heroSlides.length)}>
+                <FaChevronRight />
+            </button>
+        </div>
+    </div>
+</section>
 
             {/* 2. ABOUT US SECTION */}
             <section className="about-section-container py-5" id="about">
@@ -561,22 +565,21 @@ export default function Home() {
                 </div>
             </section>
 
-            {/* 8. ELEVATED PRICING SECTION */}
             <section className="pricing-wrapper-dark py-5">
                 <div className="container-fluid px-3 px-md-5">
                     <div className="text-start mb-5">
                         <span className="section-tag-gold d-block mb-1">PRICING STRUCTURE</span>
                         <h2 className="about-heading-light">Pricing & Plans</h2>
 
-                        <div className="pricing-toggle-container mt-3">
-                            <span className={!isYearly ? "active-toggle-dark" : "inactive-toggle-dark"}>Standard Plan</span>
+                        <div className="pricing-toggle-container mt-3 ">
+                            <span className= {!isYearly ? "active-toggle-dark" : "inactive-toggle-dark"}>Standard Plan</span>
                             <label className="pricing-switch">
                                 <input
                                     type="checkbox"
                                     checked={isYearly}
                                     onChange={() => setIsYearly(!isYearly)}
                                 />
-                                <span className="slider round"></span>
+                                <span className="slider ps-2 pe-2 round"></span>
                             </label>
                             <span className={isYearly ? "active-toggle-dark" : "inactive-toggle-dark"}>
                                 Early Bird Plan <span className="discount-tag">Save 8%</span>

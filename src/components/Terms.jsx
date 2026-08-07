@@ -44,7 +44,7 @@ export default function TermsAndConditions() {
       <section className="terms-hero-section text-center">
         <div className="container px-3 px-md-5">
           <span className="terms-gold-tag d-block mb-2">LEGAL & COMPLIANCE</span>
-          <h1 className="terms-hero-title mb-3">Terms & Conditions</h1>
+          <h1 className="] mb-3">Terms & Conditions</h1>
           <p className="terms-hero-sub mx-auto">
             Please read these terms carefully before exploring or reserving properties with Ariahaus.
           </p>

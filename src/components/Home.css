@@ -18,7 +18,25 @@
 
 
 }
+.hero-property-badge {
+  display: inline-flex;
+  align-items: center;
+  background: rgba(201, 164, 91, 0.12);
+  border: 1px solid var(--accent-gold);
+  color: var(--text-paper);
+  padding: 10px 22px;
+  border-radius: 30px;
+  font-family: var(--font-serif);
+  font-size: 0.95rem;
+  letter-spacing: 0.5px;
+  margin-top: 10px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+}
 
+.hero-property-badge span {
+  color: var(--text-paper);
+  font-weight: 500;
+}
 .home-wrapper {
   width: 100%;
   font-family: var(--font-sans);

@@ -260,7 +260,7 @@
 /* Featured Projects Cards */
 .aria-project-card {
   position: relative;
-  border-radius: 4px;
+  border-radius: 14px;
   overflow: hidden;
   height: 320px;
   border: 1px solid var(--glass-border);
@@ -313,7 +313,6 @@
   border: 1px solid var(--glass-border);
 }
 
-/* FAQ Accordion (Light Paper Mode) */
 .aria-faq-container {
   display: flex;
   flex-direction: column;
@@ -323,7 +322,7 @@
 .aria-faq-item-paper {
   background: var(--bg-card-paper);
   border: 1px solid var(--glass-border);
-  border-radius: 4px;
+  border-radius: 14px;
   padding: 20px 24px;
   cursor: pointer;
   transition: all 0.3s ease;
@@ -386,7 +385,6 @@
   border: 1px solid var(--glass-border);
 }
 
-/* --- ANIMATIONS --- */
 @keyframes fadeInUp {
   from { opacity: 0; transform: translateY(25px); }
   to { opacity: 1; transform: translateY(0); }

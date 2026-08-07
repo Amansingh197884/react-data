@@ -114,7 +114,7 @@ export default function ApartmentsSection() {
                 <div className="container-fluid px-3 px-md-5">
                     <div className="apartments-header d-flex justify-content-between align-items-end mb-4">
                         <div className="header-text">
-                            <span className="aria-gold-sub d-block mb-1">CURATED SELECTION</span>
+                            <span className="aria-gold-sub d-block mb-3">CURATED SELECTION</span>
                             <h1 className='text-white m-0'>Top Luxury Apartments</h1>
                         </div>
 
@@ -179,7 +179,7 @@ export default function ApartmentsSection() {
                 <div className="container-fluid px-3 px-md-5">
                     <div className="apartments-header d-flex justify-content-between align-items-end mb-4">
                         <div className="header-text">
-                            <span className="aria-gold-sub d-block mb-1">PORTFOLIO EXCLUSIVES</span>
+                            <span className="aria-gold-sub d-block mb-3">PORTFOLIO EXCLUSIVES</span>
                             <h1 className='text-white m-0'>Featured Projects</h1>
                         </div>
 
