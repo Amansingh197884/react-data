@@ -13,7 +13,6 @@ import {
     FaEnvelope,
     FaMapMarkerAlt,
     FaPaperPlane,
-    FaClock,
     FaCheck, 
     FaCrown, 
     FaBuilding, 
@@ -26,10 +25,9 @@ import {
     FaPlane,
     FaHospital,
     FaFacebookF, 
-  FaInstagram, 
-  FaWhatsapp, 
-  FaGlobe, 
-  FaArrowUp
+    FaInstagram, 
+    FaWhatsapp, 
+    FaGlobe
 } from 'react-icons/fa';
 
 import { Swiper, SwiperSlide } from 'swiper/react';
@@ -145,10 +143,6 @@ export default function Home() {
         return () => clearInterval(timer);
     }, [currentSlide]);
 
-    const scrollToTop = () => {
-        window.scrollTo({ top: 0, behavior: 'smooth' });
-    };
-
     const handleSubmit = async (e) => {
         e.preventDefault();
         setLoading(true);
@@ -177,62 +171,57 @@ export default function Home() {
             setLoading(false);
         }
     };
-    
 
     return (
         <div className="home-wrapper">
-            
-            {/* 1. HERO SPLIT SECTION */}
-         {/* 1. HERO SPLIT SECTION */}
-<section className="hero-split-container">
-    <div className="hero-overlay-dark"></div>
+            <section className="hero-split-container">
+                <div className="hero-overlay-dark"></div>
 
-    <div className="hero-left-panel">
-        <div key={currentSlide} className="hero-content-box animate-text">
-            <span className="hero-tag-sub mb-2 d-block">ARIAHAUS ESTATE • SAKLESHPUR</span>
-            <h1 className="hero-title">{heroSlides[currentSlide].title}</h1>
-            <p className="hero-subtitle">{heroSlides[currentSlide].subtitle}</p>
+                <div className="hero-left-panel">
+                    <div key={currentSlide} className="hero-content-box animate-text">
+                        <span className="hero-tag-sub mb-2 d-block">ARIAHAUS ESTATE • SAKLESHPUR</span>
+                        <h1 className="hero-title">{heroSlides[currentSlide].title}</h1>
+                        <p className="hero-subtitle">{heroSlides[currentSlide].subtitle}</p>
 
-            <div className="hero-property-badge">
-                <FaGem className="me-2 text-gold" />
-                <span>{heroSlides[currentSlide].highlight}</span>
-            </div>
-        </div>
-    </div>
+                        <div className="hero-property-badge">
+                            <FaGem className="me-2 text-gold" />
+                            <span>{heroSlides[currentSlide].highlight}</span>
+                        </div>
+                    </div>
+                </div>
 
-    <div className="hero-right-panel">
-        {heroSlides.map((slide, index) => (
-            <img
-                key={index}
-                src={slide.image}
-                alt={slide.title}
-                className={`hero-slide-img ${index === currentSlide ? 'active' : ''}`}
-            />
-        ))}
+                <div className="hero-right-panel">
+                    {heroSlides.map((slide, index) => (
+                        <img
+                            key={index}
+                            src={slide.image}
+                            alt={slide.title}
+                            className={`hero-slide-img ${index === currentSlide ? 'active' : ''}`}
+                        />
+                    ))}
 
-        <div className="hero-nav-controls">
-            <button className="nav-btn prev-btn" onClick={() => setCurrentSlide(currentSlide === 0 ? heroSlides.length - 1 : currentSlide - 1)}>
-                <FaChevronLeft />
-            </button>
-            <button className="nav-btn next-btn" onClick={() => setCurrentSlide((currentSlide + 1) % heroSlides.length)}>
-                <FaChevronRight />
-            </button>
-        </div>
-    </div>
-</section>
+                    <div className="hero-nav-controls">
+                        <button className="nav-btn prev-btn" onClick={() => setCurrentSlide(currentSlide === 0 ? heroSlides.length - 1 : currentSlide - 1)}>
+                            <FaChevronLeft />
+                        </button>
+                        <button className="nav-btn next-btn" onClick={() => setCurrentSlide((currentSlide + 1) % heroSlides.length)}>
+                            <FaChevronRight />
+                        </button>
+                    </div>
+                </div>
+            </section>
 
-            {/* 2. ABOUT US SECTION */}
             <section className="about-section-container py-5" id="about">
                 <div className="container-fluid px-3 px-md-5">
                     <div className="row align-items-center g-4 g-lg-5">
                         <div className="col-lg-6 about-left-col pe-lg-5">
                             <div className="about-text-content">
-                                <span className="section-tag-gold d-block mb-2">OUR PHILOSOPHY</span>
-                                <h2 className="about-heading-dark mb-3">About Us</h2>
-                                <blockquote className="villa-quote mb-4">
+                                <span className="section-tag-gold d-block">OUR PHILOSOPHY</span>
+                                <h2 className="about-heading-dark">About Us</h2>
+                                <blockquote className="villa-quote">
                                     This villa is more than a home—it's an elevated lifestyle defined by space, privacy, and uninterrupted vistas.
                                 </blockquote>
-                                <p className="about-description-dark mb-4">
+                                <p className="about-description-dark">
                                     Standing out in its step-up design, all primary daily living spaces are located on one principal level. The upper level is a private sanctuary, home to four generous en-suite bedrooms and a master suite designed for serenity.
                                 </p>
 
@@ -255,11 +244,10 @@ export default function Home() {
                 </div>
             </section>
 
-            {/* 3. HIGHLIGHTS SECTION */}
             <section className="highlights-section py-5">
                 <div className="container-fluid px-3 px-md-5">
                     <div className="text-center mb-5">
-                        <span className="section-tag-gold d-block mb-1">KEY FEATURES</span>
+                        <span className="section-tag-gold d-block">KEY FEATURES</span>
                         <h2 className="about-heading-light">Property Highlights</h2>
                     </div>
 
@@ -267,7 +255,7 @@ export default function Home() {
                         {propertyHighlights.map((item, index) => (
                             <div className="col-lg-3 col-md-6" key={index}>
                                 <div className="highlight-card h-100">
-                                    <div className="highlight-icon mb-3">
+                                    <div className="highlight-icon">
                                         {item.icon}
                                     </div>
                                     <h4 className="highlight-title">{item.title}</h4>
@@ -279,11 +267,10 @@ export default function Home() {
                 </div>
             </section>
 
-            {/* 4. UNIT FEATURES SECTION */}
             <section className="unit-features-section-paper py-5">
                 <div className="container-fluid px-3 px-md-5">
                     <div className="text-center mb-5">
-                        <span className="section-tag-gold d-block mb-1">SPECIFICATIONS</span>
+                        <span className="section-tag-gold d-block">SPECIFICATIONS</span>
                         <h2 className="about-heading-dark">Unit Features</h2>
                     </div>
 
@@ -291,10 +278,10 @@ export default function Home() {
                         {unitFeatures.map((feature, index) => (
                             <div className="col-lg-3 col-md-4 col-sm-6" key={index}>
                                 <div className="feature-item-paper h-100">
-                                    <div className="feature-img-wrapper mb-3">
+                                    <div className="feature-img-wrapper">
                                         <img src={feature.img} alt={feature.title} className="feature-icon-img-dark" />
                                     </div>
-                                    <p className="feature-text-dark m-0">{feature.title}</p>
+                                    <p className="feature-text-dark">{feature.title}</p>
                                 </div>
                             </div>
                         ))}
@@ -302,13 +289,12 @@ export default function Home() {
                 </div>
             </section>
 
-            {/* 5. ELEVATED GALLERY SECTION */}
             <section className='Galleryall'>
                 <section className="gallery-section-dark py-5">
                     <div className="container-fluid px-3 px-md-5 py-2">
                         <div className="d-flex justify-content-between align-items-end mb-4">
                             <div>
-                                <span className="section-tag-gold d-block mb-1">VISUAL TOUR</span>
+                                <span className="section-tag-gold d-block">VISUAL TOUR</span>
                                 <h2 className="about-heading-light m-0">Gallery</h2>
                             </div>
 
@@ -353,7 +339,6 @@ export default function Home() {
                     </div>
                 </section>
 
-                {/* LIGHTBOX MODAL */}
                 {selectedImgIndex !== null && (
                     <div className="luxury-lightbox-modal" onClick={() => setSelectedImgIndex(null)}>
                         <div className="lightbox-top-bar" onClick={(e) => e.stopPropagation()}>
@@ -401,12 +386,11 @@ export default function Home() {
                 )}
             </section>
 
-            {/* 6. ELEVATED FLOOR PLAN SECTION */}
             <section className="fn-section-paper py-5">
                 <div className="container-fluid px-3 px-md-5">
                     <div className="d-flex justify-content-between align-items-end mb-4">
                         <div>
-                            <span className="section-tag-gold d-block mb-1">ARCHITECTURAL LAYOUTS</span>
+                            <span className="section-tag-gold d-block">ARCHITECTURAL LAYOUTS</span>
                             <h2 className="about-heading-dark m-0">Floor Plans</h2>
                         </div>
 
@@ -454,7 +438,6 @@ export default function Home() {
                     </Swiper>
                 </div>
 
-                {/* Floor Plan Modal */}
                 {selectedPlan && (
                     <div className="fp-modal-backdrop" onClick={() => setSelectedPlan(null)}>
                         <div className="fp-modal-content" onClick={(e) => e.stopPropagation()}>
@@ -471,7 +454,7 @@ export default function Home() {
 
                                 <div className="col-lg-5">
                                     <div className="fp-details-panel p-4 p-md-5">
-                                        <span className="badge-gold mb-2 d-inline-block">{selectedPlan.bhk}</span>
+                                        <span className="badge-gold d-inline-block">{selectedPlan.bhk}</span>
                                         <h3 className="fp-detail-title">{selectedPlan.title}</h3>
 
                                         <div className="fp-stats-grid my-4">
@@ -521,13 +504,12 @@ export default function Home() {
                 )}
             </section>
 
-            {/* 7. LOCATION & CONNECTIVITY SECTION */}
             <section className="location-section py-5">
                 <div className="container-fluid px-3 px-md-5">
                     <div className="row g-5 align-items-center">
                         <div className="col-lg-5">
-                            <span className="section-tag-gold d-block mb-1">CONNECTIVITY</span>
-                            <h2 className="about-heading-light mb-3">Prime Location</h2>
+                            <span className="section-tag-gold d-block">CONNECTIVITY</span>
+                            <h2 className="about-heading-light">Prime Location</h2>
                             <p className="aria-text-stone text-white mb-4">
                                 Situated in the heart of Sakleshpur coffee estate corridor, offering seamless access to airports, business hubs, and city landmarks.
                             </p>
@@ -567,18 +549,18 @@ export default function Home() {
             <section className="pricing-wrapper-dark py-5">
                 <div className="container-fluid px-3 px-md-5">
                     <div className="text-start mb-5">
-                        <span className="section-tag-gold d-block mb-1">PRICING STRUCTURE</span>
+                        <span className="section-tag-gold d-block">PRICING STRUCTURE</span>
                         <h2 className="about-heading-light">Pricing & Plans</h2>
 
-                        <div className="pricing-toggle-container mt-3 ">
-                            <span className= {!isYearly ? "active-toggle-dark" : "inactive-toggle-dark"}>Standard Plan</span>
+                        <div className="pricing-toggle-container">
+                            <span className={!isYearly ? "active-toggle-dark" : "inactive-toggle-dark"}>Standard Plan</span>
                             <label className="pricing-switch">
                                 <input
                                     type="checkbox"
                                     checked={isYearly}
                                     onChange={() => setIsYearly(!isYearly)}
                                 />
-                                <span className="slider ps-2 pe-2 round"></span>
+                                <span className="slider round"></span>
                             </label>
                             <span className={isYearly ? "active-toggle-dark" : "inactive-toggle-dark"}>
                                 Early Bird Plan <span className="discount-tag">Save 8%</span>
@@ -686,11 +668,10 @@ export default function Home() {
                 </div>
             </section>
 
-            {/* 9. CONTACT FORM SECTION */}
             <div className="new-contact-container py-5">
                 <div className="container-fluid px-3 px-md-5">
                     <div className="text-start mb-5">
-                        <span className="section-tag-gold d-block mb-1">INQUIRIES</span>
+                        <span className="section-tag-gold d-block">INQUIRIES</span>
                         <h2 className="about-heading-light m-0">Contact Us</h2>
                     </div>
 
@@ -703,8 +684,8 @@ export default function Home() {
                                         Feel free to reach out via phone, email, or visit our office location directly.
                                     </p>
 
-                                    <div className="d-flex flex-column gap-4 my-4">
-                                        <div className="d-flex align-items-center gap-3">
+                                    <div className="d-flex flex-column gap-3 my-4">
+                                        <div className="contact-info-item">
                                             <div className="new-icon-box"><FaPhoneAlt /></div>
                                             <div>
                                                 <span className="d-block text-uppercase text-gold extra-small">Phone</span>
@@ -712,7 +693,7 @@ export default function Home() {
                                             </div>
                                         </div>
 
-                                        <div className="d-flex align-items-center gap-3">
+                                        <div className="contact-info-item">
                                             <div className="new-icon-box"><FaEnvelope /></div>
                                             <div>
                                                 <span className="d-block text-uppercase text-gold extra-small">Email</span>
@@ -720,7 +701,7 @@ export default function Home() {
                                             </div>
                                         </div>
 
-                                        <div className="d-flex align-items-center gap-3">
+                                        <div className="contact-info-item">
                                             <div className="new-icon-box"><FaMapMarkerAlt /></div>
                                             <div>
                                                 <span className="d-block text-uppercase text-gold extra-small">Location</span>
@@ -833,96 +814,73 @@ export default function Home() {
                 </div>
             </div>
 
-            {/* 10. NEW CUSTOM DETAILS FOOTER */}
-      
-<footer className="zen-custom-footer py-5">
-        <div className="container-fluid px-3 px-md-5">
-          
-          {/* Main 3-Column Section */}
-          <div className="row g-4 g-lg-5 pb-5">
-            
-            {/* Column 1: Logo, Tagline & Social Icons */}
-            <div className="col-lg-4 col-md-12">
-              <div className="footer-brand-container">
-                <Link to="/" className="text-decoration-none d-flex align-items-center gap-2 mb-3">
-                  <img src={Logo} alt="Ariahaus Logo" className="zen-footer-logo" />
-                  <span className="zen-footer-brand-title">ARIAHAUS</span>
-                </Link>
-                
-                <p className="zen-footer-tagline mb-4">
-                  A luxury villa community in Sakleshpur, Karnataka. Elevation without compromise.
-                </p>
+            <footer className="zen-custom-footer py-5">
+                <div className="container-fluid px-3 px-md-5">
+                    <div className="row g-4 g-lg-5 pb-5">
+                        <div className="col-lg-4 col-md-12">
+                            <div className="footer-brand-container">
+                                <Link to="/" className="text-decoration-none d-flex align-items-center gap-2 mb-3">
+                                    <img src={Logo} alt="Ariahaus Logo" className="zen-footer-logo" />
+                                    <span className="zen-footer-brand-title">ARIAHAUS</span>
+                                </Link>
+                                
+                                <p className="zen-footer-tagline mb-4">
+                                    A luxury villa community in Sakleshpur, Karnataka. Elevation without compromise.
+                                </p>
 
-                <div className="zen-social-links d-flex align-items-center gap-3">
-                  <a href="#facebook" className="zen-social-circle" aria-label="Facebook">
-                    <FaFacebookF />
-                  </a>
-                  <a href="#instagram" className="zen-social-circle" aria-label="Instagram">
-                    <FaInstagram />
-                  </a>
-                  <a href="#whatsapp" className="zen-social-circle" aria-label="WhatsApp">
-                    <FaWhatsapp />
-                  </a>
-                  <a href="#website" className="zen-social-circle" aria-label="Website">
-                    <FaGlobe />
-                  </a>
+                                <div className="zen-social-links d-flex align-items-center gap-3">
+                                    <a href="#facebook" className="zen-social-circle" aria-label="Facebook"><FaFacebookF /></a>
+                                    <a href="#instagram" className="zen-social-circle" aria-label="Instagram"><FaInstagram /></a>
+                                    <a href="#whatsapp" className="zen-social-circle" aria-label="WhatsApp"><FaWhatsapp /></a>
+                                    <a href="#website" className="zen-social-circle" aria-label="Website"><FaGlobe /></a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div className="col-lg-4 col-md-6 ps-lg-5">
+                            <h6 className="zen-column-header">NAVIGATE</h6>
+                            <ul className="zen-nav-list">
+                                <li><Link to="/Property">Residences</Link></li>
+                                <li><Link to="/#about">Amenities</Link></li>
+                                <li><Link to="/#gallery">Gallery</Link></li>
+                                <li><Link to="/#location">Location</Link></li>
+                                <li><Link to="/New">Contact</Link></li>
+                            </ul>
+                        </div>
+
+                        <div className="col-lg-4 col-md-6">
+                            <h6 className="zen-column-header">CONTACT</h6>
+                            <div className="zen-contact-details">
+                                <p className="mb-1"><a href="mailto:info@amyrafarms.com" className="zen-email-link">info@amyrafarms.com</a></p>
+                                <p className="mb-3"><a href="https://ariahausvillas.in" className="zen-email-link">ariahausvillas.in</a></p>
+                                <div className="zen-address-text">
+                                    <p className="m-0">Sakleshpur, Coffee Corridor,</p>
+                                    <p className="m-0">Karnataka, India</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div className="zen-sub-footer pt-4 border-top-gold">
+                        <div className="row align-items-center g-3">
+                            <div className="col-lg-4 col-md-12 text-center text-lg-start">
+                                <span className="zen-copy-text">© 2026 Ariahaus. All rights reserved.</span>
+                            </div>
+
+                            <div className="col-lg-4 col-md-12 text-center">
+                                <div className="zen-policy-links d-inline-flex gap-4">
+                                    <Link to="/Terms">Terms and Conditions</Link>
+                                    <Link to="/Privacy">Privacy Policy</Link>
+                                </div>
+                            </div>
+
+                            <div className="col-lg-4 col-md-12 text-center text-lg-end">
+                                <span className="zen-rera-text">RERA Registered · K-RERA/11/BLG/0013/2026</span>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-              </div>
-            </div>
-
-            {/* Column 2: Navigate Links */}
-            <div className="col-lg-4 col-md-6 ps-lg-5">
-              <h6 className="zen-column-header">NAVIGATE</h6>
-              <ul className="zen-nav-list">
-                <li><Link to="/Property">Residences</Link></li>
-                <li><Link to="/#about">Amenities</Link></li>
-                <li><Link to="/#gallery">Gallery</Link></li>
-                <li><Link to="/#location">Location</Link></li>
-                <li><Link to="/New">Contact</Link></li>
-              </ul>
-            </div>
-
-            {/* Column 3: Contact Info */}
-            <div className="col-lg-4 col-md-6">
-              <h6 className="zen-column-header">CONTACT</h6>
-              <div className="zen-contact-details">
-                <p className="mb-1">
-                  <a href="mailto:info@amyrafarms.com" className="zen-email-link">info@amyrafarms.com</a>
-                </p>
-                <p className="mb-3">
-                  <a href="https://ariahausvillas.in" className="zen-email-link">ariahausvillas.in</a>
-                </p>
-                <div className="zen-address-text">
-                  <p className="m-0">Sakleshpur, Coffee Corridor,</p>
-                  <p className="m-0">Karnataka, India</p>
-                </div>
-              </div>
-            </div>
-
-          </div>
-
-          {/* Bottom Sub-Footer Bar */}
-          <div className="zen-sub-footer pt-4 border-top-gold">
-            <div className="row align-items-center g-3">
-              <div className="col-lg-4 col-md-12 text-center text-lg-start">
-                <span className="zen-copy-text">© 2026 Ariahaus. All rights reserved.</span>
-              </div>
-
-              <div className="col-lg-4 col-md-12 text-center">
-                <div className="zen-policy-links d-inline-flex gap-4">
-                  <Link to="/Terms">Terms and Conditions</Link>
-                  <Link to="/Privacy">Privacy Policy</Link>
-                </div>
-              </div>
-
-              <div className="col-lg-4 col-md-12 text-center text-lg-end">
-                <span className="zen-rera-text">RERA Registered · K-RERA/11/BLG/0013/2026</span>
-              </div>
-            </div>
-          </div>
-
-        </div>
-      </footer>
+            </footer>
         </div>
     );
 }
