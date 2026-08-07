@@ -193,7 +193,6 @@ export default function Home() {
             <h1 className="hero-title">{heroSlides[currentSlide].title}</h1>
             <p className="hero-subtitle">{heroSlides[currentSlide].subtitle}</p>
 
-            {/* Property Key Highlight Tag instead of Button */}
             <div className="hero-property-badge">
                 <FaGem className="me-2 text-gold" />
                 <span>{heroSlides[currentSlide].highlight}</span>
