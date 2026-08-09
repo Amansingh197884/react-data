@@ -15,7 +15,7 @@ const projectsData = [
     location: 'Sector 128, Noida',
     city: 'Noida',
     price: '₹1.03 Cr*',
-    image: 'https://i.pinimg.com/736x/fe/cb/57/fecb570b045956d4feedaeec96e17d1b.jpg',
+    image: 'https://i.pinimg.com/736x/7c/1a/dd/7c1add62ac74e140cfcfd968d6e97c35.jpg',
   },
   {
     id: 2,
@@ -23,7 +23,7 @@ const projectsData = [
     location: 'Sector 153, Noida',
     city: 'Noida',
     price: '₹1.03 Cr*',
-    image: 'https://i.pinimg.com/736x/64/ee/79/64ee79abc0c2d88736e899dfda1eaee4.jpg',
+    image: 'https://i.pinimg.com/736x/00/49/cd/0049cdd6331955c998fb0efb1840cfe7.jpg',
   },
   {
     id: 3,
@@ -31,7 +31,7 @@ const projectsData = [
     location: 'Roma Norte, Ciudad',
     city: 'México',
     price: '₹1.50 Cr*',
-    image: 'https://i.pinimg.com/736x/ad/84/4a/ad844ab08e77522cd06c121e960783d1.jpg',
+    image: 'https://i.pinimg.com/736x/e7/6d/0b/e76d0b64ffaeb9e9e7ff1b8333649802.jpg',
   },
   {
     id: 4,
@@ -39,7 +39,7 @@ const projectsData = [
     location: 'Sector 62, Gurgaon',
     city: 'Gurgaon',
     price: '₹2.10 Cr*',
-    image: 'https://i.pinimg.com/1200x/b2/06/bf/b206bf86e2087e8616881f7241d66c07.jpg',
+    image: 'https://i.pinimg.com/736x/fa/7c/42/fa7c429ea6c0c6df56b079439d810666.jpg',
   }
 ];
 

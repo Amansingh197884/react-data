@@ -8,7 +8,7 @@ export default function MissionVision() {
       <div className="container-fluid px-3 px-md-5">
         
         {/* Section Header */}
-        <div className="text-center mb-5">
+        <div className="text-start mb-5">
           <span className="mv-section-tag">OUR PURPOSE</span>
           <h2 className="mv-section-title">Driving Real Estate Excellence</h2>
         </div>

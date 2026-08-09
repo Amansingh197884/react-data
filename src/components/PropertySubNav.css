@@ -1,0 +1,101 @@
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600&display=swap');
+
+:root {
+  --bg-subnav: rgba(21, 17, 11, 0.94);  
+  --accent-gold: #c9a45b;              
+  --glass-border: rgba(201, 164, 91, 0.35); 
+  --text-paper: #faf4e6;             
+  --text-stone: #f6efde;             
+  --btn-gradient: linear-gradient(180deg, #c9a45b 0%, #9e7a37 100%);
+  --font-sans: 'Plus Jakarta Sans', -apple-system, sans-serif;
+}
+
+.property-subnav-wrapper {
+  background: var(--bg-subnav);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border-bottom: 1px solid var(--glass-border);
+  z-index: 990;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.6);
+}
+
+.property-subnav-inner {
+  height: 60px;
+  scrollbar-width: none;
+}
+
+.property-subnav-inner::-webkit-scrollbar {
+  display: none;
+}
+
+.property-subnav-links {
+  gap: 32px;
+  white-space: nowrap;
+}
+
+.subnav-link {
+  color: var(--text-stone);
+  opacity: 0.75;
+  font-family: var(--font-sans);
+  font-size: 0.85rem;
+  font-weight: 500;
+  letter-spacing: 0.5px;
+  text-decoration: none !important;
+  padding: 18px 0;
+  position: relative;
+  transition: all 0.3s ease;
+  display: inline-block;
+}
+
+.subnav-link::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: var(--accent-gold);
+  transition: width 0.35s ease;
+  box-shadow: 0 0 8px var(--accent-gold);
+}
+
+.subnav-link:hover,
+.subnav-link.active {
+  color: var(--text-paper) !important;
+  opacity: 1;
+}
+
+.subnav-link.active::after,
+.subnav-link:hover::after {
+  width: 100%;
+}
+
+.subnav-gold-pill {
+  background: var(--btn-gradient);
+  color: #15110b !important;
+  font-family: var(--font-sans);
+  font-size: 0.78rem;
+  font-weight: 600;
+  padding: 8px 20px;
+  border-radius: 50px;
+  text-decoration: none !important;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(201, 164, 91, 0.3);
+  display: inline-block;
+}
+
+.subnav-gold-pill:hover {
+  filter: brightness(1.15);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(201, 164, 91, 0.45);
+}
+
+@media (max-width: 768px) {
+  .property-subnav-links {
+    gap: 20px;
+  }
+  .subnav-link {
+    font-size: 0.8rem;
+    padding: 14px 0;
+  }
+}

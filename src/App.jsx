@@ -6,7 +6,6 @@ import Navbar from './components/Navbar.jsx';
 import Home from './components/Home.jsx';
 import AboutUs from './components/AboutUs.jsx';
 import VisionMission from './components/VisionMission.jsx';
-// import Amenities from './components/Amenities.jsx';
 import Testimonials from './components/Testimonials.jsx';
 import ContactUs from './components/ContactUs.jsx';
 import Slide from './components/Slide.jsx';
@@ -27,17 +26,16 @@ const MainPage = () => {
     <>
       <Home />
       <High />
-      <AboutUs />
+      <Featured />
 
       <Estate />
-            <Featured />
 
       <VisionMission />
+      <AboutUs />
 
       <Gallery />
       <Slide />
 
-      {/* <Amenities /> */}
       <Testimonials />
       <ContactUs />
     </>
@@ -51,11 +49,13 @@ export default function App() {
     window.scrollTo({ top: 0, left: 0, behavior: 'instant' });
   }, [location.pathname]);
 
+  // Case-insensitive URL match for PropertyDetails
   const isDetailsPage = location.pathname.toLowerCase() === '/propertydetails';
 
   return (
     <div className="bg-light min-vh-100 overflow-x-hidden">
-      <Navbar />
+      {/* PropertyDetails Page par Main Navbar Hide Hoga */}
+      {!isDetailsPage && <Navbar />}
 
       <Routes>
         <Route path="/" element={<MainPage />} />
@@ -67,6 +67,7 @@ export default function App() {
         <Route path="/Privacy" element={<Privacy />} />
       </Routes>
 
+      {/* PropertyDetails Page par Footer bhi Hide Hoga */}
       {!isDetailsPage && <Footer />}
     </div>
   );

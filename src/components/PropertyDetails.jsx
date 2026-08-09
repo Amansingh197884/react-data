@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
+import PropertySubNav from './PropertySubNav';
 import {
     FaTimes,
     FaChevronLeft,
@@ -116,7 +117,7 @@ const heroSlides = [
             "5-star hospitality & 3-tier security"
         ],
         highlight: "Starting at ₹1.15 Cr Onwards",
-        image: "https://i.pinimg.com/1200x/8d/28/34/8d2834c2c580401ba7f836145be43484.jpg"
+        image: "https://i.pinimg.com/736x/51/94/a3/5194a352e98ab5ee14ff1d61a9228ff5.jpg"
     },
     {
         title: "Elevated Living Amidst Coffee Corridors",
@@ -215,6 +216,9 @@ export default function Home() {
 
     return (
         <div className="home-wrapper">
+            <PropertySubNav />
+
+            {/* Hero Section */}
             <section className="hero-v2-container">
                 <div className="hero-v2-overlay"></div>
 
@@ -260,7 +264,8 @@ export default function Home() {
                 </div>
             </section>
 
-            <section className="about-section-container" id="about">
+            {/* About Section */}
+            <section className="about-section-container" id="about-us">
                 <div className="container-fluid px-3 px-md-5">
                     <div className="row align-items-center g-4 g-lg-5">
                         <div className="col-lg-6 about-left-col pe-lg-5" data-animate="animate-fade-left">
@@ -293,7 +298,8 @@ export default function Home() {
                 </div>
             </section>
 
-            <section className="highlights-section">
+            {/* Highlights & Amenities Section */}
+            <section className="highlights-section" id="amenities">
                 <div className="container-fluid px-3 px-md-5">
                     <div className="text-center mb-5" data-animate="animate-fade-up">
                         <span className="section-tag-gold d-block">KEY FEATURES</span>
@@ -316,7 +322,8 @@ export default function Home() {
                 </div>
             </section>
 
-            <section className="unit-features-section-paper">
+            {/* Unit Features Section */}
+            <section className="unit-features-section-paper" id="unit-features">
                 <div className="container-fluid px-3 px-md-5">
                     <div className="text-center mb-5" data-animate="animate-fade-up">
                         <span className="section-tag-gold d-block">SPECIFICATIONS</span>
@@ -338,7 +345,8 @@ export default function Home() {
                 </div>
             </section>
 
-            <section className='Galleryall'>
+            {/* Gallery Section */}
+            <section className="Galleryall">
                 <section className="gallery-section-dark">
                     <div className="container-fluid px-3 px-md-5" data-animate="animate-fade-up">
                         <div className="d-flex justify-content-between align-items-end mb-4">
@@ -429,7 +437,8 @@ export default function Home() {
                 )}
             </section>
 
-            <section className="fn-section-paper">
+            {/* Floor Plans Section */}
+            <section className="fn-section-paper" id="pricing-plans">
                 <div className="container-fluid px-3 px-md-5" data-animate="animate-fade-up">
                     <div className="d-flex justify-content-between align-items-end mb-4">
                         <div>
@@ -547,7 +556,8 @@ export default function Home() {
                 )}
             </section>
 
-            <section className="location-section">
+            {/* Location & Map Section */}
+            <section className="location-section" id="location-map">
                 <div className="container-fluid px-3 px-md-5">
                     <div className="row g-5 align-items-center">
                         <div className="col-lg-5" data-animate="animate-fade-left">
@@ -589,6 +599,7 @@ export default function Home() {
                 </div>
             </section>
 
+            {/* Pricing Structure Section */}
             <section className="pricing-wrapper-dark">
                 <div className="container-fluid px-3 px-md-5">
                     <div className="text-start mb-5" data-animate="animate-fade-up">
@@ -711,7 +722,8 @@ export default function Home() {
                 </div>
             </section>
 
-            <div className="new-contact-container">
+            {/* Inquiries & Contact Form Section */}
+            <div className="new-contact-container" id="book-tour">
                 <div className="container-fluid px-3 px-md-5">
                     <div className="text-start mb-5" data-animate="animate-fade-up">
                         <span className="section-tag-gold d-block">INQUIRIES</span>
@@ -857,6 +869,7 @@ export default function Home() {
                 </div>
             </div>
 
+            {/* Footer */}
             <footer className="zen-custom-footer py-5">
                 <div className="container-fluid px-3 px-md-5">
                     <div className="row g-4 g-lg-5 pb-5">
@@ -884,10 +897,10 @@ export default function Home() {
                             <h6 className="zen-column-header">NAVIGATE</h6>
                             <ul className="zen-nav-list">
                                 <li><Link to="/Property">Residences</Link></li>
-                                <li><Link to="/#about">Amenities</Link></li>
-                                <li><Link to="/#gallery">Gallery</Link></li>
-                                <li><Link to="/#location">Location</Link></li>
-                                <li><Link to="/New">Contact</Link></li>
+                                <li><a href="#about-us">About Us</a></li>
+                                <li><a href="#amenities">Amenities</a></li>
+                                <li><a href="#location-map">Location</a></li>
+                                <li><a href="#book-tour">Contact</a></li>
                             </ul>
                         </div>
 
