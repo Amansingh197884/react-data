@@ -1,6 +1,6 @@
+@import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Plus+Jakarta+Sans:wght@300;400;500;600&display=swap');
 
 :root {
- 
   --bg-paper: #f5f0e6;  
   --bg-card-paper: #faf4e6;
   
@@ -12,6 +12,8 @@
   
   --btn-gradient: linear-gradient(180deg, #c9a45b 0%, #9e7a37 100%);
 
+  --font-serif: 'Libre Baskerville', Georgia, serif;
+  --font-sans: 'Plus Jakarta Sans', -apple-system, sans-serif;
 }
 
 .testimonials-section {
@@ -20,15 +22,15 @@
   font-family: var(--font-sans);
   position: relative;
   overflow: hidden;
-  padding: 80px 0;
+  padding: 100px 0 !important; 
 }
 
 .testi-tag {
   font-family: var(--font-serif);
   color: var(--accent-gold);            
-  font-size: 0.85rem;
-  letter-spacing: 3.5px;
-  font-weight: 600;
+  font-size: 0.78rem;
+  letter-spacing: 2.5px;
+  font-weight: 400;
   display: block;
   margin-bottom: 8px;
   text-transform: uppercase;
@@ -36,18 +38,18 @@
 
 .testi-heading {
   font-family: var(--font-serif);
-  font-size: clamp(2rem, 4vw, 3.2rem);
+  font-size: clamp(1.8rem, 3.2vw, 2.4rem);
   font-weight: 400;
   color: var(--text-dark);            
   letter-spacing: 0.5px;
 }
 
 .swiper-container-wrapper {
-  padding-bottom: 50px;
+  padding-bottom: 40px;
 }
 
 .testimonial-swiper {
-  padding: 10px 5px 60px 5px !important;
+  padding: 10px 5px 50px 5px !important;
 }
 
 .testimonial-card-wrapper {
@@ -62,77 +64,79 @@
   backdrop-filter: blur(16px);
   -webkit-backdrop-filter: blur(16px);
   border: 1px solid var(--glass-border);
-  border-radius: 15px;                 
-  padding: 35px 25px;
+  border-radius: 6px;
+  padding: 30px 22px;
   text-align: center;
   position: relative;
   transition: all 0.4s ease;
-  margin-bottom: 25px;
+  margin-bottom: 22px;
   box-shadow: 0 10px 30px rgba(26, 20, 12, 0.05);
 }
 
 .testimonial-card-wrapper:hover .testimonial-card {
-  transform: translateY(-6px);
-  border-color: rgba(201, 164, 91, 0.6);
+  transform: translateY(-5px);
+  border-color: var(--accent-gold);
   box-shadow: 0 15px 35px rgba(26, 20, 12, 0.1);
 }
 
 .quote-icon-box {
-  margin-bottom: 15px;
+  margin-bottom: 12px;
 }
 
 .quote-icon {
   color: var(--accent-gold);
-  font-size: 1.8rem;
+  font-size: 1.5rem;
   opacity: 0.95;
 }
 
 .testimonial-text {
   color: var(--text-muted-dark);
-  font-size: 0.98rem;
-  line-height: 1.75;
+  font-family: var(--font-sans);
+  font-size: 0.92rem;
+  line-height: 1.7;
   font-weight: 400;
-  margin-bottom: 20px;
-  min-height: 75px;
+  margin-bottom: 18px;
+  min-height: 70px;
 }
 
 .client-name {
   font-family: var(--font-serif);
   color: var(--text-dark);
-  font-size: 1.2rem;
-  font-weight: 500;
+  font-size: 1.15rem;
+  font-weight: 400;
   margin-bottom: 4px;
   letter-spacing: 0.5px;
 }
 
 .client-role {
   color: var(--accent-gold);
-  font-size: 0.8rem;
-  font-weight: 600;
+  font-size: 0.75rem;
+  font-weight: 400;
   letter-spacing: 1.5px;
   text-transform: uppercase;
   display: block;
+  font-family: var(--font-serif);
 }
 
 .bubble-arrow {
   position: absolute;
-  bottom: -10px;
+  bottom: -9px;
   left: 50%;
   transform: translateX(-50%) rotate(45deg);
-  width: 18px;
-  height: 18px;
+  width: 16px;
+  height: 16px;
   background: var(--bg-card-paper);  
   border-right: 1px solid var(--glass-border);
   border-bottom: 1px solid var(--glass-border);
 }
 
 .testimonial-card-wrapper:hover .bubble-arrow {
-  border-color: rgba(201, 164, 91, 0.6);
+  border-color: var(--accent-gold);
 }
 
 .client-avatar-wrapper {
-  width: 65px;
-  height: 65px;
+  width: 58px;
+  height: 58px;
   border-radius: 50%;
   padding: 2px;
   background: var(--accent-gold);
@@ -154,34 +158,34 @@
 .swiper-pagination-bullet {
   background: rgba(26, 20, 12, 0.25) !important;
   opacity: 1 !important;
-  width: 10px !important;
-  height: 10px !important;
+  width: 8px !important;
+  height: 8px !important;
   transition: all 0.3s ease !important;
 }
 
 .swiper-pagination-bullet-active {
   background: var(--accent-gold) !important;
-  width: 28px !important;
+  width: 24px !important;
   border-radius: 10px !important;
   box-shadow: 0 0 10px rgba(201, 164, 91, 0.4);
 }
 
 @media (max-width: 768px) {
   .testimonials-section {
-    padding: 50px 0;
+    padding: 60px 0 !important;
   }
 
   .testimonial-card {
-    padding: 28px 18px;
+    padding: 24px 16px;
   }
 
   .testimonial-text {
-    font-size: 0.92rem;
+    font-size: 0.88rem;
     min-height: auto;
   }
 
   .client-avatar-wrapper {
-    width: 58px;
-    height: 58px;
+    width: 52px;
+    height: 52px;
   }
 }

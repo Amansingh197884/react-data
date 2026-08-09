@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Plus+Jakarta+Sans:wght@300;400;500;600&display=swap');
 
 :root {
     --bg-walnut-dark: #15110b;       
@@ -12,7 +13,8 @@
     
     --btn-gradient: linear-gradient(180deg, #e8c88b 0%, #c9a45b 100%);
 
-
+    --font-serif: 'Libre Baskerville', Georgia, serif;
+    --font-sans: 'Plus Jakarta Sans', -apple-system, sans-serif;
 }
 
 .aria-property-page {
@@ -23,21 +25,22 @@
 }
 
 .aria-gold-sub {
-    font-family: var(--font-serif) ;
+    font-family: var(--font-serif);
     color: var(--accent-gold) !important;
-    font-size: 0.85rem;
-    letter-spacing: 3.5px;
-    font-weight: 600;
+    font-size: 0.78rem;
+    letter-spacing: 2.5px;
+    font-weight: 400;
     text-transform: uppercase;
 }
 
 .mv-section-title {
-    font-family: var(--font-sans);
-    font-size: clamp(2rem, 4vw, 3.2rem);
-    font-weight: 300;
+    font-family: var(--font-serif);
+    font-size: clamp(1.8rem, 3.2vw, 2.4rem);
+    font-weight: 400;
     color: var(--text-paper);
     letter-spacing: 0.5px;
 }
+
 .property-hero-wrapper {
     position: relative;
     width: 100%;
@@ -46,8 +49,8 @@
 .property-hero-banner {
     position: relative;
     width: 100%;
-    height: 52vh;
-    min-height: 360px;
+    height: 48vh; 
+    min-height: 320px;
     background-image: url('https://i.pinimg.com/736x/eb/5d/78/eb5d78661d8292240e5ada21c529c9b8.jpg');
     background-size: cover;
     background-position: center center;
@@ -64,7 +67,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 80px 20px 30px;
+    padding: 60px 20px 30px;
     z-index: 2;
 }
 
@@ -83,9 +86,9 @@
 
 .property-breadcrumb-link {
     color: var(--accent-gold, #c9a45b) !important;
-    font-size: 0.88rem;
+    font-size: 0.8rem;
     font-weight: 400;
-    letter-spacing: 2.5px;
+    letter-spacing: 1.5px;
     text-decoration: none !important;
     cursor: pointer !important; 
     display: inline-block;
@@ -94,31 +97,31 @@
     pointer-events: auto !important;
 }
 
-
 .property-crumb-separator {
     color: var(--accent-gold, #c9a45b) !important;
-    font-size: 0.85rem;
+    font-size: 0.8rem;
     opacity: 0.7;
 }
 
 .property-gold-current {
     color: var(--accent-gold, #c9a45b) !important;
-    font-size: 0.88rem;
+    font-size: 0.8rem;
     font-weight: 400;
-    letter-spacing: 2.5px;
+    letter-spacing: 1.5px;
 }
 
 .property-hero-title {
-    font-family: 'Cormorant Garamond', Georgia, serif;
-    font-size: clamp(2.4rem, 5vw, 4rem);
-    font-weight: 300;
+    font-family: var(--font-serif);
+    font-size: clamp(2rem, 4vw, 3rem); 
+    font-weight: 400;
     color: #faf4e6;
-    margin-top: 10px;
-    letter-spacing: 1px;
+    margin-top: 8px;
+    letter-spacing: 0.5px;
 }
+
 .nav-btn {
-    width: 44px;
-    height: 44px;
+    width: 38px;
+    height: 38px;
     border-radius: 50%;
     background: transparent !important;
     border: 1px solid var(--glass-border) !important;
@@ -126,7 +129,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 0.85rem;
+    font-size: 0.8rem;
     cursor: pointer;
     transition: all 0.35s cubic-bezier(0.4, 0, 0.2, 1);
 }
@@ -144,7 +147,7 @@
     backdrop-filter: blur(12px);
     -webkit-backdrop-filter: blur(12px);
     border: 1px solid var(--glass-border) !important;
-    border-radius: 4px !important;          
+    border-radius: 6px !important;          
     overflow: hidden;
     transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
 }
@@ -157,7 +160,7 @@
 .card-image-wrapper {
     position: relative;
     width: 100%;
-    height: 320px;
+    height: 280px; 
     overflow: hidden;
 }
 
@@ -198,22 +201,22 @@
 
 .overlay-starting {
     font-family: var(--font-serif);
-    font-size: 0.85rem;
+    font-size: 0.78rem;
     color: var(--accent-gold);
-    letter-spacing: 3.5px;
-    font-weight: 600;
+    letter-spacing: 2.5px;
+    font-weight: 400;
     text-transform: uppercase;
-    margin-bottom: 8px;
+    margin-bottom: 6px;
     transform: translateY(-10px);
     transition: transform 0.4s ease 0.05s;
 }
 
 .overlay-price {
     font-family: var(--font-serif);
-    font-size: clamp(2.4rem, 4vw, 3rem);
-    font-weight: 300;
+    font-size: 1.9rem;
+    font-weight: 400;
     color: var(--text-paper);
-    margin-bottom: 22px;
+    margin-bottom: 18px;
     letter-spacing: 0.5px;
     text-shadow: 0 2px 10px rgba(0, 0, 0, 0.8);
     transform: translateY(-5px);
@@ -224,11 +227,11 @@
     background: var(--btn-gradient);
     color: #15110b !important;
     text-decoration: none;
-    font-family: var(--font-serif);
-    font-size: 0.95rem;
-    font-weight: 600;
+    font-family: var(--font-sans);
+    font-size: 0.82rem;
+    font-weight: 500;
     letter-spacing: 0.5px;
-    padding: 10px 32px;
+    padding: 10px 26px;
     border-radius: 50px;
     box-shadow: 0 4px 15px rgba(201, 164, 91, 0.35);
     transition: all 0.3s ease;
@@ -250,27 +253,27 @@
 }
 
 .card-content {
-    padding: 22px 20px;
+    padding: 20px;
     text-align: left;
     background: var(--bg-card-brown);
 }
 
 .property-title {
     font-family: var(--font-serif);
-    font-size: 1.55rem;
+    font-size: 1.25rem;
     font-weight: 400;
     color: var(--text-paper);
     margin-bottom: 6px;
     letter-spacing: 0.5px;
-    line-height: 1.2;
+    line-height: 1.3;
 }
 
 .location {
     font-family: var(--font-sans);
-    font-size: 0.85rem;
+    font-size: 0.8rem;
     color: var(--accent-gold);
     margin-bottom: 8px;
-    font-weight: 500;
+    font-weight: 400;
     letter-spacing: 0.3px;
 }
 
@@ -281,7 +284,7 @@
 
 .specs {
     font-family: var(--font-sans);
-    font-size: 0.82rem;
+    font-size: 0.78rem;
     color: var(--text-stone);
     opacity: 0.75;
     letter-spacing: 0.2px;
@@ -302,17 +305,17 @@
 
 .cta-heading {
     font-family: var(--font-serif);
-    font-size: clamp(2rem, 4vw, 3.2rem);
-    font-weight: 300;
+    font-size: clamp(1.8rem, 3.2vw, 2.4rem);
+    font-weight: 400;
     color: var(--text-paper);
 }
 
 .aria-text-muted {
     font-family: var(--font-sans);
     color: var(--text-stone);
-    opacity: 0.82;
-    font-size: 0.98rem;
-    line-height: 1.7;
+    opacity: 0.85;
+    font-size: 0.9rem;
+    line-height: 1.6;
 }
 
 .max-w-600 {
@@ -322,32 +325,35 @@
 .aria-btn-outline {
     background: transparent;
     border: 1px solid var(--glass-border);
-    color: var(--accent-gold);
+    color: var(--accent-gold) !important;
     font-family: var(--font-sans);
-    font-size: 0.85rem;
+    font-size: 0.82rem;
     font-weight: 500;
+    padding: 10px 26px;
     border-radius: 50px;
-    letter-spacing: 1px;
+    letter-spacing: 0.8px;
+    text-decoration: none;
     transition: all 0.3s ease;
+    display: inline-block;
 }
 
 .aria-btn-outline:hover {
     background: var(--btn-gradient);
-    color: #15110b;
+    color: #15110b !important;
     border-color: transparent;
     box-shadow: 0 4px 15px rgba(201, 164, 91, 0.35);
 }
 
 @media (max-width: 768px) {
     .card-image-wrapper {
-        height: 260px;
+        height: 240px;
     }
 
     .overlay-price {
-        font-size: 2.2rem;
+        font-size: 1.7rem;
     }
 
     .property-title {
-        font-size: 1.35rem;
+        font-size: 1.15rem;
     }
 }

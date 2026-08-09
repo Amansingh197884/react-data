@@ -1,6 +1,6 @@
+@import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Plus+Jakarta+Sans:wght@300;400;500;600&display=swap');
 
 :root {
-  
   --bg-walnut-dark: #1b150e;   
   --bg-card-brown: rgba(48, 38, 27, 0.45);
   
@@ -12,6 +12,8 @@
   
   --btn-gradient: linear-gradient(180deg, #c9a45b 0%, #9e7a37 100%);
 
+  --font-serif: 'Libre Baskerville', Georgia, serif;
+  --font-sans: 'Plus Jakarta Sans', -apple-system, sans-serif;
 }
 
 .mission-vision-section {
@@ -20,15 +22,15 @@
   font-family: var(--font-sans);
   position: relative;
   overflow: hidden;
-  padding: 80px 0;
+  padding: 100px 0 !important;
 }
 
 .mv-section-tag {
   font-family: var(--font-serif);
   color: var(--accent-gold);
-  font-size: 0.85rem;
-  letter-spacing: 3.5px;
-  font-weight: 600;
+  font-size: 0.78rem;
+  letter-spacing: 2.5px;
+  font-weight: 400;
   display: block;
   margin-bottom: 8px;
   text-transform: uppercase;
@@ -36,10 +38,10 @@
 
 .mv-section-title {
   font-family: var(--font-serif);
-  font-size: clamp(2rem, 4vw, 3.2rem);
-  font-weight: 300;
+  font-size: clamp(1.8rem, 3.2vw, 2.4rem);
+  font-weight: 400;
   color: var(--text-paper);
-  letter-spacing: 1px;
+  letter-spacing: 0.5px;
 }
 
 .mv-card {
@@ -47,8 +49,8 @@
   backdrop-filter: blur(8px);
   -webkit-backdrop-filter: blur(8px);
   border: 1px solid var(--glass-border);  
-  border-radius: 15px !important;                   
-  padding: 40px 35px;
+  border-radius: 6px !important; 
+  padding: 32px 28px;
   transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
   position: relative;
   overflow: hidden;
@@ -76,8 +78,8 @@
 }
 
 .mv-icon-box {
-  width: 58px;
-  height: 58px;
+  width: 48px;
+  height: 48px;
   border-radius: 50%;
   background: rgba(201, 164, 91, 0.1);
   border: 1px solid var(--accent-gold);
@@ -89,28 +91,29 @@
 
 .mv-icon {
   color: var(--accent-gold);
-  font-size: 1.4rem;
+  font-size: 1.15rem;
   transition: transform 0.4s ease;
 }
 
 .mv-card:hover .mv-icon-box {
   background: var(--btn-gradient);
   box-shadow: 0 0 15px rgba(201, 164, 91, 0.35);
+  border-color: transparent;
 }
 
 .mv-card:hover .mv-icon {
-  color: var(--bg-walnut-dark);
+  color: #15110b;
   transform: scale(1.08);
 }
 
 .mv-discover-btn {
   background: transparent;
   border: 1px solid var(--glass-border);
-  border-radius: 30px;
+  border-radius: 50px;
   padding: 8px 20px;
   color: var(--accent-gold);
   font-family: var(--font-sans);
-  font-size: 0.85rem;
+  font-size: 0.82rem;
   font-weight: 500;
   display: flex;
   align-items: center;
@@ -126,7 +129,7 @@
 
 .mv-discover-btn:hover {
   background: var(--btn-gradient);
-  color: var(--bg-walnut-dark);
+  color: #15110b;
   border-color: transparent;
   box-shadow: 0 4px 15px rgba(201, 164, 91, 0.3);
 }
@@ -137,51 +140,52 @@
 
 .mv-card-title {
   font-family: var(--font-serif);
-  font-size: 1.85rem;
+  font-size: 1.35rem;
   font-weight: 400;
   color: var(--text-paper);
-  margin-bottom: 16px;
+  margin-bottom: 12px;
   letter-spacing: 0.5px;
 }
 
 .mv-card-text {
   color: var(--text-stone);
   opacity: 0.88;
-  font-size: 0.98rem;
-  line-height: 1.75;
+  font-family: var(--font-sans);
+  font-size: 0.92rem;
+  line-height: 1.7;
   font-weight: 300;
   margin: 0;
 }
 
 @media (max-width: 768px) {
   .mission-vision-section {
-    padding: 50px 0;
+    padding: 60px 0 !important;
   }
 
   .mv-card {
-    padding: 28px 20px;
+    padding: 24px 18px;
   }
 
   .mv-icon-box {
-    width: 50px;
-    height: 50px;
+    width: 42px;
+    height: 42px;
   }
 
   .mv-icon {
-    font-size: 1.2rem;
+    font-size: 1rem;
   }
 
   .mv-discover-btn {
-    padding: 6px 14px;
+    padding: 6px 16px;
     font-size: 0.78rem;
   }
 
   .mv-card-title {
-    font-size: 1.5rem;
+    font-size: 1.2rem;
   }
 
   .mv-card-text {
-    font-size: 0.9rem;
-    line-height: 1.65;
+    font-size: 0.88rem;
+    line-height: 1.6;
   }
 }

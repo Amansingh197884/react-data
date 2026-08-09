@@ -1,6 +1,6 @@
+@import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Plus+Jakarta+Sans:wght@300;400;500;600&display=swap');
 
 :root {
- 
   --bg-walnut-dark: #15110b;
   --bg-card-brown: rgba(33, 26, 17, 0.88); 
   
@@ -12,7 +12,8 @@
   
   --btn-gradient: linear-gradient(180deg, #c9a45b 0%, #9e7a37 100%);
 
-
+  --font-serif: 'Libre Baskerville', Georgia, serif;
+  --font-sans: 'Plus Jakarta Sans', -apple-system, sans-serif;
 }
 
 .custom-wrapper {
@@ -36,34 +37,33 @@
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
   border: 1px solid var(--glass-border);
-  border-radius: 16px; 
+  border-radius: 12px; 
   box-shadow: 0 25px 60px rgba(0, 0, 0, 0.7);
-  margin-top: 60px;
+  margin-top: 50px;
 }
 
-/* Header Text */
 .contact-tag-sub {
   font-family: var(--font-serif);
   color: var(--accent-gold);
-  font-size: 0.85rem;
-  letter-spacing: 3.5px;
-  font-weight: 600;
+  font-size: 0.78rem;
+  letter-spacing: 2.5px;
+  font-weight: 400;
   text-transform: uppercase;
 }
 
 .mv-section-title {
   font-family: var(--font-serif);
-  font-size: clamp(2rem, 4vw, 3rem);
-  font-weight: 300;
+  font-size: clamp(1.8rem, 3.2vw, 2.4rem);
+  font-weight: 400;
   color: var(--text-paper) !important;
   letter-spacing: 0.5px;
 }
 
 .custom-subtext {
   font-family: var(--font-sans);
-  font-size: 0.92rem;
+  font-size: 0.9rem;
   color: var(--text-stone);
-  opacity: 0.82;
+  opacity: 0.85;
   line-height: 1.6;
 }
 
@@ -91,7 +91,7 @@
   background-color: transparent;
   outline: none;
   font-family: var(--font-sans);
-  font-size: 0.95rem;
+  font-size: 0.88rem;
   color: var(--text-paper) !important;
   transition: all 0.3s ease;
 }
@@ -106,24 +106,24 @@
   top: 10px !important;
   left: 0;
   color: var(--text-stone) !important;
-  opacity: 0.7;
+  opacity: 0.75;
   pointer-events: none;
   transition: all 0.25s ease;
   font-family: var(--font-serif);
-  font-size: 1rem;
+  font-size: 0.92rem;
 }
 
 .custom-form-group .form-control-custom:focus ~ .custom-label,
 .custom-form-group .form-control-custom:not(:placeholder-shown) ~ .custom-label {
   top: -16px !important;
-  font-size: 0.8rem;
+  font-size: 0.75rem;
   color: var(--accent-gold) !important;
   opacity: 1;
   letter-spacing: 1px;
 }
 
 .custom-form-group .custom-globe-icon {
-  font-size: 0.9rem;
+  font-size: 0.85rem;
   padding-bottom: 8px;
 }
 
@@ -136,17 +136,17 @@
   left: 0px !important;
 }
 
-/* Submit Button */
 .custom-submit-btn {
   background: var(--btn-gradient) !important;
   color: #15110b !important;
   border: none;
   font-family: var(--font-sans);
-  font-size: 0.88rem;
-  letter-spacing: 1.5px;
-  font-weight: 600;
+  font-size: 0.82rem;
+  letter-spacing: 1px;
+  font-weight: 500;
   border-radius: 50px;
   cursor: pointer;
+  padding: 10px 26px;
   transition: all 0.3s ease;
   box-shadow: 0 4px 15px rgba(201, 164, 91, 0.3);
   display: inline-flex;
@@ -172,5 +172,9 @@
   .custom-contact-card {
     margin-top: 30px;
     padding: 24px !important;
+  }
+  
+  .mv-section-title {
+    font-size: 1.6rem;
   }
 }

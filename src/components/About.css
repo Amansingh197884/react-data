@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Plus+Jakarta+Sans:wght@300;400;500;600&display=swap');
 
 :root {
   --bg-walnut-dark: #15110b;            
@@ -16,7 +17,8 @@
 
   --btn-gradient: linear-gradient(180deg, #c9a45b 0%, #9e7a37 100%);
 
-
+  --font-serif: 'Libre Baskerville', Georgia, serif;
+  --font-sans: 'Plus Jakarta Sans', -apple-system, sans-serif;
 }
 
 .aria-about-page {
@@ -35,28 +37,28 @@
   color: var(--text-dark);
 }
 
-.mv-section-title {
+.mv-section-title,
+.mv-section-title-dark {
   font-family: var(--font-serif);
-  font-size: clamp(2.2rem, 4.5vw, 3.8rem);
-  font-weight: 300;
-  color: var(--text-paper);
+  font-size: clamp(1.8rem, 3.2vw, 2.4rem); 
+  font-weight: 400;
   letter-spacing: 0.5px;
 }
 
+.mv-section-title {
+  color: var(--text-paper);
+}
+
 .mv-section-title-dark {
-  font-family: var(--font-serif);
-  font-size: clamp(2.2rem, 4.5vw, 3.8rem);
-  font-weight: 300;
   color: var(--text-dark);
-  letter-spacing: 0.5px;
 }
 
 .mv-section-tag {
   font-family: var(--font-serif);
   color: var(--accent-gold);
-  font-size: 0.85rem;
-  letter-spacing: 3.5px;
-  font-weight: 600;
+  font-size: 0.78rem;
+  letter-spacing: 2.5px;
+  font-weight: 400;
   text-transform: uppercase;
 }
 
@@ -64,12 +66,12 @@
   background: rgba(201, 164, 91, 0.12);
   color: var(--accent-gold);
   border: 1px solid var(--accent-gold);
-  padding: 5px 16px;
+  padding: 4px 14px;
   border-radius: 30px;
-  font-size: 0.75rem;
+  font-size: 0.72rem;
   font-family: var(--font-serif);
-  font-weight: 600;
-  letter-spacing: 2px;
+  font-weight: 400;
+  letter-spacing: 1.5px;
   text-transform: uppercase;
 }
 
@@ -81,16 +83,19 @@
 .aria-text-muted {
   color: var(--text-stone);
   opacity: 0.85;
+  font-size: 0.9rem;
+  line-height: 1.6;
 }
 
 .aria-text-dark-muted {
   color: var(--text-dark-muted);
+  font-size: 0.9rem;
+  line-height: 1.6;
 }
 
-/* Hero Header */
 .aria-contact-hero {
   position: relative;
-  height: 320px;
+  height: 300px;
   background-image: url('https://i.pinimg.com/736x/9e/a6/f2/9ea6f210710c28863bb3009105687db7.jpg');
   background-size: cover;
   background-position: center;
@@ -107,15 +112,14 @@
 
 .aria-breadcrumb a {
   color: var(--accent-gold);
-  font-size: 0.85rem;
-  letter-spacing: 1.5px;
+  font-size: 0.8rem;
+  letter-spacing: 1.2px;
 }
 
 .crumb-sep {
   color: var(--accent-gold);
 }
 
-/* Cards (Dark Walnut Mode) */
 .aria-card-dark {
   background-color: var(--bg-card-brown);
   border: 1px solid var(--glass-border);
@@ -129,15 +133,14 @@
   box-shadow: 0 10px 25px rgba(0, 0, 0, 0.6);
 }
 
-/* Buttons */
 .aria-btn-gold {
   display: inline-block;
   background: var(--btn-gradient);
   color: #15110b !important;
   font-family: var(--font-sans);
-  font-weight: 600;
-  font-size: 0.88rem;
-  padding: 12px 30px;
+  font-weight: 500;
+  font-size: 0.82rem;
+  padding: 10px 26px;
   border-radius: 40px;
   text-decoration: none;
   transition: all 0.3s ease;
@@ -151,40 +154,30 @@
   box-shadow: 0 8px 25px rgba(201, 164, 91, 0.45);
 }
 
-.aria-btn-outline {
-  display: inline-block;
-  background: transparent;
-  color: var(--accent-gold) !important;
-  border: 1px solid var(--glass-border);
-  font-family: var(--font-sans);
-  font-weight: 500;
-  font-size: 0.88rem;
-  padding: 12px 30px;
-  border-radius: 40px;
-  text-decoration: none;
-  transition: all 0.3s ease;
-}
-
-.aria-btn-outline:hover {
-  background: var(--btn-gradient);
-  color: #15110b !important;
-  border-color: transparent;
-}
-
+.aria-btn-outline,
 .aria-btn-outline-dark {
   display: inline-block;
   background: transparent;
-  color: var(--text-dark) !important;
-  border: 1px solid rgba(201, 164, 91, 0.5);
   font-family: var(--font-sans);
-  font-weight: 600;
-  font-size: 0.88rem;
-  padding: 12px 30px;
+  font-weight: 500;
+  font-size: 0.82rem;
+  padding: 10px 26px;
   border-radius: 40px;
   text-decoration: none;
   transition: all 0.3s ease;
 }
 
+.aria-btn-outline {
+  color: var(--accent-gold) !important;
+  border: 1px solid var(--glass-border);
+}
+
+.aria-btn-outline-dark {
+  color: var(--text-dark) !important;
+  border: 1px solid rgba(201, 164, 91, 0.5);
+}
+
+.aria-btn-outline:hover,
 .aria-btn-outline-dark:hover {
   background: var(--btn-gradient);
   color: #15110b !important;
@@ -199,7 +192,7 @@
   background: var(--bg-card-brown);
   border: 1px solid var(--glass-border);
   border-radius: 4px;
-  padding: 35px 30px;
+  padding: 28px 24px;
   transition: all 0.4s ease;
 }
 
@@ -210,8 +203,8 @@
 }
 
 .mv-icon-box {
-  width: 54px;
-  height: 54px;
+  width: 46px;
+  height: 46px;
   border-radius: 50%;
   background: rgba(201, 164, 91, 0.1);
   border: 1px solid var(--accent-gold);
@@ -219,16 +212,16 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 1.3rem;
+  font-size: 1.1rem;
 }
 
 .mv-discover-btn {
   background: transparent;
   border: 1px solid var(--glass-border);
   border-radius: 30px;
-  padding: 8px 18px;
+  padding: 6px 16px;
   color: var(--accent-gold);
-  font-size: 0.82rem;
+  font-size: 0.78rem;
   display: flex;
   align-items: center;
   gap: 8px;
@@ -244,25 +237,25 @@
 
 .mv-card-title {
   font-family: var(--font-serif);
-  font-size: 1.8rem;
+  font-size: 1.35rem;
   color: var(--text-paper);
-  margin-bottom: 14px;
+  margin-bottom: 10px;
+  font-weight: 400;
 }
 
 .mv-card-text {
   color: var(--text-stone);
   opacity: 0.85;
-  font-size: 0.95rem;
-  line-height: 1.75;
+  font-size: 0.88rem;
+  line-height: 1.65;
   font-weight: 300;
 }
 
-/* Featured Projects Cards */
 .aria-project-card {
   position: relative;
-  border-radius: 14px;
+  border-radius: 10px;
   overflow: hidden;
-  height: 320px;
+  height: 280px;
   border: 1px solid var(--glass-border);
   background-color: var(--bg-card-brown);
 }
@@ -285,45 +278,46 @@
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
-  padding: 24px;
+  padding: 20px;
 }
 
 .aria-project-overlay h4 {
   color: var(--text-paper);
   margin: 0;
   font-family: var(--font-serif);
-  font-size: 1.5rem;
+  font-size: 1.25rem;
+  font-weight: 400;
 }
 
 .aria-project-overlay small {
   color: var(--accent-gold);
-  font-size: 0.85rem;
+  font-size: 0.78rem;
 }
 
 .aria-icon-circle {
-  width: 58px;
-  height: 58px;
+  width: 48px;
+  height: 48px;
   border-radius: 50%;
   background: rgba(201, 164, 91, 0.1);
   color: var(--accent-gold);
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 1.4rem;
+  font-size: 1.2rem;
   border: 1px solid var(--glass-border);
 }
 
 .aria-faq-container {
   display: flex;
   flex-direction: column;
-  gap: 16px;
+  gap: 14px;
 }
 
 .aria-faq-item-paper {
   background: var(--bg-card-paper);
   border: 1px solid var(--glass-border);
-  border-radius: 14px;
-  padding: 20px 24px;
+  border-radius: 10px;
+  padding: 16px 20px;
   cursor: pointer;
   transition: all 0.3s ease;
   box-shadow: 0 4px 15px rgba(26, 20, 12, 0.03);
@@ -345,9 +339,9 @@
 .aria-faq-header h5 {
   color: var(--text-dark);
   font-family: var(--font-serif);
-  font-size: 1.2rem;
+  font-size: 1.05rem;
   margin: 0;
-  font-weight: 500;
+  font-weight: 400;
 }
 
 .aria-faq-item-paper.active .aria-faq-header h5 {
@@ -356,6 +350,7 @@
 
 .aria-faq-arrow {
   color: var(--accent-gold);
+  font-size: 0.9rem;
   transition: transform 0.3s ease;
 }
 
@@ -365,20 +360,20 @@
 
 .aria-faq-body {
   color: var(--text-dark-muted);
-  font-size: 0.95rem;
-  line-height: 1.7;
-  margin-top: 14px;
-  padding-top: 14px;
+  font-size: 0.88rem;
+  line-height: 1.6;
+  margin-top: 12px;
+  padding-top: 12px;
   border-top: 1px dashed rgba(201, 164, 91, 0.3);
 }
 
 .grid-img {
-  height: 240px;
+  height: 220px;
   object-fit: cover;
 }
 
 .story-img {
-  max-height: 480px;
+  max-height: 440px;
 }
 
 .border-gold {
@@ -414,14 +409,14 @@
 
 @media (max-width: 768px) {
   .mv-card {
-    padding: 25px 20px;
+    padding: 22px 18px;
   }
 
   .aria-project-card {
-    height: 260px;
+    height: 240px;
   }
 
   .aria-faq-header h5 {
-    font-size: 1.05rem;
+    font-size: 0.98rem;
   }
 }

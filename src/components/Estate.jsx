@@ -5,25 +5,25 @@ export default function EstateVillaSection() {
   return (
     <section className="estate-villa-container py-5" id="estate-villa-1bhk">
       <div className="container px-3 px-md-5">
-        <div className="row">
-          <div className="col-12 col-lg-10 col-xl-9">
+        <div className="row justify-content-center">
+          <div className="col-12 col-lg-9 col-xl-8 text-center d-flex flex-column align-items-center">
             
-            <span className="villa-tag d-block mb-3">
+            <span className="villa-tag d-block mb-2">
               Estate Villa · 1BHK
             </span>
 
-            <h2 className="villa-heading mb-4">
+            <h2 className="villa-heading mb-3">
               Intimate. Private. Immersed in Nature.
             </h2>
 
-            <p className="villa-description mb-5">
+            <p className="villa-description mb-4">
               The 1BHK Estate Villa is designed as a luxury private suite inside the
               coffee estate. Ideal for couples, weekend stays, wellness escapes, and
               hospitality rentals. Compact, elegant, and deeply connected to the
               outdoors.
             </p>
 
-            <div className="price-card-box p-4 p-md-4">
+            <div className="price-card-box p-4">
               <span className="price-tagline d-block mb-2">
                 INDICATIVE PRICE · PER VILLA
               </span>

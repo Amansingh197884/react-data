@@ -27,7 +27,8 @@ import {
     FaFacebookF, 
     FaInstagram, 
     FaWhatsapp, 
-    FaGlobe
+    FaGlobe,
+    FaCheckCircle
 } from 'react-icons/fa';
 
 import { Swiper, SwiperSlide } from 'swiper/react';
@@ -108,15 +109,36 @@ const FloorImages = [
 const heroSlides = [
     {
         title: "20-Acre Eco-Luxury Estate in Sakleshpur",
-        subtitle: "Exclusive 2, 3, 4 & 5 BHK Private Villas nestled in serene coffee plantations with private plunge pools, 5-star hospitality, and 3-tier security.",
+        bullets: [
+            "Exclusive 2, 3, 4 & 5 BHK Private Villas",
+            "Nestled in serene coffee plantations",
+            "Private temperature-controlled plunge pools",
+            "5-star hospitality & 3-tier security"
+        ],
         highlight: "Starting at ₹1.15 Cr Onwards",
         image: "https://i.pinimg.com/1200x/8d/28/34/8d2834c2c580401ba7f836145be43484.jpg"
     },
     {
         title: "Elevated Living Amidst Coffee Corridors",
-        subtitle: "Spacious Italian Show Kitchens, Double-Height Living Areas, Sky View Terraces, and 24/7 Managed Concierge Services.",
+        bullets: [
+            "Spacious Italian Show Kitchens & Dining",
+            "Double-Height Living Areas with Hill Views",
+            "Exclusive Sky View Terraces & Private Lawns",
+            "24/7 Managed Concierge Services"
+        ],
         highlight: "RERA Registered · K-RERA/11/BLG/0013/2026",
         image: "https://i.pinimg.com/1200x/27/ce/7b/27ce7bf6c7768ba02de43ba8e4ad1cbd.jpg"
+    },
+    {
+        title: "A Private Sanctuary Built For Serenity",
+        bullets: [
+            "Wake up to mist-covered hills & lush green vistas",
+            "Organic coffee plantation walking trails",
+            "Private clubhouse with indoor games & pool",
+            "Designed for ultimate privacy and space"
+        ],
+        highlight: "Limited 12 Signature Villas",
+        image: "https://i.pinimg.com/1200x/c3/e9/c0/c3e9c03dc28256bf151861402f86a64b.jpg"
     }
 ];
 
@@ -142,6 +164,25 @@ export default function Home() {
         }, 5000);
         return () => clearInterval(timer);
     }, [currentSlide]);
+
+    useEffect(() => {
+        const observer = new IntersectionObserver(
+            (entries) => {
+                entries.forEach((entry) => {
+                    if (entry.isIntersecting) {
+                        const animationType = entry.target.dataset.animate || 'animate-fade-up';
+                        entry.target.classList.add(animationType);
+                    }
+                });
+            },
+            { threshold: 0.15 }
+        );
+
+        const elements = document.querySelectorAll('[data-animate]');
+        elements.forEach((el) => observer.observe(el));
+
+        return () => observer.disconnect();
+    }, []);
 
     const handleSubmit = async (e) => {
         e.preventDefault();
@@ -174,47 +215,55 @@ export default function Home() {
 
     return (
         <div className="home-wrapper">
-            <section className="hero-split-container">
-                <div className="hero-overlay-dark"></div>
+            <section className="hero-v2-container">
+                <div className="hero-v2-overlay"></div>
 
-                <div className="hero-left-panel">
-                    <div key={currentSlide} className="hero-content-box animate-text">
-                        <span className="hero-tag-sub mb-2 d-block">ARIAHAUS ESTATE • SAKLESHPUR</span>
-                        <h1 className="hero-title">{heroSlides[currentSlide].title}</h1>
-                        <p className="hero-subtitle">{heroSlides[currentSlide].subtitle}</p>
+                <div className="hero-v2-left">
+                    <div key={currentSlide} className="hero-v2-card">
+                        <span className="section-tag-gold d-block mb-2">ARIAHAUS ESTATE • SAKLESHPUR</span>
+                        <h1 className="hero-v2-title">{heroSlides[currentSlide].title}</h1>
+                        
+                        <ul className="hero-v2-list">
+                            {heroSlides[currentSlide].bullets.map((point, i) => (
+                                <li key={i}>
+                                    <FaCheckCircle className="hero-v2-icon" />
+                                    <span>{point}</span>
+                                </li>
+                            ))}
+                        </ul>
 
-                        <div className="hero-property-badge">
+                        <div className="hero-v2-badge">
                             <FaGem className="me-2 text-gold" />
                             <span>{heroSlides[currentSlide].highlight}</span>
                         </div>
                     </div>
                 </div>
 
-                <div className="hero-right-panel">
+                <div className="hero-v2-right">
                     {heroSlides.map((slide, index) => (
                         <img
                             key={index}
                             src={slide.image}
                             alt={slide.title}
-                            className={`hero-slide-img ${index === currentSlide ? 'active' : ''}`}
+                            className={`hero-v2-slide ${index === currentSlide ? 'active' : ''}`}
                         />
                     ))}
 
-                    <div className="hero-nav-controls">
-                        <button className="nav-btn prev-btn" onClick={() => setCurrentSlide(currentSlide === 0 ? heroSlides.length - 1 : currentSlide - 1)}>
+                    <div className="hero-v2-nav">
+                        <button className="nav-btn" onClick={() => setCurrentSlide(currentSlide === 0 ? heroSlides.length - 1 : currentSlide - 1)}>
                             <FaChevronLeft />
                         </button>
-                        <button className="nav-btn next-btn" onClick={() => setCurrentSlide((currentSlide + 1) % heroSlides.length)}>
+                        <button className="nav-btn" onClick={() => setCurrentSlide((currentSlide + 1) % heroSlides.length)}>
                             <FaChevronRight />
                         </button>
                     </div>
                 </div>
             </section>
 
-            <section className="about-section-container py-5" id="about">
+            <section className="about-section-container" id="about">
                 <div className="container-fluid px-3 px-md-5">
                     <div className="row align-items-center g-4 g-lg-5">
-                        <div className="col-lg-6 about-left-col pe-lg-5">
+                        <div className="col-lg-6 about-left-col pe-lg-5" data-animate="animate-fade-left">
                             <div className="about-text-content">
                                 <span className="section-tag-gold d-block">OUR PHILOSOPHY</span>
                                 <h2 className="about-heading-dark">About Us</h2>
@@ -231,7 +280,7 @@ export default function Home() {
                             </div>
                         </div>
 
-                        <div className="col-lg-6 about-right-col ps-lg-5">
+                        <div className="col-lg-6 about-right-col ps-lg-5" data-animate="animate-fade-right">
                             <div className="about-image-wrapper border-gold-light">
                                 <img
                                     src="https://i.pinimg.com/736x/66/2e/d3/662ed34442c03c5b8b1ea7504f4494a5.jpg"
@@ -244,16 +293,16 @@ export default function Home() {
                 </div>
             </section>
 
-            <section className="highlights-section py-5">
+            <section className="highlights-section">
                 <div className="container-fluid px-3 px-md-5">
-                    <div className="text-center mb-5">
+                    <div className="text-center mb-5" data-animate="animate-fade-up">
                         <span className="section-tag-gold d-block">KEY FEATURES</span>
                         <h2 className="about-heading-light">Property Highlights</h2>
                     </div>
 
                     <div className="row g-4">
                         {propertyHighlights.map((item, index) => (
-                            <div className="col-lg-3 col-md-6" key={index}>
+                            <div className="col-lg-3 col-md-6" key={index} data-animate="animate-fade-up">
                                 <div className="highlight-card h-100">
                                     <div className="highlight-icon">
                                         {item.icon}
@@ -267,16 +316,16 @@ export default function Home() {
                 </div>
             </section>
 
-            <section className="unit-features-section-paper py-5">
+            <section className="unit-features-section-paper">
                 <div className="container-fluid px-3 px-md-5">
-                    <div className="text-center mb-5">
+                    <div className="text-center mb-5" data-animate="animate-fade-up">
                         <span className="section-tag-gold d-block">SPECIFICATIONS</span>
                         <h2 className="about-heading-dark">Unit Features</h2>
                     </div>
 
                     <div className="row g-4">
                         {unitFeatures.map((feature, index) => (
-                            <div className="col-lg-3 col-md-4 col-sm-6" key={index}>
+                            <div className="col-lg-3 col-md-4 col-sm-6" key={index} data-animate="animate-fade-up">
                                 <div className="feature-item-paper h-100">
                                     <div className="feature-img-wrapper">
                                         <img src={feature.img} alt={feature.title} className="feature-icon-img-dark" />
@@ -290,8 +339,8 @@ export default function Home() {
             </section>
 
             <section className='Galleryall'>
-                <section className="gallery-section-dark py-5">
-                    <div className="container-fluid px-3 px-md-5 py-2">
+                <section className="gallery-section-dark">
+                    <div className="container-fluid px-3 px-md-5" data-animate="animate-fade-up">
                         <div className="d-flex justify-content-between align-items-end mb-4">
                             <div>
                                 <span className="section-tag-gold d-block">VISUAL TOUR</span>
@@ -342,9 +391,6 @@ export default function Home() {
                 {selectedImgIndex !== null && (
                     <div className="luxury-lightbox-modal" onClick={() => setSelectedImgIndex(null)}>
                         <div className="lightbox-top-bar" onClick={(e) => e.stopPropagation()}>
-                            <span className="lightbox-counter">
-                                {selectedImgIndex + 1} / {galleryImages.length}
-                            </span>
                             <button className="lightbox-close-btn" onClick={() => setSelectedImgIndex(null)}>
                                 <FaTimes />
                             </button>
@@ -361,15 +407,12 @@ export default function Home() {
                             <FaChevronLeft />
                         </button>
 
-                        <div className="lightbox-image-container animate-zoom-in" onClick={(e) => e.stopPropagation()}>
+                        <div className="lightbox-image-container" onClick={(e) => e.stopPropagation()}>
                             <img
                                 src={galleryImages[selectedImgIndex].url}
                                 alt={galleryImages[selectedImgIndex].caption}
                                 className="lightbox-main-img"
                             />
-                            <div className="lightbox-caption-bar">
-                                <p className="lightbox-caption-text">{galleryImages[selectedImgIndex].caption}</p>
-                            </div>
                         </div>
 
                         <button 
@@ -386,8 +429,8 @@ export default function Home() {
                 )}
             </section>
 
-            <section className="fn-section-paper py-5">
-                <div className="container-fluid px-3 px-md-5">
+            <section className="fn-section-paper">
+                <div className="container-fluid px-3 px-md-5" data-animate="animate-fade-up">
                     <div className="d-flex justify-content-between align-items-end mb-4">
                         <div>
                             <span className="section-tag-gold d-block">ARCHITECTURAL LAYOUTS</span>
@@ -504,10 +547,10 @@ export default function Home() {
                 )}
             </section>
 
-            <section className="location-section py-5">
+            <section className="location-section">
                 <div className="container-fluid px-3 px-md-5">
                     <div className="row g-5 align-items-center">
-                        <div className="col-lg-5">
+                        <div className="col-lg-5" data-animate="animate-fade-left">
                             <span className="section-tag-gold d-block">CONNECTIVITY</span>
                             <h2 className="about-heading-light">Prime Location</h2>
                             <p className="aria-text-stone text-white mb-4">
@@ -529,7 +572,7 @@ export default function Home() {
                             </div>
                         </div>
 
-                        <div className="col-lg-7">
+                        <div className="col-lg-7" data-animate="animate-fade-right">
                             <div className="location-map-box">
                                 <iframe 
                                     title="Estate Location Map"
@@ -546,11 +589,11 @@ export default function Home() {
                 </div>
             </section>
 
-            <section className="pricing-wrapper-dark py-5">
+            <section className="pricing-wrapper-dark">
                 <div className="container-fluid px-3 px-md-5">
-                    <div className="text-start mb-5">
+                    <div className="text-start mb-5" data-animate="animate-fade-up">
                         <span className="section-tag-gold d-block">PRICING STRUCTURE</span>
-                        <h2 className="about-heading-light">Pricing & Plans</h2>
+                        <h2 className="about-heading-dark">Pricing & Plans</h2>
 
                         <div className="pricing-toggle-container">
                             <span className={!isYearly ? "active-toggle-dark" : "inactive-toggle-dark"}>Standard Plan</span>
@@ -569,7 +612,7 @@ export default function Home() {
                     </div>
 
                     <div className="row g-4 justify-content-center">
-                        <div className="col-lg-4 col-md-6">
+                        <div className="col-lg-4 col-md-6" data-animate="animate-fade-up">
                             <div className="pricing-card-dark">
                                 <span className="pricing-card-badge">Popular</span>
                                 <div className="pricing-card-header">
@@ -601,7 +644,7 @@ export default function Home() {
                             </div>
                         </div>
 
-                        <div className="col-lg-4 col-md-6">
+                        <div className="col-lg-4 col-md-6" data-animate="animate-fade-up">
                             <div className="pricing-card-dark featured-dark">
                                 <span className="pricing-card-badge">Most Premium</span>
                                 <div className="pricing-card-header">
@@ -633,7 +676,7 @@ export default function Home() {
                             </div>
                         </div>
 
-                        <div className="col-lg-4 col-md-6">
+                        <div className="col-lg-4 col-md-6" data-animate="animate-fade-up">
                             <div className="pricing-card-dark">
                                 <span className="pricing-card-badge">Limited Edition</span>
                                 <div className="pricing-card-header">
@@ -668,15 +711,15 @@ export default function Home() {
                 </div>
             </section>
 
-            <div className="new-contact-container py-5">
+            <div className="new-contact-container">
                 <div className="container-fluid px-3 px-md-5">
-                    <div className="text-start mb-5">
+                    <div className="text-start mb-5" data-animate="animate-fade-up">
                         <span className="section-tag-gold d-block">INQUIRIES</span>
                         <h2 className="about-heading-light m-0">Contact Us</h2>
                     </div>
 
                     <div className="row g-4 justify-content-center align-items-stretch">
-                        <div className="col-12 col-lg-4">
+                        <div className="col-12 col-lg-4" data-animate="animate-fade-left">
                             <div className="new-info-card h-100 p-4 p-md-5 d-flex flex-column justify-content-between">
                                 <div>
                                     <h3 className="fw-normal text-white mb-3 font-serif">Contact Information</h3>
@@ -713,7 +756,7 @@ export default function Home() {
                             </div>
                         </div>
 
-                        <div className="col-12 col-lg-8">
+                        <div className="col-12 col-lg-8" data-animate="animate-fade-right">
                             <div className="new-form-card p-4 p-md-5">
                                 {sent ? (
                                     <div className="text-center py-5">

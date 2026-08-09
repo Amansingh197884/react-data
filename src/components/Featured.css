@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Plus+Jakarta+Sans:wght@300;400;500;600&display=swap');
 
 :root {
   --bg-walnut-dark: #15110b;         
@@ -10,8 +11,9 @@
   --text-stone: #f6efde;                
   
   --btn-gradient: linear-gradient(180deg, #c9a45b 0%, #9e7a37 100%);
-  
 
+  --font-serif: 'Libre Baskerville', Georgia, serif;
+  --font-sans: 'Plus Jakarta Sans', -apple-system, sans-serif;
 }
 
 .featured-section {
@@ -19,29 +21,32 @@
   background-color: var(--bg-walnut-dark);
   font-family: var(--font-sans);
   overflow: hidden;
+  padding: 100px 0 !important;
 }
 
 .featured-tag {
   font-family: var(--font-serif);
   color: var(--accent-gold);
-  font-size: 0.85rem;
-  letter-spacing: 3.5px;
-  font-weight: 600;
+  font-size: 0.78rem;
+  letter-spacing: 2.5px;
+  font-weight: 400;
   text-transform: uppercase;
+  display: block;
+  margin-bottom: 8px;
 }
 
 .featured-section-title {
   font-family: var(--font-serif);
-  font-size: clamp(2rem, 4vw, 3.2rem);
-  font-weight: 300;
+  font-size: clamp(1.8rem, 3.2vw, 2.4rem); 
+  font-weight: 400;
   color: var(--text-paper);
   letter-spacing: 0.5px;
 }
 
 .swiper-prev-btn,
 .swiper-next-btn {
-  width: 44px;
-  height: 44px;
+  width: 42px;
+  height: 42px;
   border-radius: 50%;
   background: transparent;
   border: 1px solid var(--glass-border);
@@ -49,7 +54,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 0.9rem;
+  font-size: 0.85rem;
   cursor: pointer;
   transition: all 0.3s ease;
 }
@@ -57,7 +62,7 @@
 .swiper-prev-btn:hover,
 .swiper-next-btn:hover {
   background: var(--btn-gradient);
-  color: var(--bg-walnut-dark);
+  color: var(--bg-walnut-dark) !important;
   border-color: transparent;
   box-shadow: 0 4px 15px rgba(201, 164, 91, 0.35);
 }
@@ -70,8 +75,8 @@
 
 .project-card {
   position: relative;
-  height: 420px;
-  border-radius: 15px;                  
+  height: 380px;
+  border-radius: 6px;
   overflow: hidden;
   border: 1px solid var(--glass-border);
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.6);
@@ -90,7 +95,7 @@
   bottom: 0;
   left: 0;
   width: 100%;
-  padding: 30px 20px 20px;
+  padding: 24px 20px 20px;
   background: linear-gradient(to top, rgba(21, 17, 11, 0.95) 0%, rgba(21, 17, 11, 0.4) 70%, transparent 100%);
   color: var(--text-paper);
   text-align: left;
@@ -100,7 +105,7 @@
 
 .project-title {
   font-family: var(--font-serif);
-  font-size: 1.85rem;
+  font-size: 1.35rem;
   font-weight: 400;
   margin-bottom: 4px;
   color: var(--text-paper);
@@ -109,18 +114,18 @@
 
 .project-location {
   font-family: var(--font-sans);
-  font-size: 0.88rem;
+  font-size: 0.82rem;
   font-weight: 400;
   color: var(--accent-gold);
   margin-bottom: 2px;
-  letter-spacing: 0.5px;
+  letter-spacing: 0.3px;
 }
 
 .project-city {
   font-family: var(--font-serif);
-  font-size: 0.85rem;
+  font-size: 0.8rem;
   color: var(--text-stone);
-  opacity: 0.75;
+  opacity: 0.8;
   margin: 0;
 }
 
@@ -139,13 +144,13 @@
   transition: all 0.4s ease;
   z-index: 3;
   padding: 20px;
-  border-radius: 15px;
+  border-radius: 6px;
   border: 1px solid var(--accent-gold);
 }
 
 .price-from {
   font-family: var(--font-serif);
-  font-size: 0.9rem;
+  font-size: 0.78rem;
   color: var(--accent-gold);
   letter-spacing: 2px;
   text-transform: uppercase;
@@ -154,30 +159,31 @@
 
 .price-amount {
   font-family: var(--font-serif);
-  font-size: 2.6rem;
+  font-size: 2.1rem;
   font-weight: 400;
   color: var(--text-paper);
-  margin-bottom: 20px;
+  margin-bottom: 18px;
   letter-spacing: 0.5px;
 }
 
 .view-btn {
   background: var(--btn-gradient);
-  color: var(--bg-walnut-dark);
-  padding: 10px 28px;
+  color: var(--bg-walnut-dark) !important;
+  padding: 10px 26px;
   border-radius: 50px;
   text-decoration: none;
   font-family: var(--font-sans);
-  font-size: 0.85rem;
-  font-weight: 600;
-  letter-spacing: 1px;
+  font-size: 0.82rem;
+  font-weight: 500;
+  letter-spacing: 0.8px;
   box-shadow: 0 4px 15px rgba(201, 164, 91, 0.3);
   transition: all 0.3s ease;
+  display: inline-block;
 }
 
 .view-btn:hover {
   filter: brightness(1.15);
-  color: var(--bg-walnut-dark);
+  color: var(--bg-walnut-dark) !important;
   transform: translateY(-2px);
   box-shadow: 0 6px 20px rgba(201, 164, 91, 0.45);
 }
@@ -199,7 +205,7 @@
 
 @media (max-width: 576px) {
   .project-card {
-    height: 360px;
+    height: 340px;
   }
   
   .swiper-prev-btn,
@@ -207,5 +213,9 @@
     width: 38px;
     height: 38px;
     font-size: 0.8rem;
+  }
+
+  .price-amount {
+    font-size: 1.8rem;
   }
 }
