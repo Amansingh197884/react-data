@@ -128,4 +128,4 @@ export default function LeadPopupModal({ isOpen, onClose, projectName = "Ariahau
       </div>
     </div>
   );
-}s
+}
