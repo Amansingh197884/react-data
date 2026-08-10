@@ -14,9 +14,9 @@ import {
     FaEnvelope,
     FaMapMarkerAlt,
     FaPaperPlane,
-    FaCheck, 
-    FaCrown, 
-    FaBuilding, 
+    FaCheck,
+    FaCrown,
+    FaBuilding,
     FaGem,
     FaStar,
     FaTree,
@@ -25,9 +25,9 @@ import {
     FaSubway,
     FaPlane,
     FaHospital,
-    FaFacebookF, 
-    FaInstagram, 
-    FaWhatsapp, 
+    FaFacebookF,
+    FaInstagram,
+    FaWhatsapp,
     FaGlobe,
     FaCheckCircle
 } from 'react-icons/fa';
@@ -226,7 +226,7 @@ export default function Home() {
                     <div key={currentSlide} className="hero-v2-card">
                         <span className="section-tag-gold d-block mb-2">ARIAHAUS ESTATE • SAKLESHPUR</span>
                         <h1 className="hero-v2-title">{heroSlides[currentSlide].title}</h1>
-                        
+
                         <ul className="hero-v2-list">
                             {heroSlides[currentSlide].bullets.map((point, i) => (
                                 <li key={i}>
@@ -404,8 +404,8 @@ export default function Home() {
                             </button>
                         </div>
 
-                        <button 
-                            className="lightbox-arrow-btn lightbox-arrow-left" 
+                        <button
+                            className="lightbox-arrow-btn lightbox-arrow-left"
                             onClick={(e) => {
                                 e.stopPropagation();
                                 setSelectedImgIndex((prev) => (prev === 0 ? galleryImages.length - 1 : prev - 1));
@@ -423,8 +423,8 @@ export default function Home() {
                             />
                         </div>
 
-                        <button 
-                            className="lightbox-arrow-btn lightbox-arrow-right" 
+                        <button
+                            className="lightbox-arrow-btn lightbox-arrow-right"
                             onClick={(e) => {
                                 e.stopPropagation();
                                 setSelectedImgIndex((prev) => (prev === galleryImages.length - 1 ? 0 : prev + 1));
@@ -584,13 +584,13 @@ export default function Home() {
 
                         <div className="col-lg-7" data-animate="animate-fade-right">
                             <div className="location-map-box">
-                                <iframe 
+                                <iframe
                                     title="Estate Location Map"
-                                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3887.8928373302636!2d75.782012!3d12.971598!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ba3244673199859%3A0xc3f6ef098864703a!2sSakleshpur%2C%20Karnataka!5e0!3m2!1sen!2sin!4v1700000000000!5m2!1sen!2sin" 
-                                    width="100%" 
-                                    height="420" 
-                                    style={{ border: 0, borderRadius: '6px' }} 
-                                    allowFullScreen="" 
+                                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3887.8928373302636!2d75.782012!3d12.971598!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ba3244673199859%3A0xc3f6ef098864703a!2sSakleshpur%2C%20Karnataka!5e0!3m2!1sen!2sin!4v1700000000000!5m2!1sen!2sin"
+                                    width="100%"
+                                    height="420"
+                                    style={{ border: 0, borderRadius: '6px' }}
+                                    allowFullScreen=""
                                     loading="lazy"
                                 ></iframe>
                             </div>
@@ -879,7 +879,7 @@ export default function Home() {
                                     <img src={Logo} alt="Ariahaus Logo" className="zen-footer-logo" />
                                     <span className="zen-footer-brand-title">ARIAHAUS</span>
                                 </Link>
-                                
+
                                 <p className="zen-footer-tagline mb-4">
                                     A luxury villa community in Sakleshpur, Karnataka. Elevation without compromise.
                                 </p>

@@ -42,7 +42,7 @@ export default function Home() {
 
         <div className="search-glass-wrapper animate-fade-in-scale">
           <form onSubmit={(e) => e.preventDefault()} className="search-inner-form">
-            
+
             <div className="search-item flex-select">
               <FaSlidersH className="search-icon" />
               <select className="glass-select" defaultValue="">

@@ -1,13 +1,13 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
-import { 
-    FaChevronDown, 
-    FaEye, 
-    FaBullseye, 
-    FaBuilding, 
-    FaShieldAlt, 
-    FaHeadset, 
-    FaArrowRight 
+import {
+    FaChevronDown,
+    FaEye,
+    FaBullseye,
+    FaBuilding,
+    FaShieldAlt,
+    FaHeadset,
+    FaArrowRight
 } from 'react-icons/fa';
 import './About.css';
 
@@ -18,7 +18,6 @@ export default function AboutUs() {
         setOpenFaq(openFaq === index ? null : index);
     };
 
-    // Scroll Reveal Observer
     useEffect(() => {
         const observer = new IntersectionObserver(
             (entries) => {
@@ -39,8 +38,7 @@ export default function AboutUs() {
 
     return (
         <div className="aria-about-page">
-            
-            {/* Redesigned Hero Section (Property Page Style) */}
+
             <div className="property-hero-wrapper container-fluid p-0">
                 <header className="aria-contact-hero">
                     <div className="aria-hero-overlay">
@@ -58,7 +56,6 @@ export default function AboutUs() {
                 </header>
             </div>
 
-            {/* Intro Section */}
             <section className="aria-section-dark py-5">
                 <div className="container-fluid px-3 px-md-5 py-lg-4">
                     <div className="row align-items-center g-5">
@@ -81,9 +78,9 @@ export default function AboutUs() {
                         <div className="col-lg-6 anim-reveal">
                             <div className="row g-3">
                                 <div className="col-6">
-                                    <img 
-                                        src="https://i.pinimg.com/736x/66/2e/d3/662ed34442c03c5b8b1ea7504f4494a5.jpg" 
-                                        alt="Luxury Interior" 
+                                    <img
+                                        src="https://i.pinimg.com/736x/66/2e/d3/662ed34442c03c5b8b1ea7504f4494a5.jpg"
+                                        alt="Luxury Interior"
                                         className="img-fluid rounded-2 shadow-sm w-100 object-fit-cover mb-3 grid-img border-gold"
                                     />
                                     <div className="p-3 aria-card-dark rounded-2 text-center stat-hover-box">
@@ -96,9 +93,9 @@ export default function AboutUs() {
                                         <h4 className="fw-bold aria-gold-text mb-0 fs-3">4.9 ★</h4>
                                         <small className="aria-text-stone">Guest Satisfaction</small>
                                     </div>
-                                    <img 
-                                        src="https://i.pinimg.com/736x/9c/57/93/9c5793a7622d418c655551ed90774d84.jpg" 
-                                        alt="Modern Living" 
+                                    <img
+                                        src="https://i.pinimg.com/736x/9c/57/93/9c5793a7622d418c655551ed90774d84.jpg"
+                                        alt="Modern Living"
                                         className="img-fluid rounded-2 shadow-sm w-100 object-fit-cover grid-img border-gold"
                                     />
                                 </div>
@@ -108,15 +105,14 @@ export default function AboutUs() {
                 </div>
             </section>
 
-            {/* Story Section */}
             <section id="our-story" className="aria-section-light py-5">
                 <div className="container-fluid px-3 px-md-5 py-3">
                     <div className="row g-5 align-items-center">
                         <div className="col-lg-6 anim-reveal">
                             <div className="position-relative pe-lg-3">
-                                <img 
-                                    src="https://i.pinimg.com/736x/b1/d0/c3/b1d0c3926eb7b9c10f6200fc4f68c517.jpg" 
-                                    alt="Modern Living Room" 
+                                <img
+                                    src="https://i.pinimg.com/736x/b1/d0/c3/b1d0c3926eb7b9c10f6200fc4f68c517.jpg"
+                                    alt="Modern Living Room"
                                     className="img-fluid rounded-2 shadow-lg w-100 object-fit-cover story-img border-gold"
                                 />
                             </div>
@@ -147,7 +143,6 @@ export default function AboutUs() {
                 </div>
             </section>
 
-            {/* Animated Stat Cards Section */}
             <section className="aria-section-dark py-5">
                 <div className="container-fluid px-3 px-md-5 py-3">
                     <div className="row g-4 text-center">
@@ -181,63 +176,63 @@ export default function AboutUs() {
 
             {/* Mission & Vision */}
             <section className="mission-vision-section py-5" id="mission-vision">
-                 <div className="container-fluid px-3 px-md-5">
-                   
-                   <div className="text-center mb-5 anim-reveal">
-                     <span className="mv-section-tag">OUR PURPOSE</span>
-                     <h2 className="mv-section-title">Driving Real Estate Excellence</h2>
-                   </div>
-           
-                   <div className="row g-4 justify-content-center">
-                     
-                     <div className="col-lg-6 col-md-12 anim-reveal">
-                       <div className="mv-card h-100">
-                         <div className="mv-card-header d-flex align-items-center justify-content-between mb-4">
-                           <div className="mv-icon-box">
-                             <FaEye className="mv-icon" />
-                           </div>
-                           <button className="mv-discover-btn">
-                             <span>Discover More</span>
-                             <FaArrowRight className="btn-arrow" />
-                           </button>
-                         </div>
-           
-                         <div className="mv-card-body">
-                           <h3 className="mv-card-title">Our Vision</h3>
-                           <p className="mv-card-text">
-                             To become the core framework standard for engineering modern premium habitats,
-                             removing heavy optimization hurdles while prioritizing responsive layouts and
-                             delivering sustainable native architectural brilliance globally.
-                           </p>
-                         </div>
-                       </div>
-                     </div>
-           
-                     <div className="col-lg-6 col-md-12 anim-reveal">
-                       <div className="mv-card h-100">
-                         <div className="mv-card-header d-flex align-items-center justify-content-between mb-4">
-                           <div className="mv-icon-box">
-                             <FaBullseye className="mv-icon" />
-                           </div>
-                           <button className="mv-discover-btn">
-                             <span>Discover More</span>
-                             <FaArrowRight className="btn-arrow" />
-                           </button>
-                         </div>
-           
-                         <div className="mv-card-body">
-                           <h3 className="mv-card-title">Our Mission</h3>
-                           <p className="mv-card-text">
-                             To deliver reliable infrastructure that scales smoothly to ultra-luxury standards.
-                             We ensure high-performance execution, accessible components, and beautiful layouts
-                             built strictly on clean, transparent, and customer-centric values.
-                           </p>
-                         </div>
-                       </div>
-                     </div>
-           
-                   </div>
-                 </div>
+                <div className="container-fluid px-3 px-md-5">
+
+                    <div className="text-center mb-5 anim-reveal">
+                        <span className="mv-section-tag">OUR PURPOSE</span>
+                        <h2 className="mv-section-title">Driving Real Estate Excellence</h2>
+                    </div>
+
+                    <div className="row g-4 justify-content-center">
+
+                        <div className="col-lg-6 col-md-12 anim-reveal">
+                            <div className="mv-card h-100">
+                                <div className="mv-card-header d-flex align-items-center justify-content-between mb-4">
+                                    <div className="mv-icon-box">
+                                        <FaEye className="mv-icon" />
+                                    </div>
+                                    <button className="mv-discover-btn">
+                                        <span>Discover More</span>
+                                        <FaArrowRight className="btn-arrow" />
+                                    </button>
+                                </div>
+
+                                <div className="mv-card-body">
+                                    <h3 className="mv-card-title">Our Vision</h3>
+                                    <p className="mv-card-text">
+                                        To become the core framework standard for engineering modern premium habitats,
+                                        removing heavy optimization hurdles while prioritizing responsive layouts and
+                                        delivering sustainable native architectural brilliance globally.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div className="col-lg-6 col-md-12 anim-reveal">
+                            <div className="mv-card h-100">
+                                <div className="mv-card-header d-flex align-items-center justify-content-between mb-4">
+                                    <div className="mv-icon-box">
+                                        <FaBullseye className="mv-icon" />
+                                    </div>
+                                    <button className="mv-discover-btn">
+                                        <span>Discover More</span>
+                                        <FaArrowRight className="btn-arrow" />
+                                    </button>
+                                </div>
+
+                                <div className="mv-card-body">
+                                    <h3 className="mv-card-title">Our Mission</h3>
+                                    <p className="mv-card-text">
+                                        To deliver reliable infrastructure that scales smoothly to ultra-luxury standards.
+                                        We ensure high-performance execution, accessible components, and beautiful layouts
+                                        built strictly on clean, transparent, and customer-centric values.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
             </section>
 
             {/* Featured Projects */}
@@ -256,9 +251,9 @@ export default function AboutUs() {
                     <div className="row g-4">
                         <div className="col-md-4 anim-reveal">
                             <div className="aria-project-card border-gold">
-                                <img 
-                                    src="https://i.pinimg.com/736x/66/2e/d3/662ed34442c03c5b8b1ea7504f4494a5.jpg" 
-                                    alt="Luxury Residency" 
+                                <img
+                                    src="https://i.pinimg.com/736x/66/2e/d3/662ed34442c03c5b8b1ea7504f4494a5.jpg"
+                                    alt="Luxury Residency"
                                 />
                                 <div className="aria-project-overlay">
                                     <h4>Luxury Residency</h4>
@@ -268,9 +263,9 @@ export default function AboutUs() {
                         </div>
                         <div className="col-md-4 anim-reveal">
                             <div className="aria-project-card border-gold">
-                                <img 
-                                    src="https://i.pinimg.com/736x/9c/57/93/9c5793a7622d418c655551ed90774d84.jpg" 
-                                    alt="Sky Villas" 
+                                <img
+                                    src="https://i.pinimg.com/736x/9c/57/93/9c5793a7622d418c655551ed90774d84.jpg"
+                                    alt="Sky Villas"
                                 />
                                 <div className="aria-project-overlay">
                                     <h4>Sky Villas & Suites</h4>
@@ -280,9 +275,9 @@ export default function AboutUs() {
                         </div>
                         <div className="col-md-4 anim-reveal">
                             <div className="aria-project-card border-gold">
-                                <img 
-                                    src="https://i.pinimg.com/736x/9e/a6/f2/9ea6f210710c28863bb3009105687db7.jpg" 
-                                    alt="Private Estates" 
+                                <img
+                                    src="https://i.pinimg.com/736x/9e/a6/f2/9ea6f210710c28863bb3009105687db7.jpg"
+                                    alt="Private Estates"
                                 />
                                 <div className="aria-project-overlay">
                                     <h4>Private Estates</h4>

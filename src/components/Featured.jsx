@@ -47,7 +47,7 @@ export default function FeaturedProjects() {
   return (
     <section className="featured-section py-5">
       <div className="container-fluid px-3 px-md-5">
-        
+
         <div className="d-flex justify-content-between align-items-end mb-4">
           <div>
             <span className="featured-tag d-block mb-1">OUR PORTFOLIO</span>

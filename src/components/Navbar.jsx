@@ -25,7 +25,7 @@ export default function Navbar() {
       <nav className={`navbar navbar-expand-lg p-2 luxury-navbar fixed-top ${isScrolled ? 'scrolled' : ''}`}>
         <div className="container-fluid px-3 px-md-5">
           <Link className="navbar-brand luxury-brand d-flex align-items-center gap-2" to="/" onClick={() => setIsNavOpen(false)}>
-            <img src={Logo} alt="Ariahaus Logo" className="navbar-logo-img" /> 
+            <img src={Logo} alt="Ariahaus Logo" className="navbar-logo-img" />
             <span>Ariahaus</span>
           </Link>
 
@@ -57,8 +57,8 @@ export default function Navbar() {
         </div>
       </nav>
 
-      <div 
-        className={`side-drawer-backdrop ${isNavOpen ? 'open' : ''}`} 
+      <div
+        className={`side-drawer-backdrop ${isNavOpen ? 'open' : ''}`}
         onClick={() => setIsNavOpen(false)}
       ></div>
 

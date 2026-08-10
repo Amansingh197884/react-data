@@ -36,10 +36,10 @@ export default function ContactUs() {
 
     return (
         <section id="contact" className="contact-section py-5">
-            
+
             <div className="container-fluid px-3 px-md-5 my-md-4">
                 <div className="row g-4 g-lg-5 align-items-center">
-                    
+
                     {/* Left Info Column */}
                     <div className="col-lg-5 contact-left-col pe-lg-4">
                         <div className="contact-info-wrapper">
@@ -95,47 +95,47 @@ export default function ContactUs() {
                                 <form onSubmit={onSubmit} className="contact-form">
                                     <div className="form-group mb-4">
                                         <label className="custom-label">Full Name</label>
-                                        <input 
-                                            type="text" 
-                                            className="custom-input" 
-                                            required 
-                                            value={formData.name} 
-                                            onChange={(e) => setFormData({ ...formData, name: e.target.value })} 
-                                            placeholder="Enter Your Name" 
+                                        <input
+                                            type="text"
+                                            className="custom-input"
+                                            required
+                                            value={formData.name}
+                                            onChange={(e) => setFormData({ ...formData, name: e.target.value })}
+                                            placeholder="Enter Your Name"
                                         />
                                     </div>
 
                                     <div className="form-group mb-4">
                                         <label className="custom-label">Email Address</label>
-                                        <input 
-                                            type="email" 
-                                            className="custom-input" 
-                                            required 
-                                            value={formData.email} 
-                                            onChange={(e) => setFormData({ ...formData, email: e.target.value })} 
-                                            placeholder="Enter Your Email" 
+                                        <input
+                                            type="email"
+                                            className="custom-input"
+                                            required
+                                            value={formData.email}
+                                            onChange={(e) => setFormData({ ...formData, email: e.target.value })}
+                                            placeholder="Enter Your Email"
                                         />
                                     </div>
 
                                     <div className="form-group mb-4">
                                         <label className="custom-label">Phone Number</label>
-                                        <input 
-                                            type="tel" 
-                                            className="custom-input" 
-                                            value={formData.phone} 
-                                            onChange={(e) => setFormData({ ...formData, phone: e.target.value })} 
-                                            placeholder="Enter Your Phone Number" 
+                                        <input
+                                            type="tel"
+                                            className="custom-input"
+                                            value={formData.phone}
+                                            onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
+                                            placeholder="Enter Your Phone Number"
                                         />
                                     </div>
 
                                     <div className="form-group mb-4">
                                         <label className="custom-label">Message Parameters</label>
-                                        <textarea 
-                                            className="custom-input custom-textarea" 
-                                            rows="4" 
-                                            required 
-                                            value={formData.message} 
-                                            onChange={(e) => setFormData({ ...formData, message: e.target.value })} 
+                                        <textarea
+                                            className="custom-input custom-textarea"
+                                            rows="4"
+                                            required
+                                            value={formData.message}
+                                            onChange={(e) => setFormData({ ...formData, message: e.target.value })}
                                             placeholder="Enter Your Message..."
                                         ></textarea>
                                     </div>

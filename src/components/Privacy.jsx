@@ -39,8 +39,7 @@ export default function PrivacyPolicy() {
 
   return (
     <div className="privacy-page-wrapper">
-      
-      {/* Header Banner */}
+
       <section className="privacy-hero-section text-center">
         <div className="container px-3 px-md-5">
           <span className="privacy-gold-tag d-block mb-2">TRUST & TRANSPARENCY</span>
@@ -54,11 +53,9 @@ export default function PrivacyPolicy() {
         </div>
       </section>
 
-      {/* Main Content Area */}
       <section className="privacy-content-section py-5">
         <div className="container px-3 px-md-5">
-          
-          {/* Highlights Grid */}
+
           <div className="row g-4 mb-5">
             <div className="col-md-4">
               <div className="privacy-card p-4 text-center h-100">
@@ -85,11 +82,11 @@ export default function PrivacyPolicy() {
 
           <div className="privacy-accordion-wrapper">
             {sections.map((item, index) => (
-              <div 
-                key={index} 
+              <div
+                key={index}
                 className={`privacy-accordion-item ${openSection === index ? 'active' : ''}`}
               >
-                <div 
+                <div
                   className="privacy-accordion-header d-flex justify-content-between align-items-center"
                   onClick={() => toggleSection(index)}
                 >
@@ -118,7 +115,7 @@ export default function PrivacyPolicy() {
         </div>
       </section>
 
-    
+
 
     </div>
   );

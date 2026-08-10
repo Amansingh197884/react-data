@@ -42,14 +42,12 @@ export default function Testimonials() {
   return (
     <section className="testimonials-section py-5 " id="testimonials">
       <div className="container-fluid px-3 px-md-5">
-        
-        {/* Section Title */}
+
         <div className="text-center mb-5">
           <span className="testi-tag">TESTIMONIALS</span>
           <h2 className="testi-heading">Our Clients About Us</h2>
         </div>
 
-        {/* Swiper Slider */}
         <div className="swiper-container-wrapper">
           <Swiper
             modules={[Pagination, Autoplay]}
@@ -67,8 +65,7 @@ export default function Testimonials() {
             {testimonialsData.map((item) => (
               <SwiperSlide key={item.id}>
                 <div className="testimonial-card-wrapper">
-                  
-                  {/* Bubble Glass Box */}
+
                   <div className="testimonial-card">
                     <div className="quote-icon-box">
                       <FaQuoteRight className="quote-icon" />
@@ -78,11 +75,10 @@ export default function Testimonials() {
                     </p>
                     <h4 className="client-name">{item.name}</h4>
                     <span className="client-role">{item.role}</span>
-                    
+
                     <div className="bubble-arrow"></div>
                   </div>
 
-                  {/* Avatar Below Card */}
                   <div className="client-avatar-wrapper">
                     <img src={item.image} alt={item.name} className="client-avatar" />
                   </div>

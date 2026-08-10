@@ -28,7 +28,12 @@ body {
   color: var(--text-dark);
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   font-family: var(--font-serif) !important;
   font-weight: 400;
 }
@@ -399,6 +404,7 @@ h1, h2, h3, h4, h5, h6 {
     opacity: 0;
     transform: translateY(30px);
   }
+
   to {
     opacity: 1;
     transform: translateY(0);
@@ -409,6 +415,7 @@ h1, h2, h3, h4, h5, h6 {
   from {
     transform: scale(1.05);
   }
+
   to {
     transform: scale(1);
   }
@@ -666,7 +673,7 @@ small {
   box-shadow: 0 8px 22px rgba(201, 164, 91, 0.45);
 }
 
-@media screen and (max-width:600px){
+@media screen and (max-width:600px) {
   .aman {
     min-height: 70vh !important;
   }

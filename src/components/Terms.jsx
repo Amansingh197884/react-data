@@ -39,7 +39,7 @@ export default function TermsAndConditions() {
 
   return (
     <div className="terms-page-wrapper">
-      
+
       {/* Header Banner */}
       <section className="terms-hero-section text-center">
         <div className="container px-3 px-md-5">
@@ -57,7 +57,7 @@ export default function TermsAndConditions() {
       {/* Main Content Area */}
       <section className="terms-content-section py-5">
         <div className="container px-3 px-md-5">
-          
+
           {/* Highlights Row */}
           <div className="row g-4 mb-5">
             <div className="col-md-4">
@@ -83,14 +83,13 @@ export default function TermsAndConditions() {
             </div>
           </div>
 
-          {/* Accordion / List Sections */}
           <div className="terms-accordion-wrapper">
             {sections.map((item, index) => (
-              <div 
-                key={index} 
+              <div
+                key={index}
                 className={`terms-accordion-item ${openSection === index ? 'active' : ''}`}
               >
-                <div 
+                <div
                   className="terms-accordion-header d-flex justify-content-between align-items-center"
                   onClick={() => toggleSection(index)}
                 >
@@ -106,7 +105,6 @@ export default function TermsAndConditions() {
             ))}
           </div>
 
-          {/* Contact Assistance Box */}
           <div className="terms-contact-box mt-5 p-4 p-md-5 text-center">
             <h3 className="terms-contact-heading mb-2">Have Legal Questions?</h3>
             <p className="terms-contact-desc mb-4">
@@ -120,7 +118,6 @@ export default function TermsAndConditions() {
         </div>
       </section>
 
-      {/* Footer */}
 
     </div>
   );

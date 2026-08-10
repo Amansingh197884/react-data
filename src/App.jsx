@@ -49,12 +49,10 @@ export default function App() {
     window.scrollTo({ top: 0, left: 0, behavior: 'instant' });
   }, [location.pathname]);
 
-  // Case-insensitive URL match for PropertyDetails
   const isDetailsPage = location.pathname.toLowerCase() === '/propertydetails';
 
   return (
     <div className="bg-light min-vh-100 overflow-x-hidden">
-      {/* PropertyDetails Page par Main Navbar Hide Hoga */}
       {!isDetailsPage && <Navbar />}
 
       <Routes>
@@ -67,7 +65,6 @@ export default function App() {
         <Route path="/Privacy" element={<Privacy />} />
       </Routes>
 
-      {/* PropertyDetails Page par Footer bhi Hide Hoga */}
       {!isDetailsPage && <Footer />}
     </div>
   );

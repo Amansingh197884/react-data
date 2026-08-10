@@ -9,7 +9,7 @@ export default function Footer() {
     <footer className="luxury-footer py-4">
       <div className="container-fluid px-3 px-md-5">
         <div className="row align-items-center justify-content-between g-3">
-          
+
           <div className="col-md-5 text-center text-md-start">
             <p className="copyright-text mb-0">
               &copy; {currentYear} Areahaus
@@ -21,7 +21,7 @@ export default function Footer() {
               <Link to="/Terms" className="footer-link">Terms and Conditions</Link>
               <Link to="/Privacy" className="footer-link">Privacy Policy</Link>
               <Link to="/Privacy" className="footer-link">System Security</Link>
-              
+
             </div>
           </div>
 

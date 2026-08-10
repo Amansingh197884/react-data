@@ -57,8 +57,7 @@ const ContactPage = () => {
 
       <div className="container position-relative z-1 d-flex justify-content-center">
         <div className="custom-contact-card p-4 p-sm-5 animate__animated animate__fadeInUp">
-          
-          {/* Header Section */}
+
           <div className="text-start mb-4">
             <span className="contact-tag-sub d-block mb-2">GET IN TOUCH</span>
             <h1 className="fw-normal mb-2 text-white mb-3">
@@ -70,7 +69,6 @@ const ContactPage = () => {
             </p>
           </div>
 
-          {/* Form / Success Section */}
           {sent ? (
             <div className="text-center py-5 animate__animated animate__zoomIn">
               <h3 className="text-gold fw-bold font-serif fs-2">Message Logged!</h3>
@@ -78,8 +76,7 @@ const ContactPage = () => {
             </div>
           ) : (
             <form onSubmit={handleSubmit} className="custom-minimal-form mt-4">
-              
-              {/* Row 1: First Name & Last Name */}
+
               <div className="row g-4 mb-4">
                 <div className="col-12 col-md-6">
                   <div className="custom-form-group position-relative">
@@ -109,7 +106,6 @@ const ContactPage = () => {
                 </div>
               </div>
 
-              {/* Row 2: Phone & Email */}
               <div className="row g-4 mb-4">
                 <div className="col-12 col-md-6">
                   <div className="custom-form-group position-relative d-flex align-items-end">
@@ -141,7 +137,6 @@ const ContactPage = () => {
                 </div>
               </div>
 
-              {/* Row 3: Message */}
               <div className="custom-form-group position-relative mb-5">
                 <textarea
                   className="form-control-custom w-100"
@@ -155,10 +150,9 @@ const ContactPage = () => {
                 <label className="custom-label">Your Message *</label>
               </div>
 
-              {/* Submit Button */}
               <div className="w-100 text-center">
-                <button 
-                  type="submit" 
+                <button
+                  type="submit"
                   className="custom-submit-btn w-100 py-3 text-uppercase"
                   disabled={loading}
                 >

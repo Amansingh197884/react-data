@@ -1,11 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600&display=swap');
 
 :root {
-  --bg-subnav: rgba(21, 17, 11, 0.94);  
-  --accent-gold: #c9a45b;              
-  --glass-border: rgba(201, 164, 91, 0.35); 
-  --text-paper: #faf4e6;             
-  --text-stone: #f6efde;             
+  --bg-subnav: rgba(21, 17, 11, 0.94);
+  --accent-gold: #c9a45b;
+  --glass-border: rgba(201, 164, 91, 0.35);
+  --text-paper: #faf4e6;
+  --text-stone: #f6efde;
   --btn-gradient: linear-gradient(180deg, #c9a45b 0%, #9e7a37 100%);
   --font-sans: 'Plus Jakarta Sans', -apple-system, sans-serif;
 }
@@ -94,6 +94,7 @@
   .property-subnav-links {
     gap: 20px;
   }
+
   .subnav-link {
     font-size: 0.8rem;
     padding: 14px 0;

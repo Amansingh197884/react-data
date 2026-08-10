@@ -6,14 +6,14 @@ export default function WhoWeAre() {
     <section className="who-we-are-section py-5 " id="who-we-are">
       <div className="container-fluid px-3 px-md-5">
         <div className="row align-items-center g-4 g-lg-5">
-          
+
           <div className="col-lg-7 wwa-left-col pe-lg-5">
             <div className="wwa-text-content">
               <span className="wwa-tag">WHO WE ARE</span>
               <h2 className="wwa-heading">
                 Architecting Spaces, <br className="d-none d-md-block" /> Elevating Standards
               </h2>
-              
+
               <p className="wwa-description">
                 We craft environments where design meets human integration seamlessly,
                 bringing structural luxury directly into utility execution without excessive

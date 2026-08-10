@@ -1,15 +1,15 @@
 @import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Plus+Jakarta+Sans:wght@300;400;500;600&display=swap');
 
 :root {
-  --bg-walnut-dark: #15110b;         
+  --bg-walnut-dark: #15110b;
   --bg-card-dark: rgba(33, 26, 17, 0.95);
-  
-  --accent-gold: #c9a45b;          
+
+  --accent-gold: #c9a45b;
   --glass-border: rgba(201, 164, 91, 0.35);
-  
-  --text-paper: #faf4e6;                
-  --text-stone: #f6efde;                
-  
+
+  --text-paper: #faf4e6;
+  --text-stone: #f6efde;
+
   --btn-gradient: linear-gradient(180deg, #c9a45b 0%, #9e7a37 100%);
 
   --font-serif: 'Libre Baskerville', Georgia, serif;
@@ -37,7 +37,7 @@
 
 .featured-section-title {
   font-family: var(--font-serif);
-  font-size: clamp(1.8rem, 3.2vw, 2.4rem); 
+  font-size: clamp(1.8rem, 3.2vw, 2.4rem);
   font-weight: 400;
   color: var(--text-paper);
   letter-spacing: 0.5px;
@@ -207,7 +207,7 @@
   .project-card {
     height: 340px;
   }
-  
+
   .swiper-prev-btn,
   .swiper-next-btn {
     width: 38px;

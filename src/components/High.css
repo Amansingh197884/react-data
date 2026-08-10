@@ -1,17 +1,15 @@
-/* Google Fonts Import */
 @import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Plus+Jakarta+Sans:wght@300;400;500;600&display=swap');
 
 :root {
-  --bg-paper: #f5f0e6;    
-  --bg-paper-alt: #ebd8be; 
-  --text-dark: #1a140c;    
+  --bg-paper: #f5f0e6;
+  --bg-paper-alt: #ebd8be;
+  --text-dark: #1a140c;
   --text-muted-dark: rgba(26, 20, 12, 0.78);
-  
-  --accent-gold: #c9a45b;            
+
+  --accent-gold: #c9a45b;
   --btn-gradient: linear-gradient(180deg, #c9a45b 0%, #9e7a37 100%);
   --btn-text-color: #15110b;
 
-  /* Standard Luxury Font Families */
   --font-serif: 'Libre Baskerville', Georgia, serif;
   --font-sans: 'Plus Jakarta Sans', -apple-system, sans-serif;
 }
@@ -21,7 +19,7 @@
   font-family: var(--font-sans);
   background: linear-gradient(180deg, #faf4e6 0%, #f6efde 100%);
   overflow: hidden;
-  padding: 100px 0 !important; /* Standardized Section Padding */
+  padding: 100px 0 !important;
 }
 
 .about-left-col {
@@ -37,12 +35,10 @@
     transform: translateY(-50%);
     width: 1px;
     height: 75%;
-    background: linear-gradient(
-      180deg,
-      rgba(201, 164, 91, 0) 0%,
-      rgba(201, 164, 91, 0.3) 50%,
-      rgba(201, 164, 91, 0) 100%
-    );
+    background: linear-gradient(180deg,
+        rgba(201, 164, 91, 0) 0%,
+        rgba(201, 164, 91, 0.3) 50%,
+        rgba(201, 164, 91, 0) 100%);
   }
 }
 
@@ -50,10 +46,9 @@
   animation: fadeInLeft 1s ease-out forwards;
 }
 
-/* Standardized Tag Size */
 .about-tag {
   font-family: var(--font-serif);
-  color: var(--accent-gold);            
+  color: var(--accent-gold);
   font-size: 0.78rem;
   letter-spacing: 2.5px;
   font-weight: 400;
@@ -62,28 +57,25 @@
   margin-bottom: 8px;
 }
 
-/* Standardized Heading Scale */
 .about-heading {
   font-family: var(--font-serif);
   font-size: clamp(1.8rem, 3.2vw, 2.4rem);
   font-weight: 400;
-  color: var(--text-dark);             
+  color: var(--text-dark);
   margin-bottom: 24px;
   letter-spacing: 0.5px;
   line-height: 1.25;
 }
 
-/* Standardized Description Scale */
 .about-description {
   font-family: var(--font-sans);
-  color: var(--text-muted-dark);     
+  color: var(--text-muted-dark);
   font-size: 0.95rem;
   line-height: 1.8;
   font-weight: 400;
   margin-bottom: 32px;
 }
 
-/* Standardized Gold Pill Button */
 .discover-btn {
   background: var(--btn-gradient) !important;
   border: none !important;
@@ -137,6 +129,7 @@
     opacity: 0;
     transform: translateX(-30px);
   }
+
   to {
     opacity: 1;
     transform: translateX(0);
@@ -148,6 +141,7 @@
     opacity: 0;
     transform: translateY(30px);
   }
+
   to {
     opacity: 1;
     transform: translateY(0);

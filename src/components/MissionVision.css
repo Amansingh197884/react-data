@@ -1,15 +1,15 @@
 @import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Plus+Jakarta+Sans:wght@300;400;500;600&display=swap');
 
 :root {
-  --bg-walnut-dark: #1b150e;   
+  --bg-walnut-dark: #1b150e;
   --bg-card-brown: rgba(48, 38, 27, 0.45);
-  
-  --accent-gold: #c9a45b;         
-  --glass-border: rgba(201, 164, 91, 0.35); 
-  
-  --text-paper: #faf4e6;        
-  --text-stone: #f6efde;        
-  
+
+  --accent-gold: #c9a45b;
+  --glass-border: rgba(201, 164, 91, 0.35);
+
+  --text-paper: #faf4e6;
+  --text-stone: #f6efde;
+
   --btn-gradient: linear-gradient(180deg, #c9a45b 0%, #9e7a37 100%);
 
   --font-serif: 'Libre Baskerville', Georgia, serif;
@@ -45,11 +45,11 @@
 }
 
 .mv-card {
-  background: var(--bg-card-brown);   
+  background: var(--bg-card-brown);
   backdrop-filter: blur(8px);
   -webkit-backdrop-filter: blur(8px);
-  border: 1px solid var(--glass-border);  
-  border-radius: 6px !important; 
+  border: 1px solid var(--glass-border);
+  border-radius: 6px !important;
   padding: 32px 28px;
   transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
   position: relative;

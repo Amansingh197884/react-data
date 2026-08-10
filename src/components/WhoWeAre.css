@@ -1,27 +1,25 @@
-/* Google Fonts Import */
 @import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Plus+Jakarta+Sans:wght@300;400;500;600&display=swap');
 
 :root {
-  --bg-paper: #f5f0e6;                     
-  --bg-card-paper: #faf4e6;           
+  --bg-paper: #f5f0e6;
+  --bg-card-paper: #faf4e6;
 
-  --accent-gold: #c9a45b;                  
+  --accent-gold: #c9a45b;
   --glass-border: rgba(201, 164, 91, 0.35);
 
-  --text-dark: #1a140c;              
+  --text-dark: #1a140c;
   --text-dark-muted: rgba(26, 20, 12, 0.78);
 
   --btn-gradient: linear-gradient(180deg, #c9a45b 0%, #9e7a37 100%);
 
-  /* Standard Luxury Font Families */
   --font-serif: 'Libre Baskerville', Georgia, serif;
   --font-sans: 'Plus Jakarta Sans', -apple-system, sans-serif;
 }
 
-/* Light Theme Container (Matches About Section) */
+
 .who-we-are-section {
   width: 100%;
-  background-color: var(--bg-paper); 
+  background-color: var(--bg-paper);
   font-family: var(--font-sans);
   position: relative;
   overflow: hidden;
@@ -41,12 +39,10 @@
     transform: translateY(-50%);
     width: 1px;
     height: 70%;
-    background: linear-gradient(
-      180deg,
-      rgba(201, 164, 91, 0) 0%,
-      rgba(201, 164, 91, 0.3) 50%,
-      rgba(201, 164, 91, 0) 100%
-    );
+    background: linear-gradient(180deg,
+        rgba(201, 164, 91, 0) 0%,
+        rgba(201, 164, 91, 0.3) 50%,
+        rgba(201, 164, 91, 0) 100%);
   }
 }
 
@@ -54,7 +50,6 @@
   animation: fadeInLeft 1s ease-out forwards;
 }
 
-/* Gold Subtitle Tag */
 .wwa-tag {
   font-family: var(--font-serif);
   color: var(--accent-gold);
@@ -66,7 +61,6 @@
   text-transform: uppercase;
 }
 
-/* Dark Serif Heading for Light Theme */
 .wwa-heading {
   font-family: var(--font-serif);
   font-size: clamp(1.8rem, 3.2vw, 2.4rem);
@@ -77,7 +71,6 @@
   line-height: 1.25;
 }
 
-/* Light Theme Description Text */
 .wwa-description {
   font-family: var(--font-sans);
   color: var(--text-dark-muted);
@@ -97,11 +90,10 @@
   margin: 0;
 }
 
-/* Light Theme Card (Cream Background with Soft Gold Glow) */
 .experience-glass-card {
   background: var(--bg-card-paper);
   border: 1px solid var(--glass-border);
-  border-radius: 6px;                  
+  border-radius: 6px;
   padding: 36px 28px;
   transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
   animation: fadeInUp 1.2s ease-out forwards;
@@ -131,7 +123,6 @@
   box-shadow: 0 15px 35px rgba(201, 164, 91, 0.15), 0 5px 15px rgba(26, 20, 12, 0.05);
 }
 
-/* Dark-to-Gold Gradient Stat Number */
 .stat-number {
   font-family: var(--font-serif);
   font-size: clamp(3rem, 5vw, 4rem);
@@ -166,6 +157,7 @@
     opacity: 0;
     transform: translateX(-30px);
   }
+
   to {
     opacity: 1;
     transform: translateX(0);
@@ -177,6 +169,7 @@
     opacity: 0;
     transform: translateY(30px);
   }
+
   to {
     opacity: 1;
     transform: translateY(0);

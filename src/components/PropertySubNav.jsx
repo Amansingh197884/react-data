@@ -40,8 +40,8 @@ export default function PropertySubNav() {
   }, []);
 
   return (
-    <nav 
-      className="sticky-top" 
+    <nav
+      className="sticky-top"
       style={{
         position: 'sticky',
         top: 0,
@@ -54,11 +54,11 @@ export default function PropertySubNav() {
     >
       <div className="container-fluid px-3 px-md-5">
         <div className="d-flex align-items-center justify-content-between overflow-auto" style={{ height: '60px', scrollbarWidth: 'none' }}>
-          
+
           <ul className="d-flex align-items-center m-0 p-0 list-unstyled" style={{ gap: '28px', whiteSpace: 'nowrap' }}>
             <li>
-              <a 
-                href="#about-us" 
+              <a
+                href="#about-us"
                 style={{
                   color: activeTab === 'about-us' ? '#c9a45b' : '#f6efde',
                   fontWeight: 500,
@@ -74,8 +74,8 @@ export default function PropertySubNav() {
             </li>
 
             <li>
-              <a 
-                href="#unit-features" 
+              <a
+                href="#unit-features"
                 style={{
                   color: activeTab === 'unit-features' ? '#c9a45b' : '#f6efde',
                   fontWeight: 500,
@@ -91,8 +91,8 @@ export default function PropertySubNav() {
             </li>
 
             <li>
-              <a 
-                href="#amenities" 
+              <a
+                href="#amenities"
                 style={{
                   color: activeTab === 'amenities' ? '#c9a45b' : '#f6efde',
                   fontWeight: 500,
@@ -108,8 +108,8 @@ export default function PropertySubNav() {
             </li>
 
             <li>
-              <a 
-                href="#pricing-plans" 
+              <a
+                href="#pricing-plans"
                 style={{
                   color: activeTab === 'pricing-plans' ? '#c9a45b' : '#f6efde',
                   fontWeight: 500,
@@ -125,8 +125,8 @@ export default function PropertySubNav() {
             </li>
 
             <li>
-              <a 
-                href="#location-map" 
+              <a
+                href="#location-map"
                 style={{
                   color: activeTab === 'location-map' ? '#c9a45b' : '#f6efde',
                   fontWeight: 500,
@@ -143,8 +143,8 @@ export default function PropertySubNav() {
           </ul>
 
           <div className="d-none d-md-block">
-            <a 
-              href="#book-tour" 
+            <a
+              href="#book-tour"
               style={{
                 background: 'linear-gradient(180deg, #c9a45b 0%, #9e7a37 100%)',
                 color: '#15110b',
