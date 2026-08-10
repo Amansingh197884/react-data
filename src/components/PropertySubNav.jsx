@@ -1,17 +1,18 @@
 import React, { useState, useEffect } from 'react';
+import { Link } from 'react-router-dom';
+import Logo from "../assets/Logo.png";
 
 export default function PropertySubNav() {
   const [activeTab, setActiveTab] = useState('about-us');
 
-  const handleScrollTo = (e, sectionId) => {
+  const scrollToSection = (e, id) => {
     e.preventDefault();
-    setActiveTab(sectionId);
-    const element = document.getElementById(sectionId);
-    if (element) {
-      const offset = 80;
-      const elementPosition = element.getBoundingClientRect().top - document.body.getBoundingClientRect().top;
+    setActiveTab(id);
+    const target = document.getElementById(id);
+    if (target) {
+      const topOffset = target.offsetTop - 70;
       window.scrollTo({
-        top: elementPosition - offset,
+        top: topOffset,
         behavior: 'smooth'
       });
     }
@@ -20,15 +21,13 @@ export default function PropertySubNav() {
   useEffect(() => {
     const handleScroll = () => {
       const sections = ['about-us', 'unit-features', 'amenities', 'pricing-plans', 'location-map', 'book-tour'];
-      const scrollPosition = window.scrollY + 120;
+      const scrollPos = window.scrollY + 100;
 
-      for (const sectionId of sections) {
-        const el = document.getElementById(sectionId);
+      for (const id of sections) {
+        const el = document.getElementById(id);
         if (el) {
-          const top = el.offsetTop;
-          const height = el.offsetHeight;
-          if (scrollPosition >= top && scrollPosition < top + height) {
-            setActiveTab(sectionId);
+          if (scrollPos >= el.offsetTop && scrollPos < el.offsetTop + el.offsetHeight) {
+            setActiveTab(id);
             break;
           }
         }
@@ -40,22 +39,37 @@ export default function PropertySubNav() {
   }, []);
 
   return (
-    <nav
-      className="sticky-top"
-      style={{
-        position: 'sticky',
-        top: 0,
-        backgroundColor: '#15110b',
-        borderBottom: '1px solid rgba(201, 164, 91, 0.35)',
-        zIndex: 99999,
-        boxShadow: '0 10px 25px rgba(0, 0, 0, 0.7)',
-        width: '100%'
-      }}
-    >
+    <nav className="sticky-top" style={{ backgroundColor: '#15110b', borderBottom: '1px solid rgba(201, 164, 91, 0.35)', zIndex: 99999 }}>
       <div className="container-fluid px-3 px-md-5">
         <div className="d-flex align-items-center justify-content-between overflow-auto" style={{ height: '60px', scrollbarWidth: 'none' }}>
+          
+          <ul className="d-flex align-items-center m-0 p-0 list-unstyled" style={{ gap: '24px', whiteSpace: 'nowrap' }}>
+            
+            {/* Logo + Home Link (Redirects to Home Page) */}
+            <li>
+              <Link 
+                to="/" 
+                style={{
+                  color: '#f6efde',
+                  fontWeight: 600,
+                  fontSize: '0.85rem',
+                  textDecoration: 'none',
+                  display: 'flex',
+                  alignItems: 'center',
+                  gap: '8px'
+                }}
+              >
+                <img 
+                  src={Logo} 
+                  alt="Ariahaus Logo" 
+                  style={{ height: '28px', width: 'auto', objectFit: 'contain' }} 
+                />
+                <span>Home</span>
+              </Link>
+            </li>
 
-          <ul className="d-flex align-items-center m-0 p-0 list-unstyled" style={{ gap: '28px', whiteSpace: 'nowrap' }}>
+            <li style={{ color: 'rgba(201, 164, 91, 0.4)' }}>|</li>
+
             <li>
               <a
                 href="#about-us"
@@ -64,10 +78,10 @@ export default function PropertySubNav() {
                   fontWeight: 500,
                   fontSize: '0.85rem',
                   textDecoration: 'none',
-                  padding: '18px 0',
-                  borderBottom: activeTab === 'about-us' ? '2px solid #c9a45b' : 'none'
+                  paddingBottom: '4px',
+                  borderBottom: activeTab === 'about-us' ? '2px solid #c9a45b' : '2px solid transparent'
                 }}
-                onClick={(e) => handleScrollTo(e, 'about-us')}
+                onClick={(e) => scrollToSection(e, 'about-us')}
               >
                 About Us
               </a>
@@ -81,10 +95,10 @@ export default function PropertySubNav() {
                   fontWeight: 500,
                   fontSize: '0.85rem',
                   textDecoration: 'none',
-                  padding: '18px 0',
-                  borderBottom: activeTab === 'unit-features' ? '2px solid #c9a45b' : 'none'
+                  paddingBottom: '4px',
+                  borderBottom: activeTab === 'unit-features' ? '2px solid #c9a45b' : '2px solid transparent'
                 }}
-                onClick={(e) => handleScrollTo(e, 'unit-features')}
+                onClick={(e) => scrollToSection(e, 'unit-features')}
               >
                 Unit Features
               </a>
@@ -98,10 +112,10 @@ export default function PropertySubNav() {
                   fontWeight: 500,
                   fontSize: '0.85rem',
                   textDecoration: 'none',
-                  padding: '18px 0',
-                  borderBottom: activeTab === 'amenities' ? '2px solid #c9a45b' : 'none'
+                  paddingBottom: '4px',
+                  borderBottom: activeTab === 'amenities' ? '2px solid #c9a45b' : '2px solid transparent'
                 }}
-                onClick={(e) => handleScrollTo(e, 'amenities')}
+                onClick={(e) => scrollToSection(e, 'amenities')}
               >
                 Amenities
               </a>
@@ -115,10 +129,10 @@ export default function PropertySubNav() {
                   fontWeight: 500,
                   fontSize: '0.85rem',
                   textDecoration: 'none',
-                  padding: '18px 0',
-                  borderBottom: activeTab === 'pricing-plans' ? '2px solid #c9a45b' : 'none'
+                  paddingBottom: '4px',
+                  borderBottom: activeTab === 'pricing-plans' ? '2px solid #c9a45b' : '2px solid transparent'
                 }}
-                onClick={(e) => handleScrollTo(e, 'pricing-plans')}
+                onClick={(e) => scrollToSection(e, 'pricing-plans')}
               >
                 Pricing & Floor Plan
               </a>
@@ -132,21 +146,21 @@ export default function PropertySubNav() {
                   fontWeight: 500,
                   fontSize: '0.85rem',
                   textDecoration: 'none',
-                  padding: '18px 0',
-                  borderBottom: activeTab === 'location-map' ? '2px solid #c9a45b' : 'none'
+                  paddingBottom: '4px',
+                  borderBottom: activeTab === 'location-map' ? '2px solid #c9a45b' : '2px solid transparent'
                 }}
-                onClick={(e) => handleScrollTo(e, 'location-map')}
+                onClick={(e) => scrollToSection(e, 'location-map')}
               >
                 Location & Map
               </a>
             </li>
           </ul>
 
-          <div className="d-none d-md-block">
+          <div className="d-none d-md-block ms-3">
             <a
               href="#book-tour"
               style={{
-                background: 'linear-gradient(180deg, #c9a45b 0%, #9e7a37 100%)',
+                background: '#c9a45b',
                 color: '#15110b',
                 fontSize: '0.78rem',
                 fontWeight: 600,
@@ -154,7 +168,7 @@ export default function PropertySubNav() {
                 borderRadius: '50px',
                 textDecoration: 'none'
               }}
-              onClick={(e) => handleScrollTo(e, 'book-tour')}
+              onClick={(e) => scrollToSection(e, 'book-tour')}
             >
               Book Private Tour
             </a>

@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Navigation, Autoplay } from 'swiper/modules';
 import { FaChevronLeft, FaChevronRight } from 'react-icons/fa';
+import { usePopup } from './PopupContext';
 
 import 'swiper/css';
 import 'swiper/css/navigation';
@@ -79,6 +80,8 @@ const featuredData = [
 ];
 
 export default function ApartmentsSection() {
+    const { openPopup } = usePopup();
+
     useEffect(() => {
         const observer = new IntersectionObserver(
             (entries) => {
@@ -157,18 +160,17 @@ export default function ApartmentsSection() {
                                 <div className="project-card">
                                     <img src={item.image} alt={item.title} className="card-bg-img" />
 
-                                    {/* Default State Content */}
                                     <div className="default-content">
                                         <h3 className="project-title">{item.title}</h3>
                                         <p className="project-location">{item.location}</p>
                                         <p className="project-city">{item.city}</p>
                                     </div>
 
-                                    {/* Hover Overlay Effect */}
                                     <div className="hover-overlay">
                                         <span className="price-from">starting from</span>
                                         <h4 className="price-amount">{item.price}</h4>
-                                        <Link to="/PropertyDetails" className="view-btn">
+
+                                        <Link to="/PropertyDetails" className="view-btn text-decoration-none">
                                             View Project
                                         </Link>
                                     </div>
@@ -228,7 +230,8 @@ export default function ApartmentsSection() {
                                     <div className="hover-overlay">
                                         <span className="price-from">starting from</span>
                                         <h4 className="price-amount">{item.price}</h4>
-                                        <Link to="/PropertyDetails" className="view-btn">
+
+                                        <Link to="/PropertyDetails" className="view-btn text-decoration-none">
                                             View Project
                                         </Link>
                                     </div>
@@ -249,12 +252,20 @@ export default function ApartmentsSection() {
                         </p>
 
                         <div className="cta-buttons-wrapper d-flex justify-content-center align-items-center gap-3 flex-wrap">
-                            <Link to="/Contact" className="view-btn text-decoration-none">
+                            <button
+                                type="button"
+                                className="view-btn border-0 cursor-pointer text-decoration-none"
+                                onClick={() => openPopup('PrivateTourReservation')}
+                            >
                                 Book Private Tour
-                            </Link>
-                            <Link to="/Property" className="aria-btn-outline text-decoration-none">
+                            </button>
+                            <button
+                                type="button"
+                                className="aria-btn-outline border-0 cursor-pointer text-decoration-none"
+                                onClick={() => openPopup('PortfolioDownload')}
+                            >
                                 Download Portfolio
-                            </Link>
+                            </button>
                         </div>
                     </div>
                 </div>

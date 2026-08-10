@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
+import { usePopup } from './PopupContext';
 import {
     FaChevronDown,
     FaEye,
@@ -12,6 +13,7 @@ import {
 import './About.css';
 
 export default function AboutUs() {
+    const { openPopup } = usePopup();
     const [openFaq, setOpenFaq] = useState(0);
 
     const toggleFaq = (index) => {
@@ -191,7 +193,11 @@ export default function AboutUs() {
                                     <div className="mv-icon-box">
                                         <FaEye className="mv-icon" />
                                     </div>
-                                    <button className="mv-discover-btn">
+                                    <button 
+                                        type="button" 
+                                        className="mv-discover-btn border-0 cursor-pointer"
+                                        onClick={() => openPopup('OurVision')}
+                                    >
                                         <span>Discover More</span>
                                         <FaArrowRight className="btn-arrow" />
                                     </button>
@@ -214,7 +220,11 @@ export default function AboutUs() {
                                     <div className="mv-icon-box">
                                         <FaBullseye className="mv-icon" />
                                     </div>
-                                    <button className="mv-discover-btn">
+                                    <button 
+                                        type="button" 
+                                        className="mv-discover-btn border-0 cursor-pointer"
+                                        onClick={() => openPopup('OurMission')}
+                                    >
                                         <span>Discover More</span>
                                         <FaArrowRight className="btn-arrow" />
                                     </button>
@@ -250,7 +260,10 @@ export default function AboutUs() {
 
                     <div className="row g-4">
                         <div className="col-md-4 anim-reveal">
-                            <div className="aria-project-card border-gold">
+                            <div 
+                                className="aria-project-card border-gold cursor-pointer"
+                                onClick={() => openPopup('LuxuryResidency')}
+                            >
                                 <img
                                     src="https://i.pinimg.com/736x/66/2e/d3/662ed34442c03c5b8b1ea7504f4494a5.jpg"
                                     alt="Luxury Residency"
@@ -262,7 +275,10 @@ export default function AboutUs() {
                             </div>
                         </div>
                         <div className="col-md-4 anim-reveal">
-                            <div className="aria-project-card border-gold">
+                            <div 
+                                className="aria-project-card border-gold cursor-pointer"
+                                onClick={() => openPopup('SkyVillas')}
+                            >
                                 <img
                                     src="https://i.pinimg.com/736x/9c/57/93/9c5793a7622d418c655551ed90774d84.jpg"
                                     alt="Sky Villas"
@@ -274,7 +290,10 @@ export default function AboutUs() {
                             </div>
                         </div>
                         <div className="col-md-4 anim-reveal">
-                            <div className="aria-project-card border-gold">
+                            <div 
+                                className="aria-project-card border-gold cursor-pointer"
+                                onClick={() => openPopup('PrivateEstates')}
+                            >
                                 <img
                                     src="https://i.pinimg.com/736x/9e/a6/f2/9ea6f210710c28863bb3009105687db7.jpg"
                                     alt="Private Estates"

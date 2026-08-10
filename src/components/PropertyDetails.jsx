@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import PropertySubNav from './PropertySubNav';
+import { usePopup } from './PopupContext';
 import {
     FaTimes,
     FaChevronLeft,
@@ -144,6 +145,8 @@ const heroSlides = [
 ];
 
 export default function Home() {
+    const { openPopup } = usePopup();
+
     const [currentSlide, setCurrentSlide] = useState(0);
     const [selectedImgIndex, setSelectedImgIndex] = useState(null);
     const [selectedPlan, setSelectedPlan] = useState(null);
@@ -154,7 +157,8 @@ export default function Home() {
         lastName: '',
         email: '',
         phone: '',
-        message: ''
+        message: '',
+        projectName: 'AriahausEstate'
     });
     const [sent, setSent] = useState(false);
     const [loading, setLoading] = useState(false);
@@ -201,11 +205,12 @@ export default function Home() {
                     email: formData.email,
                     phone: formData.phone,
                     message: formData.message,
+                    projectName: formData.projectName
                 })
             });
 
             setSent(true);
-            setFormData({ firstName: '', lastName: '', email: '', phone: '', message: '' });
+            setFormData({ firstName: '', lastName: '', email: '', phone: '', message: '', projectName: 'AriahausEstate' });
             setTimeout(() => setSent(false), 4000);
         } catch (error) {
             alert("Something went wrong. Please try again!");
@@ -279,7 +284,7 @@ export default function Home() {
                                     Standing out in its step-up design, all primary daily living spaces are located on one principal level. The upper level is a private sanctuary, home to four generous en-suite bedrooms and a master suite designed for serenity.
                                 </p>
 
-                                <button className="discover-btn-gold">
+                                <button className="discover-btn-gold" onClick={() => openPopup('AriahausEstate')}>
                                     Discover More <FaArrowRight className="ms-2" />
                                 </button>
                             </div>
@@ -556,7 +561,6 @@ export default function Home() {
                 )}
             </section>
 
-            {/* Location & Map Section */}
             <section className="location-section" id="location-map">
                 <div className="container-fluid px-3 px-md-5">
                     <div className="row g-5 align-items-center">
@@ -599,7 +603,6 @@ export default function Home() {
                 </div>
             </section>
 
-            {/* Pricing Structure Section */}
             <section className="pricing-wrapper-dark">
                 <div className="container-fluid px-3 px-md-5">
                     <div className="text-start mb-5" data-animate="animate-fade-up">
@@ -649,7 +652,7 @@ export default function Home() {
                                     <li><FaCheck className="check-icon" /><span>Access to Clubhouse & Pool</span></li>
                                 </ul>
 
-                                <button className="discover-btn-gold w-100 mt-4">
+                                <button className="discover-btn-gold w-100 mt-4" onClick={() => openPopup('ExecutiveSuite')}>
                                     Schedule Site Visit <FaArrowRight className="ms-2" />
                                 </button>
                             </div>
@@ -681,7 +684,7 @@ export default function Home() {
                                     <li><FaCheck className="check-icon" /><span>24/7 Personal Concierge</span></li>
                                 </ul>
 
-                                <button className="discover-btn-gold w-100 mt-4">
+                                <button className="discover-btn-gold w-100 mt-4" onClick={() => openPopup('RoyalPenthouse')}>
                                     Schedule Site Visit <FaArrowRight className="ms-2" />
                                 </button>
                             </div>
@@ -713,7 +716,7 @@ export default function Home() {
                                     <li><FaCheck className="check-icon" /><span>Private Elevator & Servant Quarter</span></li>
                                 </ul>
 
-                                <button className="discover-btn-gold w-100 mt-4">
+                                <button className="discover-btn-gold w-100 mt-4" onClick={() => openPopup('PresidentialVilla')}>
                                     Schedule Site Visit <FaArrowRight className="ms-2" />
                                 </button>
                             </div>
@@ -722,7 +725,6 @@ export default function Home() {
                 </div>
             </section>
 
-            {/* Inquiries & Contact Form Section */}
             <div className="new-contact-container" id="book-tour">
                 <div className="container-fluid px-3 px-md-5">
                     <div className="text-start mb-5" data-animate="animate-fade-up">
@@ -777,6 +779,14 @@ export default function Home() {
                                     </div>
                                 ) : (
                                     <form onSubmit={handleSubmit}>
+
+                                        {/* hidden input */}
+                                        <input
+                                            type="hidden"
+                                            name="projectName"
+                                            value={formData.projectName}
+                                        />
+
                                         <div className="row g-4">
                                             <div className="col-12 col-md-6">
                                                 <div className="new-input-group">
@@ -808,10 +818,11 @@ export default function Home() {
 
                                             <div className="col-12 col-md-6">
                                                 <div className="new-input-group">
-                                                    <label className="new-input-label">Phone Number</label>
+                                                    <label className="new-input-label">Phone Number *</label>
                                                     <input
                                                         type="tel"
                                                         className="new-input-field"
+                                                        required
                                                         placeholder="Enter Your No"
                                                         value={formData.phone}
                                                         onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
@@ -835,11 +846,10 @@ export default function Home() {
 
                                             <div className="col-12">
                                                 <div className="new-input-group">
-                                                    <label className="new-input-label">Your Message *</label>
+                                                    <label className="new-input-label">Your Message</label>
                                                     <textarea
                                                         className="new-input-field"
                                                         rows="4"
-                                                        required
                                                         placeholder="Tell us how we can help you..."
                                                         value={formData.message}
                                                         onChange={(e) => setFormData({ ...formData, message: e.target.value })}
