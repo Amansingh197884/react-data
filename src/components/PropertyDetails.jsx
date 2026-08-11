@@ -128,7 +128,7 @@ const heroSlides = [
             "Exclusive Sky View Terraces & Private Lawns",
             "24/7 Managed Concierge Services"
         ],
-        highlight: "RERA Registered · K-RERA/11/BLG/0013/2026",
+        highlight: "RERA Registered ·No",
         image: "https://i.pinimg.com/1200x/27/ce/7b/27ce7bf6c7768ba02de43ba8e4ad1cbd.jpg"
     },
     {
