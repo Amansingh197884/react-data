@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Navigation, Autoplay } from 'swiper/modules';
@@ -44,6 +44,24 @@ const projectsData = [
 ];
 
 export default function FeaturedProjects() {
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('animate-fade-up');
+          }
+        });
+      },
+      { threshold: 0.15 }
+    );
+
+    const cards = document.querySelectorAll('.project-card');
+    cards.forEach((card) => observer.observe(card));
+
+    return () => observer.disconnect();
+  }, []);
+
   return (
     <section className="featured-section py-5">
       <div className="container-fluid px-3 px-md-5">
@@ -64,7 +82,6 @@ export default function FeaturedProjects() {
           </div>
         </div>
 
-        {/* Swiper Slider */}
         <Swiper
           modules={[Navigation, Autoplay]}
           navigation={{

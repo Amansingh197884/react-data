@@ -175,15 +175,24 @@ export default function PropertyDetails() {
             (entries) => {
                 entries.forEach((entry) => {
                     if (entry.isIntersecting) {
-                        const animationType = entry.target.dataset.animate || 'animate-fade-up';
-                        entry.target.classList.add(animationType);
+                        entry.target.classList.add('animate-fade-up');
                     }
                 });
             },
-            { threshold: 0.15 }
+            { threshold: 0.12 }
         );
 
-        const elements = document.querySelectorAll('[data-animate]');
+        const animatableSelectors = [
+            '.highlight-card',
+            '.feature-item-paper',
+            '.gallery-card-luxury',
+            '.floor-card-paper',
+            '.pricing-card-dark',
+            '.location-item',
+            '[data-animate]'
+        ];
+
+        const elements = document.querySelectorAll(animatableSelectors.join(', '));
         elements.forEach((el) => observer.observe(el));
 
         return () => observer.disconnect();
@@ -301,7 +310,6 @@ export default function PropertyDetails() {
                 </div>
             </section>
 
-            {/* Property Highlights Section */}
             <section className="highlights-section" id="amenities">
                 <div className="container-fluid px-3 px-md-5">
                     <div className="text-center mb-5" data-animate="animate-fade-up">
@@ -311,7 +319,7 @@ export default function PropertyDetails() {
 
                     <div className="row g-4">
                         {propertyHighlights.map((item, index) => (
-                            <div className="col-lg-3 col-md-6" key={index} data-animate="animate-fade-up">
+                            <div className="col-lg-3 col-md-6" key={index}>
                                 <div className="highlight-card h-100">
                                     <div className="highlight-icon">
                                         {item.icon}
@@ -325,7 +333,6 @@ export default function PropertyDetails() {
                 </div>
             </section>
 
-            {/* Unit Features & Amenities Section */}
             <section className="unit-features-section-paper" id="unit-features">
                 <div className="container-fluid px-3 px-md-5">
                     <div className="text-center mb-5" data-animate="animate-fade-up">
@@ -348,7 +355,6 @@ export default function PropertyDetails() {
                 </div>
             </section>
 
-            {/* Gallery Section */}
             <section className="Galleryall" id="gallery-section">
                 <section className="gallery-section-dark">
                     <div className="container-fluid px-3 px-md-5" data-animate="animate-fade-up">
@@ -440,7 +446,6 @@ export default function PropertyDetails() {
                 )}
             </section>
 
-            {/* Floor Plans Section */}
             <section className="fn-section-paper" id="floor-plans">
                 <div className="container-fluid px-3 px-md-5" data-animate="animate-fade-up">
                     <div className="d-flex justify-content-between align-items-end mb-4">
@@ -559,7 +564,6 @@ export default function PropertyDetails() {
                 )}
             </section>
 
-            {/* Pricing Section */}
             <section className="pricing-wrapper-dark" id="pricing-plans">
                 <div className="container-fluid px-3 px-md-5">
                     <div className="d-flex justify-content-between align-items-end mb-4">
@@ -716,7 +720,6 @@ export default function PropertyDetails() {
                 </div>
             </section>
 
-            {/* Location Section */}
             <section className="location-section" id="location-map">
                 <div className="container-fluid px-3 px-md-5">
                     <div className="row g-5 align-items-center">
@@ -759,7 +762,6 @@ export default function PropertyDetails() {
                 </div>
             </section>
 
-            {/* Contact Us Section */}
             <div className="new-contact-container" id="book-tour">
                 <div className="container-fluid px-3 px-md-5">
                     <div className="text-start mb-5" data-animate="animate-fade-up">
@@ -912,7 +914,6 @@ export default function PropertyDetails() {
                 </div>
             </div>
 
-            {/* Footer with Terms and Conditions on Right Side */}
             <footer className="zen-custom-footer py-5">
                 <div className="container-fluid px-3 px-md-5">
                     <div className="row g-4 g-lg-5 pb-5">

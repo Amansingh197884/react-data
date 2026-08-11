@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Pagination, Autoplay } from 'swiper/modules';
 import { FaQuoteRight } from 'react-icons/fa';
@@ -39,8 +39,26 @@ const testimonialsData = [
 ];
 
 export default function Testimonials() {
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('animate-fade-up');
+          }
+        });
+      },
+      { threshold: 0.15 }
+    );
+
+    const cards = document.querySelectorAll('.testimonial-card-wrapper');
+    cards.forEach((card) => observer.observe(card));
+
+    return () => observer.disconnect();
+  }, []);
+
   return (
-    <section className="testimonials-section py-5 " id="testimonials">
+    <section className="testimonials-section py-5" id="testimonials">
       <div className="container-fluid px-3 px-md-5">
 
         <div className="text-center mb-5">

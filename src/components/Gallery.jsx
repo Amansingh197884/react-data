@@ -79,15 +79,12 @@ const AmenitiesGallery = () => {
         >
           {amenitiesData.map((item) => (
             <SwiperSlide key={item.id}>
-              <div
-                className="amenities-card"
-                onClick={() => setActiveImage(item.image)}
-              >
+              <div className="amenities-card" onClick={() => setActiveImage(item.image)}>
                 <img src={item.image} alt={item.title} className="card-img-zoom" />
                 <div className="card-gradient-overlay" />
 
                 <div className="card-hover-content">
-                  {/* <span className="hover-text">{item.title}</span> */}
+                  <span className="hover-text">{item.title}</span>
                 </div>
               </div>
             </SwiperSlide>

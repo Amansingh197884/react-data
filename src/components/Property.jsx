@@ -87,15 +87,15 @@ export default function ApartmentsSection() {
             (entries) => {
                 entries.forEach((entry) => {
                     if (entry.isIntersecting) {
-                        entry.target.classList.add('reveal-active');
+                        entry.target.classList.add('animate-fade-up');
                     }
                 });
             },
             { threshold: 0.12 }
         );
 
-        const animatableElements = document.querySelectorAll('.anim-reveal');
-        animatableElements.forEach((el) => observer.observe(el));
+        const cards = document.querySelectorAll('.project-card, .anim-reveal');
+        cards.forEach((card) => observer.observe(card));
 
         return () => observer.disconnect();
     }, []);
