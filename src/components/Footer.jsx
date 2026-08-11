@@ -20,7 +20,7 @@ export default function Footer() {
             <div className="footer-links-group d-flex flex-wrap justify-content-center justify-content-md-end gap-3 gap-md-4">
               <Link to="/Terms" className="footer-link">Terms and Conditions</Link>
               <Link to="/Privacy" className="footer-link">Privacy Policy</Link>
-              <Link to="/Privacy" className="footer-link">System Security</Link>
+              {/* <Link to="/Privacy" className="footer-link">System Security</Link> */}
 
             </div>
           </div>

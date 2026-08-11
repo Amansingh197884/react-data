@@ -144,7 +144,7 @@ const heroSlides = [
     }
 ];
 
-export default function Home() {
+export default function PropertyDetails() {
     const { openPopup } = usePopup();
 
     const [currentSlide, setCurrentSlide] = useState(0);
@@ -205,7 +205,7 @@ export default function Home() {
                     email: formData.email,
                     phone: formData.phone,
                     message: formData.message,
-                    projectName: formData.projectName
+                    projectName: formData.projectName 
                 })
             });
 
@@ -223,7 +223,6 @@ export default function Home() {
         <div className="home-wrapper">
             <PropertySubNav />
 
-            {/* Hero Section */}
             <section className="hero-v2-container">
                 <div className="hero-v2-overlay"></div>
 
@@ -269,7 +268,6 @@ export default function Home() {
                 </div>
             </section>
 
-            {/* About Section */}
             <section className="about-section-container" id="about-us">
                 <div className="container-fluid px-3 px-md-5">
                     <div className="row align-items-center g-4 g-lg-5">
@@ -303,7 +301,7 @@ export default function Home() {
                 </div>
             </section>
 
-            {/* Highlights & Amenities Section */}
+            {/* Property Highlights Section */}
             <section className="highlights-section" id="amenities">
                 <div className="container-fluid px-3 px-md-5">
                     <div className="text-center mb-5" data-animate="animate-fade-up">
@@ -327,17 +325,17 @@ export default function Home() {
                 </div>
             </section>
 
-            {/* Unit Features Section */}
+            {/* Unit Features & Amenities Section */}
             <section className="unit-features-section-paper" id="unit-features">
                 <div className="container-fluid px-3 px-md-5">
                     <div className="text-center mb-5" data-animate="animate-fade-up">
                         <span className="section-tag-gold d-block">SPECIFICATIONS</span>
-                        <h2 className="about-heading-dark">Unit Features</h2>
+                        <h2 className="about-heading-dark">Unit Features & Amenities</h2>
                     </div>
 
-                    <div className="row g-4">
+                    <div className="row g-3 g-md-4">
                         {unitFeatures.map((feature, index) => (
-                            <div className="col-lg-3 col-md-4 col-sm-6" key={index} data-animate="animate-fade-up">
+                            <div className="col-6 col-md-4 col-lg-3" key={index}>
                                 <div className="feature-item-paper h-100">
                                     <div className="feature-img-wrapper">
                                         <img src={feature.img} alt={feature.title} className="feature-icon-img-dark" />
@@ -351,7 +349,7 @@ export default function Home() {
             </section>
 
             {/* Gallery Section */}
-            <section className="Galleryall">
+            <section className="Galleryall" id="gallery-section">
                 <section className="gallery-section-dark">
                     <div className="container-fluid px-3 px-md-5" data-animate="animate-fade-up">
                         <div className="d-flex justify-content-between align-items-end mb-4">
@@ -361,10 +359,10 @@ export default function Home() {
                             </div>
 
                             <div className="swiper-custom-navigation gap-2 d-flex">
-                                <button className="swiper-prev-btn nav-btn-dark" aria-label="Previous Photo">
+                                <button className="swiper-prev-btn nav-btn-dark gallery-prev-btn" aria-label="Previous Photo">
                                     <FaChevronLeft />
                                 </button>
-                                <button className="swiper-next-btn nav-btn-dark" aria-label="Next Photo">
+                                <button className="swiper-next-btn nav-btn-dark gallery-next-btn" aria-label="Next Photo">
                                     <FaChevronRight />
                                 </button>
                             </div>
@@ -376,8 +374,8 @@ export default function Home() {
                             slidesPerView={1}
                             autoplay={{ delay: 3500, disableOnInteraction: false }}
                             navigation={{
-                                prevEl: '.gallery-section-dark .swiper-prev-btn',
-                                nextEl: '.gallery-section-dark .swiper-next-btn',
+                                prevEl: '.gallery-prev-btn',
+                                nextEl: '.gallery-next-btn',
                             }}
                             breakpoints={{
                                 640: { slidesPerView: 1.8 },
@@ -443,7 +441,7 @@ export default function Home() {
             </section>
 
             {/* Floor Plans Section */}
-            <section className="fn-section-paper" id="pricing-plans">
+            <section className="fn-section-paper" id="floor-plans">
                 <div className="container-fluid px-3 px-md-5" data-animate="animate-fade-up">
                     <div className="d-flex justify-content-between align-items-end mb-4">
                         <div>
@@ -452,10 +450,10 @@ export default function Home() {
                         </div>
 
                         <div className="swiper-custom-navigation gap-2 d-flex">
-                            <button type="button" className="swiper-prev-btn nav-btn-light" aria-label="Previous Floor">
+                            <button type="button" className="swiper-prev-btn nav-btn-light floor-prev-btn" aria-label="Previous Floor">
                                 <FaChevronLeft />
                             </button>
-                            <button type="button" className="swiper-next-btn nav-btn-light" aria-label="Next Floor">
+                            <button type="button" className="swiper-next-btn nav-btn-light floor-next-btn" aria-label="Next Floor">
                                 <FaChevronRight />
                             </button>
                         </div>
@@ -464,11 +462,11 @@ export default function Home() {
                     <Swiper
                         modules={[Navigation, Autoplay]}
                         spaceBetween={24}
-                        slidesPerView={1.2}
+                        slidesPerView={1}
                         autoplay={{ delay: 3500, disableOnInteraction: false }}
                         navigation={{
-                            prevEl: '.fn-section-paper .swiper-prev-btn',
-                            nextEl: '.fn-section-paper .swiper-next-btn',
+                            prevEl: '.floor-prev-btn',
+                            nextEl: '.floor-next-btn',
                         }}
                         breakpoints={{
                             576: { slidesPerView: 2 },
@@ -561,6 +559,164 @@ export default function Home() {
                 )}
             </section>
 
+            {/* Pricing Section */}
+            <section className="pricing-wrapper-dark" id="pricing-plans">
+                <div className="container-fluid px-3 px-md-5">
+                    <div className="d-flex justify-content-between align-items-end mb-4">
+                        <div>
+                            <span className="section-tag-gold d-block">PRICING STRUCTURE</span>
+                            <h2 className="about-heading-dark m-0">Pricing & Plans</h2>
+
+                            <div className="pricing-toggle-container">
+                                <span className={!isYearly ? "active-toggle-dark" : "inactive-toggle-dark"}>Standard Plan</span>
+                                <label className="pricing-switch">
+                                    <input
+                                        type="checkbox"
+                                        checked={isYearly}
+                                        onChange={() => setIsYearly(!isYearly)}
+                                    />
+                                    <span className="slider round"></span>
+                                </label>
+                                <span className={isYearly ? "active-toggle-dark" : "inactive-toggle-dark"}>
+                                    Early Bird Plan <span className="discount-tag">Save 8%</span>
+                                </span>
+                            </div>
+                        </div>
+
+                        <div className="swiper-custom-navigation gap-2 d-none d-md-flex">
+                            <button type="button" className="swiper-prev-btn nav-btn-light pricing-prev-btn" aria-label="Previous Pricing">
+                                <FaChevronLeft />
+                            </button>
+                            <button type="button" className="swiper-next-btn nav-btn-light pricing-next-btn" aria-label="Next Pricing">
+                                <FaChevronRight />
+                            </button>
+                        </div>
+                    </div>
+
+                    <Swiper
+                        modules={[Navigation, Autoplay]}
+                        spaceBetween={24}
+                        slidesPerView={1}
+                        autoplay={{ delay: 4000, disableOnInteraction: false }}
+                        navigation={{
+                            prevEl: '.pricing-prev-btn',
+                            nextEl: '.pricing-next-btn',
+                        }}
+                        breakpoints={{
+                            768: { slidesPerView: 2 },
+                            1200: { slidesPerView: 3 }
+                        }}
+                        className="pricing-swiper"
+                    >
+                        <SwiperSlide>
+                            <div className="pricing-card-dark h-100">
+                                <span className="pricing-card-badge">Popular</span>
+                                <div className="pricing-card-header">
+                                    <div className="pricing-card-icon"><FaBuilding /></div>
+                                    <h3 className="pricing-card-title">Executive Suite</h3>
+                                    <div className="pricing-bhk-tag">2 & 3 BHK</div>
+                                </div>
+
+                                <div className="pricing-card-price">
+                                    <span className="price-amount-dark">
+                                        {isYearly ? "₹ 1.15 Cr" : "₹ 1.25 Cr"}
+                                    </span>
+                                    <span className="price-label-dark">Onwards</span>
+                                </div>
+
+                                <hr className="pricing-divider-dark" />
+
+                                <ul className="pricing-features-list-dark">
+                                    <li><FaCheck className="check-icon" /><span>1,250 - 1,600 Sq.Ft. Area</span></li>
+                                    <li><FaCheck className="check-icon" /><span>Spacious Balconies with Park View</span></li>
+                                    <li><FaCheck className="check-icon" /><span>Modular Kitchen Included</span></li>
+                                    <li><FaCheck className="check-icon" /><span>1 Reserved Covered Parking</span></li>
+                                    <li><FaCheck className="check-icon" /><span>Access to Clubhouse & Pool</span></li>
+                                </ul>
+
+                                <button className="discover-btn-gold w-100 mt-4" onClick={() => openPopup('ExecutiveSuite')}>
+                                    Schedule Site Visit <FaArrowRight className="ms-2" />
+                                </button>
+                            </div>
+                        </SwiperSlide>
+
+                        <SwiperSlide>
+                            <div className="pricing-card-dark featured-dark h-100">
+                                <span className="pricing-card-badge">Most Premium</span>
+                                <div className="pricing-card-header">
+                                    <div className="pricing-card-icon"><FaCrown /></div>
+                                    <h3 className="pricing-card-title">Royal Penthouse</h3>
+                                    <div className="pricing-bhk-tag">4 BHK Duplex</div>
+                                </div>
+
+                                <div className="pricing-card-price">
+                                    <span className="price-amount-dark">
+                                        {isYearly ? "₹ 2.65 Cr" : "₹ 2.85 Cr"}
+                                    </span>
+                                    <span className="price-label-dark">Onwards</span>
+                                </div>
+
+                                <hr className="pricing-divider-dark" />
+
+                                <ul className="pricing-features-list-dark">
+                                    <li><FaCheck className="check-icon" /><span>3,200 Sq.Ft. Living Space</span></li>
+                                    <li><FaCheck className="check-icon" /><span>Private Deck & Plunge Pool</span></li>
+                                    <li><FaCheck className="check-icon" /><span>Italian Marble Flooring</span></li>
+                                    <li><FaCheck className="check-icon" /><span>2 Covered Car Parkings</span></li>
+                                    <li><FaCheck className="check-icon" /><span>24/7 Personal Concierge</span></li>
+                                </ul>
+
+                                <button className="discover-btn-gold w-100 mt-4" onClick={() => openPopup('RoyalPenthouse')}>
+                                    Schedule Site Visit <FaArrowRight className="ms-2" />
+                                </button>
+                            </div>
+                        </SwiperSlide>
+
+                        <SwiperSlide>
+                            <div className="pricing-card-dark h-100">
+                                <span className="pricing-card-badge">Limited Edition</span>
+                                <div className="pricing-card-header">
+                                    <div className="pricing-card-icon"><FaGem /></div>
+                                    <h3 className="pricing-card-title">Presidential Villa</h3>
+                                    <div className="pricing-bhk-tag">5 BHK Villa</div>
+                                </div>
+
+                                <div className="pricing-card-price">
+                                    <span className="price-amount-dark">
+                                        {isYearly ? "₹ 4.20 Cr" : "₹ 4.50 Cr"}
+                                    </span>
+                                    <span className="price-label-dark">Onwards</span>
+                                </div>
+
+                                <hr className="pricing-divider-dark" />
+
+                                <ul className="pricing-features-list-dark">
+                                    <li><FaCheck className="check-icon" /><span>5,000+ Sq.Ft. Private Estate</span></li>
+                                    <li><FaCheck className="check-icon" /><span>Private Landscaped Garden</span></li>
+                                    <li><FaCheck className="check-icon" /><span>Home Automation & Cinema</span></li>
+                                    <li><FaCheck className="check-icon" /><span>3 Dedicated Parkings</span></li>
+                                    <li><FaCheck className="check-icon" /><span>Private Elevator & Servant Quarter</span></li>
+                                </ul>
+
+                                <button className="discover-btn-gold w-100 mt-4" onClick={() => openPopup('PresidentialVilla')}>
+                                    Schedule Site Visit <FaArrowRight className="ms-2" />
+                                </button>
+                            </div>
+                        </SwiperSlide>
+                    </Swiper>
+
+                    <div className="d-flex d-md-none justify-content-center gap-3 mt-4">
+                        <button type="button" className="swiper-prev-btn nav-btn-light pricing-prev-btn" aria-label="Previous Pricing">
+                            <FaChevronLeft />
+                        </button>
+                        <button type="button" className="swiper-next-btn nav-btn-light pricing-next-btn" aria-label="Next Pricing">
+                            <FaChevronRight />
+                        </button>
+                    </div>
+                </div>
+            </section>
+
+            {/* Location Section */}
             <section className="location-section" id="location-map">
                 <div className="container-fluid px-3 px-md-5">
                     <div className="row g-5 align-items-center">
@@ -603,128 +759,7 @@ export default function Home() {
                 </div>
             </section>
 
-            <section className="pricing-wrapper-dark">
-                <div className="container-fluid px-3 px-md-5">
-                    <div className="text-start mb-5" data-animate="animate-fade-up">
-                        <span className="section-tag-gold d-block">PRICING STRUCTURE</span>
-                        <h2 className="about-heading-dark">Pricing & Plans</h2>
-
-                        <div className="pricing-toggle-container">
-                            <span className={!isYearly ? "active-toggle-dark" : "inactive-toggle-dark"}>Standard Plan</span>
-                            <label className="pricing-switch">
-                                <input
-                                    type="checkbox"
-                                    checked={isYearly}
-                                    onChange={() => setIsYearly(!isYearly)}
-                                />
-                                <span className="slider round"></span>
-                            </label>
-                            <span className={isYearly ? "active-toggle-dark" : "inactive-toggle-dark"}>
-                                Early Bird Plan <span className="discount-tag">Save 8%</span>
-                            </span>
-                        </div>
-                    </div>
-
-                    <div className="row g-4 justify-content-center">
-                        <div className="col-lg-4 col-md-6" data-animate="animate-fade-up">
-                            <div className="pricing-card-dark">
-                                <span className="pricing-card-badge">Popular</span>
-                                <div className="pricing-card-header">
-                                    <div className="pricing-card-icon"><FaBuilding /></div>
-                                    <h3 className="pricing-card-title">Executive Suite</h3>
-                                    <div className="pricing-bhk-tag">2 & 3 BHK</div>
-                                </div>
-
-                                <div className="pricing-card-price">
-                                    <span className="price-amount-dark">
-                                        {isYearly ? "₹ 1.15 Cr" : "₹ 1.25 Cr"}
-                                    </span>
-                                    <span className="price-label-dark">Onwards</span>
-                                </div>
-
-                                <hr className="pricing-divider-dark" />
-
-                                <ul className="pricing-features-list-dark">
-                                    <li><FaCheck className="check-icon" /><span>1,250 - 1,600 Sq.Ft. Area</span></li>
-                                    <li><FaCheck className="check-icon" /><span>Spacious Balconies with Park View</span></li>
-                                    <li><FaCheck className="check-icon" /><span>Modular Kitchen Included</span></li>
-                                    <li><FaCheck className="check-icon" /><span>1 Reserved Covered Parking</span></li>
-                                    <li><FaCheck className="check-icon" /><span>Access to Clubhouse & Pool</span></li>
-                                </ul>
-
-                                <button className="discover-btn-gold w-100 mt-4" onClick={() => openPopup('ExecutiveSuite')}>
-                                    Schedule Site Visit <FaArrowRight className="ms-2" />
-                                </button>
-                            </div>
-                        </div>
-
-                        <div className="col-lg-4 col-md-6" data-animate="animate-fade-up">
-                            <div className="pricing-card-dark featured-dark">
-                                <span className="pricing-card-badge">Most Premium</span>
-                                <div className="pricing-card-header">
-                                    <div className="pricing-card-icon"><FaCrown /></div>
-                                    <h3 className="pricing-card-title">Royal Penthouse</h3>
-                                    <div className="pricing-bhk-tag">4 BHK Duplex</div>
-                                </div>
-
-                                <div className="pricing-card-price">
-                                    <span className="price-amount-dark">
-                                        {isYearly ? "₹ 2.65 Cr" : "₹ 2.85 Cr"}
-                                    </span>
-                                    <span className="price-label-dark">Onwards</span>
-                                </div>
-
-                                <hr className="pricing-divider-dark" />
-
-                                <ul className="pricing-features-list-dark">
-                                    <li><FaCheck className="check-icon" /><span>3,200 Sq.Ft. Living Space</span></li>
-                                    <li><FaCheck className="check-icon" /><span>Private Deck & Plunge Pool</span></li>
-                                    <li><FaCheck className="check-icon" /><span>Italian Marble Flooring</span></li>
-                                    <li><FaCheck className="check-icon" /><span>2 Covered Car Parkings</span></li>
-                                    <li><FaCheck className="check-icon" /><span>24/7 Personal Concierge</span></li>
-                                </ul>
-
-                                <button className="discover-btn-gold w-100 mt-4" onClick={() => openPopup('RoyalPenthouse')}>
-                                    Schedule Site Visit <FaArrowRight className="ms-2" />
-                                </button>
-                            </div>
-                        </div>
-
-                        <div className="col-lg-4 col-md-6" data-animate="animate-fade-up">
-                            <div className="pricing-card-dark">
-                                <span className="pricing-card-badge">Limited Edition</span>
-                                <div className="pricing-card-header">
-                                    <div className="pricing-card-icon"><FaGem /></div>
-                                    <h3 className="pricing-card-title">Presidential Villa</h3>
-                                    <div className="pricing-bhk-tag">5 BHK Villa</div>
-                                </div>
-
-                                <div className="pricing-card-price">
-                                    <span className="price-amount-dark">
-                                        {isYearly ? "₹ 4.20 Cr" : "₹ 4.50 Cr"}
-                                    </span>
-                                    <span className="price-label-dark">Onwards</span>
-                                </div>
-
-                                <hr className="pricing-divider-dark" />
-
-                                <ul className="pricing-features-list-dark">
-                                    <li><FaCheck className="check-icon" /><span>5,000+ Sq.Ft. Private Estate</span></li>
-                                    <li><FaCheck className="check-icon" /><span>Private Landscaped Garden</span></li>
-                                    <li><FaCheck className="check-icon" /><span>Home Automation & Cinema</span></li>
-                                    <li><FaCheck className="check-icon" /><span>3 Dedicated Parkings</span></li>
-                                    <li><FaCheck className="check-icon" /><span>Private Elevator & Servant Quarter</span></li>
-                                </ul>
-
-                                <button className="discover-btn-gold w-100 mt-4" onClick={() => openPopup('PresidentialVilla')}>
-                                    Schedule Site Visit <FaArrowRight className="ms-2" />
-                                </button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
-
+            {/* Contact Us Section */}
             <div className="new-contact-container" id="book-tour">
                 <div className="container-fluid px-3 px-md-5">
                     <div className="text-start mb-5" data-animate="animate-fade-up">
@@ -779,8 +814,6 @@ export default function Home() {
                                     </div>
                                 ) : (
                                     <form onSubmit={handleSubmit}>
-
-                                        {/* hidden input */}
                                         <input
                                             type="hidden"
                                             name="projectName"
@@ -879,7 +912,7 @@ export default function Home() {
                 </div>
             </div>
 
-            {/* Footer */}
+            {/* Footer with Terms and Conditions on Right Side */}
             <footer className="zen-custom-footer py-5">
                 <div className="container-fluid px-3 px-md-5">
                     <div className="row g-4 g-lg-5 pb-5">
@@ -908,7 +941,7 @@ export default function Home() {
                             <ul className="zen-nav-list">
                                 <li><Link to="/Property">Residences</Link></li>
                                 <li><a href="#about-us">About Us</a></li>
-                                <li><a href="#amenities">Amenities</a></li>
+                                <li><a href="#unit-features">Amenities</a></li>
                                 <li><a href="#location-map">Location</a></li>
                                 <li><a href="#book-tour">Contact</a></li>
                             </ul>
@@ -929,19 +962,15 @@ export default function Home() {
 
                     <div className="zen-sub-footer pt-4 border-top-gold">
                         <div className="row align-items-center g-3">
-                            <div className="col-lg-4 col-md-12 text-center text-lg-start">
+                            <div className="col-md-6 text-center text-md-start">
                                 <span className="zen-copy-text">© 2026 Ariahaus. All rights reserved.</span>
                             </div>
 
-                            <div className="col-lg-4 col-md-12 text-center">
+                            <div className="col-md-6 text-center text-md-end">
                                 <div className="zen-policy-links d-inline-flex gap-4">
                                     <Link to="/Terms">Terms and Conditions</Link>
                                     <Link to="/Privacy">Privacy Policy</Link>
                                 </div>
-                            </div>
-
-                            <div className="col-lg-4 col-md-12 text-center text-lg-end">
-                                <span className="zen-rera-text">RERA Registered · K-RERA/11/BLG/0013/2026</span>
                             </div>
                         </div>
                     </div>

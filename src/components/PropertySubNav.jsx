@@ -20,7 +20,16 @@ export default function PropertySubNav() {
 
   useEffect(() => {
     const handleScroll = () => {
-      const sections = ['about-us', 'unit-features', 'amenities', 'pricing-plans', 'location-map', 'book-tour'];
+      const sections = [
+        'about-us', 
+        'amenities', 
+        'unit-features', 
+        'gallery-section', 
+        'floor-plans', 
+        'pricing-plans', 
+        'location-map', 
+        'book-tour'
+      ];
       const scrollPos = window.scrollY + 100;
 
       for (const id of sections) {
@@ -43,9 +52,9 @@ export default function PropertySubNav() {
       <div className="container-fluid px-3 px-md-5">
         <div className="d-flex align-items-center justify-content-between overflow-auto" style={{ height: '60px', scrollbarWidth: 'none' }}>
           
-          <ul className="d-flex align-items-center m-0 p-0 list-unstyled" style={{ gap: '24px', whiteSpace: 'nowrap' }}>
+          <ul className="d-flex align-items-center m-0 p-0 list-unstyled" style={{ gap: '22px', whiteSpace: 'nowrap' }}>
             
-            {/* Logo + Home Link (Redirects to Home Page) */}
+            {/* Logo + Home Link */}
             <li>
               <Link 
                 to="/" 
@@ -70,6 +79,7 @@ export default function PropertySubNav() {
 
             <li style={{ color: 'rgba(201, 164, 91, 0.4)' }}>|</li>
 
+            {/* About Us */}
             <li>
               <a
                 href="#about-us"
@@ -87,23 +97,7 @@ export default function PropertySubNav() {
               </a>
             </li>
 
-            <li>
-              <a
-                href="#unit-features"
-                style={{
-                  color: activeTab === 'unit-features' ? '#c9a45b' : '#f6efde',
-                  fontWeight: 500,
-                  fontSize: '0.85rem',
-                  textDecoration: 'none',
-                  paddingBottom: '4px',
-                  borderBottom: activeTab === 'unit-features' ? '2px solid #c9a45b' : '2px solid transparent'
-                }}
-                onClick={(e) => scrollToSection(e, 'unit-features')}
-              >
-                Unit Features
-              </a>
-            </li>
-
+            {/* Highlights */}
             <li>
               <a
                 href="#amenities"
@@ -117,10 +111,65 @@ export default function PropertySubNav() {
                 }}
                 onClick={(e) => scrollToSection(e, 'amenities')}
               >
+                Highlights
+              </a>
+            </li>
+
+            {/* Amenities -> Clicks and scrolls to Unit Features */}
+            <li>
+              <a
+                href="#unit-features"
+                style={{
+                  color: activeTab === 'unit-features' ? '#c9a45b' : '#f6efde',
+                  fontWeight: 500,
+                  fontSize: '0.85rem',
+                  textDecoration: 'none',
+                  paddingBottom: '4px',
+                  borderBottom: activeTab === 'unit-features' ? '2px solid #c9a45b' : '2px solid transparent'
+                }}
+                onClick={(e) => scrollToSection(e, 'unit-features')}
+              >
                 Amenities
               </a>
             </li>
 
+            {/* Gallery */}
+            <li>
+              <a
+                href="#gallery-section"
+                style={{
+                  color: activeTab === 'gallery-section' ? '#c9a45b' : '#f6efde',
+                  fontWeight: 500,
+                  fontSize: '0.85rem',
+                  textDecoration: 'none',
+                  paddingBottom: '4px',
+                  borderBottom: activeTab === 'gallery-section' ? '2px solid #c9a45b' : '2px solid transparent'
+                }}
+                onClick={(e) => scrollToSection(e, 'gallery-section')}
+              >
+                Gallery
+              </a>
+            </li>
+
+            {/* Floor Plans (Separate) */}
+            <li>
+              <a
+                href="#floor-plans"
+                style={{
+                  color: activeTab === 'floor-plans' ? '#c9a45b' : '#f6efde',
+                  fontWeight: 500,
+                  fontSize: '0.85rem',
+                  textDecoration: 'none',
+                  paddingBottom: '4px',
+                  borderBottom: activeTab === 'floor-plans' ? '2px solid #c9a45b' : '2px solid transparent'
+                }}
+                onClick={(e) => scrollToSection(e, 'floor-plans')}
+              >
+                Floor Plans
+              </a>
+            </li>
+
+            {/* Pricing Plans (Separate) */}
             <li>
               <a
                 href="#pricing-plans"
@@ -134,10 +183,11 @@ export default function PropertySubNav() {
                 }}
                 onClick={(e) => scrollToSection(e, 'pricing-plans')}
               >
-                Pricing & Floor Plan
+                Pricing Plans
               </a>
             </li>
 
+            {/* Location & Map */}
             <li>
               <a
                 href="#location-map"
@@ -154,6 +204,25 @@ export default function PropertySubNav() {
                 Location & Map
               </a>
             </li>
+
+            {/* Contact Us */}
+            <li>
+              <a
+                href="#book-tour"
+                style={{
+                  color: activeTab === 'book-tour' ? '#c9a45b' : '#f6efde',
+                  fontWeight: 500,
+                  fontSize: '0.85rem',
+                  textDecoration: 'none',
+                  paddingBottom: '4px',
+                  borderBottom: activeTab === 'book-tour' ? '2px solid #c9a45b' : '2px solid transparent'
+                }}
+                onClick={(e) => scrollToSection(e, 'book-tour')}
+              >
+                Contact Us
+              </a>
+            </li>
+
           </ul>
 
           <div className="d-none d-md-block ms-3">

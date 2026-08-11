@@ -106,7 +106,6 @@
 .visit-showroom-btn:hover,
 .discover-btn-gold:hover {
   filter: brightness(1.15);
-  transform: translateY(-2px);
   box-shadow: 0 8px 22px rgba(201, 164, 91, 0.45);
 }
 
@@ -322,14 +321,13 @@
   border: 1px solid var(--glass-border);
   border-radius: 6px;
   padding: 36px 28px;
-  transition: all 0.35s ease;
+  transition: border-color 0.35s ease, box-shadow 0.35s ease;
   cursor: pointer;
 }
 
 .highlight-card:hover {
   border-color: var(--accent-gold);
   box-shadow: 0 12px 30px rgba(0, 0, 0, 0.5);
-  transform: translateY(-5px);
 }
 
 .highlight-icon {
@@ -340,9 +338,8 @@
   transition: transform 0.6s ease;
 }
 
-.highlight-card:hover .highlight-icon,
-.highlight-card:active .highlight-icon {
-  transform: rotate(360deg) scale(1.15);
+.highlight-card:hover .highlight-icon {
+  transform: rotate(360deg);
 }
 
 .highlight-title {
@@ -371,16 +368,15 @@
   background: var(--bg-card-paper);
   border: 1px solid rgba(201, 164, 91, 0.25);
   border-radius: 6px;
-  padding: 30px 24px;
+  padding: 30px 20px;
   text-align: center;
-  transition: all 0.35s ease;
+  transition: border-color 0.35s ease, box-shadow 0.35s ease;
   cursor: pointer;
 }
 
 .feature-item-paper:hover {
   border-color: var(--accent-gold);
-  box-shadow: 0 10px 25px rgba(26, 20, 12, 0.08);
-  transform: translateY(-5px);
+  box-shadow: 0 8px 22px rgba(201, 164, 91, 0.25);
 }
 
 .feature-icon-img-dark {
@@ -393,9 +389,8 @@
   transition: transform 0.6s ease;
 }
 
-.feature-item-paper:hover .feature-icon-img-dark,
-.feature-item-paper:active .feature-icon-img-dark {
-  transform: rotate(360deg) scale(1.15);
+.feature-item-paper:hover .feature-icon-img-dark {
+  transform: rotate(360deg);
 }
 
 .feature-text-dark {
@@ -454,7 +449,7 @@
 }
 
 .gallery-card-luxury:hover img {
-  transform: scale(1.08);
+  transform: scale(1.05);
 }
 
 .Galleryall .luxury-lightbox-modal {
@@ -496,7 +491,6 @@
 
 .Galleryall .lightbox-close-btn:hover {
   color: #ffffff;
-  transform: scale(1.15);
 }
 
 .Galleryall .lightbox-arrow-btn {
@@ -530,7 +524,6 @@
   background: var(--btn-gradient);
   color: #15110b !important;
   border-color: transparent;
-  box-shadow: 0 0 18px rgba(201, 164, 91, 0.4);
 }
 
 .Galleryall .lightbox-image-container {
@@ -566,13 +559,11 @@
   cursor: pointer;
   transition: border-color 0.35s ease, box-shadow 0.35s ease !important;
   position: relative;
-  transform: none !important;
 }
 
 .floor-card-paper:hover {
   border-color: var(--accent-gold) !important;
-  box-shadow: 0 10px 30px rgba(201, 164, 91, 0.3), 0 4px 12px rgba(26, 20, 12, 0.08) !important;
-  transform: none !important;
+  box-shadow: 0 10px 30px rgba(201, 164, 91, 0.25) !important;
 }
 
 .floor-card-img-box {
@@ -830,10 +821,6 @@
   transition: transform 0.3s ease;
 }
 
-.contact-info-item:hover {
-  transform: translateX(6px);
-}
-
 .pricing-wrapper-dark {
   background-color: var(--bg-paper);
   padding: 100px 0;
@@ -922,13 +909,12 @@ input:checked+.slider:before {
   border-radius: 6px;
   padding: 38px 28px;
   position: relative;
-  transition: all 0.35s ease;
+  transition: border-color 0.35s ease, box-shadow 0.35s ease;
 }
 
 .pricing-card-dark:hover {
   border-color: var(--accent-gold);
-  transform: translateY(-6px);
-  box-shadow: 0 15px 35px rgba(26, 20, 12, 0.08);
+  box-shadow: 0 10px 25px rgba(201, 164, 91, 0.25);
 }
 
 .featured-dark {
@@ -1062,6 +1048,30 @@ input:checked+.slider:before {
   box-shadow: 0 0 12px rgba(201, 164, 91, 0.25);
 }
 
+/* Footer & Sub-Footer Custom Styles */
+.border-top-gold {
+  border-top: 1px solid rgba(201, 164, 91, 0.25);
+}
+
+.zen-copy-text {
+  color: var(--text-stone);
+  font-size: 0.82rem;
+  opacity: 0.75;
+}
+
+.zen-policy-links a {
+  color: var(--text-stone);
+  font-size: 0.82rem;
+  text-decoration: none;
+  opacity: 0.75;
+  transition: opacity 0.3s ease, color 0.3s ease;
+}
+
+.zen-policy-links a:hover {
+  color: var(--accent-gold);
+  opacity: 1;
+}
+
 @media (max-width: 768px) {
   .hero-v2-container {
     flex-direction: column;
@@ -1091,5 +1101,19 @@ input:checked+.slider:before {
 
   .Galleryall .lightbox-arrow-right {
     right: 12px;
+  }
+
+  .feature-item-paper {
+    padding: 20px 10px;
+  }
+
+  .feature-icon-img-dark {
+    width: 32px;
+    height: 32px;
+    margin-bottom: 10px;
+  }
+
+  .feature-text-dark {
+    font-size: 0.8rem;
   }
 }
