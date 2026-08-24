@@ -30,7 +30,8 @@ import {
     FaInstagram,
     FaWhatsapp,
     FaGlobe,
-    FaCheckCircle
+    FaCheckCircle,
+    FaCity
 } from 'react-icons/fa';
 
 import { Swiper, SwiperSlide } from 'swiper/react';
@@ -152,12 +153,13 @@ export default function PropertyDetails() {
     const [selectedPlan, setSelectedPlan] = useState(null);
     const [isYearly, setIsYearly] = useState(false);
 
+    // Message field ki jagah ab City field rakha hai
     const [formData, setFormData] = useState({
         firstName: '',
         lastName: '',
         email: '',
         phone: '',
-        message: '',
+        city: '',
         projectName: 'AriahausEstate'
     });
     const [sent, setSent] = useState(false);
@@ -213,13 +215,13 @@ export default function PropertyDetails() {
                     name: `${formData.firstName} ${formData.lastName}`.trim(),
                     email: formData.email,
                     phone: formData.phone,
-                    message: formData.message,
-                    projectName: formData.projectName 
+                    city: formData.city,
+                    projectName: formData.projectName
                 })
             });
 
             setSent(true);
-            setFormData({ firstName: '', lastName: '', email: '', phone: '', message: '', projectName: 'AriahausEstate' });
+            setFormData({ firstName: '', lastName: '', email: '', phone: '', city: '', projectName: 'AriahausEstate' });
             setTimeout(() => setSent(false), 4000);
         } catch (error) {
             alert("Something went wrong. Please try again!");
@@ -762,44 +764,47 @@ export default function PropertyDetails() {
                 </div>
             </section>
 
-            <div className="new-contact-container" id="book-tour">
+            {/* contcat form   */}
+            <div className="light-gradient-contact-section" id="book-tour">
                 <div className="container-fluid px-3 px-md-5">
-                    <div className="text-start mb-5" data-animate="animate-fade-up">
+                    <div className="text-start mb-4" data-animate="animate-fade-up">
                         <span className="section-tag-gold d-block">INQUIRIES</span>
-                        <h2 className="about-heading-light m-0">Contact Us</h2>
+                        <h2 className="about-heading-dark m-0">Contact Us</h2>
                     </div>
 
-                    <div className="row g-4 justify-content-center align-items-stretch">
+                    <div className="row g-4 g-lg-5 align-items-stretch">
+
+
                         <div className="col-12 col-lg-4" data-animate="animate-fade-left">
-                            <div className="new-info-card h-100 p-4 p-md-5 d-flex flex-column justify-content-between">
+                            <div className="light-info-card h-100 p-4 p-md-5 d-flex flex-column justify-content-between">
                                 <div>
-                                    <h3 className="fw-normal text-white mb-3 font-serif">Contact Information</h3>
-                                    <p className="aria-text-stone text-white small mb-4">
+                                    <h3 className="fw-normal text-dark mb-2 font-serif">Contact Information</h3>
+                                    <p className="text-muted extra-small-text mb-4">
                                         Feel free to reach out via phone, email, or visit our office location directly.
                                     </p>
 
                                     <div className="d-flex flex-column gap-3 my-4">
-                                        <div className="contact-info-item">
-                                            <div className="new-icon-box"><FaPhoneAlt /></div>
+                                        <div className="contact-info-item-light">
+                                            <div className="light-icon-box"><FaPhoneAlt /></div>
                                             <div>
-                                                <span className="d-block text-uppercase text-gold extra-small">Phone</span>
-                                                <strong className="text-white">+91 81477 75092</strong>
+                                                <span className="d-block text-uppercase text-gold-dark extra-small">Phone</span>
+                                                <strong className="text-dark-small">+91 81477 75092</strong>
                                             </div>
                                         </div>
 
-                                        <div className="contact-info-item">
-                                            <div className="new-icon-box"><FaEnvelope /></div>
+                                        <div className="contact-info-item-light">
+                                            <div className="light-icon-box"><FaEnvelope /></div>
                                             <div>
-                                                <span className="d-block text-uppercase text-gold extra-small">Email</span>
-                                                <strong className="text-white">info@amyrafarms.com</strong>
+                                                <span className="d-block text-uppercase text-gold-dark extra-small">Email</span>
+                                                <strong className="text-dark-small">info@amyrafarms.com</strong>
                                             </div>
                                         </div>
 
-                                        <div className="contact-info-item">
-                                            <div className="new-icon-box"><FaMapMarkerAlt /></div>
+                                        <div className="contact-info-item-light">
+                                            <div className="light-icon-box"><FaMapMarkerAlt /></div>
                                             <div>
-                                                <span className="d-block text-uppercase text-gold extra-small">Location</span>
-                                                <strong className="text-white">Sakleshpur, Karnataka</strong>
+                                                <span className="d-block text-uppercase text-gold-dark extra-small">Location</span>
+                                                <strong className="text-dark-small">Sakleshpur, Karnataka</strong>
                                             </div>
                                         </div>
                                     </div>
@@ -807,12 +812,14 @@ export default function PropertyDetails() {
                             </div>
                         </div>
 
+                        {/* form  */}
+
                         <div className="col-12 col-lg-8" data-animate="animate-fade-right">
-                            <div className="new-form-card p-4 p-md-5">
+                            <div className="light-form-card p-4 p-md-5">
                                 {sent ? (
-                                    <div className="text-center py-5">
-                                        <h3 className="text-gold fw-bold font-serif">Message Logged!</h3>
-                                        <p className="aria-text-stone small">We will get back to you shortly.</p>
+                                    <div className="text-center py-4">
+                                        <h4 className="text-gold-dark fw-bold font-serif mb-1">Inquiry Logged!</h4>
+                                        <p className="text-muted extra-small-text">We will get back to you shortly.</p>
                                     </div>
                                 ) : (
                                     <form onSubmit={handleSubmit}>
@@ -822,13 +829,13 @@ export default function PropertyDetails() {
                                             value={formData.projectName}
                                         />
 
-                                        <div className="row g-4">
+                                        <div className="row g-3">
                                             <div className="col-12 col-md-6">
-                                                <div className="new-input-group">
-                                                    <label className="new-input-label">First Name *</label>
+                                                <div className="light-input-group">
+                                                    <label className="light-input-label">First Name *</label>
                                                     <input
                                                         type="text"
-                                                        className="new-input-field"
+                                                        className="light-input-field"
                                                         required
                                                         placeholder="First Name"
                                                         value={formData.firstName}
@@ -838,11 +845,11 @@ export default function PropertyDetails() {
                                             </div>
 
                                             <div className="col-12 col-md-6">
-                                                <div className="new-input-group">
-                                                    <label className="new-input-label">Last Name *</label>
+                                                <div className="light-input-group">
+                                                    <label className="light-input-label">Last Name *</label>
                                                     <input
                                                         type="text"
-                                                        className="new-input-field"
+                                                        className="light-input-field"
                                                         required
                                                         placeholder="Last Name"
                                                         value={formData.lastName}
@@ -852,25 +859,11 @@ export default function PropertyDetails() {
                                             </div>
 
                                             <div className="col-12 col-md-6">
-                                                <div className="new-input-group">
-                                                    <label className="new-input-label">Phone Number *</label>
-                                                    <input
-                                                        type="tel"
-                                                        className="new-input-field"
-                                                        required
-                                                        placeholder="Enter Your No"
-                                                        value={formData.phone}
-                                                        onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
-                                                    />
-                                                </div>
-                                            </div>
-
-                                            <div className="col-12 col-md-6">
-                                                <div className="new-input-group">
-                                                    <label className="new-input-label">Email Address *</label>
+                                                <div className="light-input-group">
+                                                    <label className="light-input-label">Email Address *</label>
                                                     <input
                                                         type="email"
-                                                        className="new-input-field"
+                                                        className="light-input-field"
                                                         required
                                                         placeholder="Enter Your Email"
                                                         value={formData.email}
@@ -879,23 +872,38 @@ export default function PropertyDetails() {
                                                 </div>
                                             </div>
 
-                                            <div className="col-12">
-                                                <div className="new-input-group">
-                                                    <label className="new-input-label">Your Message</label>
-                                                    <textarea
-                                                        className="new-input-field"
-                                                        rows="4"
-                                                        placeholder="Tell us how we can help you..."
-                                                        value={formData.message}
-                                                        onChange={(e) => setFormData({ ...formData, message: e.target.value })}
-                                                    ></textarea>
+                                            <div className="col-12 col-md-6">
+                                                <div className="light-input-group">
+                                                    <label className="light-input-label">Phone Number *</label>
+                                                    <input
+                                                        type="tel"
+                                                        className="light-input-field"
+                                                        required
+                                                        placeholder="Enter Your Phone No."
+                                                        value={formData.phone}
+                                                        onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
+                                                    />
                                                 </div>
                                             </div>
 
-                                            <div className="col-12 mt-4">
+                                            <div className="col-12">
+                                                <div className="light-input-group">
+                                                    <label className="light-input-label">City *</label>
+                                                    <input
+                                                        type="text"
+                                                        className="light-input-field"
+                                                        required
+                                                        placeholder="Enter Your City"
+                                                        value={formData.city}
+                                                        onChange={(e) => setFormData({ ...formData, city: e.target.value })}
+                                                    />
+                                                </div>
+                                            </div>
+
+                                            <div className="col-12 mt-3 pt-2">
                                                 <button
                                                     type="submit"
-                                                    className="discover-btn-gold w-100 py-3 text-uppercase fw-bold"
+                                                    className="discover-btn-gold w-100 py-2 text-uppercase fw-semibold"
                                                     disabled={loading}
                                                 >
                                                     {loading ? "Submitting Inquiry..." : (
@@ -910,6 +918,7 @@ export default function PropertyDetails() {
                                 )}
                             </div>
                         </div>
+
                     </div>
                 </div>
             </div>

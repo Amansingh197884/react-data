@@ -15,6 +15,8 @@ import Gallery from './components/Gallery.jsx';
 import Footer from './components/Footer.jsx';
 import Property from './components/Property.jsx';
 import PropertyDetails from './components/PropertyDetails.jsx';
+import PropertySearch from './components/PropertySearch.jsx';
+import ViewProperty from './components/ViewProperty.jsx';
 import Aboutpage from './components/Aboutpage.jsx';
 import Featured from './components/Featured.jsx';
 import Estate from './components/Estate.jsx';
@@ -49,7 +51,15 @@ export default function App() {
     window.scrollTo({ top: 0, left: 0, behavior: 'instant' });
   }, [location.pathname]);
 
-  const isDetailsPage = location.pathname.toLowerCase() === '/propertydetails';
+  const currentPath = location.pathname.toLowerCase();
+  
+  // Jo pages apna customized zen footer use karte hain, unke liye global footer disable rahega
+  const hasCustomFooter = 
+    currentPath === '/propertydetails' || 
+    currentPath === '/propertysearch' || 
+    currentPath.startsWith('/view-property');
+
+  const isDetailsPage = currentPath === '/propertydetails';
 
   return (
     <div className="bg-light min-vh-100 overflow-x-hidden">
@@ -59,13 +69,17 @@ export default function App() {
         <Route path="/" element={<MainPage />} />
         <Route path="/new" element={<New />} />
         <Route path="/Property" element={<Property />} />
+        <Route path="/PropertySearch" element={<PropertySearch />} />
+                <Route path="/view-property" element={<ViewProperty />} />
+
+        <Route path="/view-property/:id" element={<ViewProperty />} />
         <Route path="/Aboutpage" element={<Aboutpage />} />
         <Route path="/PropertyDetails" element={<PropertyDetails />} />
         <Route path="/terms" element={<Terms />} />
         <Route path="/Privacy" element={<Privacy />} />
       </Routes>
 
-      {!isDetailsPage && <Footer />}
+      {!hasCustomFooter && <Footer />}
     </div>
   );
 }
