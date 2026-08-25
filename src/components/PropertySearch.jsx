@@ -27,6 +27,14 @@ const recentInsights = [
   { title: "Plantation Corridor Investment Guide", date: "Jun 2026" }
 ];
 
+const createSlug = (text) => {
+  return text
+    .toLowerCase()
+    .trim()
+    .replace(/[^a-z0-9]+/g, '-')
+    .replace(/^-+|-+$/g, '');
+};
+
 const categoryData = {
   flat: [
     {
@@ -43,7 +51,7 @@ const categoryData = {
       lotSize: "2,200 sqft",
       author: "Ariahaus Advisory",
       images: [
-        "https://i.pinimg.com/736x/a2/92/b6/a292b62f23edcbd3fff81ef7b914cb8c.jpg",
+        "https://i.pinimg.com/736x/8f/26/66/8f266673fa99a947be88f83a1038db06.jpg",
         "https://i.pinimg.com/736x/8f/26/66/8f266673fa99a947be88f83a1038db06.jpg",
         "https://i.pinimg.com/736x/10/9f/57/109f57ba8d8a6b84f5cbd806787e637b.jpg",
         "https://i.pinimg.com/1200x/d3/75/90/d375900924fb8ec4521165e8d422fba3.jpg",
@@ -334,7 +342,8 @@ export default function PropertySearch() {
   };
 
   const handlePropertyClick = (item) => {
-    navigate('/view-property', { state: { property: item } });
+    const slug = createSlug(item.title);
+    navigate(`/property/${slug}`, { state: { property: item } });
   };
 
   return (

@@ -9,23 +9,47 @@ import 'swiper/css';
 import 'swiper/css/navigation';
 import './Card.css';
 
+// Pinterest Hotlinking Block Bypass Helper
+const getSafeImageUrl = (url) => {
+  if (!url) return '';
+  if (url.includes('i.pinimg.com')) {
+    const cleanUrl = url.replace(/^https?:\/\//, '');
+    return `https://images.weserv.nl/?url=${encodeURIComponent(cleanUrl)}&default=${encodeURIComponent(url)}`;
+  }
+  return url;
+};
+
+const createSlug = (text) => {
+  return text
+    .toLowerCase()
+    .trim()
+    .replace(/[^a-z0-9]+/g, '-')
+    .replace(/^-+|-+$/g, '');
+};
+
 const apartmentsData = [
   {
     id: 1,
+    propertyId: 'TREJO-101',
     title: 'Trejo Urban Escape',
     location: 'Roma Norte, CDMX',
     city: 'Ciudad de México',
     price: '₹1.03 Cr*',
+    beds: 3,
+    baths: 3,
+    garage: 2,
+    area: '1,750 sqft',
+    lotSize: '2,200 sqft',
+    author: 'Ariahaus Advisory',
+    shortDesc: 'An ultra-modern sanctuary situated in prime central avenues, offering open-concept duplex units, smart automation, and private sky lounges.',
     image: 'https://i.pinimg.com/1200x/98/79/c9/9879c949ecbe7feafb49efac228d9a64.jpg',
-    tagline: 'Contemporary Urban Living With Sky Garden',
-    desc: 'An ultra-modern sanctuary situated in prime central avenues, offering open-concept duplex units, smart automation, and private sky lounges.',
-    gallery: [
-      { id: 1, url: 'https://i.pinimg.com/1200x/98/79/c9/9879c949ecbe7feafb49efac228d9a64.jpg', caption: 'Facade & Architecture' },
-      { id: 2, url: 'https://i.pinimg.com/736x/8c/02/89/8c0289a7cbb69f7f6fe5171ae9bb7e25.jpg', caption: 'Interior Living Pavilion' },
-      { id: 3, url: 'https://i.pinimg.com/736x/3a/3c/ff/3a3cff30ebca23ad46f5010a9822da85.jpg', caption: 'Modular Chef Kitchen' },
-      { id: 4, url: 'https://i.pinimg.com/736x/f4/19/22/f41922c074df3bfa4b4238f886f7b13d.jpg', caption: 'Master Bed Suite' },
-      { id: 5, url: 'https://i.pinimg.com/736x/11/49/71/114971dc67f2b9636c0a0c4f346fa97c.jpg', caption: 'Private Sunset Balcony' },
-      { id: 6, url: 'https://i.pinimg.com/736x/4b/32/38/4b3238634c4f3e5e6e87900b95ebca97.jpg', caption: 'Rooftop Lounge Area' }
+    images: [
+      'https://i.pinimg.com/1200x/98/79/c9/9879c949ecbe7feafb49efac228d9a64.jpg',
+      'https://i.pinimg.com/736x/8c/02/89/8c0289a7cbb69f7f6fe5171ae9bb7e25.jpg',
+      'https://i.pinimg.com/736x/3a/3c/ff/3a3cff30ebca23ad46f5010a9822da85.jpg',
+      'https://i.pinimg.com/736x/f4/19/22/f41922c074df3bfa4b4238f886f7b13d.jpg',
+      'https://i.pinimg.com/736x/11/49/71/114971dc67f2b9636c0a0c4f346fa97c.jpg',
+      'https://i.pinimg.com/736x/4b/32/38/4b3238634c4f3e5e6e87900b95ebca97.jpg'
     ],
     pricing: [
       { type: 'Executive Suite', bhk: '2 BHK', priceStd: '₹ 1.03 Cr', priceEarly: '₹ 95 Lakh', area: '1,100 Sq.Ft.', park: '1 Reserved Covered Parking' },
@@ -40,20 +64,26 @@ const apartmentsData = [
   },
   {
     id: 2,
+    propertyId: 'SKY-102',
     title: 'Skyline Luxury Suite',
     location: 'Polanco, CDMX',
     city: 'Ciudad de México',
     price: '₹1.80 Cr*',
+    beds: 3,
+    baths: 3,
+    garage: 2,
+    area: '2,100 sqft',
+    lotSize: '2,800 sqft',
+    author: 'Ariahaus Advisory',
+    shortDesc: 'Bespoke high-floor residences overlooking tree-lined avenues with Italian marble flooring, soundproof double-glazed envelopes, and concierge services.',
     image: 'https://i.pinimg.com/736x/a1/9e/ce/a19eceebed7b7eb5e3b8c01a2882f6d9.jpg',
-    tagline: 'High-Rise Architectural Landmark in Prestige Corridor',
-    desc: 'Bespoke high-floor residences overlooking tree-lined avenues with Italian marble flooring, soundproof double-glazed envelopes, and concierge services.',
-    gallery: [
-      { id: 1, url: 'https://i.pinimg.com/736x/a1/9e/ce/a19eceebed7b7eb5e3b8c01a2882f6d9.jpg', caption: 'Skyline Perspective' },
-      { id: 2, url: 'https://i.pinimg.com/736x/11/49/71/114971dc67f2b9636c0a0c4f346fa97c.jpg', caption: 'Double-Height Living' },
-      { id: 3, url: 'https://i.pinimg.com/736x/4b/32/38/4b3238634c4f3e5e6e87900b95ebca97.jpg', caption: 'Private Balcony Deck' },
-      { id: 4, url: 'https://i.pinimg.com/736x/8c/02/89/8c0289a7cbb69f7f6fe5171ae9bb7e25.jpg', caption: 'Designer Dining Suite' },
-      { id: 5, url: 'https://i.pinimg.com/736x/3a/3c/ff/3a3cff30ebca23ad46f5010a9822da85.jpg', caption: 'Gourmet Kitchen' },
-      { id: 6, url: 'https://i.pinimg.com/736x/f4/19/22/f41922c074df3bfa4b4238f886f7b13d.jpg', caption: 'En-Suite Spa Bath' }
+    images: [
+      'https://i.pinimg.com/736x/a1/9e/ce/a19eceebed7b7eb5e3b8c01a2882f6d9.jpg',
+      'https://i.pinimg.com/736x/11/49/71/114971dc67f2b9636c0a0c4f346fa97c.jpg',
+      'https://i.pinimg.com/736x/4b/32/38/4b3238634c4f3e5e6e87900b95ebca97.jpg',
+      'https://i.pinimg.com/736x/8c/02/89/8c0289a7cbb69f7f6fe5171ae9bb7e25.jpg',
+      'https://i.pinimg.com/736x/3a/3c/ff/3a3cff30ebca23ad46f5010a9822da85.jpg',
+      'https://i.pinimg.com/736x/f4/19/22/f41922c074df3bfa4b4238f886f7b13d.jpg'
     ],
     pricing: [
       { type: 'Executive Suite', bhk: '2 BHK', priceStd: '₹ 1.80 Cr', priceEarly: '₹ 1.68 Cr', area: '1,350 Sq.Ft.', park: '2 Reserved Parkings' },
@@ -68,20 +98,26 @@ const apartmentsData = [
   },
   {
     id: 3,
+    propertyId: 'LOFT-103',
     title: 'Royal Penthouse Loft',
     location: 'Santa Fe, CDMX',
     city: 'Ciudad de México',
     price: '₹2.10 Cr*',
+    beds: 4,
+    baths: 4,
+    garage: 3,
+    area: '3,100 sqft',
+    lotSize: '3,800 sqft',
+    author: 'Ariahaus Advisory',
+    shortDesc: 'Sprawling duplex residences crafted for seamless entertaining, complete with infinity plunge pools, private elevators, and custom joinery.',
     image: 'https://i.pinimg.com/736x/15/77/65/1577655843ee1f4e15d05bf336b828af.jpg',
-    tagline: 'Expansive Duplex Sanctuaries Overlooking Skyline',
-    desc: 'Sprawling duplex residences crafted for seamless entertaining, complete with infinity plunge pools, private elevators, and custom joinery.',
-    gallery: [
-      { id: 1, url: 'https://i.pinimg.com/736x/15/77/65/1577655843ee1f4e15d05bf336b828af.jpg', caption: 'Grand Penthouse Atrium' },
-      { id: 2, url: 'https://i.pinimg.com/736x/8c/02/89/8c0289a7cbb69f7f6fe5171ae9bb7e25.jpg', caption: 'Dining & Wine Lounge' },
-      { id: 3, url: 'https://i.pinimg.com/736x/d2/54/1b/d2541b65e9c07ef21a44e5cb4e8be306.jpg', caption: 'Sunset Pool Deck' },
-      { id: 4, url: 'https://i.pinimg.com/736x/3a/3c/ff/3a3cff30ebca23ad46f5010a9822da85.jpg', caption: 'Italian Chef Counter' },
-      { id: 5, url: 'https://i.pinimg.com/736x/11/49/71/114971dc67f2b9636c0a0c4f346fa97c.jpg', caption: 'Panoramic Living Room' },
-      { id: 6, url: 'https://i.pinimg.com/736x/f4/19/22/f41922c074df3bfa4b4238f886f7b13d.jpg', caption: 'Master Bed Sanctuary' }
+    images: [
+      'https://i.pinimg.com/736x/15/77/65/1577655843ee1f4e15d05bf336b828af.jpg',
+      'https://i.pinimg.com/736x/8c/02/89/8c0289a7cbb69f7f6fe5171ae9bb7e25.jpg',
+      'https://i.pinimg.com/736x/d2/54/1b/d2541b65e9c07ef21a44e5cb4e8be306.jpg',
+      'https://i.pinimg.com/736x/3a/3c/ff/3a3cff30ebca23ad46f5010a9822da85.jpg',
+      'https://i.pinimg.com/736x/11/49/71/114971dc67f2b9636c0a0c4f346fa97c.jpg',
+      'https://i.pinimg.com/736x/f4/19/22/f41922c074df3bfa4b4238f886f7b13d.jpg'
     ],
     pricing: [
       { type: 'Penthouse Loft', bhk: '3 BHK', priceStd: '₹ 2.10 Cr', priceEarly: '₹ 1.95 Cr', area: '2,200 Sq.Ft.', park: '2 Covered Parkings' },
@@ -96,20 +132,26 @@ const apartmentsData = [
   },
   {
     id: 4,
+    propertyId: 'DUPLEX-104',
     title: 'Grand Haven Duplex',
     location: 'Condesa, CDMX',
     city: 'Ciudad de México',
     price: '₹2.90 Cr*',
+    beds: 4,
+    baths: 4,
+    garage: 2,
+    area: '3,800 sqft',
+    lotSize: '4,500 sqft',
+    author: 'Ariahaus Advisory',
+    shortDesc: 'Nestled in shaded avenues, Grand Haven combines historic design aesthetics with cutting-edge residential automation and climate control.',
     image: 'https://i.pinimg.com/736x/6b/fb/a7/6bfba7811cc753decbaafd9f236e7201.jpg',
-    tagline: 'Art Deco Inspired Urban Villas Amidst Green Parkways',
-    desc: 'Nestled in shaded avenues, Grand Haven combines historic design aesthetics with cutting-edge residential automation and climate control.',
-    gallery: [
-      { id: 1, url: 'https://i.pinimg.com/736x/6b/fb/a7/6bfba7811cc753decbaafd9f236e7201.jpg', caption: 'Exterior Courtyard' },
-      { id: 2, url: 'https://i.pinimg.com/736x/3a/3c/ff/3a3cff30ebca23ad46f5010a9822da85.jpg', caption: 'Master Show Kitchen' },
-      { id: 3, url: 'https://i.pinimg.com/736x/f4/19/22/f41922c074df3bfa4b4238f886f7b13d.jpg', caption: 'Private Terrace' },
-      { id: 4, url: 'https://i.pinimg.com/736x/8c/02/89/8c0289a7cbb69f7f6fe5171ae9bb7e25.jpg', caption: 'Grand Hallway' },
-      { id: 5, url: 'https://i.pinimg.com/736x/11/49/71/114971dc67f2b9636c0a0c4f346fa97c.jpg', caption: 'Guest Bedroom' },
-      { id: 6, url: 'https://i.pinimg.com/736x/4b/32/38/4b3238634c4f3e5e6e87900b95ebca97.jpg', caption: 'Reading Deck' }
+    images: [
+      'https://i.pinimg.com/736x/6b/fb/a7/6bfba7811cc753decbaafd9f236e7201.jpg',
+      'https://i.pinimg.com/736x/3a/3c/ff/3a3cff30ebca23ad46f5010a9822da85.jpg',
+      'https://i.pinimg.com/736x/f4/19/22/f41922c074df3bfa4b4238f886f7b13d.jpg',
+      'https://i.pinimg.com/736x/8c/02/89/8c0289a7cbb69f7f6fe5171ae9bb7e25.jpg',
+      'https://i.pinimg.com/736x/11/49/71/114971dc67f2b9636c0a0c4f346fa97c.jpg',
+      'https://i.pinimg.com/736x/4b/32/38/4b3238634c4f3e5e6e87900b95ebca97.jpg'
     ],
     pricing: [
       { type: 'Duplex Loft', bhk: '3 BHK', priceStd: '₹ 2.90 Cr', priceEarly: '₹ 2.70 Cr', area: '2,600 Sq.Ft.', park: '2 Covered Parkings' },
@@ -127,20 +169,26 @@ const apartmentsData = [
 const featuredData = [
   {
     id: 101,
+    propertyId: 'HORIZON-201',
     title: 'Aria Horizon Penthouse',
     location: 'Lomas de Chapultepec, CDMX',
     city: 'Ciudad de México',
     price: '₹3.20 Cr*',
+    beds: 4,
+    baths: 4,
+    garage: 3,
+    area: '4,100 sqft',
+    lotSize: '5,000 sqft',
+    author: 'Ariahaus Advisory',
+    shortDesc: 'Custom glass elevations with panoramic hill contours, heated private swimming pools, and dedicated butler quarters.',
     image: 'https://i.pinimg.com/736x/02/ff/14/02ff14ae5d16c92ac14d586a8fc7d902.jpg',
-    tagline: 'Ultra-Exclusive Private Sanctuaries For Discerned Living',
-    desc: 'Custom glass elevations with panoramic hill contours, heated private swimming pools, and dedicated butler quarters.',
-    gallery: [
-      { id: 1, url: 'https://i.pinimg.com/736x/02/ff/14/02ff14ae5d16c92ac14d586a8fc7d902.jpg', caption: 'Horizon Atrium' },
-      { id: 2, url: 'https://i.pinimg.com/736x/8c/02/89/8c0289a7cbb69f7f6fe5171ae9bb7e25.jpg', caption: 'Panoramic Living Room' },
-      { id: 3, url: 'https://i.pinimg.com/736x/3a/3c/ff/3a3cff30ebca23ad46f5010a9822da85.jpg', caption: 'Quartz Island Counter' },
-      { id: 4, url: 'https://i.pinimg.com/736x/f4/19/22/f41922c074df3bfa4b4238f886f7b13d.jpg', caption: 'Master Bed Suite' },
-      { id: 5, url: 'https://i.pinimg.com/736x/11/49/71/114971dc67f2b9636c0a0c4f346fa97c.jpg', caption: 'Infinity Plunge Pool' },
-      { id: 6, url: 'https://i.pinimg.com/736x/4b/32/38/4b3238634c4f3e5e6e87900b95ebca97.jpg', caption: 'Skyline Terrace' }
+    images: [
+      'https://i.pinimg.com/736x/02/ff/14/02ff14ae5d16c92ac14d586a8fc7d902.jpg',
+      'https://i.pinimg.com/736x/8c/02/89/8c0289a7cbb69f7f6fe5171ae9bb7e25.jpg',
+      'https://i.pinimg.com/736x/3a/3c/ff/3a3cff30ebca23ad46f5010a9822da85.jpg',
+      'https://i.pinimg.com/736x/f4/19/22/f41922c074df3bfa4b4238f886f7b13d.jpg',
+      'https://i.pinimg.com/736x/11/49/71/114971dc67f2b9636c0a0c4f346fa97c.jpg',
+      'https://i.pinimg.com/736x/4b/32/38/4b3238634c4f3e5e6e87900b95ebca97.jpg'
     ],
     pricing: [
       { type: 'Horizon Suite', bhk: '3 BHK Duplex', priceStd: '₹ 3.20 Cr', priceEarly: '₹ 2.95 Cr', area: '2,900 Sq.Ft.', park: '2 Covered Parkings' },
@@ -155,20 +203,26 @@ const featuredData = [
   },
   {
     id: 102,
+    propertyId: 'GLASS-202',
     title: 'The Glass Pavilion Villa',
     location: 'Pedregal, CDMX',
     city: 'Ciudad de México',
     price: '₹2.60 Cr*',
+    beds: 3,
+    baths: 4,
+    garage: 2,
+    area: '3,900 sqft',
+    lotSize: '4,800 sqft',
+    author: 'Ariahaus Advisory',
+    shortDesc: 'Volcanic stone foundations framed by floor-to-ceiling glass pavilions, direct garden connectivity, and internal courtyard reflection pools.',
     image: 'https://i.pinimg.com/736x/4f/90/66/4f906605cc5da8c659f0a6118ed0cda3.jpg',
-    tagline: 'Organic Architecture Blended Into Natural Greenery',
-    desc: 'Volcanic stone foundations framed by floor-to-ceiling glass pavilions, direct garden connectivity, and internal courtyard reflection pools.',
-    gallery: [
-      { id: 1, url: 'https://i.pinimg.com/736x/4f/90/66/4f906605cc5da8c659f0a6118ed0cda3.jpg', caption: 'Glass Pavilion Exterior' },
-      { id: 2, url: 'https://i.pinimg.com/736x/11/49/71/114971dc67f2b9636c0a0c4f346fa97c.jpg', caption: 'Zen Internal Courtyard' },
-      { id: 3, url: 'https://i.pinimg.com/736x/8c/02/89/8c0289a7cbb69f7f6fe5171ae9bb7e25.jpg', caption: 'Living Pavilion' },
-      { id: 4, url: 'https://i.pinimg.com/736x/3a/3c/ff/3a3cff30ebca23ad46f5010a9822da85.jpg', caption: 'Chef Kitchen Island' },
-      { id: 5, url: 'https://i.pinimg.com/736x/f4/19/22/f41922c074df3bfa4b4238f886f7b13d.jpg', caption: 'Master Bed Pavilion' },
-      { id: 6, url: 'https://i.pinimg.com/736x/d2/54/1b/d2541b65e9c07ef21a44e5cb4e8be306.jpg', caption: 'Private Pool Garden' }
+    images: [
+      'https://i.pinimg.com/736x/4f/90/66/4f906605cc5da8c659f0a6118ed0cda3.jpg',
+      'https://i.pinimg.com/736x/11/49/71/114971dc67f2b9636c0a0c4f346fa97c.jpg',
+      'https://i.pinimg.com/736x/8c/02/89/8c0289a7cbb69f7f6fe5171ae9bb7e25.jpg',
+      'https://i.pinimg.com/736x/3a/3c/ff/3a3cff30ebca23ad46f5010a9822da85.jpg',
+      'https://i.pinimg.com/736x/f4/19/22/f41922c074df3bfa4b4238f886f7b13d.jpg',
+      'https://i.pinimg.com/736x/d2/54/1b/d2541b65e9c07ef21a44e5cb4e8be306.jpg'
     ],
     pricing: [
       { type: 'Pavilion Villa', bhk: '3 BHK', priceStd: '₹ 2.60 Cr', priceEarly: '₹ 2.40 Cr', area: '2,500 Sq.Ft.', park: '2 Covered Parkings' },
@@ -183,20 +237,26 @@ const featuredData = [
   },
   {
     id: 103,
+    propertyId: 'SANCTUARY-203',
     title: 'Urban Sanctuary Suite',
     location: 'Juárez, CDMX',
     city: 'Ciudad de México',
     price: '₹1.95 Cr*',
+    beds: 3,
+    baths: 3,
+    garage: 2,
+    area: '1,950 sqft',
+    lotSize: '2,400 sqft',
+    author: 'Ariahaus Advisory',
+    shortDesc: 'High-yield boutique residences engineered with acoustic isolation, smart home ecosystem, and exclusive access to rooftop wellness facilities.',
     image: 'https://i.pinimg.com/1200x/ec/05/b2/ec05b2197739b15a9f8511c5314d57cc.jpg',
-    tagline: 'Modern Tranquility in the Heart of Metropolitan Energy',
-    desc: 'High-yield boutique residences engineered with acoustic isolation, smart home ecosystem, and exclusive access to rooftop wellness facilities.',
-    gallery: [
-      { id: 1, url: 'https://i.pinimg.com/1200x/ec/05/b2/ec05b2197739b15a9f8511c5314d57cc.jpg', caption: 'Sanctuary Lounge' },
-      { id: 2, url: 'https://i.pinimg.com/736x/3a/3c/ff/3a3cff30ebca23ad46f5010a9822da85.jpg', caption: 'Boutique Kitchenette' },
-      { id: 3, url: 'https://i.pinimg.com/736x/8c/02/89/8c0289a7cbb69f7f6fe5171ae9bb7e25.jpg', caption: 'Open Living Pavilion' },
-      { id: 4, url: 'https://i.pinimg.com/736x/f4/19/22/f41922c074df3bfa4b4238f886f7b13d.jpg', caption: 'Master Bed Suite' },
-      { id: 5, url: 'https://i.pinimg.com/736x/11/49/71/114971dc67f2b9636c0a0c4f346fa97c.jpg', caption: 'Balcony Deck' },
-      { id: 6, url: 'https://i.pinimg.com/736x/4b/32/38/4b3238634c4f3e5e6e87900b95ebca97.jpg', caption: 'Rooftop Pool Deck' }
+    images: [
+      'https://i.pinimg.com/1200x/ec/05/b2/ec05b2197739b15a9f8511c5314d57cc.jpg',
+      'https://i.pinimg.com/736x/3a/3c/ff/3a3cff30ebca23ad46f5010a9822da85.jpg',
+      'https://i.pinimg.com/736x/8c/02/89/8c0289a7cbb69f7f6fe5171ae9bb7e25.jpg',
+      'https://i.pinimg.com/736x/f4/19/22/f41922c074df3bfa4b4238f886f7b13d.jpg',
+      'https://i.pinimg.com/736x/11/49/71/114971dc67f2b9636c0a0c4f346fa97c.jpg',
+      'https://i.pinimg.com/736x/4b/32/38/4b3238634c4f3e5e6e87900b95ebca97.jpg'
     ],
     pricing: [
       { type: 'Urban Loft', bhk: '2 BHK', priceStd: '₹ 1.95 Cr', priceEarly: '₹ 1.80 Cr', area: '1,400 Sq.Ft.', park: '1 Covered Parking' },
@@ -211,20 +271,26 @@ const featuredData = [
   },
   {
     id: 104,
+    propertyId: 'MANSION-204',
     title: 'Presidential Duplex Mansion',
     location: 'Bosques de las Lomas, CDMX',
     city: 'Ciudad de México',
     price: '₹4.50 Cr*',
+    beds: 5,
+    baths: 6,
+    garage: 4,
+    area: '6,200 sqft',
+    lotSize: '7,500 sqft',
+    author: 'Ariahaus Advisory',
+    shortDesc: '6,000+ sq.ft. private residential compound with bespoke marble finishes, climate-controlled wine cellars, cinema room, and private garage arcade.',
     image: 'https://i.pinimg.com/1200x/f7/7e/d8/f77ed8c18f562a0eedd305c91bce8d06.jpg',
-    tagline: 'Pinnacle of Luxury with Forest Canopy Panoramas',
-    desc: '6,000+ sq.ft. private residential compound with bespoke marble finishes, climate-controlled wine cellars, cinema room, and private garage arcade.',
-    gallery: [
-      { id: 1, url: 'https://i.pinimg.com/1200x/f7/7e/d8/f77ed8c18f562a0eedd305c91bce8d06.jpg', caption: 'Mansion Facade' },
-      { id: 2, url: 'https://i.pinimg.com/736x/8c/02/89/8c0289a7cbb69f7f6fe5171ae9bb7e25.jpg', caption: 'Double-Height Living' },
-      { id: 3, url: 'https://i.pinimg.com/736x/3a/3c/ff/3a3cff30ebca23ad46f5010a9822da85.jpg', caption: 'Chef Show Kitchen' },
-      { id: 4, url: 'https://i.pinimg.com/736x/f4/19/22/f41922c074df3bfa4b4238f886f7b13d.jpg', caption: 'Presidential Suite' },
-      { id: 5, url: 'https://i.pinimg.com/736x/11/49/71/114971dc67f2b9636c0a0c4f346fa97c.jpg', caption: 'Skyline Balcony' },
-      { id: 6, url: 'https://i.pinimg.com/736x/d2/54/1b/d2541b65e9c07ef21a44e5cb4e8be306.jpg', caption: 'Private Infinity Pool' }
+    images: [
+      'https://i.pinimg.com/1200x/f7/7e/d8/f77ed8c18f562a0eedd305c91bce8d06.jpg',
+      'https://i.pinimg.com/736x/8c/02/89/8c0289a7cbb69f7f6fe5171ae9bb7e25.jpg',
+      'https://i.pinimg.com/736x/3a/3c/ff/3a3cff30ebca23ad46f5010a9822da85.jpg',
+      'https://i.pinimg.com/736x/f4/19/22/f41922c074df3bfa4b4238f886f7b13d.jpg',
+      'https://i.pinimg.com/736x/11/49/71/114971dc67f2b9636c0a0c4f346fa97c.jpg',
+      'https://i.pinimg.com/736x/d2/54/1b/d2541b65e9c07ef21a44e5cb4e8be306.jpg'
     ],
     pricing: [
       { type: 'Signature Duplex', bhk: '4 BHK Duplex', priceStd: '₹ 4.50 Cr', priceEarly: '₹ 4.15 Cr', area: '4,200 Sq.Ft.', park: '3 Covered Parkings' },
@@ -250,7 +316,8 @@ export default function ApartmentsSection() {
   }
 
   const handleViewProject = (item) => {
-    navigate('/PropertyDetails', { state: { projectData: item } });
+    const slug = createSlug(item.title);
+    navigate(`/property/${slug}`, { state: { property: item } });
   };
 
   return (
@@ -308,7 +375,13 @@ export default function ApartmentsSection() {
             {apartmentsData.map((item) => (
               <SwiperSlide key={item.id}>
                 <div className="project-card">
-                  <img src={item.image} alt={item.title} className="card-bg-img" />
+                  <img
+                    src={getSafeImageUrl(item.image)}
+                    alt={item.title}
+                    className="card-bg-img"
+                    referrerPolicy="no-referrer"
+                    crossOrigin="anonymous"
+                  />
                   <div className="default-content">
                     <h3 className="project-title">{item.title}</h3>
                     <p className="project-location"><FaMapMarkerAlt className="me-1 text-gold" /> {item.location}</p>
@@ -369,7 +442,13 @@ export default function ApartmentsSection() {
             {featuredData.map((item) => (
               <SwiperSlide key={item.id}>
                 <div className="project-card">
-                  <img src={item.image} alt={item.title} className="card-bg-img" />
+                  <img
+                    src={getSafeImageUrl(item.image)}
+                    alt={item.title}
+                    className="card-bg-img"
+                    referrerPolicy="no-referrer"
+                    crossOrigin="anonymous"
+                  />
                   <div className="default-content">
                     <h3 className="project-title">{item.title}</h3>
                     <p className="project-location"><FaMapMarkerAlt className="me-1 text-gold" /> {item.location}</p>
