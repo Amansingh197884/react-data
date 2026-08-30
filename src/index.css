@@ -37,7 +37,185 @@ h6 {
   font-family: var(--font-serif) !important;
   font-weight: 400;
 }
+@import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap');
 
+:root {
+  --bg-walnut-dark: #15110b;
+  --bg-night: #15110b;
+  --bg-walnut: #211a11;
+  --bg-card-brown: rgba(33, 26, 17, 0.88);
+  --bg-card-dark: rgba(33, 26, 17, 0.95);
+  --bg-creamy-light: #fcfaf6;
+  --bg-paper: #f5f0e6;
+  --bg-card-paper: #faf4e6;
+  --bg-price-box: rgba(235, 225, 208, 0.55);
+  --header-dark: #15110b;
+
+  --accent-gold: #c9a45b;
+  --accent-gold-bright: #e5be70;
+  --accent-gold-dark: #9e7a37;
+  --accent-gold-light: #e0be77;
+
+  --text-dark: #1a140c;
+  --text-dark-muted: rgba(26, 20, 12, 0.78);
+  --text-sub-dark: rgba(26, 20, 12, 0.6);
+  --text-muted: #757575;
+  --text-paper: #faf4e6;
+  --text-stone: #f6efde;
+  --btn-text-color: #15110b;
+
+  --glass-border: rgba(201, 164, 91, 0.35);
+  --border-gold: rgba(201, 164, 91, 0.35);
+  --btn-shadow: rgba(201, 164, 91, 0.4);
+
+  --btn-gradient: linear-gradient(135deg, #c9a45b 0%, #9e7a37 100%);
+  --btn-gradient-vertical: linear-gradient(180deg, #c9a45b 0%, #9e7a37 100%);
+  --title-gradient: linear-gradient(180deg, #ffffff 0%, #f6efde 60%, #c9a45b 100%);
+  --overlay-bg: linear-gradient(
+    180deg,
+    rgba(15, 11, 7, 0.75) 0%,
+    rgba(21, 17, 11, 0.45) 40%,
+    rgba(21, 17, 11, 0.6) 70%,
+    rgba(15, 11, 7, 0.95) 100%
+  );
+
+  --font-serif: 'Libre Baskerville', Georgia, serif;
+  --font-sans: 'Plus Jakarta Sans', -apple-system, sans-serif;
+  --transition-smooth: all 0.4s cubic-bezier(0.25, 1, 0.5, 1);
+  --transition-fast: all 0.25s ease;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  background-color: var(--bg-paper) !important;
+  color: var(--text-dark);
+  font-family: var(--font-sans) !important;
+  line-height: 1.6;
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--font-serif) !important;
+  font-weight: 400;
+  margin-top: 0;
+}
+
+p {
+  font-family: var(--font-sans);
+  margin-top: 0;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+  transition: var(--transition-fast);
+}
+
+.section-main-heading,
+.mv-section-title,
+.mv-section-title-dark,
+.featured-section-title,
+.about-heading,
+.gallery-section-title,
+.testi-heading,
+.wwa-heading,
+.contact-title,
+.terms-hero-title,
+.privacy-hero-title {
+  font-family: var(--font-serif) !important;
+  font-size: clamp(1.8rem, 3.2vw, 2.4rem);
+  font-weight: 400;
+  letter-spacing: 0.5px;
+}
+
+.section-tag-gold,
+.mv-section-tag,
+.aria-gold-badge,
+.contact-tag,
+.contact-tag-sub,
+.featured-tag,
+.gallery-section-tag,
+.privacy-gold-tag,
+.terms-gold-tag,
+.testi-tag,
+.wwa-tag,
+.villa-tag {
+  font-family: var(--font-serif) !important;
+  color: var(--accent-gold);
+  font-size: 0.78rem;
+  letter-spacing: 2.5px;
+  font-weight: 400;
+  text-transform: uppercase;
+}
+
+.nav-btn,
+.custom-prev-btn,
+.custom-next-btn,
+.swiper-prev-btn,
+.swiper-next-btn {
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  background: transparent !important;
+  border: 1px solid var(--glass-border) !important;
+  color: var(--accent-gold) !important;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.85rem;
+  cursor: pointer;
+  transition: var(--transition-fast);
+}
+
+.nav-btn:hover,
+.custom-prev-btn:hover,
+.custom-next-btn:hover,
+.swiper-prev-btn:hover,
+.swiper-next-btn:hover {
+  background: var(--btn-gradient) !important;
+  color: #15110b !important;
+  border-color: transparent !important;
+  box-shadow: 0 4px 15px rgba(201, 164, 91, 0.4);
+  transform: scale(1.05);
+}
+
+.anim-reveal {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.anim-reveal.reveal-active,
+.animate-fade-up {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
 .amenity-hover:hover {
   transform: translateY(-3px);
   box-shadow: 0 10px 20px rgba(201, 164, 91, 0.15) !important;

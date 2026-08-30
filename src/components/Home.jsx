@@ -23,11 +23,10 @@ export default function Home() {
   useEffect(() => {
     const timer = setInterval(() => {
       setIndex((prev) => (prev + 1) % heroImages.length);
-    }, 5000);
+    }, 5500);
     return () => clearInterval(timer);
   }, []);
 
-  // Close suggestions when clicking outside
   useEffect(() => {
     const handleClickOutside = (e) => {
       if (searchWrapperRef.current && !searchWrapperRef.current.contains(e.target)) {
@@ -38,7 +37,6 @@ export default function Home() {
     return () => document.removeEventListener('mousedown', handleClickOutside);
   }, []);
 
-  // Real-time location auto-suggest
   useEffect(() => {
     if (!location.trim() || location.trim().length < 2) {
       setSuggestions([]);
@@ -85,7 +83,7 @@ export default function Home() {
   };
 
   return (
-    <div className="hero-section-container">
+    <section className="hero-section-container">
       {heroImages.map((img, i) => (
         <div
           key={i}
@@ -97,6 +95,8 @@ export default function Home() {
       <div className="hero-overlay-dark" />
 
       <div className="hero-content-box">
+        <span className="top-brand-subtitle">EXCLUSIVITY & DISTINCTION</span>
+        
         <h1 className="main-hero-heading animate-fade-up">
           FIND YOUR PLACE
         </h1>
@@ -109,10 +109,11 @@ export default function Home() {
                 className="glass-select" 
                 value={type}
                 onChange={(e) => setType(e.target.value)}
+                aria-label="Select Property Type"
               >
-                <option value="flat">Flat</option>
-                <option value="villa">Villa</option>
-                <option value="plot">Plot</option>
+                <option value="flat">Flat / Apartment</option>
+                <option value="villa">Luxury Villa</option>
+                <option value="plot">Land & Plots</option>
               </select>
             </div>
 
@@ -123,7 +124,7 @@ export default function Home() {
               <input
                 type="text"
                 className="glass-input"
-                placeholder="Enter your location"
+                placeholder="Enter city, locality or region..."
                 value={location}
                 onChange={(e) => setLocation(e.target.value)}
                 onFocus={() => suggestions.length > 0 && setIsOpen(true)}
@@ -139,10 +140,9 @@ export default function Home() {
             </button>
           </form>
 
-          {/* Clean Solid-Glass Dropdown */}
           {isOpen && suggestions.length > 0 && (
             <div className="api-suggestions-dropdown">
-              <div className="dropdown-header">Matching Indian Locations</div>
+              <div className="dropdown-header">Matching Locations</div>
               {suggestions.map((item) => (
                 <div
                   key={item.id}
@@ -159,9 +159,9 @@ export default function Home() {
 
         <div className="bottom-tagline-group animate-fade-up-delay">
           <h3 className="tagline-title">Luxury Living, Reimagined.</h3>
-          <p className="tagline-sub">Discover Verified Real Estate across India.</p>
+          <p className="tagline-sub">Discover Verified Real Estate across Prime Indian Corridors.</p>
         </div>
       </div>
-    </div>
+    </section>
   );
 }
