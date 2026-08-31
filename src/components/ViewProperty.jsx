@@ -595,9 +595,9 @@ export default function ViewProperty() {
 
             <section id="sec-location" className="vp-content-section mb-5">
               <h4 className="section-clean-title">Transit & Connectivity</h4>
-              <div className="row g-3 mt-1 mb-4">
+              <div className="row g-2 g-md-3 mt-1 mb-4">
                 {nearbyLandmarks.map((item, idx) => (
-                  <div className="col-12 col-sm-6 col-md-3" key={idx}>
+                  <div className="col-6 col-md-3" key={idx}>
                     <div className="clean-transit-cell">
                       <div className="transit-ico-box spin-on-hover mb-2">{item.icon}</div>
                       <h6 className="transit-name mb-1">{item.title}</h6>

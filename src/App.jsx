@@ -52,18 +52,16 @@ export default function App() {
   }, [location.pathname]);
 
   const currentPath = location.pathname.toLowerCase();
-  
-  // Custom footer check (in pages par global footer nahi aayega)
-  const hasCustomFooter = 
-    currentPath === '/propertydetails' || 
-    currentPath === '/propertysearch' || 
+
+  const hasCustomFooter =
+    currentPath === '/propertydetails' ||
+    currentPath === '/propertysearch' ||
     currentPath.startsWith('/view-property') ||
     currentPath.startsWith('/property/');
 
-  // Purana global Navbar in pages par disable rahega (ViewProperty apna naya dedicated navbar use karega)
-  const hideGlobalNavbar = 
-    currentPath === '/propertydetails' || 
-    currentPath.startsWith('/view-property') || 
+  const hideGlobalNavbar =
+    currentPath === '/propertydetails' ||
+    currentPath.startsWith('/view-property') ||
     currentPath.startsWith('/property/');
 
   return (
@@ -75,12 +73,11 @@ export default function App() {
         <Route path="/new" element={<New />} />
         <Route path="/Property" element={<Property />} />
         <Route path="/PropertySearch" element={<PropertySearch />} />
-        
-        {/* Dynamic Property Route by Slug / Name */}
+
         <Route path="/property/:slug" element={<ViewProperty />} />
         <Route path="/view-property" element={<ViewProperty />} />
         <Route path="/view-property/:id" element={<ViewProperty />} />
-        
+
         <Route path="/Aboutpage" element={<Aboutpage />} />
         <Route path="/PropertyDetails" element={<PropertyDetails />} />
         <Route path="/terms" element={<Terms />} />
