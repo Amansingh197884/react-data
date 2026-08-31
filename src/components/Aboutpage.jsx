@@ -193,8 +193,8 @@ export default function AboutUs() {
                                     <div className="mv-icon-box">
                                         <FaEye className="mv-icon" />
                                     </div>
-                                    <button 
-                                        type="button" 
+                                    <button
+                                        type="button"
                                         className="mv-discover-btn border-0 cursor-pointer"
                                         onClick={() => openPopup('OurVision')}
                                     >
@@ -220,8 +220,8 @@ export default function AboutUs() {
                                     <div className="mv-icon-box">
                                         <FaBullseye className="mv-icon" />
                                     </div>
-                                    <button 
-                                        type="button" 
+                                    <button
+                                        type="button"
                                         className="mv-discover-btn border-0 cursor-pointer"
                                         onClick={() => openPopup('OurMission')}
                                     >
@@ -260,7 +260,7 @@ export default function AboutUs() {
 
                     <div className="row g-4">
                         <div className="col-md-4 anim-reveal">
-                            <div 
+                            <div
                                 className="aria-project-card border-gold cursor-pointer"
                                 onClick={() => openPopup('LuxuryResidency')}
                             >
@@ -275,7 +275,7 @@ export default function AboutUs() {
                             </div>
                         </div>
                         <div className="col-md-4 anim-reveal">
-                            <div 
+                            <div
                                 className="aria-project-card border-gold cursor-pointer"
                                 onClick={() => openPopup('SkyVillas')}
                             >
@@ -290,7 +290,7 @@ export default function AboutUs() {
                             </div>
                         </div>
                         <div className="col-md-4 anim-reveal">
-                            <div 
+                            <div
                                 className="aria-project-card border-gold cursor-pointer"
                                 onClick={() => openPopup('PrivateEstates')}
                             >
@@ -308,7 +308,6 @@ export default function AboutUs() {
                 </div>
             </section>
 
-            {/* Why Choose Us with Rotating Icons */}
             <section className="aria-section-dark py-5">
                 <div className="container-fluid px-3 px-md-5">
                     <div className="text-center mx-auto mb-5 anim-reveal">
@@ -356,7 +355,6 @@ export default function AboutUs() {
                 </div>
             </section>
 
-            {/* Smooth FAQ Section */}
             <section className="aria-section-light py-5">
                 <div className="container-fluid px-3 px-md-5 py-3">
                     <div className="row justify-content-center">

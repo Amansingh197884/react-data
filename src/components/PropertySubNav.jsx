@@ -54,7 +54,6 @@ export default function PropertySubNav() {
           
           <ul className="d-flex align-items-center m-0 p-0 list-unstyled" style={{ gap: '22px', whiteSpace: 'nowrap' }}>
             
-            {/* Logo + Home Link */}
             <li>
               <Link 
                 to="/" 
@@ -79,7 +78,6 @@ export default function PropertySubNav() {
 
             <li style={{ color: 'rgba(201, 164, 91, 0.4)' }}>|</li>
 
-            {/* About Us */}
             <li>
               <a
                 href="#about-us"
@@ -97,7 +95,6 @@ export default function PropertySubNav() {
               </a>
             </li>
 
-            {/* Highlights */}
             <li>
               <a
                 href="#amenities"
@@ -115,7 +112,6 @@ export default function PropertySubNav() {
               </a>
             </li>
 
-            {/* Amenities -> Clicks and scrolls to Unit Features */}
             <li>
               <a
                 href="#unit-features"
@@ -133,7 +129,6 @@ export default function PropertySubNav() {
               </a>
             </li>
 
-            {/* Gallery */}
             <li>
               <a
                 href="#gallery-section"
@@ -151,7 +146,6 @@ export default function PropertySubNav() {
               </a>
             </li>
 
-            {/* Floor Plans (Separate) */}
             <li>
               <a
                 href="#floor-plans"
@@ -169,7 +163,6 @@ export default function PropertySubNav() {
               </a>
             </li>
 
-            {/* Pricing Plans (Separate) */}
             <li>
               <a
                 href="#pricing-plans"
@@ -187,7 +180,6 @@ export default function PropertySubNav() {
               </a>
             </li>
 
-            {/* Location & Map */}
             <li>
               <a
                 href="#location-map"
@@ -205,7 +197,6 @@ export default function PropertySubNav() {
               </a>
             </li>
 
-            {/* Contact Us */}
             <li>
               <a
                 href="#book-tour"

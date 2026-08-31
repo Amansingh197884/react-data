@@ -54,11 +54,9 @@ export default function TermsAndConditions() {
         </div>
       </section>
 
-      {/* Main Content Area */}
       <section className="terms-content-section py-5">
         <div className="container px-3 px-md-5">
 
-          {/* Highlights Row */}
           <div className="row g-4 mb-5">
             <div className="col-md-4">
               <div className="terms-card p-4 text-center h-100">

@@ -1,14 +1,14 @@
 @import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Plus+Jakarta+Sans:wght@300;400;500;600&display=swap');
 
 :root {
-  --bg-paper: #f5f0e6;                     
-  --bg-price-box: rgba(235, 225, 208, 0.55); 
-  
-  --text-dark: #1a140c;                    
-  --text-muted-dark: rgba(26, 20, 12, 0.75); 
-  --text-sub-dark: rgba(26, 20, 12, 0.6);   
-  
-  --accent-gold: #c9a45b;                  
+  --bg-paper: #f5f0e6;
+  --bg-price-box: rgba(235, 225, 208, 0.55);
+
+  --text-dark: #1a140c;
+  --text-muted-dark: rgba(26, 20, 12, 0.75);
+  --text-sub-dark: rgba(26, 20, 12, 0.6);
+
+  --accent-gold: #c9a45b;
   --glass-border: rgba(201, 164, 91, 0.35);
 
   --font-serif: 'Libre Baskerville', Georgia, serif;
@@ -33,7 +33,7 @@
 
 .villa-heading {
   font-family: var(--font-serif);
-  font-size: clamp(2.2rem, 3.8vw, 3rem); 
+  font-size: clamp(2.2rem, 3.8vw, 3rem);
   font-weight: 400;
   color: var(--text-dark);
   line-height: 1.25;

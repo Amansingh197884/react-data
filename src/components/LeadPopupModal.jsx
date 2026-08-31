@@ -53,7 +53,6 @@ export default function LeadPopupModal({ isOpen, onClose, projectName = "Ariahau
     <div className="popup-modal-overlay" onClick={onClose}>
       <div className="popup-modal-container" onClick={(e) => e.stopPropagation()}>
         
-        {/* Close Icon */}
         <button type="button" className="popup-close-btn" onClick={onClose}>
           <FaTimes />
         </button>
@@ -72,7 +71,6 @@ export default function LeadPopupModal({ isOpen, onClose, projectName = "Ariahau
         ) : (
           <form onSubmit={handleSubmit} className="popup-form">
             
-            {/* Hidden Input for Project Name */}
             <input 
               type="hidden" 
               name="projectName" 

@@ -2,14 +2,14 @@
 
 :root {
   --bg-walnut-dark: #15110b;
-  --bg-card-brown: rgba(33, 26, 17, 0.88); 
-  
-  --accent-gold: #c9a45b;              
+  --bg-card-brown: rgba(33, 26, 17, 0.88);
+
+  --accent-gold: #c9a45b;
   --glass-border: rgba(201, 164, 91, 0.35);
 
-  --text-paper: #faf4e6;             
-  --text-stone: #f6efde;         
-  
+  --text-paper: #faf4e6;
+  --text-stone: #f6efde;
+
   --btn-gradient: linear-gradient(180deg, #c9a45b 0%, #9e7a37 100%);
 
   --font-serif: 'Libre Baskerville', Georgia, serif;
@@ -23,7 +23,7 @@
 }
 
 .custom-bg-overlay {
-  background-image: url('https://i.pinimg.com/736x/a8/3c/3a/a83c3aa881dfdf1cd5f0d6299bda151b.jpg'); 
+  background-image: url('https://i.pinimg.com/736x/a8/3c/3a/a83c3aa881dfdf1cd5f0d6299bda151b.jpg');
   background-size: cover;
   background-position: center center;
   filter: brightness(0.35);
@@ -37,7 +37,7 @@
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
   border: 1px solid var(--glass-border);
-  border-radius: 12px; 
+  border-radius: 12px;
   box-shadow: 0 25px 60px rgba(0, 0, 0, 0.7);
   margin-top: 50px;
 }
@@ -113,8 +113,8 @@
   font-size: 0.92rem;
 }
 
-.custom-form-group .form-control-custom:focus ~ .custom-label,
-.custom-form-group .form-control-custom:not(:placeholder-shown) ~ .custom-label {
+.custom-form-group .form-control-custom:focus~.custom-label,
+.custom-form-group .form-control-custom:not(:placeholder-shown)~.custom-label {
   top: -16px !important;
   font-size: 0.75rem;
   color: var(--accent-gold) !important;
@@ -131,8 +131,8 @@
   left: 28px !important;
 }
 
-.form-control-custom:focus ~ .phone-label-shift,
-.form-control-custom:not(:placeholder-shown) ~ .phone-label-shift {
+.form-control-custom:focus~.phone-label-shift,
+.form-control-custom:not(:placeholder-shown)~.phone-label-shift {
   left: 0px !important;
 }
 
@@ -173,7 +173,7 @@
     margin-top: 30px;
     padding: 24px !important;
   }
-  
+
   .mv-section-title {
     font-size: 1.6rem;
   }

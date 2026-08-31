@@ -7,7 +7,7 @@ export default function EstateVillaSection() {
       <div className="container px-3 px-md-5">
         <div className="row justify-content-center">
           <div className="col-12 col-lg-9 col-xl-8 text-center d-flex flex-column align-items-center">
-            
+
             <span className="villa-tag d-block mb-2">
               Estate Villa · 1BHK
             </span>

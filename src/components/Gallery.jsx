@@ -92,7 +92,6 @@ const AmenitiesGallery = () => {
         </Swiper>
       </div>
 
-      {/* Lightbox Modal */}
       {activeImage && (
         <div className="lightbox-overlay" onClick={() => setActiveImage(null)}>
           <span className="lightbox-close">&times;</span>

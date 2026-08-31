@@ -857,7 +857,6 @@ small {
   }
 }
 
-/* new animation  */
 @keyframes fadeInUp {
   from {
     opacity: 0;

@@ -378,8 +378,8 @@ export default function PropertySearch() {
             ) : (
               <div className="ps-cards-stack d-flex flex-column gap-4">
                 {properties.map((item, index) => (
-                  <div 
-                    className="ps-horizontal-card" 
+                  <div
+                    className="ps-horizontal-card"
                     key={index}
                     onClick={() => handlePropertyClick(item)}
                   >
@@ -467,21 +467,21 @@ export default function PropertySearch() {
             <div className="ps-sidebar-widget mb-4">
               <h4 className="ps-widget-title">Property Types</h4>
               <div className="category-count-list">
-                <div 
+                <div
                   className={`cat-count-item ${typeParam === 'flat' ? 'active-cat' : ''}`}
                   onClick={() => navigate(`/PropertySearch?type=flat&location=${encodeURIComponent(cleanLocation)}`)}
                 >
                   <span>Flats & Apartments</span>
                   <span className="cat-badge">4 Available</span>
                 </div>
-                <div 
+                <div
                   className={`cat-count-item ${typeParam === 'villa' ? 'active-cat' : ''}`}
                   onClick={() => navigate(`/PropertySearch?type=villa&location=${encodeURIComponent(cleanLocation)}`)}
                 >
                   <span>Luxury Villas & Estates</span>
                   <span className="cat-badge">4 Available</span>
                 </div>
-                <div 
+                <div
                   className={`cat-count-item ${typeParam === 'plot' ? 'active-cat' : ''}`}
                   onClick={() => navigate(`/PropertySearch?type=plot&location=${encodeURIComponent(cleanLocation)}`)}
                 >
@@ -512,8 +512,8 @@ export default function PropertySearch() {
               </div>
               <h5 className="text-dark font-serif mb-1" style={{ fontSize: '1.05rem' }}>Download Project Dossier</h5>
               <p className="small text-muted mb-3" style={{ fontSize: '0.82rem' }}>Get price charts, master floor layouts, and legal approvals in PDF.</p>
-              <button 
-                type="button" 
+              <button
+                type="button"
                 className="ps-text-link-btn text-gold fw-bold"
                 onClick={() => alert("Dossier downloading...")}
               >
