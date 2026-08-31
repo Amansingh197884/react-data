@@ -51,12 +51,11 @@ const categoryData = {
       lotSize: "2,200 sqft",
       author: "Ariahaus Advisory",
       images: [
-        "https://i.pinimg.com/736x/8f/26/66/8f266673fa99a947be88f83a1038db06.jpg",
-        "https://i.pinimg.com/736x/8f/26/66/8f266673fa99a947be88f83a1038db06.jpg",
-        "https://i.pinimg.com/736x/10/9f/57/109f57ba8d8a6b84f5cbd806787e637b.jpg",
-        "https://i.pinimg.com/1200x/d3/75/90/d375900924fb8ec4521165e8d422fba3.jpg",
-        "https://i.pinimg.com/736x/8a/cc/8c/8acc8ccc8649512d66b8839be6ae8d40.jpg",
-        "https://i.pinimg.com/736x/f2/10/f0/f210f0d5b6b251553f81fe29a9b277a8.jpg"
+        "https://images.pexels.com/photos/1571460/pexels-photo-1571460.jpeg?auto=compress&cs=tinysrgb&w=1200",
+        "https://images.pexels.com/photos/1643383/pexels-photo-1643383.jpeg?auto=compress&cs=tinysrgb&w=1200",
+        "https://images.pexels.com/photos/276724/pexels-photo-276724.jpeg?auto=compress&cs=tinysrgb&w=1200",
+        "https://images.pexels.com/photos/1571468/pexels-photo-1571468.jpeg?auto=compress&cs=tinysrgb&w=1200",
+        "https://images.pexels.com/photos/271816/pexels-photo-271816.jpeg?auto=compress&cs=tinysrgb&w=1200"
       ]
     },
     {
@@ -73,12 +72,11 @@ const categoryData = {
       lotSize: "1,600 sqft",
       author: "Ariahaus Advisory",
       images: [
-        "https://i.pinimg.com/736x/3a/3c/ff/3a3cff30ebca23ad46f5010a9822da85.jpg",
-        "https://i.pinimg.com/736x/47/96/04/479604dff6f537980434e2c86cfaed88.jpg",
-        "https://i.pinimg.com/736x/93/74/19/937419cd16165d937a9dd62956bb6396.jpg",
-        "https://i.pinimg.com/736x/17/b4/b6/17b4b66eafba4a753e4d2876c2654e28.jpg",
-        "https://i.pinimg.com/736x/11/49/71/114971dc67f2b9636c0a0c4f346fa97c.jpg",
-        "https://i.pinimg.com/736x/d2/54/1b/d2541b65e9c07ef21a44e5cb4e8be306.jpg"
+        "https://images.pexels.com/photos/276583/pexels-photo-276583.jpeg?auto=compress&cs=tinysrgb&w=1200",
+        "https://images.pexels.com/photos/1571470/pexels-photo-1571470.jpeg?auto=compress&cs=tinysrgb&w=1200",
+        "https://images.pexels.com/photos/1457842/pexels-photo-1457842.jpeg?auto=compress&cs=tinysrgb&w=1200",
+        "https://images.pexels.com/photos/271795/pexels-photo-271795.jpeg?auto=compress&cs=tinysrgb&w=1200",
+        "https://images.pexels.com/photos/271624/pexels-photo-271624.jpeg?auto=compress&cs=tinysrgb&w=1200"
       ]
     },
     {
@@ -95,12 +93,11 @@ const categoryData = {
       lotSize: "3,800 sqft",
       author: "Ariahaus Advisory",
       images: [
-        "https://i.pinimg.com/736x/f4/19/22/f41922c074df3bfa4b4238f886f7b13d.jpg",
-        "https://i.pinimg.com/736x/8c/02/89/8c0289a7cbb69f7f6fe5171ae9bb7e25.jpg",
-        "https://i.pinimg.com/736x/3a/3c/ff/3a3cff30ebca23ad46f5010a9822da85.jpg",
-        "https://i.pinimg.com/736x/11/49/71/114971dc67f2b9636c0a0c4f346fa97c.jpg",
-        "https://i.pinimg.com/736x/4b/32/38/4b3238634c4f3e5e6e87900b95ebca97.jpg",
-        "https://i.pinimg.com/736x/d2/54/1b/d2541b65e9c07ef21a44e5cb4e8be306.jpg"
+        "https://images.pexels.com/photos/323780/pexels-photo-323780.jpeg?auto=compress&cs=tinysrgb&w=1200",
+        "https://images.pexels.com/photos/276554/pexels-photo-276554.jpeg?auto=compress&cs=tinysrgb&w=1200",
+        "https://images.pexels.com/photos/1571458/pexels-photo-1571458.jpeg?auto=compress&cs=tinysrgb&w=1200",
+        "https://images.pexels.com/photos/2724749/pexels-photo-2724749.jpeg?auto=compress&cs=tinysrgb&w=1200",
+        "https://images.pexels.com/photos/2635038/pexels-photo-2635038.jpeg?auto=compress&cs=tinysrgb&w=1200"
       ]
     },
     {
@@ -117,12 +114,11 @@ const categoryData = {
       lotSize: "2,400 sqft",
       author: "Ariahaus Advisory",
       images: [
-        "https://i.pinimg.com/736x/4b/32/38/4b3238634c4f3e5e6e87900b95ebca97.jpg",
-        "https://i.pinimg.com/736x/3a/3c/ff/3a3cff30ebca23ad46f5010a9822da85.jpg",
-        "https://i.pinimg.com/736x/f4/19/22/f41922c074df3bfa4b4238f886f7b13d.jpg",
-        "https://i.pinimg.com/736x/8c/02/89/8c0289a7cbb69f7f6fe5171ae9bb7e25.jpg",
-        "https://i.pinimg.com/736x/11/49/71/114971dc67f2b9636c0a0c4f346fa97c.jpg",
-        "https://i.pinimg.com/736x/d2/54/1b/d2541b65e9c07ef21a44e5cb4e8be306.jpg"
+        "https://images.pexels.com/photos/271618/pexels-photo-271618.jpeg?auto=compress&cs=tinysrgb&w=1200",
+        "https://images.pexels.com/photos/1571453/pexels-photo-1571453.jpeg?auto=compress&cs=tinysrgb&w=1200",
+        "https://images.pexels.com/photos/1648776/pexels-photo-1648776.jpeg?auto=compress&cs=tinysrgb&w=1200",
+        "https://images.pexels.com/photos/2089698/pexels-photo-2089698.jpeg?auto=compress&cs=tinysrgb&w=1200",
+        "https://images.pexels.com/photos/279719/pexels-photo-279719.jpeg?auto=compress&cs=tinysrgb&w=1200"
       ]
     }
   ],
@@ -141,12 +137,11 @@ const categoryData = {
       lotSize: "4,500 sqft",
       author: "Ariahaus Advisory",
       images: [
-        "https://i.pinimg.com/736x/8c/02/89/8c0289a7cbb69f7f6fe5171ae9bb7e25.jpg",
-        "https://i.pinimg.com/736x/3a/3c/ff/3a3cff30ebca23ad46f5010a9822da85.jpg",
-        "https://i.pinimg.com/736x/f4/19/22/f41922c074df3bfa4b4238f886f7b13d.jpg",
-        "https://i.pinimg.com/736x/11/49/71/114971dc67f2b9636c0a0c4f346fa97c.jpg",
-        "https://i.pinimg.com/736x/4b/32/38/4b3238634c4f3e5e6e87900b95ebca97.jpg",
-        "https://i.pinimg.com/736x/d2/54/1b/d2541b65e9c07ef21a44e5cb4e8be306.jpg"
+        "https://images.pexels.com/photos/53610/large-home-residential-house-architecture-53610.jpeg?auto=compress&cs=tinysrgb&w=1200",
+        "https://images.pexels.com/photos/261102/pexels-photo-261102.jpeg?auto=compress&cs=tinysrgb&w=1200",
+        "https://images.pexels.com/photos/221540/pexels-photo-221540.jpeg?auto=compress&cs=tinysrgb&w=1200",
+        "https://images.pexels.com/photos/1643384/pexels-photo-1643384.jpeg?auto=compress&cs=tinysrgb&w=1200",
+        "https://images.pexels.com/photos/259588/pexels-photo-259588.jpeg?auto=compress&cs=tinysrgb&w=1200"
       ]
     },
     {
@@ -163,12 +158,11 @@ const categoryData = {
       lotSize: "3,200 sqft",
       author: "Ariahaus Advisory",
       images: [
-        "https://i.pinimg.com/736x/3a/3c/ff/3a3cff30ebca23ad46f5010a9822da85.jpg",
-        "https://i.pinimg.com/736x/8c/02/89/8c0289a7cbb69f7f6fe5171ae9bb7e25.jpg",
-        "https://i.pinimg.com/736x/4b/32/38/4b3238634c4f3e5e6e87900b95ebca97.jpg",
-        "https://i.pinimg.com/736x/f4/19/22/f41922c074df3bfa4b4238f886f7b13d.jpg",
-        "https://i.pinimg.com/736x/11/49/71/114971dc67f2b9636c0a0c4f346fa97c.jpg",
-        "https://i.pinimg.com/736x/d2/54/1b/d2541b65e9c07ef21a44e5cb4e8be306.jpg"
+        "https://images.pexels.com/photos/2102587/pexels-photo-2102587.jpeg?auto=compress&cs=tinysrgb&w=1200",
+        "https://images.pexels.com/photos/280222/pexels-photo-280222.jpeg?auto=compress&cs=tinysrgb&w=1200",
+        "https://images.pexels.com/photos/1396132/pexels-photo-1396132.jpeg?auto=compress&cs=tinysrgb&w=1200",
+        "https://images.pexels.com/photos/206172/pexels-photo-206172.jpeg?auto=compress&cs=tinysrgb&w=1200",
+        "https://images.pexels.com/photos/277667/pexels-photo-277667.jpeg?auto=compress&cs=tinysrgb&w=1200"
       ]
     },
     {
@@ -185,12 +179,11 @@ const categoryData = {
       lotSize: "6,500 sqft",
       author: "Ariahaus Advisory",
       images: [
-        "https://i.pinimg.com/736x/11/49/71/114971dc67f2b9636c0a0c4f346fa97c.jpg",
-        "https://i.pinimg.com/736x/8c/02/89/8c0289a7cbb69f7f6fe5171ae9bb7e25.jpg",
-        "https://i.pinimg.com/736x/3a/3c/ff/3a3cff30ebca23ad46f5010a9822da85.jpg",
-        "https://i.pinimg.com/736x/f4/19/22/f41922c074df3bfa4b4238f886f7b13d.jpg",
-        "https://i.pinimg.com/736x/4b/32/38/4b3238634c4f3e5e6e87900b95ebca97.jpg",
-        "https://i.pinimg.com/736x/d2/54/1b/d2541b65e9c07ef21a44e5cb4e8be306.jpg"
+        "https://images.pexels.com/photos/7061662/pexels-photo-7061662.jpeg?auto=compress&cs=tinysrgb&w=1200",
+        "https://images.pexels.com/photos/1488327/pexels-photo-1488327.jpeg?auto=compress&cs=tinysrgb&w=1200",
+        "https://images.pexels.com/photos/2440471/pexels-photo-2440471.jpeg?auto=compress&cs=tinysrgb&w=1200",
+        "https://images.pexels.com/photos/3288102/pexels-photo-3288102.jpeg?auto=compress&cs=tinysrgb&w=1200",
+        "https://images.pexels.com/photos/1732414/pexels-photo-1732414.jpeg?auto=compress&cs=tinysrgb&w=1200"
       ]
     },
     {
@@ -207,12 +200,11 @@ const categoryData = {
       lotSize: "2,500 sqft",
       author: "Ariahaus Advisory",
       images: [
-        "https://i.pinimg.com/736x/4b/32/38/4b3238634c4f3e5e6e87900b95ebca97.jpg",
-        "https://i.pinimg.com/736x/3a/3c/ff/3a3cff30ebca23ad46f5010a9822da85.jpg",
-        "https://i.pinimg.com/736x/8c/02/89/8c0289a7cbb69f7f6fe5171ae9bb7e25.jpg",
-        "https://i.pinimg.com/736x/11/49/71/114971dc67f2b9636c0a0c4f346fa97c.jpg",
-        "https://i.pinimg.com/736x/f4/19/22/f41922c074df3bfa4b4238f886f7b13d.jpg",
-        "https://i.pinimg.com/736x/d2/54/1b/d2541b65e9c07ef21a44e5cb4e8be306.jpg"
+        "https://images.pexels.com/photos/209296/pexels-photo-209296.jpeg?auto=compress&cs=tinysrgb&w=1200",
+        "https://images.pexels.com/photos/259580/pexels-photo-259580.jpeg?auto=compress&cs=tinysrgb&w=1200",
+        "https://images.pexels.com/photos/209315/pexels-photo-209315.jpeg?auto=compress&cs=tinysrgb&w=1200",
+        "https://images.pexels.com/photos/1438832/pexels-photo-1438832.jpeg?auto=compress&cs=tinysrgb&w=1200",
+        "https://images.pexels.com/photos/221502/pexels-photo-221502.jpeg?auto=compress&cs=tinysrgb&w=1200"
       ]
     }
   ],
@@ -231,12 +223,11 @@ const categoryData = {
       lotSize: "2,400 sqft",
       author: "Ariahaus Advisory",
       images: [
-        "https://i.pinimg.com/736x/8c/02/89/8c0289a7cbb69f7f6fe5171ae9bb7e25.jpg",
-        "https://i.pinimg.com/736x/3a/3c/ff/3a3cff30ebca23ad46f5010a9822da85.jpg",
-        "https://i.pinimg.com/736x/f4/19/22/f41922c074df3bfa4b4238f886f7b13d.jpg",
-        "https://i.pinimg.com/736x/11/49/71/114971dc67f2b9636c0a0c4f346fa97c.jpg",
-        "https://i.pinimg.com/736x/4b/32/38/4b3238634c4f3e5e6e87900b95ebca97.jpg",
-        "https://i.pinimg.com/736x/d2/54/1b/d2541b65e9c07ef21a44e5cb4e8be306.jpg"
+        "https://images.pexels.com/photos/440731/pexels-photo-440731.jpeg?auto=compress&cs=tinysrgb&w=1200",
+        "https://images.pexels.com/photos/158607/cows-pasture-nature-agricultural-158607.jpeg?auto=compress&cs=tinysrgb&w=1200",
+        "https://images.pexels.com/photos/1423600/pexels-photo-1423600.jpeg?auto=compress&cs=tinysrgb&w=1200",
+        "https://images.pexels.com/photos/414612/pexels-photo-414612.jpeg?auto=compress&cs=tinysrgb&w=1200",
+        "https://images.pexels.com/photos/1112080/pexels-photo-1112080.jpeg?auto=compress&cs=tinysrgb&w=1200"
       ]
     },
     {
@@ -253,12 +244,11 @@ const categoryData = {
       lotSize: "43,560 sqft",
       author: "Ariahaus Advisory",
       images: [
-        "https://i.pinimg.com/736x/3a/3c/ff/3a3cff30ebca23ad46f5010a9822da85.jpg",
-        "https://i.pinimg.com/736x/f4/19/22/f41922c074df3bfa4b4238f886f7b13d.jpg",
-        "https://i.pinimg.com/736x/8c/02/89/8c0289a7cbb69f7f6fe5171ae9bb7e25.jpg",
-        "https://i.pinimg.com/736x/4b/32/38/4b3238634c4f3e5e6e87900b95ebca97.jpg",
-        "https://i.pinimg.com/736x/11/49/71/114971dc67f2b9636c0a0c4f346fa97c.jpg",
-        "https://i.pinimg.com/736x/d2/54/1b/d2541b65e9c07ef21a44e5cb4e8be306.jpg"
+        "https://images.pexels.com/photos/974314/pexels-photo-974314.jpeg?auto=compress&cs=tinysrgb&w=1200",
+        "https://images.pexels.com/photos/775201/pexels-photo-775201.jpeg?auto=compress&cs=tinysrgb&w=1200",
+        "https://images.pexels.com/photos/1183099/pexels-photo-1183099.jpeg?auto=compress&cs=tinysrgb&w=1200",
+        "https://images.pexels.com/photos/158607/cows-pasture-nature-agricultural-158607.jpeg?auto=compress&cs=tinysrgb&w=1200",
+        "https://images.pexels.com/photos/440731/pexels-photo-440731.jpeg?auto=compress&cs=tinysrgb&w=1200"
       ]
     },
     {
@@ -275,12 +265,11 @@ const categoryData = {
       lotSize: "3,200 sqft",
       author: "Ariahaus Advisory",
       images: [
-        "https://i.pinimg.com/736x/f4/19/22/f41922c074df3bfa4b4238f886f7b13d.jpg",
-        "https://i.pinimg.com/736x/8c/02/89/8c0289a7cbb69f7f6fe5171ae9bb7e25.jpg",
-        "https://i.pinimg.com/736x/11/49/71/114971dc67f2b9636c0a0c4f346fa97c.jpg",
-        "https://i.pinimg.com/736x/3a/3c/ff/3a3cff30ebca23ad46f5010a9822da85.jpg",
-        "https://i.pinimg.com/736x/4b/32/38/4b3238634c4f3e5e6e87900b95ebca97.jpg",
-        "https://i.pinimg.com/736x/d2/54/1b/d2541b65e9c07ef21a44e5cb4e8be306.jpg"
+        "https://images.pexels.com/photos/417074/pexels-photo-417074.jpeg?auto=compress&cs=tinysrgb&w=1200",
+        "https://images.pexels.com/photos/1423600/pexels-photo-1423600.jpeg?auto=compress&cs=tinysrgb&w=1200",
+        "https://images.pexels.com/photos/414612/pexels-photo-414612.jpeg?auto=compress&cs=tinysrgb&w=1200",
+        "https://images.pexels.com/photos/1112080/pexels-photo-1112080.jpeg?auto=compress&cs=tinysrgb&w=1200",
+        "https://images.pexels.com/photos/974314/pexels-photo-974314.jpeg?auto=compress&cs=tinysrgb&w=1200"
       ]
     },
     {
@@ -297,12 +286,11 @@ const categoryData = {
       lotSize: "10,000 sqft",
       author: "Ariahaus Advisory",
       images: [
-        "https://i.pinimg.com/736x/4b/32/38/4b3238634c4f3e5e6e87900b95ebca97.jpg",
-        "https://i.pinimg.com/736x/11/49/71/114971dc67f2b9636c0a0c4f346fa97c.jpg",
-        "https://i.pinimg.com/736x/8c/02/89/8c0289a7cbb69f7f6fe5171ae9bb7e25.jpg",
-        "https://i.pinimg.com/736x/3a/3c/ff/3a3cff30ebca23ad46f5010a9822da85.jpg",
-        "https://i.pinimg.com/736x/f4/19/22/f41922c074df3bfa4b4238f886f7b13d.jpg",
-        "https://i.pinimg.com/736x/d2/54/1b/d2541b65e9c07ef21a44e5cb4e8be306.jpg"
+        "https://images.pexels.com/photos/1183099/pexels-photo-1183099.jpeg?auto=compress&cs=tinysrgb&w=1200",
+        "https://images.pexels.com/photos/775201/pexels-photo-775201.jpeg?auto=compress&cs=tinysrgb&w=1200",
+        "https://images.pexels.com/photos/440731/pexels-photo-440731.jpeg?auto=compress&cs=tinysrgb&w=1200",
+        "https://images.pexels.com/photos/158607/cows-pasture-nature-agricultural-158607.jpeg?auto=compress&cs=tinysrgb&w=1200",
+        "https://images.pexels.com/photos/417074/pexels-photo-417074.jpeg?auto=compress&cs=tinysrgb&w=1200"
       ]
     }
   ]
@@ -348,10 +336,18 @@ export default function PropertySearch() {
 
   return (
     <div className="ps-main-container">
+      <div className="floating-action-bar">
+        <a href="https://wa.me/918147775092" target="_blank" rel="noreferrer" className="fab-btn fab-whatsapp" aria-label="WhatsApp">
+          <FaWhatsapp />
+        </a>
+        <a href="tel:8147775092" className="fab-btn fab-phone" aria-label="Phone">
+          <FaPhoneAlt />
+        </a>
+      </div>
+
       <div className="ps-hybrid-banner">
         <div className="banner-kenburns-layer" />
         <div className="banner-soft-overlay" />
-        <div className="banner-mesh-shimmer" />
 
         <div className="ps-banner-content">
           <span className="ps-pill-tag">
@@ -382,19 +378,26 @@ export default function PropertySearch() {
             ) : (
               <div className="ps-cards-stack d-flex flex-column gap-4">
                 {properties.map((item, index) => (
-                  <div className="ps-horizontal-card" key={index}>
+                  <div 
+                    className="ps-horizontal-card" 
+                    key={index}
+                    onClick={() => handlePropertyClick(item)}
+                  >
                     <div className="ps-card-img-wrap">
                       <img src={item.images[0]} alt={item.title} loading="lazy" />
                       <div className="ps-img-overlay">
                         <button
                           type="button"
                           className="ps-view-btn"
-                          onClick={() => handlePropertyClick(item)}
+                          onClick={(e) => {
+                            e.stopPropagation();
+                            handlePropertyClick(item);
+                          }}
                         >
                           View Property
                         </button>
                       </div>
-                      <div className="ps-img-actions">
+                      <div className="ps-img-actions" onClick={(e) => e.stopPropagation()}>
                         <button type="button" className="ps-action-icon" aria-label="Save"><FaHeart /></button>
                         <button type="button" className="ps-action-icon" aria-label="Compare"><FaExchangeAlt /></button>
                       </div>
@@ -406,10 +409,7 @@ export default function PropertySearch() {
                         <h4 className="ps-prop-price">{item.price}</h4>
                       </div>
 
-                      <h4
-                        className="ps-card-title"
-                        onClick={() => handlePropertyClick(item)}
-                      >
+                      <h4 className="ps-card-title">
                         {item.title}
                       </h4>
 
@@ -448,7 +448,10 @@ export default function PropertySearch() {
                         <button
                           type="button"
                           className="ps-text-link-btn"
-                          onClick={() => handlePropertyClick(item)}
+                          onClick={(e) => {
+                            e.stopPropagation();
+                            handlePropertyClick(item);
+                          }}
                         >
                           View Details <FaChevronRight className="chevron-link ms-1" />
                         </button>
@@ -461,83 +464,81 @@ export default function PropertySearch() {
           </div>
 
           <div className="col-12 col-lg-4">
-            <div className="ps-sidebar-wrapper">
-              <div className="ps-sidebar-widget mb-4">
-                <h4 className="ps-widget-title">Property Types</h4>
-                <div className="category-count-list">
-                  <div 
-                    className={`cat-count-item ${typeParam === 'flat' ? 'active-cat' : ''}`}
-                    onClick={() => navigate(`/PropertySearch?type=flat&location=${encodeURIComponent(cleanLocation)}`)}
-                  >
-                    <span>Flats & Apartments</span>
-                    <span className="cat-badge">4 Available</span>
-                  </div>
-                  <div 
-                    className={`cat-count-item ${typeParam === 'villa' ? 'active-cat' : ''}`}
-                    onClick={() => navigate(`/PropertySearch?type=villa&location=${encodeURIComponent(cleanLocation)}`)}
-                  >
-                    <span>Luxury Villas & Estates</span>
-                    <span className="cat-badge">4 Available</span>
-                  </div>
-                  <div 
-                    className={`cat-count-item ${typeParam === 'plot' ? 'active-cat' : ''}`}
-                    onClick={() => navigate(`/PropertySearch?type=plot&location=${encodeURIComponent(cleanLocation)}`)}
-                  >
-                    <span>Residential & Farm Plots</span>
-                    <span className="cat-badge">4 Available</span>
-                  </div>
-                </div>
-              </div>
-
-              <div className="ps-sidebar-widget mb-4">
-                <h4 className="ps-widget-title">Market Insights</h4>
-                <ul className="ps-recent-list">
-                  {recentInsights.map((post, i) => (
-                    <li key={i} className="d-flex justify-content-between align-items-center">
-                      <div className="d-flex align-items-center gap-2">
-                        <FaChevronRight className="widget-arrow" />
-                        <span>{post.title}</span>
-                      </div>
-                      <small className="text-muted">{post.date}</small>
-                    </li>
-                  ))}
-                </ul>
-              </div>
-
-              <div className="ps-sidebar-widget mb-4 text-center">
-                <div className="floating-action-icon mb-2">
-                  <FaFileDownload />
-                </div>
-                <h5 className="text-dark font-serif mb-1" style={{ fontSize: '1.05rem' }}>Download Project Dossier</h5>
-                <p className="small text-muted mb-3" style={{ fontSize: '0.82rem' }}>Get price charts, master floor layouts, and legal approvals in PDF.</p>
-                <button 
-                  type="button" 
-                  className="ps-text-link-btn text-gold fw-bold"
-                  onClick={() => alert("Dossier downloading...")}
+            <div className="ps-sidebar-widget mb-4">
+              <h4 className="ps-widget-title">Property Types</h4>
+              <div className="category-count-list">
+                <div 
+                  className={`cat-count-item ${typeParam === 'flat' ? 'active-cat' : ''}`}
+                  onClick={() => navigate(`/PropertySearch?type=flat&location=${encodeURIComponent(cleanLocation)}`)}
                 >
-                  Download PDF Brochure <FaChevronRight className="chevron-link ms-1" />
-                </button>
-              </div>
-
-              <div className="ps-sidebar-cta">
-                <h5 className="text-white mb-2 font-serif" style={{ fontSize: '1.15rem' }}>Need Quick Consultation?</h5>
-                <p className="small text-white-50 mb-4" style={{ fontSize: '0.85rem' }}>Speak directly with our senior regional property advisors.</p>
-                <div className="d-flex flex-column gap-2">
-                  <a
-                    href="https://wa.me/918147775092"
-                    target="_blank"
-                    rel="noreferrer"
-                    className="ps-whatsapp-btn justify-content-center"
-                  >
-                    <FaWhatsapp className="me-2" /> WhatsApp Us
-                  </a>
-                  <a
-                    href="tel:8147775092"
-                    className="ps-contact-call-btn"
-                  >
-                    <FaPhoneAlt className="me-2" /> Call Advisor
-                  </a>
+                  <span>Flats & Apartments</span>
+                  <span className="cat-badge">4 Available</span>
                 </div>
+                <div 
+                  className={`cat-count-item ${typeParam === 'villa' ? 'active-cat' : ''}`}
+                  onClick={() => navigate(`/PropertySearch?type=villa&location=${encodeURIComponent(cleanLocation)}`)}
+                >
+                  <span>Luxury Villas & Estates</span>
+                  <span className="cat-badge">4 Available</span>
+                </div>
+                <div 
+                  className={`cat-count-item ${typeParam === 'plot' ? 'active-cat' : ''}`}
+                  onClick={() => navigate(`/PropertySearch?type=plot&location=${encodeURIComponent(cleanLocation)}`)}
+                >
+                  <span>Residential & Farm Plots</span>
+                  <span className="cat-badge">4 Available</span>
+                </div>
+              </div>
+            </div>
+
+            <div className="ps-sidebar-widget mb-4">
+              <h4 className="ps-widget-title">Market Insights</h4>
+              <ul className="ps-recent-list">
+                {recentInsights.map((post, i) => (
+                  <li key={i} className="d-flex justify-content-between align-items-center">
+                    <div className="d-flex align-items-center gap-2">
+                      <FaChevronRight className="widget-arrow" />
+                      <span>{post.title}</span>
+                    </div>
+                    <small className="text-muted">{post.date}</small>
+                  </li>
+                ))}
+              </ul>
+            </div>
+
+            <div className="ps-sidebar-widget mb-4 text-center">
+              <div className="floating-action-icon mb-2">
+                <FaFileDownload />
+              </div>
+              <h5 className="text-dark font-serif mb-1" style={{ fontSize: '1.05rem' }}>Download Project Dossier</h5>
+              <p className="small text-muted mb-3" style={{ fontSize: '0.82rem' }}>Get price charts, master floor layouts, and legal approvals in PDF.</p>
+              <button 
+                type="button" 
+                className="ps-text-link-btn text-gold fw-bold"
+                onClick={() => alert("Dossier downloading...")}
+              >
+                Download PDF Brochure <FaChevronRight className="chevron-link ms-1" />
+              </button>
+            </div>
+
+            <div className="ps-sidebar-cta">
+              <h5 className="text-white mb-2 font-serif" style={{ fontSize: '1.15rem' }}>Need Quick Consultation?</h5>
+              <p className="small text-white-50 mb-4" style={{ fontSize: '0.85rem' }}>Speak directly with our senior regional property advisors.</p>
+              <div className="d-flex flex-column gap-2">
+                <a
+                  href="https://wa.me/918147775092"
+                  target="_blank"
+                  rel="noreferrer"
+                  className="ps-whatsapp-btn justify-content-center"
+                >
+                  <FaWhatsapp className="me-2" /> WhatsApp Us
+                </a>
+                <a
+                  href="tel:8147775092"
+                  className="ps-contact-call-btn"
+                >
+                  <FaPhoneAlt className="me-2" /> Call Advisor
+                </a>
               </div>
             </div>
           </div>

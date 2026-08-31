@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { useLocation, Link, useNavigate } from 'react-router-dom';
 import { Swiper, SwiperSlide } from 'swiper/react';
-import { Navigation, Autoplay } from 'swiper/modules';
+import { Autoplay } from 'swiper/modules';
 import {
   FaBed,
   FaBath,
@@ -39,15 +39,14 @@ import Logo from '../assets/Logo.png';
 import { usePopup } from './PopupContext';
 
 import 'swiper/css';
-import 'swiper/css/navigation';
 import './PropertySearch.css';
 
 const defaultFallbackPhotos = [
-  'https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1200&q=80',
-  'https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?auto=format&fit=crop&w=1200&q=80',
-  'https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=1200&q=80',
-  'https://images.unsplash.com/photo-1600566753376-12c8ab7fb75b?auto=format&fit=crop&w=1200&q=80',
-  'https://images.unsplash.com/photo-1600585154526-990dced4db0d?auto=format&fit=crop&w=1200&q=80'
+  'https://images.pexels.com/photos/53610/large-home-residential-house-architecture-53610.jpeg?auto=compress&cs=tinysrgb&w=1200',
+  'https://images.pexels.com/photos/261102/pexels-photo-261102.jpeg?auto=compress&cs=tinysrgb&w=1200',
+  'https://images.pexels.com/photos/1571460/pexels-photo-1571460.jpeg?auto=compress&cs=tinysrgb&w=1200',
+  'https://images.pexels.com/photos/1643383/pexels-photo-1643383.jpeg?auto=compress&cs=tinysrgb&w=1200',
+  'https://images.pexels.com/photos/221540/pexels-photo-221540.jpeg?auto=compress&cs=tinysrgb&w=1200'
 ];
 
 const unitFeatures = [
@@ -225,8 +224,6 @@ export default function ViewProperty() {
 
   return (
     <div className="vp-main-container">
-      
-      {/* Floating Action Buttons */}
       <div className="floating-action-bar">
         <a href="https://wa.me/918147775092" target="_blank" rel="noreferrer" className="fab-btn fab-whatsapp" aria-label="WhatsApp">
           <FaWhatsapp />
@@ -236,10 +233,8 @@ export default function ViewProperty() {
         </a>
       </div>
 
-      {/* Luxury Dedicated Navbar */}
       <header className="vp-custom-navbar">
         <div className="container-fluid px-3 px-md-5 d-flex align-items-center justify-content-between">
-          
           <Link to="/" className="vp-nav-brand d-flex align-items-center gap-2 text-decoration-none">
             <img src={Logo} alt="Ariahaus" className="vp-navbar-logo" />
             <span className="vp-brand-name">ARIAHAUS</span>
@@ -261,10 +256,7 @@ export default function ViewProperty() {
             ))}
           </div>
 
-          <div className="vp-nav-right d-flex align-items-center gap-2">
-            <Link to="/" className="vp-nav-text-link d-lg-none">
-              Home
-            </Link>
+          <div className="vp-nav-right d-flex align-items-center">
             <button
               type="button"
               className="vp-nav-cta-btn"
@@ -275,7 +267,10 @@ export default function ViewProperty() {
           </div>
         </div>
 
-        <div className="vp-mobile-subnav d-lg-none px-3 py-2 d-flex gap-3 overflow-x-auto">
+        <div className="vp-mobile-subnav d-lg-none">
+          <Link to="/" className="vp-subnav-text-link">
+            Home
+          </Link>
           {navSections.map((sec) => (
             <button
               key={sec.id}
@@ -289,7 +284,6 @@ export default function ViewProperty() {
         </div>
       </header>
 
-      {/* Hero Banner */}
       <div className="vp-hybrid-hero">
         <div 
           className="banner-kenburns-layer" 
@@ -321,10 +315,7 @@ export default function ViewProperty() {
         </div>
       </div>
 
-      {/* Main Content Layout */}
       <div className="container-fluid px-3 px-md-5 py-4">
-        
-        {/* Top Meta Bar */}
         <div className="vp-meta-header d-flex justify-content-between align-items-center flex-wrap gap-2 pb-3 border-bottom-subtle">
           <span className="vp-prop-id-clean">
             Property ID: <strong className="text-black-bold">{property.propertyId}</strong>
@@ -333,10 +324,7 @@ export default function ViewProperty() {
         </div>
 
         <div className="row g-4 g-lg-5 mt-2">
-          {/* Left Main Sections */}
           <div className="col-12 col-lg-8">
-            
-            {/* 1. Quick Specs & Key Overview */}
             <section id="sec-overview" className="vp-content-section mb-5">
               <div className="vp-clean-specs-grid mb-4">
                 <div className="vp-clean-spec-item">
@@ -425,7 +413,6 @@ export default function ViewProperty() {
               </div>
             </section>
 
-            {/* 2. Interior & Space Gallery */}
             <section id="sec-gallery" className="vp-content-section mb-5">
               <div className="d-flex justify-content-between align-items-center mb-3">
                 <h4 className="section-clean-title mb-0">Interior & Space Gallery</h4>
@@ -447,7 +434,6 @@ export default function ViewProperty() {
               </div>
             </section>
 
-            {/* 3. Architectural Description */}
             <section id="sec-layout" className="vp-content-section mb-5">
               <h4 className="section-clean-title">Architectural Description & Layout</h4>
               <p className="clean-desc-lead mt-2 mb-3">{property.shortDesc}</p>
@@ -459,7 +445,6 @@ export default function ViewProperty() {
               </ul>
             </section>
 
-            {/* 4. Features & Inclusions */}
             <section id="sec-features" className="vp-content-section mb-5">
               <h4 className="section-clean-title">Features & Inclusions</h4>
               <div className="row g-3 mt-1">
@@ -474,14 +459,13 @@ export default function ViewProperty() {
               </div>
             </section>
 
-            {/* 5. Unit Features & Amenities */}
             <section id="sec-amenities" className="vp-content-section mb-5">
               <h4 className="section-clean-title">Unit Features & Amenities</h4>
               <div className="row g-3 mt-1">
                 {unitFeatures.map((feat, index) => (
                   <div className="col-6 col-md-3" key={index}>
                     <div className="clean-amenity-card">
-                      <img src={feat.img} alt={feat.title} className="amenity-img" />
+                      <img src={feat.img} alt={feat.title} className="amenity-img spin-on-hover" />
                       <p className="amenity-title">{feat.title}</p>
                     </div>
                   </div>
@@ -489,7 +473,6 @@ export default function ViewProperty() {
               </div>
             </section>
 
-            {/* 6. Pricing Slider */}
             {pricingTiers.length > 0 && (
               <section id="sec-pricing" className="vp-content-section mb-5">
                 <div className="d-flex justify-content-between align-items-center mb-3 flex-wrap gap-2">
@@ -515,15 +498,15 @@ export default function ViewProperty() {
                 </div>
 
                 <Swiper
-                  modules={[Navigation, Autoplay]}
-                  navigation={true}
+                  modules={[Autoplay]}
+                  grabCursor={true}
                   spaceBetween={20}
                   slidesPerView={1}
                   breakpoints={{
                     640: { slidesPerView: 2, spaceBetween: 20 },
                     1024: { slidesPerView: 3, spaceBetween: 20 }
                   }}
-                  className="clean-pricing-swiper py-2"
+                  className="clean-pricing-swiper py-2 cursor-grab-swiper"
                 >
                   {pricingTiers.map((tier, idx) => (
                     <SwiperSlide key={idx}>
@@ -562,7 +545,6 @@ export default function ViewProperty() {
               </section>
             )}
 
-            {/* 7. About Developer */}
             <section id="sec-developer" className="vp-content-section mb-5">
               <h4 className="section-clean-title">About The Developer</h4>
               <div className="clean-dev-box mt-3">
@@ -611,14 +593,13 @@ export default function ViewProperty() {
               </div>
             </section>
 
-            {/* 8. Transit & Prime Location Map */}
             <section id="sec-location" className="vp-content-section mb-5">
               <h4 className="section-clean-title">Transit & Connectivity</h4>
               <div className="row g-3 mt-1 mb-4">
                 {nearbyLandmarks.map((item, idx) => (
                   <div className="col-12 col-sm-6 col-md-3" key={idx}>
                     <div className="clean-transit-cell">
-                      <div className="transit-ico-box mb-2">{item.icon}</div>
+                      <div className="transit-ico-box spin-on-hover mb-2">{item.icon}</div>
                       <h6 className="transit-name mb-1">{item.title}</h6>
                       <span className="transit-dist">{item.dist}</span>
                     </div>
@@ -641,10 +622,7 @@ export default function ViewProperty() {
             </section>
           </div>
 
-          {/* Right STICKY Sidebar Column */}
-          <div className="col-12 col-lg-4 sticky-sidebar-column">
-            
-            {/* 1. Theme-Matched Lead Form */}
+          <div className="col-12 col-lg-4">
             <div className="theme-lead-form-card p-4 mb-4">
               <div className="text-center mb-4">
                 <h3 className="form-theme-title mb-1">Submit Your Details</h3>
@@ -731,14 +709,13 @@ export default function ViewProperty() {
               )}
             </div>
 
-            {/* 2. Advisory & Contact Card */}
             <div className="clean-sidebar-box p-4 mb-4">
               <div className="d-flex align-items-center gap-3 mb-3">
                 <div className="advisor-avatar-box">
                   <FaUserTie />
                 </div>
                 <div>
-                  <small className="text-gold text-uppercase fw-bold" style={{ fontSize: '0.72rem', letterSpacing: '0.6px' }}>
+                  <small className="text-gold text-uppercase fw-500" style={{ fontSize: '0.72rem', letterSpacing: '0.6px' }}>
                     Listing Advisor
                   </small>
                   <h6 className="mb-0 text-dark font-serif">{property.author}</h6>
@@ -759,7 +736,6 @@ export default function ViewProperty() {
               </div>
             </div>
 
-            {/* 3. Download Brochure & Price Sheet Modal Trigger */}
             <div className="clean-sidebar-box p-4 mb-4 text-center">
               <div className="dossier-download-icon mb-2">
                 <FaFileDownload />
@@ -777,7 +753,6 @@ export default function ViewProperty() {
               </button>
             </div>
 
-            {/* 4. Payment Schedule */}
             <div className="clean-sidebar-box p-4 mb-4">
               <div className="d-flex align-items-center gap-2 mb-3">
                 <FaCoins className="text-gold" />
@@ -793,7 +768,6 @@ export default function ViewProperty() {
               </ul>
             </div>
 
-            {/* 5. Legal Approvals */}
             <div className="clean-sidebar-box p-4">
               <div className="d-flex align-items-center gap-2 mb-3">
                 <FaFileAlt className="text-gold" />
@@ -809,7 +783,6 @@ export default function ViewProperty() {
         </div>
       </div>
 
-      {/* Footer */}
       <footer className="zen-custom-footer py-5 mt-5">
         <div className="container-fluid px-3 px-md-5">
           <div className="row g-4 g-lg-5 pb-5">
